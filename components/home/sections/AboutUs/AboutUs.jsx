@@ -11,7 +11,7 @@ import Cooperate from './sections/Cooperate'
 
 const AboutUs = () => {
   return (
-    <section className='relative top-[-130px] w-[1240px] m-auto flex flex-col gap-[150px]'>
+    <section className='relative w-[1240px] m-auto flex flex-col gap-[150px]'>
         <article className='flex gap-[50px]'>
             <Image src={mainImage} width={420} height={290} className='rounded-[10px]'/>
             <div className='flex flex-col gap-[50px]'>

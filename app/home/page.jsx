@@ -8,9 +8,11 @@ const home = () => {
   return (
     <>
       <Header/>
-      <Encourage/>
-      <AboutUs/>
-      <Cooperation/>
+      <main className='flex flex-col relative top-[-250px] gap-[200px]'>
+        <Encourage/>
+        <AboutUs/>
+        <Cooperation/>
+      </main>
     </>
   )
 }
