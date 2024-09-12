@@ -5,10 +5,12 @@ import React from 'react'
 
 import mainImage from '@public/assets/images/aboutUsMain.webp'
 import Mission from './sections/Mission'
+import Work from './sections/Work'
+import People from './sections/People'
 
 const AboutUs = () => {
   return (
-    <section className='relative top-[-130px] w-[1240px] m-auto'>
+    <section className='relative top-[-130px] w-[1240px] m-auto flex flex-col gap-[150px]'>
         <article className='flex gap-[50px]'>
             <Image src={mainImage} width={420} height={290} className='rounded-[10px]'/>
             <div className='flex flex-col gap-[50px]'>
@@ -19,6 +21,8 @@ const AboutUs = () => {
         </article>
 
         <Mission/>
+        <Work/>
+        <People/>
     </section>
   )
 }
