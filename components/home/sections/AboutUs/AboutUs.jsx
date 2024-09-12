@@ -7,6 +7,7 @@ import mainImage from '@public/assets/images/aboutUsMain.webp'
 import Mission from './sections/Mission'
 import Work from './sections/Work'
 import People from './sections/People'
+import Cooperate from './sections/Cooperate'
 
 const AboutUs = () => {
   return (
@@ -23,6 +24,7 @@ const AboutUs = () => {
         <Mission/>
         <Work/>
         <People/>
+        <Cooperate/>
     </section>
   )
 }
