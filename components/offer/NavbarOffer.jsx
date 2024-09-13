@@ -13,8 +13,6 @@ import servicesCard from '@public/assets/images/offer/navbar/servicesCard.webp'
 const NavbarOffer = () => {
   const pathname = usePathname();
 
-  console.log(pathname);
-
   const offerMenu = [
     {
       name: "Strony",

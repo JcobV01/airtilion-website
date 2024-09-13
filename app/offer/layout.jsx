@@ -1,3 +1,4 @@
+import Footer from '@components/Footer'
 import Header from '@components/Header'
 import Navbar from '@components/Navbar'
 import NavbarOffer from '@components/offer/NavbarOffer'
@@ -12,6 +13,7 @@ const layout = ({ children }) => {
         <NavbarOffer />
         {children}
       </main>
+      <Footer />
     </>
   )
 }
