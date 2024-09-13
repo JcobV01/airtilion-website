@@ -14,9 +14,6 @@ const home = () => {
         <AboutUs/>
         <Cooperation/>
       </main>
-      <Encourage/>
-      <AboutUs/>
-      <Cooperation/>
       <Footer />
     </>
   )
