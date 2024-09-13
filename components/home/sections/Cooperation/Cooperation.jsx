@@ -58,7 +58,7 @@ const Cooperation = () => {
 
 
                 <div className='flex justify-between relative mt-[70px]'>
-                    <div className='flex flex-col gap-[390px]'>
+                    <div className='flex flex-col gap-[380px]'>
                         {cooperation.map((post, index) => {
                             if (index % 2 == 0) {
                                 return (
@@ -68,38 +68,11 @@ const Cooperation = () => {
                         })}
                     </div>
 
-                    <div className='flex absolute top-[100px] left-[525px]'>
-                        <Image src={lines} alt="Linie" width="236" height="1399"/>
-                        {/* <div className='absolute top-[300px] flex flex-col'>
-                            {cooperation.map((_, index) => (
-                                <div className='relative' key={index}>
-                                    {index % 2 == 0 ? (
-                                        <div className="relative flex flex-col items-center top-[15px]">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="180" height="290" viewBox="0 0 180 290" fill="none">
-                                                <path d="M78.2667 2H128C155.614 2 178 24.3858 178 52V98.4048C178 126.019 155.614 148.405 128 148.405H52C24.3858 148.405 2 170.791 2 198.405V238C2 265.614 24.3858 288 52 288H85" stroke="#E2B350" strokeWidth="2.5" strokeDasharray="25 25" />
-                                            </svg>
-                                        </div>
-                                    ) : (
-                                        index < 4 ? (
-                                            <div className="relative flex flex-col items-center top-[10px]">
-                                                <svg className='relative' xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                                                    <circle cx="12.5" cy="12.5" r="12" fill="#1B1B1B" fillOpacity="0.4" stroke="#E2B350" />
-                                                </svg>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="240" viewBox="0 0 4 231" fill="none">
-                                                    <path d="M2 0V231" stroke="#E2B350" strokeWidth="2.5" strokeDasharray="25 25" />
-                                                </svg>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                                                    <circle cx="12.5" cy="12.5" r="12" fill="#1B1B1B" fillOpacity="0.4" stroke="#E2B350" />
-                                                </svg>
-                                            </div>
-                                        ) : null
-                                    )}
-                                </div>
-                            ))}
-                        </div> */}
+                    <div className='flex absolute top-[85px] left-[525px]'>
+                        <Image src={lines} alt="Linie z kropkami" width="236" height="1399"/>
                     </div>
 
-                    <div className='flex flex-col gap-[375px] justify-end mt-[300px]'>
+                    <div className='flex flex-col gap-[375px] justify-end mt-[275px]'>
                         {cooperation.map((post, index) => {
                             if (index % 2 != 0) {
                                 return (

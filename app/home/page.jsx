@@ -1,3 +1,4 @@
+import Footer from '@components/Footer'
 import Header from '@components/Header'
 import AboutUs from '@components/home/sections/AboutUs/AboutUs'
 import Cooperation from '@components/home/sections/Cooperation/Cooperation'
@@ -11,6 +12,7 @@ const home = () => {
       <Encourage/>
       <AboutUs/>
       <Cooperation/>
+      <Footer />
     </>
   )
 }
