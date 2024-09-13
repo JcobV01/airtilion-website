@@ -1,9 +1,9 @@
 import React from 'react'
 
-const shop = () => {
+const shops = () => {
   return (
     <div>page</div>
   )
 }
 
-export default shop
+export default shops

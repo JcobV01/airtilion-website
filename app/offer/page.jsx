@@ -1,9 +1,14 @@
-import React from 'react'
+'use client';
 
-const offer = () => {
-  return (
-    <div>page</div>
-  )
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
+export default function offer() {
+    const router = useRouter();
+
+    useEffect(() => {
+        router.push('/offer/websites');
+    }, [router]);
+
+    return null;
 }
-
-export default offer
