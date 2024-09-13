@@ -8,6 +8,8 @@ import sourceCode from '@public/assets/icons/home/cooperation/source-code.png'
 import checkAll from '@public/assets/icons/home/cooperation/check-all.png'
 import cloud from '@public/assets/icons/home/cooperation/cloud.png'
 import protect from '@public/assets/icons/home/cooperation/protect.png'
+import lines from '@public/assets/icons/home/cooperation/lines.svg'
+import Image from 'next/image'
 
 const Cooperation = () => {
     const cooperation = [
@@ -55,8 +57,8 @@ const Cooperation = () => {
                 <p className='text-[16px] mt-[30px]'>Stawiamy na otwartą komunikację i bliską współpracę, aby dokładnie zrozumieć Twoje potrzeby i dostosować nasze rozwiązania. Dzięki elastyczności i zaangażowaniu, dążymy do osiągnięcia najlepszych rezultatów i budowania długotrwałych relacji.</p>
 
 
-                <div className='flex justify-between'>
-                    <div className='flex flex-col gap-[325px]'>
+                <div className='flex justify-between relative mt-[70px]'>
+                    <div className='flex flex-col gap-[390px]'>
                         {cooperation.map((post, index) => {
                             if (index % 2 == 0) {
                                 return (
@@ -66,8 +68,9 @@ const Cooperation = () => {
                         })}
                     </div>
 
-                    <div className='flex justify-center'>
-                        <div className='absolute top-[300px] flex flex-col'>
+                    <div className='flex absolute top-[100px] left-[525px]'>
+                        <Image src={lines} alt="Linie" width="236" height="1399"/>
+                        {/* <div className='absolute top-[300px] flex flex-col'>
                             {cooperation.map((_, index) => (
                                 <div className='relative' key={index}>
                                     {index % 2 == 0 ? (
@@ -93,10 +96,10 @@ const Cooperation = () => {
                                     )}
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
 
-                    <div className='flex flex-col gap-[325px] justify-end mt-[300px]'>
+                    <div className='flex flex-col gap-[375px] justify-end mt-[300px]'>
                         {cooperation.map((post, index) => {
                             if (index % 2 != 0) {
                                 return (

@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Cards = ({title, desc, image, flexRow}) => {
     return (
-        <div className={`w-[575px] h-[175px] flex bg-[rgba(27,27,27,0.40)] rounded-[20px] justify-between items-center px-[20px] mt-[75px] ${flexRow}`}>
+        <div className={`w-[575px] h-[175px] flex bg-[rgba(27,27,27,0.40)] rounded-[20px] justify-between items-center px-[20px] ${flexRow}`}>
             <div className='pt-[10px] w-[400px]'>
                 <h5 className='text-[22px] tracking-[5px] font-light'>{title}</h5>
                 <p className='text-[14px] tracking-[1.4px] font-light mt-[20px]'>{desc}</p>
