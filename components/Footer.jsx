@@ -10,7 +10,7 @@ import NavbarFooter from './NavbarFooter'
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className='z-10'>
             <article className='flex justify-center bg-cover' style={{ backgroundImage: `url(${FooterSmoke.src})` }}>
                 <div className='flex flex-col mt-[100px] items-center'>
                     <div className='w-[255px] mt-[100px]'>

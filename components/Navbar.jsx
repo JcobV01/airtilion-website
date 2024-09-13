@@ -60,7 +60,7 @@ const Navbar = () => {
     }, []);
 
   return (
-    <nav className='flex justify-between px-[100px] py-[40px] items-center sticky top-0 w-full z-100'>
+    <nav className='flex justify-between px-[100px] py-[40px] items-center sticky top-0 w-full z-20'>
         <Image src={logo} width={260} height="auto" alt="logo spółki Airtilion"/>
         <div className='flex gap-[40px]'>
             {

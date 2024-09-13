@@ -33,7 +33,7 @@ const data = [
 
 const Encourage = () => {
   return (
-    <section className='w-dvh flex justify-center relative'>
+    <section className='w-dvh flex justify-center relative z-10'>
         <article className='flex flex-col items-center px-[70px] pb-[70px] pt-[30px] gap-[50px] radial-gradient relative'>
             <p className='text-[15px] font-extralight'>Od posiadania swojej własnej, nowoczesnej strony dzielą Cię już tylko 4 kroki: </p>
             <div className='flex gap-[50px] w-[1100px] items-start'>

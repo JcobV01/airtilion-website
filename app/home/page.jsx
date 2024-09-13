@@ -9,12 +9,16 @@ const home = () => {
   return (
     <>
       <Header/>
-      <main className='flex flex-col relative top-[-250px] gap-[200px]'>
+      <main className='flex flex-col relative top-[-450px] gap-[200px]'>
         <Encourage/>
         <AboutUs/>
         <Cooperation/>
+        <Footer /> 
+
+        <div className='absolute top-0 left-0 w-full h-full background'>
+
+        </div>
       </main>
-      <Footer />
     </>
   )
 }

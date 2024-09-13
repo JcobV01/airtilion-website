@@ -51,7 +51,7 @@ const Cooperation = () => {
         }
     ]
     return (
-        <section className='relative w-[1240px] m-auto'>
+        <section className='relative w-[1240px] m-auto z-10'>
             <article className='flex-col gap-[50px] pb-[50px]'>
                 <Heading title="Współpraca" subtitle="POZNAJ JAK PRZEBIEGA PROCES TWORZENIA TWOICH MARZEŃ" />
                 <p className='text-[16px] mt-[30px]'>Stawiamy na otwartą komunikację i bliską współpracę, aby dokładnie zrozumieć Twoje potrzeby i dostosować nasze rozwiązania. Dzięki elastyczności i zaangażowaniu, dążymy do osiągnięcia najlepszych rezultatów i budowania długotrwałych relacji.</p>
