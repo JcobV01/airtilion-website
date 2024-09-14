@@ -42,7 +42,7 @@ const NavbarOffer = () => {
   ]
 
   return (
-    <nav className='flex justify-center gap-[30px]'>
+    <nav className='flex justify-center gap-[30px] z-10'>
       {
         offerMenu.map((item, index) => {
           const isActive = pathname.startsWith(`/offer${item.link}`);
