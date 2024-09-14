@@ -7,6 +7,7 @@ import Link from 'next/link';
 import orangeGradient from '@public/assets/images/offer/orangeGradient.webp'
 import goldGradient from '@public/assets/images/offer/goldGradient.webp'
 import check from '@public/assets/icons/offer/check.png'
+import logo from '@public/assets/icons/offer/logo.svg'
 import LightButton from '@components/LightButton';
 
 const Cards = () => {
@@ -34,10 +35,11 @@ const Cards = () => {
             desc: 'Oferuje bardziej rozbudowaną stronę, idealną dla firm średniej wielkości, które chcą zwiększyć swoją widoczność online.',
             price: '3000 zł',
             points: [
-                'strona onepage lub do 6 podstron',
-                'implementacja mediów dostarczonych przez klienta',
+                'zawartość pakietu "Lwiątko"',
+                'do 12 podstron',
                 'podstawowe SEO',
-                'w przypadku CMS, krótkie szkolenie z obsługi',
+                'integracja z Google Analytics / Google Search Console',
+                'integracja z social mediami',
             ],
             link: 'Lew',
         },
@@ -46,10 +48,11 @@ const Cards = () => {
             desc: 'Pakiet "Przywódca stada" to nasze najbardziej zaawansowane rozwiązanie, stworzone z myślą o firmach, które potrzebują indywidualnie dopasowanej strony internetowej o najwyższej jakości.',
             price: 'od 5000 zł',
             points: [
-                'strona onepage lub do 6 podstron',
-                'implementacja mediów dostarczonych przez klienta',
-                'podstawowe SEO',
-                'w przypadku CMS, krótkie szkolenie z obsługi',
+                'zawartość pakietu "Lwiątko" oraz "Lew"',
+                'nielimitowana ilość podstron',
+                'zaawansowane SEO',
+                'integracja z, np. płatnościami online',
+                'indywidualne wtyczki',
             ],
             link: 'Przywódca Stada',
         },
@@ -59,7 +62,7 @@ const Cards = () => {
         <div className="flex justify-between items-center w-full h-screen p-4">
             {cardsSwitcher.map((cards, index) => (
                 <div key={index} className={`transition cursor-pointer ${activeIndex === index ? 'w-[400px] h-[700px] z-10' : 'w-[350px] h-[575px]'}`} onClick={() => handleClick(index)}>
-                    <div className="relative rounded-[10px] backdrop-blur-[5px] bg-[rgba(27,27,27,0.40)] flex flex-col justify-center h-full px-[20px]">
+                    <div className="relative rounded-[10px] backdrop-blur-[5px] bg-[rgba(27,27,27,0.40)] flex flex-col h-full px-[20px]">
                         <Image className='absolute top-0 left-0 transition' src={index === 1 ? orangeGradient : goldGradient} alt={index === 1 ? "Pomarańczowy gradient" : "Złoty gradient"} width={activeIndex === index ? 400 : 350} height={429} />
 
                         {index === 1 && (
@@ -68,9 +71,14 @@ const Cards = () => {
                             </div>
                         )}
 
-                        <h5 className={`font-light ${activeIndex === index ? 'text-[20px] tracking-[2px]' : 'text-[15px] tracking-[1.5px]'}`}>{cards.title}</h5>
-                        <p className={`font-light transition ${activeIndex === index ? 'text-[13px] tracking-[1.3px]' : 'text-[10px] tracking-[1px]'}`}>{cards.desc}</p>
-                        <h6 className={`font-medium ${activeIndex === index ? 'text-[25px] tracking-[2.5px]' : 'text-[20px] tracking-[2px]'}`}>{cards.price}<span className={`font-light ${activeIndex === index ? 'text-[16px] tracking-[1.6px]' : 'text-[13px] tracking-[1.3px]'}`}> netto</span></h6>
+                        <div className={`transition mt-[30px] ${activeIndex === index ? 'w-[100px]' : 'w-[50px]'}`}>
+                            <Image src={logo} width="auto" height="auto" alt="Logo firmy" className={`filter ${activeIndex === index ? 'brightness-[70%]' : 'brightness-[60%]'}`} />
+                        </div>
+
+                        <h5 className={`font-light transition ${activeIndex === index ? 'text-[20px] tracking-[2px] mt-[40px]' : 'text-[15px] tracking-[1.5px] mt-[20px]'}`}>{cards.title}</h5>
+                        <p className={`font-light transition mt-[10px] ${activeIndex === index ? 'text-[13px] tracking-[1.3px]' : 'text-[11px] tracking-[1px]'}`}>{cards.desc}</p>
+                        <h6 className={`font-medium text-[#E2B350] mt-[25px] mb-[20px] ${activeIndex === index ? 'text-[25px] tracking-[2.5px]' : 'text-[20px] tracking-[2px]'}`}>{cards.price}<span className={`font-light text-[#E2B350] ${activeIndex === index ? 'text-[16px] tracking-[1.6px]' : 'text-[13px] tracking-[1.3px]'}`}> netto</span></h6>
+
                         <LightButton text="Wybieram" paddingBlock={activeIndex === index ? "15px" : "10px"} paddingInline="20px" rounded="10px" isInCardsOffer={true} />
 
                         <div className='flex items-center justify-center mt-[25px]'>
@@ -79,16 +87,18 @@ const Cards = () => {
                             <span className='w-[60px] h-[1px] bg-[rgba(226,179,80,0.50);]'></span>
                         </div>
 
-                        <ul>
+                        <ul className={`transition font-light space-y-[10px] mt-[15px] ${activeIndex === index ? 'text-[15px] tracking-[1.5px]' : 'text-[13px] tracking-[1.3px]'}`}>
                             {cards.points.map((point, index) => (
-                                <li key={index}>
+                                <li key={index} className='flex items-center gap-2'>
                                     <Image src={check} alt="Ikona fajki" />
-                                    {point}
+                                    <p>{point}</p>
                                 </li>
                             ))}
                         </ul>
 
-                        <Link href={index === 0 ? '/home' : index === 1 ? '/#' : '/#x'} className={`transition text-center text-[#ECD8AD] font-light ${activeIndex === index ? 'text-[14px] tracking 1.3px' : 'text-[12px] tracking 1px'}`}>Poznaj pełne szczegóły pakietu&nbsp;<span className={`transition text-[#E2B350] font-medium ${activeIndex === index ? 'text-[14px] tracking 1.3px' : 'text-[12px] tracking 1px'}`}>"{cards.link}"</span></Link>
+                        <div className='flex justify-center'>
+                            <Link href="/offer" className={`absolute bottom-2 transition text-[#ECD8AD] font-light ${activeIndex === index ? 'text-[14px] tracking 1.3px' : 'text-[12px] tracking 1px'}`}>Poznaj pełne szczegóły pakietu&nbsp;<span className={`transition text-[#E2B350] font-medium ${activeIndex === index ? 'text-[14px] tracking 1.3px' : 'text-[12px] tracking 1px'}`}>"{cards.link}"</span></Link>
+                        </div>
 
                     </div>
 
