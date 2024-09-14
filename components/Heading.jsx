@@ -2,7 +2,7 @@ import React from 'react'
 
 const Heading = ({title, subtitle}) => {
   return (
-    <div>
+    <div className='z-10'>
         <div className='flex gap-[30px] items-center'>
             <div className='h-[2px] w-[100px] bg-[#E2B350]'></div>
             <h3 className='text-[30px] font-bold'>{title}</h3>
