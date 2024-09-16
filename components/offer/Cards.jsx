@@ -28,7 +28,8 @@ const Cards = () => {
                 'podstawowe SEO',
                 'w przypadku CMS, krótkie szkolenie z obsługi',
             ],
-            link: 'Lwiątko',
+            linkText: 'Lwiątko',
+            link: '#lionCub',
         },
         {
             title: 'Pakiet "Lew"',
@@ -41,7 +42,8 @@ const Cards = () => {
                 'integracja z Google Analytics / Google Search Console',
                 'integracja z social mediami',
             ],
-            link: 'Lew',
+            linkText: 'Lew',
+            link: '#lion',
         },
         {
             title: 'Pakiet "Przywódca Stada"',
@@ -54,12 +56,13 @@ const Cards = () => {
                 'integracja z, np. płatnościami online',
                 'indywidualne wtyczki',
             ],
-            link: 'Przywódca Stada',
+            linkText: 'Przywódca Stada',
+            link: '#',
         },
     ]
 
     return (
-        <div className="flex justify-between items-center w-full h-screen p-4">
+        <div className="flex justify-between items-center h-screen w-full p-4">
             {cardsSwitcher.map((cards, index) => (
                 <div key={index} className={`transition cursor-pointer ${activeIndex === index ? 'w-[400px] h-[700px] z-10' : 'w-[350px] h-[575px]'}`} onClick={() => handleClick(index)}>
                     <div className="relative rounded-[10px] backdrop-blur-[5px] bg-[rgba(27,27,27,0.40)] flex flex-col h-full px-[20px]">
@@ -97,7 +100,7 @@ const Cards = () => {
                         </ul>
 
                         <div className='flex justify-center'>
-                            <Link href="/offer" className={`absolute bottom-2 transition text-[#ECD8AD] font-light ${activeIndex === index ? 'text-[14px] tracking 1.3px' : 'text-[12px] tracking 1px'}`}>Poznaj pełne szczegóły pakietu&nbsp;<span className={`transition text-[#E2B350] font-medium ${activeIndex === index ? 'text-[14px] tracking 1.3px' : 'text-[12px] tracking 1px'}`}>"{cards.link}"</span></Link>
+                            <Link href={cards.link} className={`absolute bottom-2 transition text-[#ECD8AD] font-light ${activeIndex === index ? 'text-[14px] tracking 1.3px' : 'text-[12px] tracking 1px'}`}>Poznaj pełne szczegóły pakietu&nbsp;<span className={`transition text-[#E2B350] font-medium ${activeIndex === index ? 'text-[14px] tracking 1.3px' : 'text-[12px] tracking 1px'}`}>"{cards.linkText}"</span></Link>
                         </div>
 
                     </div>
