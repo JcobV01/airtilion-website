@@ -16,6 +16,53 @@ const websites = () => {
 
   const tooglePrice = () => setIsNetto(!isNetto);
 
+  const cardsSwitcher = [
+    {
+      title: 'Pakiet "Lwiątko"',
+      desc: 'Ten pakiet jest idealny dla małych firm i osób, które potrzebują prostych, ale profesjonalnych stron internetowych. Obejmuje:',
+      priceNetto: '1600 zł',
+      priceBrutto: '1968 zł',
+      points: [
+        'Strona onepage lub do 6 podstron',
+        'Implementacja mediów dostarczonych przez klienta',
+        'Podstawowe SEO',
+        'W przypadku CMS, krótkie szkolenie z obsługi',
+      ],
+      linkText: 'Lwiątko',
+      link: '#lionCub',
+    },
+    {
+      title: 'Pakiet "Lew"',
+      desc: 'Oferuje bardziej rozbudowaną stronę, idealną dla firm średniej wielkości, które chcą zwiększyć swoją widoczność online.',
+      priceNetto: '3000 zł',
+      priceBrutto: '3690 zł',
+      points: [
+        'Zawartość pakietu "Lwiątko"',
+        'Do 12 podstron',
+        'Podstawowe SEO',
+        'Integracja z Google Analytics / Google Search Console',
+        'Integracja z social mediami',
+      ],
+      linkText: 'Lew',
+      link: '#lion',
+    },
+    {
+      title: 'Pakiet "Przywódca Stada"',
+      desc: 'Pakiet "Przywódca stada" to nasze najbardziej zaawansowane rozwiązanie, stworzone z myślą o firmach, które potrzebują indywidualnie dopasowanej strony internetowej o najwyższej jakości.',
+      priceNetto: 'od 5000 zł',
+      priceBrutto: 'od 6150 zł',
+      points: [
+        'Zawartość pakietu "Lwiątko" oraz "Lew"',
+        'Nielimitowana ilość podstron',
+        'Zaawansowane SEO',
+        'Integracja z, np. płatnościami online',
+        'Indywidualne wtyczki',
+      ],
+      linkText: 'Przywódca Stada',
+      link: '#leader',
+    },
+  ]
+
   const offer = [
     {
       id: 'lionCub',
@@ -252,18 +299,18 @@ const websites = () => {
 
   return (
     <>
-      <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px] scroll-smooth'>
+      <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px]'>
         <article className='flex flex-col w-[1240px] mt-[100px]'>
           <Heading title="Strony Internetowe" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
           <div className='mt-[50px]'>
             <p className='text-[18px] font-light'>Nasza oferta obejmuje trzy zróżnicowane pakiety usług tworzenia stron internetowych, które zostały starannie zaprojektowane, aby sprostać różnorodnym potrzebom oraz budżetom naszych klientów. Każdy z pakietów oferuje unikalne rozwiązania, dostosowane zarówno do wymagań małych firm, jak i większych przedsiębiorstw, dzięki czemu możemy zapewnić kompleksową obsługę na każdym etapie rozwoju Twojej marki online.</p>
-            <ButtonPrice isNetto={isNetto} tooglePrice={tooglePrice}/>
-            <Cards isNetto={isNetto}/>
+            <ButtonPrice isNetto={isNetto} tooglePrice={tooglePrice} />
+            <Cards offer={cardsSwitcher} isNetto={isNetto} />
             <InfoAboutOffer />
           </div>
         </article>
         <article className='flex w-[1400px]'>
-          <DetailsOffer offer={offer} isNetto={isNetto}/>
+          <DetailsOffer offer={offer} isNetto={isNetto} />
         </article>
       </section>
     </>
