@@ -60,7 +60,7 @@ const Cards = ({ isNetto }) => {
                 'indywidualne wtyczki',
             ],
             linkText: 'Przywódca Stada',
-            link: '#',
+            link: '#leader',
         },
     ]
 

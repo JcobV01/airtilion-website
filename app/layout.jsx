@@ -9,7 +9,7 @@ export const metadata = {
 
 const rootLayout = ({children}) => {
   return (
-    <html lang="pl-PL">
+    <html lang="pl-PL" className="scroll-smooth">
         <body className="w-dvw h-dvh overflow-x-hidden bg-center">
             {children}
         </body>

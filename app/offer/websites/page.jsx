@@ -252,7 +252,7 @@ const websites = () => {
 
   return (
     <>
-      <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px]'>
+      <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px] scroll-smooth'>
         <article className='flex flex-col w-[1240px] mt-[100px]'>
           <Heading title="Strony Internetowe" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
           <div className='mt-[50px]'>
