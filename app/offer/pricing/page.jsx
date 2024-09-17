@@ -80,9 +80,9 @@ const pricing = () => {
             <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
               <div className='flex flex-col gap-[15px]'>
 
-              <Form nameForm="number" text="1-6" idHandle="L1" />
-              <Form nameForm="number" text="6-12" idHandle="L2" />
-              <Form nameForm="number" text="Inne:" idHandle="L3" showTextInput={true} />
+                <Form nameForm="number" text="1-6" idHandle="L1" />
+                <Form nameForm="number" text="6-12" idHandle="L2" />
+                <Form nameForm="number" text="Inne:" idHandle="L3" showTextInput={true} />
 
               </div>
 
@@ -93,24 +93,24 @@ const pricing = () => {
             <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
               <div className='flex flex-col gap-[15px]'>
 
-              <Form nameForm="functionality" text="System zarządzania treścią (CMS)" idHandle="F1" />
-              <Form nameForm="functionality" text="Formularz kontaktowy" idHandle="F2" />
-              <Form nameForm="functionality" text="Blog / artykuły" idHandle="F3" />
-              <Form nameForm="functionality" text="Galeria zdjęć" idHandle="F4" />
-              <Form nameForm="functionality" text="Sklep internetowy" idHandle="F5" />
-              <Form nameForm="functionality" text="Płatności online (PayPal, Przelewy24)" idHandle="F6" />
-              <Form nameForm="functionality" text="Integracja z social mediami" idHandle="F7" />
-              <Form nameForm="functionality" text="Inne:" idHandle="F8" showTextInput={true} />
+                <Form nameForm="functionality" text="System zarządzania treścią (CMS)" idHandle="F1" />
+                <Form nameForm="functionality" text="Formularz kontaktowy" idHandle="F2" />
+                <Form nameForm="functionality" text="Blog / artykuły" idHandle="F3" />
+                <Form nameForm="functionality" text="Galeria zdjęć" idHandle="F4" />
+                <Form nameForm="functionality" text="Sklep internetowy" idHandle="F5" />
+                <Form nameForm="functionality" text="Płatności online (PayPal, Przelewy24)" idHandle="F6" />
+                <Form nameForm="functionality" text="Integracja z social mediami" idHandle="F7" />
+                <Form nameForm="functionality" text="Inne:" idHandle="F8" showTextInput={true} />
 
               </div>
               <div className='flex flex-col gap-[15px]'>
 
-              <Form nameForm="functionality" text="Integracja z mapami Google" idHandle="F9" />
-              <Form nameForm="functionality" text="Autentyfikacja" idHandle="F10" />
-              <Form nameForm="functionality" text="Komentarze / recenzje użytkowników" idHandle="F11" />
-              <Form nameForm="functionality" text="Newsletter / subskrybcje" idHandle="F12" />
-              <Form nameForm="functionality" text="Wielojęzyczność" idHandle="F13" />
-              <Form nameForm="functionality" text="Forum dyskusyjne" idHandle="F14" />
+                <Form nameForm="functionality" text="Integracja z mapami Google" idHandle="F9" />
+                <Form nameForm="functionality" text="Autentyfikacja" idHandle="F10" />
+                <Form nameForm="functionality" text="Komentarze / recenzje użytkowników" idHandle="F11" />
+                <Form nameForm="functionality" text="Newsletter / subskrybcje" idHandle="F12" />
+                <Form nameForm="functionality" text="Wielojęzyczność" idHandle="F13" />
+                <Form nameForm="functionality" text="Forum dyskusyjne" idHandle="F14" />
 
               </div>
             </div>
@@ -120,9 +120,95 @@ const pricing = () => {
             <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
               <div className='flex flex-col gap-[15px]'>
 
-              <Form nameForm="cms" text="Wordpress" idHandle="C1" />
-              <Form nameForm="cms" text="Indywidualny CMS oparty o, np. Next.js" idHandle="C2" />
-              <Form nameForm="cms" text="Inne:" idHandle="C3" showTextInput={true} />
+                <Form nameForm="cms" text="Wordpress" idHandle="C1" />
+                <Form nameForm="cms" text="Indywidualny CMS oparty o, np. Next.js" idHandle="C2" />
+                <Form nameForm="cms" text="Inne:" idHandle="C3" showTextInput={true} />
+
+              </div>
+
+            </div>
+          </div>
+          <div>
+            <h5 className='text-[20px] font-normal'>4. Optymalizacja i dodatkowe usługi</h5>
+            <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
+              <div className='flex flex-col gap-[15px]'>
+
+                <Form nameForm="optymalization" text="Optymalizacja SEO" idHandle="O1" />
+                <Form nameForm="optymalization" text="Optymalizacja szybkości ładowania strony" idHandle="O2" />
+                <Form nameForm="optymalization" text="Copywriting (tworzenie treści)" idHandle="O3" />
+                <Form nameForm="optymalization" text="Media (zdjęcia, ikony, ilustracje)" idHandle="O4" />
+                <Form nameForm="optymalization" text="Inne:" idHandle="O5" showTextInput={true} />
+
+              </div>
+
+            </div>
+          </div>
+          <div>
+            <h5 className='text-[20px] font-normal'>5. Integracje</h5>
+            <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
+              <div className='flex flex-col gap-[15px]'>
+
+                <Form nameForm="integrations" text="Google Analytics" idHandle="I1" />
+                <Form nameForm="integrations" text="Google Search Console" idHandle="I2" />
+                <Form nameForm="integrations" text="Facebook Pixel" idHandle="I3" />
+                <Form nameForm="integrations" text="System mailingowy" idHandle="I4" />
+                <Form nameForm="integrations" text="Inne:" idHandle="I5" showTextInput={true} />
+
+              </div>
+
+            </div>
+          </div>
+          <div>
+            <h5 className='text-[20px] font-normal'>6. Budżet</h5>
+            <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
+              <div className='flex flex-col gap-[15px]'>
+
+                <Form nameForm="budget" text="<2000 zł" idHandle="B1" />
+                <Form nameForm="budget" text="2000-5000 zł" idHandle="B2" />
+                <Form nameForm="budget" text="5000-10 000 zł" idHandle="B3" />
+                <Form nameForm="budget" text=">10000zł" idHandle="B4" />
+                <Form nameForm="budget" text="Nie wiem, potrzebuję porady" idHandle="B5" />
+
+              </div>
+
+            </div>
+          </div>
+          <div>
+            <h5 className='text-[20px] font-normal'>7. Termin realizacji</h5>
+            <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
+              <div className='flex flex-col gap-[15px]'>
+
+                <Form nameForm="deadline" text="Do 2 tygodni" idHandle="T1" />
+                <Form nameForm="deadline" text="2-4 tygodni" idHandle="T2" />
+                <Form nameForm="deadline" text="1-2 miesiący" idHandle="T3" />
+                <Form nameForm="deadline" text="Powyżej 2 miesięcy" idHandle="T4" />
+                <Form nameForm="deadline" text="Nie mam konkretnego terminu" idHandle="T5" />
+
+              </div>
+
+            </div>
+          </div>
+          <div>
+            <h5 className='text-[20px] font-normal'>8. Dodatkowe usługi</h5>
+            <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
+              <div className='flex flex-col gap-[15px]'>
+
+                <input type="text" name="additional" />
+
+              </div>
+
+            </div>
+          </div>
+          <div>
+            <h5 className='text-[20px] font-normal'>9. Podstawowe informacje o kliencie</h5>
+            <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
+              <div className='flex flex-col gap-[15px]'>
+
+                <input type="text" name="firstname" placeholder="Imię i nazwisko" required/>
+                <input type="email" name="email" placeholder="Email" required/>
+                <input type="text" name="number" placeholder="Numer telefonu" required/>
+                <input type="text" name="companyName" placeholder="Nazwa firmy (opcjonalnie)" />
+                <input type="text" name="industry" placeholder="Branża (opcjonalnie)" />
 
               </div>
 
