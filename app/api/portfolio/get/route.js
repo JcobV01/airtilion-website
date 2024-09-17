@@ -6,7 +6,18 @@ export async function POST(req) {
     try {
         await connectToDB();
 
-        const document = await PortfolioItem.find({}).lean()
+        const { id } = await req.json();
+
+        let document = ''
+
+        if(id){
+            document = await PortfolioItem.find({ _id: id }).lean();
+        }
+        else{
+            document = await PortfolioItem.find({}).lean()
+        }
+        
+
 
         return new Response(JSON.stringify(document), { status: 200 });
     } catch (error) {

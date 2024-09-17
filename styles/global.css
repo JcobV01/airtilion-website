@@ -106,46 +106,48 @@ body::-webkit-scrollbar-thumb {
 .background {
   background-size: 1920px 2400px;
   background-position: 0px 0px, 0px 0px, 0px 0px;
-  background-image: radial-gradient(900px 700px at 13% 34%, #23232335 0%, #00FFFF00 100%),radial-gradient(1400px 500px at 81% 60%, #23232335 0%, #00FFFF00 100%),radial-gradient(75% 75% at 50% 50%, #040404 0%, #040404 100%);
+  background-image: radial-gradient(900px 700px at 13% 34%, #23232335 0%, #00FFFF00 100%), radial-gradient(1400px 500px at 81% 60%, #23232335 0%, #00FFFF00 100%), radial-gradient(75% 75% at 50% 50%, #040404 0%, #040404 100%);
 }
 
 /* portfolio saturation */
 
-.portfolio-item > img{
+.portfolio-item>img {
   transition-duration: 2000ms;
 }
 
-.portfolio-item:hover > img{
+.portfolio-item:hover>img {
   filter: saturate(1);
 }
 
 /* font Kaushan Script */
 
-.kaushan{
+.kaushan {
   font-family: "Kaushan Script";
 }
 
 /* gradeint - transparent*/
 
-.transparent-y{-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0,0,0,0) 100%);}
+.transparent-y {
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
 
 /* portfolio hover */
 
-.portfolio-item-hovered:hover > img{
+.portfolio-item-hovered:hover>img {
   top: -25px;
 }
 
-.portfolio-item-hovered:hover > div{
+.portfolio-item-hovered:hover>div {
   filter: brightness(1) saturate(1)
 }
 
-.portfolio-item-hovered:hover > p{
+.portfolio-item-hovered:hover>p {
   bottom: 20px;
   transform: translateY(0);
 }
 
 /* oferta formularz */
-.circleBefore::before{
+.circleBefore::before {
   content: "";
   height: 20px;
   width: 20px;
@@ -156,7 +158,36 @@ body::-webkit-scrollbar-thumb {
   transition-duration: 700ms;
 }
 
-.offerForm .peer:checked + label .circleBefore::before{
+.offerForm .peer:checked+label .circleBefore::before {
   border-color: #000000;
   background-color: #E2B350;
+}
+
+/* decoration lines before - after*/
+
+.decoration-lines::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 30px;
+  width: 136px;
+  height: 12px;
+  flex-shrink: 0;
+  border-radius: 5px 0px 0px 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.50);
+  border-left: 1px solid rgba(255, 255, 255, 0.50);
+}
+
+.decoration-lines::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  width: 136px;
+  height: 12px;
+  flex-shrink: 0;
+  border-radius: 0px 5px 0px 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.50);
+  border-right: 1px solid rgba(255, 255, 255, 0.50);
+  z-index: 5;
 }
