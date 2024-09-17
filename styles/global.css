@@ -124,3 +124,22 @@ body::-webkit-scrollbar-thumb {
 .kaushan{
   font-family: "Kaushan Script";
 }
+
+/* gradeint - transparent*/
+
+.transparent-y{-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0,0,0,0) 100%);}
+
+/* portfolio hover */
+
+.portfolio-item-hovered:hover > img{
+  top: -25px;
+}
+
+.portfolio-item-hovered:hover > div{
+  filter: brightness(1) saturate(1)
+}
+
+.portfolio-item-hovered:hover > p{
+  bottom: 20px;
+  transform: translateY(0);
+}
