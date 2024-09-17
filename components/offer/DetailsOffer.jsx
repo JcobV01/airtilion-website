@@ -4,11 +4,12 @@ import circle from '@public/assets/icons/offer/circle.svg'
 import Image from 'next/image'
 import ButtonBuy from './ButtonBuy'
 
-const DetailsOffer = ({ offer }) => {
+const DetailsOffer = ({ offer, isNetto }) => {
     return (
         <div className='flex flex-col gap-[150px]'>
             {
                 offer.map((details, index) => {
+                    const price = isNetto ? details.priceNetto : details.priceBrutto;
                     return (
                         <div id={details.id} key={index} className='relative w-full h-[900px]' style={{ backgroundImage: `url(${details.img.src})` }}>
                             <div className='absolute inset-0 h' style={{ backgroundImage: `url(${gradient.src})` }}></div>
@@ -46,7 +47,7 @@ const DetailsOffer = ({ offer }) => {
                                                 )
                                             })
                                         }
-                                        <p className={`text-[25px] font-semibold tracking-[2.5px] absolute bottom-[25px] ${index === 1 ? 'right-[50px]' : 'left-[50px]'}`}>{details.price}&nbsp;<span className='text-[16px] tracking-[1.5px] font-medium'>netto</span></p>
+                                        <p className={`text-[25px] font-semibold tracking-[2.5px] absolute bottom-[25px] ${index === 1 ? 'right-[50px]' : 'left-[50px]'}`}>{price}&nbsp;<span className='text-[16px] tracking-[1.5px] font-medium'>{isNetto ? 'netto' : 'brutto'}</span></p>
                                     </div>
                                     <div className={`absolute bottom-[35px] ${index === 1 ? 'left-[225px]' : 'right-[225px]'}`}>
                                         <ButtonBuy />

@@ -1,15 +1,21 @@
+'use client'
+
 import Heading from '@components/Heading'
 import ButtonPrice from '@components/offer/ButtonPrice'
 import Cards from '@components/offer/Cards'
 import DetailsOffer from '@components/offer/DetailsOffer'
 import InfoAboutOffer from '@components/offer/InfoAboutOffer'
-import React from 'react'
+import React, { useState } from 'react'
 
 import lionCub from '@public/assets/images/offer/lionCub.webp'
 import lion from '@public/assets/images/offer/lion.webp'
 import leader from '@public/assets/images/offer/leaderOfThePack.webp'
 
 const websites = () => {
+  const [isNetto, setIsNetto] = useState(true);
+
+  const tooglePrice = () => setIsNetto(!isNetto);
+
   const offer = [
     {
       id: 'lionCub',
@@ -100,7 +106,8 @@ const websites = () => {
           ]
         },
       ],
-      price: '1600 zł',
+      priceNetto: '1600 zł',
+      priceBrutto: '1968 zł',
     },
     {
       id: 'lion',
@@ -175,7 +182,8 @@ const websites = () => {
           ]
         },
       ],
-      price: '3000 zł',
+      priceNetto: '3000 zł',
+      priceBrutto: '3690 zł',
     },
     {
       id: 'leader',
@@ -237,7 +245,8 @@ const websites = () => {
           ]
         },
       ],
-      price: 'od 5000 zł',
+      priceNetto: 'od 5000 zł',
+      priceBrutto: 'od 6150 zł',
     },
   ]
 
@@ -248,13 +257,13 @@ const websites = () => {
           <Heading title="Strony Internetowe" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
           <div className='mt-[50px]'>
             <p className='text-[18px] font-light'>Nasza oferta obejmuje trzy zróżnicowane pakiety usług tworzenia stron internetowych, które zostały starannie zaprojektowane, aby sprostać różnorodnym potrzebom oraz budżetom naszych klientów. Każdy z pakietów oferuje unikalne rozwiązania, dostosowane zarówno do wymagań małych firm, jak i większych przedsiębiorstw, dzięki czemu możemy zapewnić kompleksową obsługę na każdym etapie rozwoju Twojej marki online.</p>
-            <ButtonPrice />
-            <Cards />
+            <ButtonPrice isNetto={isNetto} tooglePrice={tooglePrice}/>
+            <Cards isNetto={isNetto}/>
             <InfoAboutOffer />
           </div>
         </article>
         <article className='flex w-[1400px]'>
-          <DetailsOffer offer={offer} />
+          <DetailsOffer offer={offer} isNetto={isNetto}/>
         </article>
       </section>
     </>
