@@ -17,8 +17,8 @@ const DetailsOffer = ({ offer, isNetto }) => {
                             <div className='relative z-10 h-full'>
                                 <div className='flex justify-center'>
                                     <span className='absolute w-[1350px] h-[2px] bg-[rgba(255,255,255,0.60)] top-[25px]'></span>
-                                    <span className={`absolute w-[2px] h-[850px] bg-[rgba(255,255,255,0.60)] ${index === 1 ? 'right-[25px]' : 'left-[25px]'} top-[25px]`}></span>
-                                    <span className={`absolute w-[450px] h-[2px] bg-[rgba(255,255,255,0.60)] ${index === 1 ? 'left-[25px]' : 'right-[25px]'} bottom-[25px]`}></span>
+                                    <span className={`absolute w-[2px] h-[848px] bg-[rgba(255,255,255,0.60)] ${index === 1 ? 'right-[25px]' : 'left-[25px]'} top-[27px]`}></span>
+                                    <span className={`absolute w-[448px] h-[2px] bg-[rgba(255,255,255,0.60)] ${index === 1 ? 'left-[27px]' : 'right-[27px]'} bottom-[25px]`}></span>
                                     <span className={`absolute w-[2px] h-[200px] bg-[rgba(255,255,255,0.60)] ${index === 1 ? 'left-[25px]' : 'right-[25px]'} bottom-[25px]`}></span>
                                 </div>
                                 <div className='flex flex-col'>

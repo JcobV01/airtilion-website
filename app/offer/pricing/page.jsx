@@ -4,8 +4,8 @@ import Heading from '@components/Heading'
 
 import circle from '@public/assets/icons/offer/circle.svg'
 import circleOutline from '@public/assets/icons/offer/circleOutline.svg'
+import imageBackground from '@public/assets/images/offer/formPricing.webp'
 import Form from '@components/offer/Form'
-
 
 const pricing = () => {
   return (
@@ -19,7 +19,7 @@ const pricing = () => {
           <ul className='flex flex-col pl-[10px] text-[16px] font-extralight mt-[10px] space-y-[10px] tracking-[1.1px]'>
             <li className='flex gap-[10px]'>
               <Image src={circle} width='10' height='10' alt="Ikona kropki" />
-              <p><span className='font-normal'>Responsywność:&nbsp;</span>Strona będzie optymalizowana dla wszystkich rodzajów urządzeń, w tym smartfonów, tabletów i komputerów.</p>
+              <p><span className='font-normal'>Responsywność:&nbsp;</span>Strona lub sklep będą optymalizowane dla wszystkich rodzajów urządzeń, w tym smartfonów, tabletów i komputerów.</p>
             </li>
             <li className='flex gap-[10px]'>
               <Image src={circle} width='10' height='10' alt="Ikona kropki" />
@@ -193,22 +193,36 @@ const pricing = () => {
             <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
               <div className='flex flex-col gap-[15px]'>
 
-                <input type="text" name="additional" />
+                <textarea cols="80" rows="10" type="text" name="additional" placeholder='Jeśli w formularzu nie znalazłeś/aś dodatkowych usług, które Cię interesują, wpisze je tutaj.' className='py-[10px] px-[15px] outline-none bg-[#0c0c0c80] border-[1px] border-[#E2B350] resize-none' />
 
               </div>
 
             </div>
           </div>
-          <div>
-            <h5 className='text-[20px] font-normal'>9. Podstawowe informacje o kliencie</h5>
-            <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
-              <div className='flex flex-col gap-[15px]'>
+          <div style={{ backgroundImage: `url(${imageBackground.src})` }} className='h-[600px]'>
+            <h5 className='text-[20px] font-normal text-center pt-[50px]'>Podstawowe informacje o kliencie</h5>
+            <div className='mt-[20px] pl-[25px] flex justify-center gap-[200px]'>
+              <div className='flex flex-col gap-[15px] w-[800px]'>
 
-                <input type="text" name="firstname" placeholder="Imię i nazwisko" required/>
-                <input type="email" name="email" placeholder="Email" required/>
-                <input type="text" name="number" placeholder="Numer telefonu" required/>
-                <input type="text" name="companyName" placeholder="Nazwa firmy (opcjonalnie)" />
-                <input type="text" name="industry" placeholder="Branża (opcjonalnie)" />
+                <input type="text" name="firstname" placeholder="IMIĘ I NAZWISKO" className='bg-inherit border-b-[1px] border-[#FFF] py-[5px]' required />
+                <input type="email" name="email" placeholder="EMAIL" className='bg-inherit border-b-[1px] border-[#FFF] py-[5px]' required />
+                <input type="text" name="number" placeholder="NUMER TELEFONU" className='bg-inherit border-b-[1px] border-[#FFF] py-[5px]' required />
+                <input type="text" name="companyName" placeholder="NAZWA FIRMY (OPCJONALNIE)" className='bg-inherit border-b-[1px] border-[#FFF] py-[5px]' />
+                <input type="text" name="industry" placeholder="BRANŻA (OPCJONALNIE)" className='bg-inherit border-b-[1px] border-[#FFF] py-[5px]' />
+
+                <div className='flex items-center gap-[10px]'>
+                  <input type="checkbox" name="privacyPolicy" id="privacy" className='hidden peer' required />
+                  <label htmlFor='privacy' className='flex items-center cursor-pointer'>
+                    <span className='quadBefore flex items-center'>Polityka prywatności</span>
+                  </label>
+                </div>
+
+                <div className='flex items-center gap-[10px]'>
+                  <input type="checkbox" name="processing" id="processing" className='hidden peer' required />
+                  <label htmlFor='processing'>
+                    <span className='quadBefore flex items-center'>Zgoda na przetwarzanie danych osobowych</span>
+                  </label>
+                </div>
 
               </div>
 

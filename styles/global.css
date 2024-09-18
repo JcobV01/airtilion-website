@@ -163,6 +163,20 @@ body::-webkit-scrollbar-thumb {
   background-color: #E2B350;
 }
 
+.quadBefore::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border: 2px solid #E2B350;
+  transition-duration: 700ms;
+  margin-right: 10px;
+}
+
+.offerForm .peer:checked+label .quadBefore::before {
+  border-color: #000000;
+  background-color: #E2B350;
+}
+
 /* decoration lines before - after*/
 
 .decoration-lines::before {
