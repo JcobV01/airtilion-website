@@ -23,7 +23,7 @@ const Challange = ({icon, title, description}) => {
         <Image src={challanges[icon]} width={50} height={50} alt='ikona wyzwania' className='absolute top-[-30px] left-[50%] translate-x-[-50%]'/>
         <h6 className='text-[15px] font-semibold text-center'>{title}</h6>
         <p className='text-[12px] text-center'>{description}</p>
-        <Image src={bg} width={400} height={200} alt='tło kafelka' className='absolute left-0 top-0'/>
+        <Image src={bg} width={400} height={200} alt='tło kafelka' className='absolute left-0 top-0 brightness-50'/>
     </div>
   )
 }

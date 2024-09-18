@@ -32,6 +32,7 @@ const PortfolioItemSchema = new Schema({
         description: String,
         opinion: String,
         author: String,
+        background: String,
     },
     Logo: {
         type: String, required: true

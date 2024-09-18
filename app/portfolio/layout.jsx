@@ -9,10 +9,10 @@ const layout = ({ children }) => {
     <>
       <Navbar />
       <Header />
-      <main className='flex flex-col relative top-[-250px] items-center'>
+      <main className='flex flex-col relative top-[-250px] items-center background'>
         {children}
+        <Footer />
       </main>
-      <Footer />
     </>
   )
 }
