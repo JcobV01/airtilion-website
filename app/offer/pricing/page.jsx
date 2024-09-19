@@ -13,13 +13,30 @@ import { useRouter } from 'next/navigation'
 
 const pricing = () => {
   const [submitting, setSubmitting] = useState(false);
-  const [post, setPost] = useState({})
+  const [post, setPost] = useState({});
+  const [isOtherChecked, setIsOtherChecked] = useState(true);
   const [error, setError] = useState('');
+
+  const [textInputValue, setTextInputValue] = useState(''); //do usuniecia
 
   const router = useRouter();
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
+
+    if (name === 'Privacy_policy' || name === 'Processing_of_personal_data') {
+      setPost(prevPost => ({
+        ...prevPost,
+        [name]: checked // Ustawia na true/false
+      }));
+      return;
+    }
+
+    if (value === 'Inne:') {
+      setIsOtherChecked(false);
+    } else {
+      setIsOtherChecked(true)
+    }
 
     if (type === 'checkbox') {
       setPost(prevPost => {
@@ -36,7 +53,14 @@ const pricing = () => {
           };
         }
       });
-    } else {
+    } else if (type === 'text') {
+      setTextInputValue(value);
+      setPost(prevPost => ({
+        ...prevPost,
+        [name]: value // Zaktualizuj odpowiednie pole w stanie post
+      }));
+    }
+    else {
       setPost({
         ...post,
         [name]: value
@@ -63,39 +87,8 @@ const pricing = () => {
 
       if (response.ok) {
         router.push('/offer');
-      } else if (!post.Type) {
-        setError("Rodzaj strony jest wymagany!");
-        router.push('#pricing');
-      } else if (!post.Number_of_subpages) {
-        setError("Liczba podstron jest wymagana!");
-        router.push('#pricing');
-      } else if (!post.Functionality) {
-        setError("Funkcjonalności są wymagane!");
-        router.push('#pricing');
-      } else if (!post.Budget) {
-        setError("Budżet jest wymagany!");
-        router.push('#pricing');
-      } else if (!post.Deadline) {
-        setError("Termin jest wymagany!");
-        router.push('#pricing');
-      } else if (!post.Name) {
-        setError("Imię i Nazwisko jest wymagane!");
-        router.push('#pricing');
-      } else if (!post.Email) {
-        setError("Email jest wymagany!");
-        router.push('#pricing');
-      } else if (!post.Number) {
-        setError("Numer jest wymagany!");
-        router.push('#pricing');
-      } else if (!post.Privacy_policy) {
-        setError("Zgoda na politykę prywatności jest wymagana.");
-        router.push('#pricing');
-      } else if (!post.Processing_of_personal_data) {
-        setError("Zgoda na przetwarzanie danych osobowych jest wymagana.");
-        router.push('#pricing');
       } else {
-        setError("Coś poszło nie tak...");
-        router.push('#pricing');
+        handleErrorResponse();
       }
 
 
@@ -105,6 +98,33 @@ const pricing = () => {
       setSubmitting(false);
     }
   }
+
+  const handleErrorResponse = () => {
+    if (!post.Type) {
+      setError("Rodzaj strony jest wymagany!");
+    } else if (!post.Number_of_subpages) {
+      setError("Liczba podstron jest wymagana!");
+    } else if (!post.Functionality) {
+      setError("Funkcjonalności są wymagane!");
+    } else if (!post.Budget) {
+      setError("Budżet jest wymagany!");
+    } else if (!post.Deadline) {
+      setError("Termin jest wymagany!");
+    } else if (!post.Name) {
+      setError("Imię i Nazwisko jest wymagane!");
+    } else if (!post.Email) {
+      setError("Email jest wymagany!");
+    } else if (!post.Number) {
+      setError("Numer jest wymagany!");
+    } else if (post.Privacy_policy !== true) {
+      setError("Zgoda na politykę prywatności jest wymagana.");
+    } else if (post.Processing_of_personal_data !== true) {
+      setError("Zgoda na przetwarzanie danych osobowych jest wymagana.");
+    } else {
+      setError("Coś poszło nie tak...");
+    }
+    router.push('#form');
+  };
 
 
   return (
@@ -152,7 +172,7 @@ const pricing = () => {
             </ul>
           </ul>
         </div>
-        <form id="pricing" onSubmit={createPricing} className='mt-[100px] flex flex-col text-[18px] font-extralight space-y-[50px]'>
+        <form id="form" onSubmit={createPricing} className='mt-[100px] flex flex-col text-[18px] font-extralight space-y-[50px]'>
           {error && <span className='text-red-700 font-light tracking-[2px] mb-[5px]'>{error}</span>}
           <div>
             <h5 className='text-[20px] font-normal'>1. Rodzaj strony internetowej</h5>
@@ -163,7 +183,7 @@ const pricing = () => {
                 <Form nameForm="Type" text="Blog" idHandle="R2" inputType="radio" handleInputChange={handleInputChange} />
                 <Form nameForm="Type" text="Sklep internetowy" inputType="radio" idHandle="R3" handleInputChange={handleInputChange} />
                 <Form nameForm="Type" text="Portfolio" idHandle="R4" inputType="radio" handleInputChange={handleInputChange} />
-                <Form nameForm="Type" text="Inne:" idHandle="R5" inputType="radio" showTextInput={true} handleInputChange={handleInputChange} />
+                <Form nameForm="Type" text="Inne:" idHandle="R5" inputType="radio" showTextInput={true} handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} textInputValue={textInputValue} />
 
               </div>
               <div className='flex flex-col gap-[15px]'>
@@ -182,7 +202,7 @@ const pricing = () => {
 
                 <Form nameForm="Number_of_subpages" text="1-6" idHandle="L1" inputType="radio" handleInputChange={handleInputChange} />
                 <Form nameForm="Number_of_subpages" text="6-12" idHandle="L2" inputType="radio" handleInputChange={handleInputChange} />
-                <Form nameForm="Number_of_subpages" text="Inne:" idHandle="L3" inputType="radio" showTextInput={true} handleInputChange={handleInputChange} />
+                <Form nameForm="Number_of_subpages" text="Inne:" idHandle="L3" inputType="radio" showTextInput={true} handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
 
               </div>
 
@@ -196,11 +216,11 @@ const pricing = () => {
                 <Form nameForm="Functionality" text="System zarządzania treścią (CMS)" style="quadBefore" idHandle="F1" inputType="checkbox" handleInputChange={handleInputChange} />
                 <Form nameForm="Functionality" text="Formularz kontaktowy" idHandle="F2" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
                 <Form nameForm="Functionality" text="Blog / artykuły" idHandle="F3" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                <Form nameForm="Functionality" text="Galeria zdjęć" idHandle="F4"style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                <Form nameForm="Functionality" text="Galeria zdjęć" idHandle="F4" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
                 <Form nameForm="Functionality" text="Sklep internetowy" idHandle="F5" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
                 <Form nameForm="Functionality" text="Płatności online (PayPal, Przelewy24)" style="quadBefore" idHandle="F6" inputType="checkbox" handleInputChange={handleInputChange} />
                 <Form nameForm="Functionality" text="Integracja z social mediami" idHandle="F7" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                <Form nameForm="Functionality" text="Inne:" idHandle="F8" style="quadBefore" showTextInput={true} inputType="checkbox" handleInputChange={handleInputChange} />
+                <Form nameForm="Functionality" text="Inne:" idHandle="F8" style="quadBefore" showTextInput={true} inputType="checkbox" handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
 
               </div>
               <div className='flex flex-col gap-[15px]'>
@@ -222,7 +242,7 @@ const pricing = () => {
 
                 <Form nameForm="CMS" text="Wordpress" idHandle="C1" inputType="radio" handleInputChange={handleInputChange} />
                 <Form nameForm="CMS" text="Indywidualny CMS oparty o, np. Next.js" idHandle="C2" inputType="radio" handleInputChange={handleInputChange} />
-                <Form nameForm="CMS" text="Inne:" idHandle="C3" showTextInput={true} inputType="radio" handleInputChange={handleInputChange} />
+                <Form nameForm="CMS" text="Inne:" idHandle="C3" showTextInput={true} inputType="radio" handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
 
               </div>
 
@@ -237,7 +257,7 @@ const pricing = () => {
                 <Form nameForm="Optimization_and_additional_services" text="Optymalizacja szybkości ładowania strony" style="quadBefore" idHandle="O2" inputType="checkbox" handleInputChange={handleInputChange} />
                 <Form nameForm="Optimization_and_additional_services" text="Copywriting (tworzenie treści)" idHandle="O3" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
                 <Form nameForm="Optimization_and_additional_services" text="Media (zdjęcia, ikony, ilustracje)" idHandle="O4" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                <Form nameForm="Optimization_and_additional_services" text="Inne:" idHandle="O5" style="quadBefore" showTextInput={true} inputType="checkbox" handleInputChange={handleInputChange} />
+                <Form nameForm="Optimization_and_additional_services" text="Inne:" idHandle="O5" style="quadBefore" showTextInput={true} inputType="checkbox" handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
 
               </div>
 
@@ -252,7 +272,7 @@ const pricing = () => {
                 <Form nameForm="Integrations" text="Google Search Console" idHandle="I2" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
                 <Form nameForm="Integrations" text="Facebook Pixel" idHandle="I3" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
                 <Form nameForm="Integrations" text="System mailingowy" idHandle="I4" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                <Form nameForm="Integrations" text="Inne:" idHandle="I5" style="quadBefore" showTextInput={true} inputType="checkbox" handleInputChange={handleInputChange} />
+                <Form nameForm="Integrations" text="Inne:" idHandle="I5" style="quadBefore" showTextInput={true} inputType="checkbox" handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
 
               </div>
 
@@ -315,15 +335,15 @@ const pricing = () => {
                 <input type="text" name="Industry" placeholder="BRANŻA (OPCJONALNIE)" onChange={handleInputChange} className='bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none' />
 
                 <div className='flex items-center gap-[10px] mt-[20px]'>
-                  <input type="checkbox" name="Privacy_policy" id="privacy" onChange={handleInputChange} className='hidden peer' />
+                  <input type="checkbox" name="Privacy_policy" id="privacy" value="Polityka prywatności" onChange={handleInputChange} className='hidden peer' />
                   <label htmlFor='privacy' className='flex items-center cursor-pointer'>
                     <span className='quadBefore flex items-center'>Polityka prywatności</span>
                   </label>
                 </div>
 
                 <div className='flex items-center gap-[10px]'>
-                  <input type="checkbox" name="Processing_of_personal_data" id="processing" onChange={handleInputChange} className='hidden peer' />
-                  <label htmlFor='processing'>
+                  <input type="checkbox" name="Processing_of_personal_data" value="Zgoda na przetwarzanie danych osobowych" id="processing" onChange={handleInputChange} className='hidden peer' />
+                  <label htmlFor='processing' className='flex items-center cursor-pointer'>
                     <span className='quadBefore flex items-center'>Zgoda na przetwarzanie danych osobowych</span>
                   </label>
                 </div>
