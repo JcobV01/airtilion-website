@@ -5,11 +5,20 @@ import { useEffect, useState } from "react"
 
 const PortfolioSites = () => {
   const [items, setItems] = useState([])
+  const id = ''
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch('/api/portfolio/get', { method: "POST" });
+        const response = await fetch('/api/portfolio/get', { 
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ id: '' }),
+        }
+        );
+
         if (!response.ok) {
           throw new Error('Failed to fetch projects');
         }
