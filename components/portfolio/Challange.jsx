@@ -3,19 +3,7 @@ import React from 'react'
 
 import bg from '@public/assets/images/portfolioChallangesGradient.png'
 
-import documentIcon from '@public/assets/icons/portfolio/challanges/document.png'
-import languagesIcon from '@public/assets/icons/portfolio/challanges/languages.png'
-import chartIcon from '@public/assets/icons/portfolio/challanges/chartUp.png'
-import rodoIcon from '@public/assets/icons/portfolio/challanges/rodo.png'
-import mapIcon from '@public/assets/icons/portfolio/challanges/map.png'
-
-const challanges = {
-    "Document": documentIcon,
-    "Languages": languagesIcon,
-    "Chart": chartIcon,
-    "Rodo": rodoIcon,
-    "Map": mapIcon,
-}
+import { challanges } from '@data/portfolio'
 
 const Challange = ({icon, title, description}) => {
   return (

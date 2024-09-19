@@ -1,21 +1,6 @@
-import React from 'react'
-
-import figmaIcon from '@public/assets/icons/portfolio/figma.png'
-import htmlIcon from '@public/assets/icons/portfolio/html.png'
-import wordpressIcon from '@public/assets/icons/portfolio/wordpress.png'
-import googleIcon from '@public/assets/icons/portfolio/google.png'
-import cssIcon from '@public/assets/icons/portfolio/css.png'
-import jsIcon from '@public/assets/icons/portfolio/javascript.png'
 import Image from 'next/image'
 
-const technologies = {
-    "Figma": figmaIcon,
-    "HTML": htmlIcon,
-    "Wordpress": wordpressIcon,
-    "Google SC": googleIcon,
-    "CSS": cssIcon,
-    "JavaScript": jsIcon,
-}
+import { technologies } from '@data/portfolio'
 
 const Technology = ({name}) => {
   return (

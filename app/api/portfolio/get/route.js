@@ -9,6 +9,7 @@ export async function POST(req) {
         
         try {
             const body = await req.json();  // Bezpiecznie pobierz treść żądania
+
             id = body.id || '';  // Jeśli nie ma id, ustaw jako pusty string
         } catch (e) {
             // Jeśli nie ma treści w żądaniu, to nie rzucaj błędu, po prostu zostaw id puste
