@@ -17,6 +17,7 @@ const Contact = () => {
                     height="800"
                     viewBox="0 0 1402 800"
                     fill="none"
+                    className='z-10'
                 >
                     <path
                         fillRule="evenodd"
@@ -50,7 +51,7 @@ const Contact = () => {
                     </defs>
                 </svg>
 
-            <div className='absolute w-[1100px] h-full top-0 left-[50%] translate-x-[-50%] flex gap-[170px] py-[50px]'>
+            <div className='absolute w-[1100px] h-full top-0 left-[50%] translate-x-[-50%] flex gap-[170px] py-[50px] z-10'>
                 <div className='flex-1 flex flex-col gap-[50px]'>
                     <Heading title="Kontakt" subtitle="ROZPOCZNIJMY WSPÓŁPRACĘ"/>
                     <p className='text-[18px]'>Chcesz dowiedzieć się więcej o naszych usługach lub potrzebujesz porady? Skontaktuj się z nami!</p>
@@ -65,7 +66,7 @@ const Contact = () => {
                     </form>
                 </div>
 
-                <div className='flex-1 flex flex-col justify-center gap-[20px]'>
+                <div className='flex-1 flex flex-col justify-center gap-[20px] z-10'>
                     <p className='text-[25px] font-medium text-[#E2B350]'>Dane kontaktowe</p>
                     <div className='flex gap-[15px]'>
                         <Image src={icon} width={40} height={40} alt='ikona'/>
@@ -94,6 +95,17 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className='absolute top-[300px] left-[50%] translate-x-[-50%] z-[1]'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1924" height="868" viewBox="0 0 1864 568" fill="none">
+                    <path d="M-111.344 566.97C24.1409 392.47 276.293 222.47 508.015 188.97C689.033 162.8 899.415 168.47 1131.14 58.9701C1311.25 -26.1402 1616.09 -31.5299 1824.69 151.97C2092.6 387.637 2056.95 68.9701 2190.28 11.9701" stroke="#E2B350" stroke-opacity="0.1" stroke-width="3" />
+                    <path d="M-111.344 646.97C24.1409 472.47 276.293 302.47 508.015 268.97C689.033 242.8 899.415 248.47 1131.14 138.97C1311.25 53.8599 1616.09 48.4701 1824.69 231.97C2092.6 467.637 2056.95 148.97 2190.28 91.9701" stroke="#E2B350" stroke-opacity="0.1" stroke-width="3" />
+                    <path d="M-111.344 726.97C24.1409 552.47 276.293 382.47 508.015 348.97C689.033 322.8 899.415 328.47 1131.14 218.97C1311.25 133.86 1616.09 128.47 1824.69 311.97C2092.6 547.637 2056.95 228.97 2190.28 171.97" stroke="#E2B350" stroke-opacity="0.1" stroke-width="3" />
+                    <path d="M-111.344 826.97C24.1409 652.47 276.293 482.47 508.015 448.97C689.033 422.8 899.415 428.47 1131.14 318.97C1311.25 233.86 1616.09 228.47 1824.69 411.97C2092.6 647.637 2056.95 328.97 2190.28 271.97" stroke="#E2B350" stroke-opacity="0.1" stroke-width="3" />
+                </svg>
+
+
             </div>
         </section>
     )

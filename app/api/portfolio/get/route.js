@@ -29,7 +29,6 @@ export async function POST(req) {
             return new Response(JSON.stringify({ error: 'Nie znaleziono projektów' }), { status: 404 });
         }
         
-        console.log(document);
         
 
         return new Response(JSON.stringify(document), { status: 200 });

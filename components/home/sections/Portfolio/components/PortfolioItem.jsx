@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic'
 const PortfolioItem = ({title, desc, bg, image}) => {
 
     return (
-        <section className='pt-[50px]'>
+        <section className='pt-[50px] z-10'>
             <article className='relative h-[550px] w-[1100px] m-auto hover:w-[1200px] transition-all duration-1000 cursor-pointer portfolio-item'>
                 <div className='w-[960px] h-[550px] relative px-[50px]'>
                     <span className='h-[2px] w-[50%] bg-[#E2B35080] z-10 block absolute top-[30px] left-[50%] translate-x-[-50%]'></span>
