@@ -4,6 +4,7 @@ import AboutUs from '@components/home/sections/AboutUs/AboutUs'
 import Contact from '@components/home/sections/Contact/Contact'
 import Cooperation from '@components/home/sections/Cooperation/Cooperation'
 import Encourage from '@components/home/sections/Encourage/Encourage'
+import Offer from '@components/home/sections/Offer/Offer'
 import Portofolio from '@components/home/sections/Portfolio/Portofolio'
 import React from 'react'
 
@@ -15,6 +16,7 @@ const home = () => {
         <Encourage />
         <AboutUs />
         <Cooperation />
+        <Offer/>
         <Portofolio/>
         <Contact/>
         
