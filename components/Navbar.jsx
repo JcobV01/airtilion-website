@@ -14,19 +14,19 @@ const menu = [
     },
     {
         name: "O nas",
-        link: "#about"
+        link: "/home#about"
     },
     {
         name: "Współpraca",
-        link: "#cooperation"
+        link: "/home#cooperation"
     },
     {
         name: "Oferta",
-        link: "#offer"
+        link: "/home#offer"
     },
     {
         name: "Portfolio",
-        link: "#portfolio"
+        link: "/home#portfolio"
     },
     {
         name: "Nasze projekty",
@@ -34,7 +34,7 @@ const menu = [
     },
     {
         name: "Kontakt",
-        link: "#contact"
+        link: "/home#contact"
     },
 ]
 
