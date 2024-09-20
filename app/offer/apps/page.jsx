@@ -118,9 +118,13 @@ const apps = () => {
       setError("Rodzaj strony jest wymagany!");
     } else if (!post.Number_of_subpages) {
       setError("Liczba podstron jest wymagana!");
-    } else if (!post.Functionality || post.Functionality.length === 0) {
+    } else if (!post.Website_functionality || post.Website_functionality.length === 0) {
       setError("Funkcjonalności są wymagane!");
-    } else if (post.Functionality.some(func => func.length < 9)) {
+    } else if (post.Website_functionality.some(func => func.length < 9)) {
+      setError("Minimalna ilość znaków w funkcjonalnościach to 4!");
+    } else if (!post.App_functionality || post.Website_functionality.length === 0) {
+      setError("Funkcjonalności są wymagane!");
+    } else if (post.App_functionality.some(func => func.length < 9)) {
       setError("Minimalna ilość znaków w funkcjonalnościach to 4!");
     } else if (!post.Budget) {
       setError("Budżet jest wymagany!");
