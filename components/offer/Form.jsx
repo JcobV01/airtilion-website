@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Form = ({ nameForm, text, idHandle, inputType, showTextInput = false, handleInputChange, isOtherChecked, style = 'circleBefore', textInputValue }) => {
+const Form = ({ nameForm, text, idHandle, inputType, showTextInput = false, handleInputChange, isOtherChecked, style = 'circleBefore'}) => {
    
     return (
         <div className='flex gap-[10px]'>
@@ -9,7 +9,7 @@ const Form = ({ nameForm, text, idHandle, inputType, showTextInput = false, hand
                 <span className={`${style} flex items-center`}>{text}</span>
             </label>
 
-            {showTextInput && <input type="text" name='test' value={textInputValue} onChange={handleInputChange} disabled={isOtherChecked} className='w-[400px] bg-inherit border-b-[1px] border-[#FFF] tracking-[1px] outline-none' />}
+            {showTextInput && <input type="text" name={nameForm} onChange={handleInputChange} disabled={isOtherChecked} className='w-[400px] bg-inherit border-b-[1px] border-[#FFF] tracking-[1px] outline-none' />}
         </div>
     )
 }

@@ -17,8 +17,6 @@ const pricing = () => {
   const [isOtherChecked, setIsOtherChecked] = useState(true);
   const [error, setError] = useState('');
 
-  const [textInputValue, setTextInputValue] = useState(''); //do usuniecia
-
   const router = useRouter();
 
   const handleInputChange = (e) => {
@@ -31,41 +29,56 @@ const pricing = () => {
       }));
       return;
     }
-
-    if (value === 'Inne:') {
-      setIsOtherChecked(false);
-    } else {
-      setIsOtherChecked(true)
-    }
-
     if (type === 'checkbox') {
       setPost(prevPost => {
-        const currentValues = prevPost[name] || [];
+        const currentValues = Array.isArray(prevPost[name]) ? prevPost[name] : [];
         if (checked) {
-          return {
-            ...prevPost,
-            [name]: [...currentValues, value]
-          };
+          if (!currentValues.includes(value)) {
+            return {
+              ...prevPost,
+              [name]: [...currentValues, value] // Dodaj wartość do tablicy
+            };
+          }
         } else {
           return {
             ...prevPost,
-            [name]: currentValues.filter(v => v !== value)
+            [name]: currentValues.filter(v => v !== value) // Filtruj tablicę
           };
         }
+        return prevPost;
       });
-    } else if (type === 'text') {
-      setTextInputValue(value);
+      setIsOtherChecked(value !== 'Inne:');
+      return;
+    };
+
+    if (type === 'radio') {
       setPost(prevPost => ({
         ...prevPost,
-        [name]: value // Zaktualizuj odpowiednie pole w stanie post
+        [name]: value 
       }));
+      setIsOtherChecked(value !== 'Inne:');
     }
-    else {
-      setPost({
-        ...post,
+
+    if (type === 'text' && ['Type', 'Number_of_subpages', 'Functionality', 'CMS', 'Optimization_and_additional_services', 'Integrations'].includes(name) && name !== 'Name' && name !== 'Email' && name !== 'Number' && name !== 'Company' && name !== 'Industry') {
+      if (!isOtherChecked) {
+        setPost(prevPost => {
+          const newValue = `Inne: ${value}`;
+          const currentValues = Array.isArray(prevPost[name]) ? prevPost[name] : [];
+
+          const updatedValues = currentValues.filter(v => !v.startsWith('Inne:'));
+          return {
+            ...prevPost,
+            [name]: [...updatedValues, newValue] // Dodaj nową wartość do odpowiedniego pola
+          };
+        });
+      }
+      return;
+    } else {
+      setPost(prevPost => ({
+        ...prevPost,
         [name]: value
-      });
-    }
+      }));
+    };
   };
 
   console.log(post);
@@ -104,8 +117,10 @@ const pricing = () => {
       setError("Rodzaj strony jest wymagany!");
     } else if (!post.Number_of_subpages) {
       setError("Liczba podstron jest wymagana!");
-    } else if (!post.Functionality) {
+    } else if (!post.Functionality || post.Functionality.length === 0) {
       setError("Funkcjonalności są wymagane!");
+    } else if (post.Functionality.some(func => func.length < 9)){
+      setError("Minimalna ilość znaków w funkcjonalnościach to 4!");
     } else if (!post.Budget) {
       setError("Budżet jest wymagany!");
     } else if (!post.Deadline) {
@@ -183,7 +198,7 @@ const pricing = () => {
                 <Form nameForm="Type" text="Blog" idHandle="R2" inputType="radio" handleInputChange={handleInputChange} />
                 <Form nameForm="Type" text="Sklep internetowy" inputType="radio" idHandle="R3" handleInputChange={handleInputChange} />
                 <Form nameForm="Type" text="Portfolio" idHandle="R4" inputType="radio" handleInputChange={handleInputChange} />
-                <Form nameForm="Type" text="Inne:" idHandle="R5" inputType="radio" showTextInput={true} handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} textInputValue={textInputValue} />
+                <Form nameForm="Type" text="Inne:" idHandle="R5" inputType="radio" showTextInput={true} handleInputChange={handleInputChange} isOtherChecked={isOtherChecked}/>
 
               </div>
               <div className='flex flex-col gap-[15px]'>
