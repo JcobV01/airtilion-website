@@ -5,16 +5,32 @@ import ButtonPrice from '@components/offer/ButtonPrice'
 import Cards from '@components/offer/Cards'
 import DetailsOffer from '@components/offer/DetailsOffer'
 import InfoAboutOffer from '@components/offer/InfoAboutOffer'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 import lionCub from '@public/assets/images/offer/lionCub.webp'
 import lion from '@public/assets/images/offer/lion.webp'
 import leader from '@public/assets/images/offer/leaderOfThePack.webp'
+import DialogOffer from '@components/offer/DialogOffer'
 
 const websites = () => {
   const [isNetto, setIsNetto] = useState(true);
+  const [dialogTitle, setDialogTitle] = useState(false);
 
   const tooglePrice = () => setIsNetto(!isNetto);
+  const dialogRef = useRef();
+
+  const handleOpenDialog = (title) => {
+    setDialogTitle(title);
+    if (dialogRef.current) {
+      dialogRef.current.showModal();
+    }
+  }
+
+  const handleCloseDialog = () => {
+    if (dialogRef.current) {
+      dialogRef.current.close();
+    }
+  }
 
   const cardsSwitcher = [
     {
@@ -310,7 +326,9 @@ const websites = () => {
           </div>
         </article>
         <article className='flex w-[1400px]'>
-          <DetailsOffer offer={offer} isNetto={isNetto} />
+          <DetailsOffer offer={offer} isNetto={isNetto} handleOpenDialog={handleOpenDialog} />
+
+          <DialogOffer dialogRef={dialogRef} handleCloseDialog={handleCloseDialog} title={dialogTitle}/>
         </article>
       </section>
     </>

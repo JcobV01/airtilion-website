@@ -4,7 +4,7 @@ import circle from '@public/assets/icons/offer/circle.svg'
 import Image from 'next/image'
 import ButtonBuy from './ButtonBuy'
 
-const DetailsOffer = ({ offer, isNetto }) => {
+const DetailsOffer = ({ offer, isNetto, handleOpenDialog}) => {
     return (
         <div className='flex flex-col gap-[150px]'>
             {
@@ -50,7 +50,7 @@ const DetailsOffer = ({ offer, isNetto }) => {
                                         <p className={`text-[25px] font-semibold tracking-[2.5px] absolute bottom-[25px] ${index === 1 ? 'right-[50px]' : 'left-[50px]'}`}>{price}&nbsp;<span className='text-[16px] tracking-[1.5px] font-medium'>{isNetto ? 'netto' : 'brutto'}</span></p>
                                     </div>
                                     <div className={`absolute bottom-[35px] ${index === 1 ? 'left-[225px]' : 'right-[225px]'}`}>
-                                        <ButtonBuy />
+                                        <ButtonBuy handleOpenDialog={() => handleOpenDialog(details.title)}/>
                                     </div>
                                 </div>
                             </div>
