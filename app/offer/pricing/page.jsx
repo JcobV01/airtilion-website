@@ -301,7 +301,7 @@ const pricing = () => {
                 <Form nameForm="Budget" text="<2000 zł" idHandle="B1" inputType="radio" handleInputChange={handleInputChange} />
                 <Form nameForm="Budget" text="2000-5000 zł" idHandle="B2" inputType="radio" handleInputChange={handleInputChange} />
                 <Form nameForm="Budget" text="5000-10 000 zł" idHandle="B3" inputType="radio" handleInputChange={handleInputChange} />
-                <Form nameForm="Budget" text=">10000zł" idHandle="B4" inputType="radio" handleInputChange={handleInputChange} />
+                <Form nameForm="Budget" text=">10 000zł" idHandle="B4" inputType="radio" handleInputChange={handleInputChange} />
                 <Form nameForm="Budget" text="Nie wiem, potrzebuję porady" idHandle="B5" inputType="radio" handleInputChange={handleInputChange} />
 
               </div>
@@ -315,7 +315,7 @@ const pricing = () => {
 
                 <Form nameForm="Deadline" text="Do 2 tygodni" idHandle="T1" inputType="radio" handleInputChange={handleInputChange} />
                 <Form nameForm="Deadline" text="2-4 tygodni" idHandle="T2" inputType="radio" handleInputChange={handleInputChange} />
-                <Form nameForm="Deadline" text="1-2 miesiący" idHandle="T3" inputType="radio" handleInputChange={handleInputChange} />
+                <Form nameForm="Deadline" text="1-2 miesięcy" idHandle="T3" inputType="radio" handleInputChange={handleInputChange} />
                 <Form nameForm="Deadline" text="Powyżej 2 miesięcy" idHandle="T4" inputType="radio" handleInputChange={handleInputChange} />
                 <Form nameForm="Deadline" text="Nie mam konkretnego terminu" idHandle="T5" inputType="radio" handleInputChange={handleInputChange} />
 
