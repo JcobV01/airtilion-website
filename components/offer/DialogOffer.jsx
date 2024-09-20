@@ -17,18 +17,38 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title }) => {
 
     const router = useRouter();
 
-    console.log(title)
-
-    const handleSubmit = (e) => {
+    
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsSubmitting(true);
+        
         if (!name || !email || !number) {
             setError('Wypełnij wszystkie pola!');
             return;
         }
+        
+        try {
+            const response = await fetch('/api/offer/order', {
+                method: 'POST',
+                body: JSON.stringify({
+                    Name: name,
+                    Email: email,
+                    Number: number,
+                    Package: title,
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
 
-        setIsSubmitting(true);
-        console.log(name, email, number);
-        router.push('/offer');
+            if (response.ok) {
+                router.push('/offer');
+            }
+        } catch (error) {
+            setError('Wystąpił nieoczekiwany błąd.');
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     return (
@@ -42,13 +62,14 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title }) => {
                 <form onSubmit={handleSubmit} className='flex flex-col items-center px-[100px] mt-[20px] w-[75%] sm:px-0'>
 
                     <p className='text-[16px] text-center tracking-[1px]'>Aby złożyć zamówienie na <span className='text-[#E2B350]'>{title}</span>, prosimy o podanie kilku informacji kontaktowych. Skontaktujemy się z Tobą w ciągu 2 dni roboczych, aby omówić szczegóły.</p>
-                    <input type="text" placeholder="Imię i Nazwisko" value={name} onChange={(e) => setName(e.target.value)} className='w-full px-[10px] mt-[25px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
-                    <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className='w-full px-[10px] mt-[15px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
-                    <input type="text" placeholder="Numer telefonu" value={number} onChange={(e) => setNumber(e.target.value)} className='w-full px-[10px] mt-[15px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
+                    <input type="text" name="Name" placeholder="Imię i Nazwisko" value={name} onChange={(e) => setName(e.target.value)} className='w-full px-[10px] mt-[25px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
+                    <input type="email" name="Email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className='w-full px-[10px] mt-[15px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
+                    <input type="text" name="Number" placeholder="Numer telefonu" value={number} onChange={(e) => setNumber(e.target.value)} className='w-full px-[10px] mt-[15px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
+                    <input type="text" name="Package" value={title} className='hidden' />
 
                     <div className='w-full flex justify-between my-[40px]'>
                         <CancelButton text="Anuluj" handleClose={handleCloseDialog} />
-                        <FormButton text="Wyślij" />
+                        <FormButton text="Wyślij" submitting={isSubmitting} />
                     </div>
                 </form>
             </div>
