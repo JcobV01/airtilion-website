@@ -52,7 +52,7 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title }) => {
     }
 
     return (
-        <dialog ref={dialogRef} className='fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] justify-center items-center w-[1000px] bg-[#000000b3] rounded-[5px] backdrop-blur-[5px]'>
+        <dialog ref={dialogRef} className='fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] justify-center items-center w-[1000px] bg-[#000000b3] rounded-[5px] backdrop-blur-[5px] xl:w-[90%]'>
             <div className='flex flex-col justify-center items-center py-[20px] px-[20px]'>
                 <div className='w-[100px] mt-[20px]'>
                     <Image src={logo} width="auto" height="auto" alt="Logo firmy" className='brightness-[70%]' />
