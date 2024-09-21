@@ -13,15 +13,14 @@ const home = () => {
     <>
       <Header />
       <main className='flex flex-col relative mt-[-450px] gap-[200px]'>
-      <Encourage />
+        <Encourage />
         <AboutUs />
         <Cooperation />
-        <Offer/>
-        <Portofolio/>
-        <Contact/>
-        
-        <Footer />
+        <Offer />
+        <Portofolio />
+        <Contact />
 
+        <Footer />
         <div className='absolute top-0 left-0 w-full h-full background'></div>
       </main>
     </>

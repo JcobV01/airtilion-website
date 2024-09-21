@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import { toast } from 'react-toastify';
 
 import circle from '@public/assets/icons/offer/circle.svg'
 import circleOutline from '@public/assets/icons/offer/circleOutline.svg'
@@ -100,6 +101,7 @@ const apps = () => {
       });
 
       if (response.ok) {
+        toast.success('Przesłano formularz!');
         router.push('/offer');
       } else {
         handleErrorResponse();

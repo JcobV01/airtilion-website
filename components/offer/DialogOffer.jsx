@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { toast } from 'react-toastify';
 
 import CancelButton from '@components/CancelButton';
 import FormButton from '@components/FormButton';
@@ -61,6 +62,7 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
             });
 
             if (response.ok) {
+                toast.success('Przesłano formularz!');
                 router.push('/offer');
             }
         } catch (error) {

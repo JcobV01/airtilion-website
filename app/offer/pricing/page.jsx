@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Heading from '@components/Heading'
+import { toast } from 'react-toastify';
 
 import circle from '@public/assets/icons/offer/circle.svg'
 import circleOutline from '@public/assets/icons/offer/circleOutline.svg'
@@ -99,6 +100,7 @@ const pricing = () => {
       });
 
       if (response.ok) {
+        toast.success('Przesłano formularz!');
         router.push('/offer');
       } else {
         handleErrorResponse();
