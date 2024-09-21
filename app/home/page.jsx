@@ -12,8 +12,8 @@ const home = () => {
   return (
     <>
       <Header />
-      <main className='flex flex-col relative top-[-450px] gap-[200px]'>
-        <Encourage />
+      <main className='flex flex-col relative mt-[-450px] gap-[200px]'>
+      <Encourage />
         <AboutUs />
         <Cooperation />
         <Offer/>
