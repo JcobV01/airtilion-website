@@ -15,11 +15,13 @@ import DialogOffer from '@components/offer/DialogOffer'
 const websites = () => {
   const [isNetto, setIsNetto] = useState(true);
   const [dialogTitle, setDialogTitle] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const tooglePrice = () => setIsNetto(!isNetto);
   const dialogRef = useRef();
 
   const handleOpenDialog = (title) => {
+    setIsOpen(true);
     setDialogTitle(title);
     if (dialogRef.current) {
       dialogRef.current.showModal();
@@ -27,6 +29,7 @@ const websites = () => {
   }
 
   const handleCloseDialog = () => {
+    setIsOpen(false);
     if (dialogRef.current) {
       dialogRef.current.close();
     }
@@ -321,14 +324,14 @@ const websites = () => {
           <div className='mt-[50px]'>
             <p className='text-[18px] font-light'>Nasza oferta obejmuje trzy zróżnicowane pakiety usług tworzenia stron internetowych, które zostały starannie zaprojektowane, aby sprostać różnorodnym potrzebom oraz budżetom naszych klientów. Każdy z pakietów oferuje unikalne rozwiązania, dostosowane zarówno do wymagań małych firm, jak i większych przedsiębiorstw, dzięki czemu możemy zapewnić kompleksową obsługę na każdym etapie rozwoju Twojej marki online.</p>
             <ButtonPrice isNetto={isNetto} tooglePrice={tooglePrice} />
-            <Cards offer={cardsSwitcher} isNetto={isNetto} />
+            <Cards offer={cardsSwitcher} isNetto={isNetto} handleOpenDialog={handleOpenDialog} />
             <InfoAboutOffer />
           </div>
         </article>
         <article className='flex w-[1400px]'>
           <DetailsOffer offer={offer} isNetto={isNetto} handleOpenDialog={handleOpenDialog} />
 
-          <DialogOffer dialogRef={dialogRef} handleCloseDialog={handleCloseDialog} title={dialogTitle}/>
+          <DialogOffer dialogRef={dialogRef} handleCloseDialog={handleCloseDialog} title={dialogTitle} isOpen={isOpen} />
         </article>
       </section>
     </>

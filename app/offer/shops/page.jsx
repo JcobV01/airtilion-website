@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Heading from '@components/Heading'
 import ButtonPrice from '@components/offer/ButtonPrice';
 import Cards from '@components/offer/Cards'
@@ -9,11 +9,30 @@ import InfoAboutOffer from '@components/offer/InfoAboutOffer';
 
 import lionCub from '@public/assets/images/offer/lionCub.webp'
 import lion from '@public/assets/images/offer/lion.webp'
+import DialogOffer from '@components/offer/DialogOffer';
 
 const shops = () => {
   const [isNetto, setIsNetto] = useState(true);
+  const [dialogTitle, setDialogTitle] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const tooglePrice = () => setIsNetto(!isNetto);
+  const dialogRef = useRef();
+
+  const handleOpenDialog = (title) => {
+    setIsOpen(true);
+    setDialogTitle(title);
+    if (dialogRef.current) {
+      dialogRef.current.showModal();
+    }
+  }
+
+  const handleCloseDialog = () => {
+    setIsOpen(false);
+    if (dialogRef.current) {
+      dialogRef.current.close();
+    }
+  }
 
   const cardsSwitcher = [
     {
@@ -217,12 +236,13 @@ const shops = () => {
           <div className='mt-[50px]'>
             <p className='text-[18px] font-light'>Nasza oferta obejmuje różnorodne pakiety usług tworzenia sklepów internetowych, które zostały zaprojektowane z myślą o indywidualnych potrzebach klientów oraz specyfice ich branży. Oferujemy rozwiązania, które umożliwiają skuteczne prowadzenie sprzedaży online, niezależnie od wielkości Twojego biznesu. Dzięki naszym usługom, Twoja firma zyska profesjonalnie zaprojektowany sklep, który będzie intuicyjny w obsłudze zarówno dla Ciebie, jak i Twoich klientów.</p>
             <ButtonPrice isNetto={isNetto} tooglePrice={tooglePrice} />
-            <Cards isNetto={isNetto} offer={cardsSwitcher} />
+            <Cards isNetto={isNetto} offer={cardsSwitcher} handleOpenDialog={handleOpenDialog} />
             <InfoAboutOffer />
           </div>
         </article>
         <article className='flex w-[1400px]'>
-          <DetailsOffer offer={offer} isNetto={isNetto}/>
+          <DetailsOffer offer={offer} isNetto={isNetto} handleOpenDialog={handleOpenDialog} />
+          <DialogOffer dialogRef={dialogRef} handleCloseDialog={handleCloseDialog} title={dialogTitle} isOpen={isOpen} />
         </article>
       </section>
     </>

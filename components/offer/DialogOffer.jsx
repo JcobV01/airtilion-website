@@ -1,14 +1,15 @@
 'use client'
 
-import React, { useState } from 'react'
-import { useRouter } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
+
+import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 import CancelButton from '@components/CancelButton';
 import FormButton from '@components/FormButton';
 import logo from '@public/assets/icons/offer/logo.svg'
 
-const DialogOffer = ({ dialogRef, handleCloseDialog, title }) => {
+const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [number, setNumber] = useState('');
@@ -16,17 +17,34 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const router = useRouter();
+    const pathname = usePathname();
 
-    
+    useEffect(() => {
+        if (isOpen) {
+            setName('');
+            setEmail('');
+            setNumber('');
+            setError('');
+            setIsSubmitting(false);
+        }
+    }, [isOpen]);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        
+
         if (!name || !email || !number) {
             setError('Wypełnij wszystkie pola!');
             return;
         }
-        
+
+        const emailRegex = /^\S+@\S+\.\S+$/;
+        if (!emailRegex.test(email)) {
+            setError('Podaj poprawny adres email!');
+            setIsSubmitting(false);
+            return;
+        }
+
         try {
             const response = await fetch('/api/offer/order', {
                 method: 'POST',
@@ -35,6 +53,7 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title }) => {
                     Email: email,
                     Number: number,
                     Package: title,
+                    Type: pathname,
                 }),
                 headers: {
                     'Content-Type': 'application/json'

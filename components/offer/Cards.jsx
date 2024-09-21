@@ -10,7 +10,7 @@ import check from '@public/assets/icons/offer/check.png'
 import logo from '@public/assets/icons/offer/logo.svg'
 import LightButton from '@components/LightButton';
 
-const Cards = ({offer, isNetto }) => {
+const Cards = ({ offer, isNetto, handleOpenDialog }) => {
     const [activeIndex, setActiveIndex] = useState(1);
 
     const handleClick = (index) => {
@@ -27,7 +27,7 @@ const Cards = ({offer, isNetto }) => {
                         <div className="relative rounded-[10px] backdrop-blur-[5px] bg-[rgba(27,27,27,0.40)] flex flex-col h-full px-[20px]">
                             <Image className='absolute top-0 left-0 transition' src={index === 1 ? orangeGradient : goldGradient} alt={index === 1 ? "Pomarańczowy gradient" : "Złoty gradient"} width={activeIndex === index ? 400 : 350} height={429} />
 
-                            {offer.length >= 3 && index === 1 &&(
+                            {offer.length >= 3 && index === 1 && (
                                 <div className="absolute top-5 right-[-18px] py-[5px] px-[30px] rounded-[11.5px]" style={{ background: 'radial-gradient(50% 50% at 50% 50%, #222 0%, #1E1E1E 100%)' }}>
                                     <span className='text-[#FFDE98] text-[12px] tracking-[1px] font-light'>Najlepszy wybór</span>
                                 </div>
@@ -41,7 +41,9 @@ const Cards = ({offer, isNetto }) => {
                             <p className={`font-light transition mt-[10px] ${activeIndex === index ? 'text-[13px] tracking-[1.3px]' : 'text-[11px] tracking-[1px]'}`}>{cards.desc}</p>
                             <h6 className={`font-medium text-[#E2B350] mt-[25px] mb-[20px] ${activeIndex === index ? 'text-[25px] tracking-[2.5px]' : 'text-[20px] tracking-[2px]'}`}>{price}<span className={`font-light text-[#E2B350] ${activeIndex === index ? 'text-[16px] tracking-[1.6px]' : 'text-[13px] tracking-[1.3px]'}`}>&nbsp;{isNetto ? 'netto' : 'brutto'}</span></h6>
 
-                            <LightButton text="Wybieram" paddingBlock={activeIndex === index ? "15px" : "10px"} paddingInline="20px" rounded="10px" isInCardsOffer={true} />
+                            <div className='z-10'>
+                                <LightButton handleClick={() => handleOpenDialog(cards.title)} text="Wybieram" paddingBlock={activeIndex === index ? "15px" : "10px"} paddingInline="20px" rounded="10px" isInCardsOffer={true} />
+                            </div>
 
                             <div className='flex items-center justify-center mt-[25px]'>
                                 <span className='w-[60px] h-[1px] bg-[rgba(226,179,80,0.50);] '></span>

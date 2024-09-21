@@ -5,6 +5,7 @@ const OrderSchema = new Schema({
     Email: { type: String, required: true },
     Number: { type: String, required: true },
     Package: { type: String, required: true },
+    Type: { type: String, required: true },
 }, { collection: 'zamowienia' });
 
 const Order = models?.Order || model('Order', OrderSchema);

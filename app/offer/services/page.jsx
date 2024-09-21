@@ -1,8 +1,30 @@
+'use client'
+
 import Heading from '@components/Heading'
 import CardsWithoutPrice from '@components/offer/CardsWithoutPrice'
-import React from 'react'
+import DialogOffer from '@components/offer/DialogOffer'
+import React, { useRef, useState } from 'react'
 
 const services = () => {
+  const [dialogTitle, setDialogTitle] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const dialogRef = useRef();
+
+  const handleOpenDialog = (title) => {
+    setIsOpen(true);
+    setDialogTitle(title);
+    if (dialogRef.current) {
+      dialogRef.current.showModal();
+    }
+  }
+
+  const handleCloseDialog = () => {
+    setIsOpen(false);
+    if (dialogRef.current) {
+      dialogRef.current.close();
+    }
+  }
+
   const cardsSwitcher = [
     {
       title: 'Optymalizacja strony',
@@ -46,7 +68,8 @@ const services = () => {
           <Heading title="Pozostałe usługi" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
           <div className='mt-[50px]'>
             <p className='text-[18px] font-light'>Zainteresowany optymalizacją lub kompleksową opieką nad swoją stroną internetową? Skorzystaj z naszej oferty, aby zapewnić sobie pełną funkcjonalność i wydajność witryny. Wybierz odpowiedni pakiet, a my zajmiemy się resztą!</p>
-            <CardsWithoutPrice offer={cardsSwitcher} />
+            <CardsWithoutPrice offer={cardsSwitcher} handleOpenDialog={handleOpenDialog} />
+            <DialogOffer dialogRef={dialogRef} handleCloseDialog={handleCloseDialog} title={dialogTitle} isOpen={isOpen} />
           </div>
         </article>
       </section>

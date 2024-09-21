@@ -9,7 +9,7 @@ import check from '@public/assets/icons/offer/check.png'
 import logo from '@public/assets/icons/offer/logo.svg'
 import LightButton from '@components/LightButton';
 
-const CardsWithoutPrice = ({ offer }) => {
+const CardsWithoutPrice = ({ offer, handleOpenDialog }) => {
     const [activeIndex, setActiveIndex] = useState(1);
 
     const handleClick = (index) => {
@@ -31,7 +31,9 @@ const CardsWithoutPrice = ({ offer }) => {
                             <p className={`font-light transition mt-[10px] ${activeIndex === index ? 'text-[13px] tracking-[1.3px]' : 'text-[11px] tracking-[1px]'}`}>{cards.desc}</p>
                             <h6 className={`font-medium text-[#E2B350] mt-[25px] mb-[20px] ${activeIndex === index ? 'text-[16px] tracking-[2.5px]' : 'text-[13px] tracking-[2px]'}`}>{cards.price}</h6>
 
-                            <LightButton text="Wybieram" paddingBlock={activeIndex === index ? "15px" : "10px"} paddingInline="20px" rounded="10px" isInCardsOffer={true} />
+                            <div className='z-10'>
+                                <LightButton handleClick={() => handleOpenDialog(cards.title)} text="Wybieram" paddingBlock={activeIndex === index ? "15px" : "10px"} paddingInline="20px" rounded="10px" isInCardsOffer={true} />
+                            </div>
 
                             <div className='flex items-center justify-center mt-[25px]'>
                                 <span className='w-[60px] h-[1px] bg-[rgba(226,179,80,0.50);] '></span>
