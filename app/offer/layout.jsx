@@ -2,13 +2,14 @@ import Footer from '@components/Footer'
 import Header from '@components/Header'
 import Navbar from '@components/Navbar'
 import NavbarOffer from '@components/offer/NavbarOffer'
+import HeaderBg from '@public/assets/images/headerOfferPortfolio.webp'
 import React from 'react'
 
 const layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Header title="Odkryj nowe horyzonty z Naszą wyjątkową ofertą" subtitle="Przekraczaj granice możliwości - Twoja przygoda z Nami zaczyna się tutaj" />
+      <Header title="Odkryj nowe horyzonty z Naszą wyjątkową ofertą" subtitle="Przekraczaj granice możliwości - Twoja przygoda z Nami zaczyna się tutaj" img={HeaderBg} />
       <main className='flex flex-col relative top-[-250px] items-center'>
         <NavbarOffer />
         {children}
