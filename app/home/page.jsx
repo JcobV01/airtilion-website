@@ -16,12 +16,12 @@ const home = () => {
       <main className='flex flex-col relative mt-[-250px] gap-[200px]'>
         <Encourage />
         <AboutUs />
-        {/* <Cooperation />
-        <Offer />
-        <Portofolio />
-        <Contact />
+        {/* <Cooperation /> */}
+        {/* <Offer /> */}
+        {/* <Portofolio />
+        <Contact /> */}
 
-        <Footer /> */}
+        <Footer />
         <div className='absolute top-0 left-0 w-full h-full background'></div>
       </main>
     </>
