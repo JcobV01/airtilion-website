@@ -102,7 +102,7 @@ const Navbar = () => {
                     <span className='top-[36px] block absolute h-[5px] sm:h-[3px] w-full bg-[#E2B350] opacity-[1] left-0 rounded-[1px]'></span>
                 </div>
 
-                <div className={`fixed ${visibility} bg-[#000000b5] w-dvw h-dvh top-0 z-30 flex flex-col gap-[30px] justify-center fold:items-center`}>
+                <div className={`fixed ${visibility} bg-[#000000b5] w-dvw h-dvh top-0 z-30 flex flex-col gap-[30px] justify-center fold:items-center backdrop-blur-[5px]`}>
                     {
                         menu.map((item, index) => (
                             <Link href={item.link} key={index}>

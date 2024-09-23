@@ -34,9 +34,9 @@ const data = [
 const Encourage = () => {
   return (
     <section className='w-dvh flex justify-center relative z-10'>
-        <article className='flex flex-col items-center px-[70px] pb-[70px] pt-[30px] gap-[50px] radial-gradient relative'>
-            <p className='text-[15px] font-extralight'>Od posiadania swojej własnej, nowoczesnej strony dzielą Cię już tylko 4 kroki: </p>
-            <div className='flex gap-[50px] w-[1100px] items-start'>
+        <article className='flex flex-col items-center px-[70px] pb-[70px] pt-[30px] gap-[50px] w-[1240px] 2xl:w-[80%] radial-gradient relative xl:px-[50px] xl:pb-[50px] fold:w-[90%]'>
+            <p className='text-[15px] text-center font-extralight lg:text-[13px]'>Od posiadania swojej własnej, nowoczesnej strony dzielą Cię już tylko 4 kroki: </p>
+            <div className='flex gap-[50px] items-start lg:flex-wrap'>
                 {data.map((card, index) => (
                     <EncourageCard image={card.image} title={card.title} desc={card.desc} key={index}/>
                 ))}

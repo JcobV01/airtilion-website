@@ -11,20 +11,20 @@ import Cooperate from './sections/Cooperate'
 
 const AboutUs = () => {
   return (
-    <section className='relative w-[1240px] m-auto flex flex-col gap-[150px] z-10'>
-      <article className='flex gap-[50px]'>
-        <Image src={mainImage} width={420} height={290} className='rounded-[10px]' />
+    <section className='relative w-[1240px] 2xl:w-[80%] m-auto flex flex-col gap-[150px] z-10'>
+      <article className='flex gap-[50px] z-10 xl:gap-[30px] lg:gap-[50px] lg:flex-col'>
+        <Image src={mainImage} width={420} height={290} className='rounded-[10px] xl:w-[400px] xl:h-[400px] lg:w-full lg:h-[300px] object-cover' />
         <div className='flex flex-col gap-[50px]'>
           <Heading title="O nas" subtitle="poznaj naszą firmę" />
-          <p className='text-[16px] font-light'>Jesteśmy zespołem pasjonatów technologii, tworzącym strony i aplikacje internetowe od A do Z, które są dostosowane do Twoich potrzeb. Od wielu lat jesteśmy zafascynowani tą branżą, zauważyliśmy przez ten czas, że coraz więcej firm świadczących podobne usługi staje się coraz bardziej leniwych i skupia się tylko na zyskach, zapominając o jakości i kliencie. Airtilion powstał żeby to zmienić. </p>
+          <p className='text-[16px] font-light xl:text-[15px] lg:text-[13px]'>Jesteśmy zespołem pasjonatów technologii, tworzącym strony i aplikacje internetowe od A do Z, które są dostosowane do Twoich potrzeb. Od wielu lat jesteśmy zafascynowani tą branżą, zauważyliśmy przez ten czas, że coraz więcej firm świadczących podobne usługi staje się coraz bardziej leniwych i skupia się tylko na zyskach, zapominając o jakości i kliencie. Airtilion powstał żeby to zmienić. </p>
           <LightButton text="Napisz do nas" paddingBlock="11px" paddingInline="30px" rounded="5px" isInCardsOffer={false} />
         </div>
       </article>
 
       <Mission />
-      <Work />
+      {/* <Work />
       <People />
-      <Cooperate />
+      <Cooperate /> */}
 
       <div className='absolute top-0 left-[50%] translate-x-[-50%] z-[1]'>
         <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1849" viewBox="0 0 1864 1849" fill="none">
