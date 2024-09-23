@@ -6,7 +6,7 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+*:not(svg, path) {
   font-family: "Poppins";
   color: #FFF;
   box-sizing: border-box;
@@ -215,4 +215,70 @@ dialog::backdrop {
   border-top: 1px solid rgba(255, 255, 255, 0.50);
   border-right: 1px solid rgba(255, 255, 255, 0.50);
   z-index: 5;
+}
+
+/* navbar button */
+
+.nav-button:hover > svg:first-child{
+  display: none;
+}
+
+.nav-button:hover > svg:last-child{
+  display: block;
+}
+
+.menu-button::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 50%;
+  height: 2px;
+  background-color: #E2B350;
+  transition-duration: 500ms;
+}
+
+.menu-button::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 50%;
+  height: 2px;
+  background-color: #E2B350;
+  transition-duration: 500ms;
+}
+
+.menu-button:hover::after{
+  right: 0;
+}
+
+.menu-button:hover::before{
+  left: 0;
+}
+
+.menu-active{
+  color: #E2B350;
+}
+
+.menu-active::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #E2B350;
+  transition-duration: 500ms;
+}
+
+.menu-active::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #E2B350;
+  transition-duration: 500ms;
 }
