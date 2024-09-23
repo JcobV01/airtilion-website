@@ -51,13 +51,13 @@ const Cooperation = () => {
         }
     ]
     return (
-        <section className='relative w-[1240px] m-auto z-10'>
+        <section className='relative w-[1240px] 2xl:80% m-auto z-10'>
             <article className='flex-col gap-[50px] pb-[50px] z-10'>
-                <Heading title="Współpraca" subtitle="POZNAJ JAK PRZEBIEGA PROCES TWORZENIA TWOICH MARZEŃ" />
-                <p className='text-[16px] mt-[30px]'>Stawiamy na otwartą komunikację i bliską współpracę, aby dokładnie zrozumieć Twoje potrzeby i dostosować nasze rozwiązania. Dzięki elastyczności i zaangażowaniu, dążymy do osiągnięcia najlepszych rezultatów i budowania długotrwałych relacji.</p>
+                <Heading title="Współpraca" subtitle="ZOBACZ JAK PRZEBIEGA PROCES TWORZENIA TWOICH MARZEŃ" />
+                <p className='text-[16px] xl:text-[15px] lg:text-[13px] mt-[30px]'>Stawiamy na otwartą komunikację i bliską współpracę, aby dokładnie zrozumieć Twoje potrzeby i dostosować nasze rozwiązania. Dzięki elastyczności i zaangażowaniu, dążymy do osiągnięcia najlepszych rezultatów i budowania długotrwałych relacji.</p>
 
 
-                <div className='flex justify-between relative mt-[70px]'>
+                <div className='flex justify-between relative mt-[70px] xl:justify-center xl:gap-[50px]'>
                     <div className='flex flex-col gap-[380px]'>
                         {cooperation.map((post, index) => {
                             if (index % 2 == 0) {
