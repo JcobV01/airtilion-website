@@ -6,12 +6,13 @@ import Cooperation from '@components/home/sections/Cooperation/Cooperation'
 import Encourage from '@components/home/sections/Encourage/Encourage'
 import Offer from '@components/home/sections/Offer/Offer'
 import Portofolio from '@components/home/sections/Portfolio/Portofolio'
+import HeaderBg from '@public/assets/images/mainHeader.webp'
 import React from 'react'
 
 const home = () => {
   return (
     <>
-      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." />
+      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBg} />
       <main className='flex flex-col relative mt-[-450px] gap-[200px]'>
         <Encourage />
         <AboutUs />
