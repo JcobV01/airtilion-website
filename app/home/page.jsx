@@ -13,7 +13,7 @@ const home = () => {
   return (
     <>
       <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBg} />
-      <main className='flex flex-col relative mt-[-450px] gap-[200px]'>
+      {/* <main className='flex flex-col relative mt-[-250px] gap-[200px]'>
         <Encourage />
         <AboutUs />
         <Cooperation />
@@ -23,7 +23,7 @@ const home = () => {
 
         <Footer />
         <div className='absolute top-0 left-0 w-full h-full background'></div>
-      </main>
+      </main> */}
     </>
   )
 }

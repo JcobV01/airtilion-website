@@ -20,7 +20,7 @@ const rootLayout = ({ children }) => {
 
   return (
     <html lang="pl-PL" className="scroll-smooth">
-      <body className="w-dvw overflow-x-hidden bg-center" style={{ height: currentPath == '/' ? '100dvh' : '', minHeight: 'calc(100vh - 450px)' }}>
+      <body className="w-dvw overflow-x-hidden bg-center">
         {children}
         <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
       </body>
