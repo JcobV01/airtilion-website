@@ -318,8 +318,8 @@ const websites = () => {
 
   return (
     <>
-      <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px]'>
-        <article className='flex flex-col w-[1240px] mt-[100px]'>
+      <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px] xl:gap-[100px] fold:w-[100%]'>
+        <article className='flex flex-col w-[1240px] mt-[150px] xl:w-[90%]'>
           <Heading title="Strony Internetowe" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
           <div className='mt-[50px]'>
             <p className='text-[18px] font-light'>Nasza oferta obejmuje trzy zróżnicowane pakiety usług tworzenia stron internetowych, które zostały starannie zaprojektowane, aby sprostać różnorodnym potrzebom oraz budżetom naszych klientów. Każdy z pakietów oferuje unikalne rozwiązania, dostosowane zarówno do wymagań małych firm, jak i większych przedsiębiorstw, dzięki czemu możemy zapewnić kompleksową obsługę na każdym etapie rozwoju Twojej marki online.</p>
@@ -328,7 +328,7 @@ const websites = () => {
             <InfoAboutOffer />
           </div>
         </article>
-        <article className='flex w-[1400px]'>
+        <article className='flex w-[1400px] 2xl:w-[95%]'>
           <DetailsOffer offer={offer} isNetto={isNetto} handleOpenDialog={handleOpenDialog} />
 
           <DialogOffer dialogRef={dialogRef} handleCloseDialog={handleCloseDialog} title={dialogTitle} isOpen={isOpen} />

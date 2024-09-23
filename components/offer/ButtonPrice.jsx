@@ -3,7 +3,7 @@ import React from 'react'
 const ButtonPrice = ({isNetto, tooglePrice}) => {
 
     return (
-        <div className='flex items-center justify-center gap-[25px] text-[17px] tracking-[1.5px] font-light mt-[60px]'>
+        <div className='flex items-center justify-center gap-[25px] text-[17px] tracking-[1.5px] font-light mt-[60px] xl:mb-[40px]'>
             <span>Netto</span>
             <div>
                 <input type="checkbox" id="toggle" className='sr-only' checked={!isNetto} onChange={tooglePrice} />

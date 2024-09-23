@@ -28,8 +28,8 @@ module.exports = {
       'sm': { 'max': '639px' },
       // => @media (max-width: 639px) { ... }
   
-      'fold': { 'max': '345px' },
-      // => @media (max-width: 325px) { ... }
+      'fold': { 'max': '350px' },
+      // => @media (max-width: 350px) { ... }
     },
   },
   plugins: [],

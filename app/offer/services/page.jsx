@@ -63,8 +63,8 @@ const services = () => {
 
   return (
     <>
-      <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px]'>
-        <article className='flex flex-col w-[1240px] mt-[100px]'>
+      <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px] xl:gap-[100px] fold:w-[100%]'>
+        <article className='flex flex-col w-[1240px] mt-[100px] xl:w-[90%]'>
           <Heading title="Pozostałe usługi" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
           <div className='mt-[50px]'>
             <p className='text-[18px] font-light'>Zainteresowany optymalizacją lub kompleksową opieką nad swoją stroną internetową? Skorzystaj z naszej oferty, aby zapewnić sobie pełną funkcjonalność i wydajność witryny. Wybierz odpowiedni pakiet, a my zajmiemy się resztą!</p>
