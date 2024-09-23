@@ -11,30 +11,19 @@ export const technologies = {
 
 /*Wyzwania*/
 
-import documentIcon from '@public/assets/icons/portfolio/challanges/document.png'
-import languagesIcon from '@public/assets/icons/portfolio/challanges/languages.png'
-import chartIcon from '@public/assets/icons/portfolio/challanges/chartUp.png'
-import rodoIcon from '@public/assets/icons/portfolio/challanges/rodo.png'
-import mapIcon from '@public/assets/icons/portfolio/challanges/map.png'
-
 export const challanges = {
-    "Document": documentIcon,
-    "Languages": languagesIcon,
-    "Chart": chartIcon,
-    "Rodo": rodoIcon,
-    "Map": mapIcon,
+    "Document": "basil:document-solid",
+    "Languages": "clarity:language-solid",
+    "Chart": "streamline:graph-bar-increase-solid",
+    "Rodo": "streamline:user-protection-2-solid",
+    "Map": "gis:map",
 }
 
 /*Osiągnięcia*/
 
-import upArrowsIcon from '@public/assets/icons/portfolio/achivements/up.png'
-import chatIcon from '@public/assets/icons/portfolio/achivements/chat.png'
-import cursorIcon from '@public/assets/icons/portfolio/achivements/cursor.png'
-import walkingIcon from '@public/assets/icons/portfolio/achivements/walking.png'
-
 export const achivements = {
-    "ThreeArrowUp" : upArrowsIcon,
-    "Chat" : chatIcon,
-    "Cursor" : cursorIcon,
-    "PersonWalking" : walkingIcon,
+    "ThreeArrowUp" : "tabler:chart-arrows-vertical",
+    "Chat" : "raphael:chat",
+    "Cursor" : "fluent:cursor-click-20-filled",
+    "PersonWalking" : "fa6-solid:person-walking",
 }

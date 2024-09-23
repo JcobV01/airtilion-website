@@ -7,6 +7,7 @@ import facebook from '@public/assets/icons/facebook.svg'
 import linkedin from '@public/assets/icons/linkedin.svg'
 import Link from 'next/link'
 import NavbarFooter from './NavbarFooter'
+import { Icon } from '@iconify/react'
 
 const Footer = () => {
     return (
@@ -22,10 +23,10 @@ const Footer = () => {
                     <p className='text-center mt-[25px] text-[20px] font-light'>Znajdziesz nas tutaj</p>
                     <div className='flex gap-[25px] mt-[40px]'>
                         <Link href="/">
-                            <Image src={facebook} width="auto" height="auto" alt="Ikona Facebooka" />
+                            <Icon icon="bi:facebook" width="40px" height="40px" alt="Ikona Facebooka" className='text-[#E2B350]' />
                         </Link>
                         <Link href="/">
-                            <Image src={linkedin} width="auto" height="auto" alt="Ikona LinkedIn" />
+                            <Icon icon="bi:linkedin" width="40px" height="40px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
                         </Link>
                     </div>
                     <div className='mt-[30px]'>

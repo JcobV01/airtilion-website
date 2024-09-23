@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import React from 'react'
 
 import quote from '@public/assets/icons/portfolio/quote.svg'
+import { Icon } from '@iconify/react'
 
 
 const PortfolioOpinion = ({client}) => {
@@ -11,7 +11,7 @@ const PortfolioOpinion = ({client}) => {
 
             <div className='flex flex-col w-full justify-center items-center gap-[40px] relative'>
 
-                <Image src={quote} width={175} height={112} alt='ikona cudzosłowu' className='absolute z-10 left-[-20px] top-[-20px]' />
+                <Icon icon="bxs-quote-alt-left" width="175" height="112" alt='Ikona cudzosłowu' className='text-[#121212] absolute z-10 left-[-20px] top-[-20px]' />
 
                 <span className='h-[2px] w-[30%] bg-gradient-to-r from-[#CEA75B] to-[#7A6B4E]'></span>
 
