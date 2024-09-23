@@ -17,9 +17,9 @@ const home = () => {
         <Encourage />
         <AboutUs />
         {/* <Cooperation /> */}
-        {/* <Offer /> */}
-        {/* <Portofolio />
-        <Contact /> */}
+        <Offer />
+        <Portofolio />
+        {/* <Contact /> */}
 
         <Footer />
         <div className='absolute top-0 left-0 w-full h-full background'></div>
