@@ -75,7 +75,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='flex fold:flex-col fold:gap-[20px] justify-between px-[100px] xl:px-[50px] sm:px-[25px] py-[40px] items-center sticky top-0 w-full z-20 duration-500' style={{ backgroundColor: scrolled && '#00000080', backdropFilter: scrolled && 'blur(5px)' }}>
+            <nav className='flex fold:flex-col fold:gap-[20px] justify-between px-[100px] xl:px-[50px] sm:px-[25px] py-[40px] items-center sticky top-0 w-full z-20 duration-500' style={{ backgroundColor: scrolled && '#00000080', backdropFilter: (scrolled && visibility != 'flex') && 'blur(5px)' }}>
                 <Image src={logo} width={260} height="auto" alt="logo spółki Airtilion" className='xl:w-[200px]' />
                 <div className='flex gap-[40px] xl:gap-[30px] items-center lg:hidden'>
 
@@ -102,7 +102,7 @@ const Navbar = () => {
                     <span className='top-[36px] block absolute h-[5px] sm:h-[3px] w-full bg-[#E2B350] opacity-[1] left-0 rounded-[1px]'></span>
                 </div>
 
-                <div className={`fixed ${visibility} bg-[#000000b5] w-dvw h-dvh top-0 z-30 flex flex-col gap-[30px] justify-center fold:items-center backdrop-blur-[5px]`}>
+                <div className={`fixed ${visibility} bg-[#000000b5] w-dvw h-dvh top-0 left-0 p-[50px] z-30 flex flex-col gap-[30px] justify-center fold:items-center backdrop-blur-[5px]`}>
                     {
                         menu.map((item, index) => (
                             <Link href={item.link} key={index}>
