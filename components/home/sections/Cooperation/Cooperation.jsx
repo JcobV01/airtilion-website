@@ -1,6 +1,6 @@
 import Heading from '@components/Heading'
 import React from 'react'
-import Cards from '@components/home/sections/Cooperation/components/Cards'
+import Cards from './components/Cards'
 
 import search from '@public/assets/icons/home/cooperation/search.png'
 import pencil from '@public/assets/icons/home/cooperation/pencil.png'

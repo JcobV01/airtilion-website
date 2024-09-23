@@ -16,8 +16,8 @@ const home = () => {
       <main className='flex flex-col relative mt-[-250px] gap-[200px]'>
         <Encourage />
         <AboutUs />
-        {/* <Cooperation />
-        <Offer />
+        <Cooperation />
+        {/* <Offer />
         <Portofolio />
         <Contact />
 
