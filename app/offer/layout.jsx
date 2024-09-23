@@ -8,7 +8,7 @@ const layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Header />
+      <Header title="Odkryj nowe horyzonty z Naszą wyjątkową ofertą" subtitle="Przekraczaj granice możliwości - Twoja przygoda z Nami zaczyna się tutaj" />
       <main className='flex flex-col relative top-[-250px] items-center'>
         <NavbarOffer />
         {children}

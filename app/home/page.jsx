@@ -11,7 +11,7 @@ import React from 'react'
 const home = () => {
   return (
     <>
-      <Header />
+      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." />
       <main className='flex flex-col relative mt-[-450px] gap-[200px]'>
         <Encourage />
         <AboutUs />
