@@ -1,19 +1,12 @@
 /*Technologie*/
 
-import figmaIcon from '@public/assets/icons/portfolio/figma.png'
-import htmlIcon from '@public/assets/icons/portfolio/html.png'
-import wordpressIcon from '@public/assets/icons/portfolio/wordpress.png'
-import googleIcon from '@public/assets/icons/portfolio/google.png'
-import cssIcon from '@public/assets/icons/portfolio/css.png'
-import jsIcon from '@public/assets/icons/portfolio/javascript.png'
-
 export const technologies = {
-    "Figma": figmaIcon,
-    "HTML": htmlIcon,
-    "Wordpress": wordpressIcon,
-    "Google SC": googleIcon,
-    "CSS": cssIcon,
-    "JavaScript": jsIcon,
+    "Figma": "devicon-plain:figma",
+    "HTML": "devicon-plain:html5",
+    "Wordpress": "devicon-plain:wordpress",
+    "Google SC": "devicon-plain:google",
+    "CSS": "devicon-plain:css3",
+    "JavaScript": "devicon-plain:javascript",
 }
 
 /*Wyzwania*/
