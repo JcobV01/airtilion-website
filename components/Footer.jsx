@@ -3,8 +3,6 @@ import Image from 'next/image'
 
 import FooterSmoke from '@public/assets/images/footerSmoke.webp'
 import AirtilionLogo from '@public/assets/images/airtilion-logo-dark.png'
-import facebook from '@public/assets/icons/facebook.svg'
-import linkedin from '@public/assets/icons/linkedin.svg'
 import Link from 'next/link'
 import NavbarFooter from './NavbarFooter'
 import { Icon } from '@iconify/react'
