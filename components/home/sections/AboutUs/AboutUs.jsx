@@ -24,7 +24,7 @@ const AboutUs = () => {
       <Mission />
       <Work />
       <People />
-      {/* <Cooperate /> */}
+      <Cooperate />
 
       <div className='absolute top-0 left-[50%] translate-x-[-50%] z-[1]'>
         <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1849" viewBox="0 0 1864 1849" fill="none">
