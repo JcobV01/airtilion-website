@@ -11,7 +11,7 @@ import NavbarFooter from './NavbarFooter'
 const Footer = () => {
     return (
         <footer className='z-10 w-full'>
-            <article className='flex justify-center bg-cover' style={{ backgroundImage: `url(${FooterSmoke.src})` }}>
+            <article className='flex justify-center bg-cover lg:bg-center' style={{ backgroundImage: `url(${FooterSmoke.src})` }}>
                 <div className='flex flex-col mt-[100px] items-center'>
                     <div className='w-[255px] mt-[100px]'>
                         <Image src={AirtilionLogo} alt='Logo Airtilionu' />

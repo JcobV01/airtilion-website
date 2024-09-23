@@ -34,7 +34,7 @@ const NavbarFooter = () => {
     ]
     return (
         <nav className='flex justify-between px-[100px] py-[40px] items-center sticky top-0 w-full z-100'>
-            <div className='flex gap-[40px] text-[18px] font-light'>
+            <div className='flex gap-[40px] text-[18px] font-light lg:flex-wrap lg:justify-center lg:gap-[30px] sm:flex-col sm:items-center sm:text-center'>
                 {
                     menuFooter.map((item, index) => (
                         <Link href={item.link} key={index}>
