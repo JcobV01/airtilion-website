@@ -9,7 +9,7 @@ const layout = ({ children }) => {
     <>
       <Navbar />
       <Header title="Zobacz nasze dotychczasowe osiągnięcia" subtitle="Przekształcamy wizję w rzeczywistość - twoja historia sukcesu może być następna!" img={HeaderBg} />
-      <main className='flex flex-col relative top-[-250px] items-center background'>
+      <main className='flex flex-col relative mt-[-100px] items-center background'>
         {children}
         <Footer />
       </main>
