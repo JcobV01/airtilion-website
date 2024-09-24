@@ -45,11 +45,11 @@ const Portofolio = () => {
             ))}
 
             <div className='flex flex-col gap-[30px] items-center mt-[50px] z-10'>
-                <h5 className='text-[20px] tracking-[3px] text-[#E2B350] text-center'>To tylko początek! Zobacz nasze pełne portfolio!</h5>
-                <p className='text-[15px] tracking-[1.5px] text-center'>Prezentujemy tu jedynie nasze najnowsze projekty, aby dać Ci przedsmak naszych umiejętności i kreatywności. Każdy projekt to unikalna historia, dopasowana do indywidualnych potrzeb klientów. Chcesz zobaczyć więcej? </p>
+                <h5 className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] tracking-[3px] text-[#E2B350] text-center'>To tylko początek! Zobacz nasze pełne portfolio!</h5>
+                <p className='text-[15px] lg:text-[13px] sm:text-[11px] tracking-[1.5px] text-center'>Prezentujemy tu jedynie nasze najnowsze projekty, aby dać Ci przedsmak naszych umiejętności i kreatywności. Każdy projekt to unikalna historia, dopasowana do indywidualnych potrzeb klientów. Chcesz zobaczyć więcej? </p>
 
-                <div className='flex gap-[40px]'>
-                    <p className='text-[15px] tracking-[1.5px]'>Przejdź do pełnego portfolio</p>
+                <div className='flex gap-[40px] fold:gap-[10px]'>
+                    <p className='text-[15px] lg:text-[13px] sm:text-[11px] tracking-[1.5px]'>Przejdź do pełnego portfolio</p>
                     <Image src={arrow} width={20} height={20} alt='Inkona strzałki' />
                 </div>
 

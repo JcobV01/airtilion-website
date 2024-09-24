@@ -90,6 +90,20 @@ body::-webkit-scrollbar-thumb {
 
 }
 
+@media only screen and (max-width: 1023px){
+  .header-border::after,
+  .header-border::before{
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .header-border::after,
+  .header-border::before{
+    width: 200px;
+  }
+}
+
 @media only screen and (max-width: 639px){
   .header-border::after,
   .header-border::before{
@@ -337,4 +351,14 @@ dialog::backdrop {
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
+}
+
+/* 3 lines of text */
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
