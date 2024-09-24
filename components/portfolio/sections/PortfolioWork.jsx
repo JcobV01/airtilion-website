@@ -1,6 +1,3 @@
-import Image from 'next/image'
-
-import checkIcon from '@public/assets/icons/portfolio/checkMark.svg'
 import { Icon } from '@iconify/react'
 
 

@@ -1,10 +1,9 @@
 import React from 'react'
+import { Icon } from '@iconify/react'
 import gradient from '@public/assets/images/offer/detailsGradient.webp'
-import circle from '@public/assets/icons/offer/circle.svg'
-import Image from 'next/image'
 import ButtonBuy from './ButtonBuy'
 
-const DetailsOffer = ({ offer, isNetto, handleOpenDialog}) => {
+const DetailsOffer = ({ offer, isNetto, handleOpenDialog }) => {
     return (
         <div className='flex flex-col gap-[150px] xl:gap-[75px]'>
             {
@@ -35,8 +34,10 @@ const DetailsOffer = ({ offer, isNetto, handleOpenDialog}) => {
                                                             {
                                                                 detailsItem.list.map((listItem) => {
                                                                     return (
-                                                                        <li key={listItem.sectionType} className='flex gap-[10px] pl-[10px] mt-[5px] 2xl:text-[14px] xl:mt-[3px]'>
-                                                                            <Image src={circle} width='10' height='10' alt="Ikona kropki" />
+                                                                        <li key={listItem.sectionType} className='flex items-center gap-[10px] pl-[10px] mt-[5px] 2xl:text-[14px] xl:mt-[3px]'>
+                                                                            <div className='w-[10px] h-[10px]'>
+                                                                                <Icon icon="material-symbols:circle" width='10' height='10' alt="Ikona kropki" className='text-[#E2B350]' />
+                                                                            </div>
                                                                             <p className='font-extralight'><span className='font-medium'>{listItem.sectionType}&nbsp;</span>{listItem.description}</p>
                                                                         </li>
                                                                     )
@@ -50,7 +51,7 @@ const DetailsOffer = ({ offer, isNetto, handleOpenDialog}) => {
                                         <p className={`text-[25px] font-semibold tracking-[2.5px] absolute bottom-[25px] ${index === 1 ? 'right-[50px]' : 'left-[50px]'} md:bottom-[110px] md:inset-x-0 md:text-center`}>{price}&nbsp;<span className='text-[16px] tracking-[1.5px] font-medium'>{isNetto ? 'netto' : 'brutto'}</span></p>
                                     </div>
                                     <div className={`absolute bottom-[35px] ${index === 1 ? 'left-[225px]' : 'right-[225px]'} md:inset-x-0 md:flex md:justify-center md:bottom-[40px]`}>
-                                        <ButtonBuy handleOpenDialog={() => handleOpenDialog(details.title)}/>
+                                        <ButtonBuy handleOpenDialog={() => handleOpenDialog(details.title)} />
                                     </div>
                                 </div>
                             </div>

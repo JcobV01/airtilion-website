@@ -3,17 +3,17 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Icon } from '@iconify/react';
 
 import orangeGradient from '@public/assets/images/offer/orangeGradient.webp'
 import goldGradient from '@public/assets/images/offer/goldGradient.webp'
-import check from '@public/assets/icons/offer/check.png'
 import logo from '@public/assets/icons/offer/logo.svg'
 import LightButton from '@components/LightButton';
 
 const Cards = ({ offer, isNetto, handleOpenDialog }) => {
     const [activeIndex, setActiveIndex] = useState(undefined);
     const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 0);
-    
+
     useEffect(() => {
         const handleResize = () => {
             const newWidth = window.innerWidth;
@@ -73,7 +73,9 @@ const Cards = ({ offer, isNetto, handleOpenDialog }) => {
                             <ul className={`transition font-light space-y-[10px] mt-[15px] ${activeIndex === index ? 'text-[15px] tracking-[1.5px]' : 'text-[13px] tracking-[1.3px]'} xl:text-[15px] xl:tracking-[1.5px] sm:text-[13px] sm:tracking-[1.3px] `}>
                                 {cards.points.map((point, index) => (
                                     <li key={index} className='flex items-center gap-2'>
-                                        <Image src={check} alt="Ikona fajki" />
+                                        <div className='w-[20px] h-[20px]'>
+                                            <Icon icon="lets-icons:check-fill" width="20" height="20" alt='Ikona listy' className='text-[#E2B350]' />
+                                        </div>
                                         <p>{point}</p>
                                     </li>
                                 ))}

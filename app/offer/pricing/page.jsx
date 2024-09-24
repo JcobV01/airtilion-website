@@ -1,16 +1,14 @@
 'use client'
 
 import React, { useState } from 'react'
-import Image from 'next/image'
 import Heading from '@components/Heading'
 import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation'
+import { Icon } from '@iconify/react';
 
-import circle from '@public/assets/icons/offer/circle.svg'
-import circleOutline from '@public/assets/icons/offer/circleOutline.svg'
 import imageBackground from '@public/assets/images/offer/formPricing.webp'
 import Form from '@components/offer/Form'
 import FormButton from '@components/FormButton'
-import { useRouter } from 'next/navigation'
 
 const pricing = () => {
   const [submitting, setSubmitting] = useState(false);
@@ -55,7 +53,7 @@ const pricing = () => {
     if (type === 'radio') {
       setPost(prevPost => ({
         ...prevPost,
-        [name]: value 
+        [name]: value
       }));
       setIsOtherChecked(value !== 'Inne:');
     }
@@ -121,7 +119,7 @@ const pricing = () => {
       setError("Liczba podstron jest wymagana!");
     } else if (!post.Functionality || post.Functionality.length === 0) {
       setError("Funkcjonalności są wymagane!");
-    } else if (post.Functionality.some(func => func.length < 9)){
+    } else if (post.Functionality.some(func => func.length < 9)) {
       setError("Minimalna ilość znaków w funkcjonalnościach to 4!");
     } else if (!post.Budget) {
       setError("Budżet jest wymagany!");
@@ -153,37 +151,53 @@ const pricing = () => {
           <h5 className='text-[22px] sm:text-[18px]'>Informacje ogólne</h5>
           <p className='mt-[15px] text-[18px] font-extralight sm:text-[16px]'>Każda strona internetowa lub sklep internetowy obejmuje:</p>
           <ul className='flex flex-col pl-[10px] text-[16px] font-extralight mt-[10px] space-y-[10px] tracking-[1.1px] sm:text-[14px]'>
-            <li className='flex gap-[10px]'>
-              <Image src={circle} width='10' height='10' alt="Ikona kropki" />
+            <li className='flex items-center gap-[10px]'>
+              <div className='w-[12px] h-[12px]'>
+                <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+              </div>
               <p><span className='font-normal'>Responsywność:&nbsp;</span>Strona lub sklep będą optymalizowane dla wszystkich rodzajów urządzeń, w tym smartfonów, tabletów i komputerów.</p>
             </li>
-            <li className='flex gap-[10px]'>
-              <Image src={circle} width='10' height='10' alt="Ikona kropki" />
+            <li className='flex items-center gap-[10px]'>
+              <div className='w-[12px] h-[12px]'>
+                <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+              </div>
               <p><span className='font-normal'>Certyfikat SSL:&nbsp;</span>Integracja certyfikatu SSL. Koszt zakupu po stronie klienta</p>
             </li>
-            <li className='flex gap-[10px]'>
-              <Image src={circle} width='10' height='10' alt="Ikona kropki" />
+            <li className='flex items-center gap-[10px]'>
+              <div className='w-[12px] h-[12px]'>
+                <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+              </div>
               <p><span className='font-normal'>Hosting i domena:&nbsp;</span>Koszt zakupu po stronie klienta</p>
             </li>
-            <li className='flex gap-[10px]'>
-              <Image src={circle} width='10' height='10' alt="Ikona kropki" />
+            <li className='flex items-center gap-[10px]'>
+              <div className='w-[12px] h-[12px]'>
+                <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+              </div>
               <p className='font-normal'>Wsparcie techniczne przez 1 rok w tym:</p>
             </li>
             <ul className='pl-[20px]  space-y-[5px]'>
-              <li className='flex gap-[5px]'>
-                <Image src={circleOutline} width='10' height='10' alt="Ikona kropki" />
+              <li className='flex items-center gap-[5px]'>
+                <div className='w-[12px] h-[12px]'>
+                  <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                </div>
                 <p>Regularne aktualizacje wtyczek: Zapewnienie najnowszych wersji wtyczek i motywów dla bezpieczeństwa i funkcjonalności.</p>
               </li>
-              <li className='flex gap-[5px]'>
-                <Image src={circleOutline} width='10' height='10' alt="Ikona kropki" />
+              <li className='flex items-center gap-[5px]'>
+                <div className='w-[12px] h-[12px]'>
+                  <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                </div>
                 <p>Co miesięczny backup strony.</p>
               </li>
-              <li className='flex gap-[5px]'>
-                <Image src={circleOutline} width='10' height='10' alt="Ikona kropki" />
+              <li className='flex items-center gap-[5px]'>
+                <div className='w-[12px] h-[12px]'>
+                  <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                </div>
                 <p>Naprawa ewentualnych błędów.</p>
               </li>
-              <li className='flex gap-[5px]'>
-                <Image src={circleOutline} width='10' height='10' alt="Ikona kropki" />
+              <li className='flex items-center gap-[5px]'>
+                <div className='w-[12px] h-[12px]'>
+                  <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                </div>
                 <p>Dodawanie nowych treści (do 2 godzin miesięcznie).</p>
               </li>
             </ul>
@@ -200,7 +214,7 @@ const pricing = () => {
                 <Form nameForm="Type" text="Blog" idHandle="R2" inputType="radio" handleInputChange={handleInputChange} />
                 <Form nameForm="Type" text="Sklep internetowy" inputType="radio" idHandle="R3" handleInputChange={handleInputChange} />
                 <Form nameForm="Type" text="Portfolio" idHandle="R4" inputType="radio" handleInputChange={handleInputChange} />
-                <Form nameForm="Type" text="Inne:" idHandle="R5" inputType="radio" showTextInput={true} handleInputChange={handleInputChange} isOtherChecked={isOtherChecked}/>
+                <Form nameForm="Type" text="Inne:" idHandle="R5" inputType="radio" showTextInput={true} handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
 
               </div>
               <div className='flex flex-col gap-[15px]'>

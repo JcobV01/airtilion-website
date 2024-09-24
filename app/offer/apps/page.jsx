@@ -2,11 +2,9 @@
 
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import Image from 'next/image'
 import { toast } from 'react-toastify';
+import { Icon } from '@iconify/react';
 
-import circle from '@public/assets/icons/offer/circle.svg'
-import circleOutline from '@public/assets/icons/offer/circleOutline.svg'
 import imageBackground from '@public/assets/images/offer/formPricing.webp'
 
 import Heading from '@components/Heading'
@@ -156,37 +154,53 @@ const apps = () => {
           <h5 className='text-[22px] sm:text-[18px]'>Informacje ogólne</h5>
           <p className='mt-[15px] text-[18px] font-extralight sm:text-[16px]'>W pakiecie każda strona internetowa obejmuje:</p>
           <ul className='flex flex-col pl-[10px] text-[16px] font-extralight mt-[10px] space-y-[10px] tracking-[1.1px] sm:text-[14px]'>
-            <li className='flex gap-[10px]'>
-              <Image src={circle} width='10' height='10' alt="Ikona kropki" />
+            <li className='flex items-center gap-[10px]'>
+              <div className='w-[12px] h-[12px]'>
+                <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+              </div>
               <p><span className='font-normal'>Responsywność:&nbsp;</span>Strona lub sklep będą optymalizowane dla wszystkich rodzajów urządzeń, w tym smartfonów, tabletów i komputerów.</p>
             </li>
-            <li className='flex gap-[10px]'>
-              <Image src={circle} width='10' height='10' alt="Ikona kropki" />
+            <li className='flex items-center gap-[10px]'>
+              <div className='w-[12px] h-[12px]'>
+                <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+              </div>
               <p><span className='font-normal'>Certyfikat SSL:&nbsp;</span>Integracja certyfikatu SSL. Koszt zakupu po stronie klienta</p>
             </li>
-            <li className='flex gap-[10px]'>
-              <Image src={circle} width='10' height='10' alt="Ikona kropki" />
+            <li className='flex items-center gap-[10px]'>
+              <div className='w-[12px] h-[12px]'>
+                <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+              </div>
               <p><span className='font-normal'>Hosting i domena:&nbsp;</span>Koszt zakupu po stronie klienta</p>
             </li>
-            <li className='flex gap-[10px]'>
-              <Image src={circle} width='10' height='10' alt="Ikona kropki" />
+            <li className='flex items-center gap-[10px]'>
+              <div className='w-[12px] h-[12px]'>
+                <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+              </div>
               <p className='font-normal'>Wsparcie techniczne strony oraz aplikacji przez 1 rok w tym:</p>
             </li>
             <ul className='pl-[20px]  space-y-[5px]'>
-              <li className='flex gap-[5px]'>
-                <Image src={circleOutline} width='10' height='10' alt="Ikona kropki" />
+              <li className='flex items-center gap-[5px]'>
+                <div className='w-[12px] h-[12px]'>
+                  <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                </div>
                 <p>Regularne aktualizacje wtyczek: Zapewnienie najnowszych wersji wtyczek i motywów dla bezpieczeństwa i funkcjonalności.</p>
               </li>
-              <li className='flex gap-[5px]'>
-                <Image src={circleOutline} width='10' height='10' alt="Ikona kropki" />
+              <li className='flex items-center gap-[5px]'>
+                <div className='w-[12px] h-[12px]'>
+                  <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                </div>
                 <p>Co miesięczny backup strony.</p>
               </li>
-              <li className='flex gap-[5px]'>
-                <Image src={circleOutline} width='10' height='10' alt="Ikona kropki" />
+              <li className='flex items-center gap-[5px]'>
+                <div className='w-[12px] h-[12px]'>
+                  <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                </div>
                 <p>Naprawa ewentualnych błędów.</p>
               </li>
-              <li className='flex gap-[5px]'>
-                <Image src={circleOutline} width='10' height='10' alt="Ikona kropki" />
+              <li className='flex items-center gap-[5px]'>
+                <div className='w-[12px] h-[12px]'>
+                  <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                </div>
                 <p>Dodawanie nowych treści (do 2 godzin miesięcznie).</p>
               </li>
             </ul>

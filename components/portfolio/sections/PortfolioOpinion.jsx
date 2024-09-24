@@ -1,6 +1,5 @@
 import React from 'react'
 
-import quote from '@public/assets/icons/portfolio/quote.svg'
 import { Icon } from '@iconify/react'
 
 
