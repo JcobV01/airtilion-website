@@ -20,10 +20,10 @@ const Footer = () => {
                     </div>
                     <p className='text-center mt-[25px] text-[20px] font-light'>Znajdziesz nas tutaj</p>
                     <div className='flex gap-[25px] mt-[40px]'>
-                        <Link href="/">
+                        <Link href="/" aria-label="Znajdź nas na Facebooku">
                             <Icon icon="bi:facebook" width="40px" height="40px" alt="Ikona Facebooka" className='text-[#E2B350]' />
                         </Link>
-                        <Link href="/">
+                        <Link href="/" aria-label="Znajdź nas na Linkedin">
                             <Icon icon="bi:linkedin" width="40px" height="40px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
                         </Link>
                     </div>

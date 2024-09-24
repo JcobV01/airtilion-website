@@ -16,10 +16,10 @@ const People = () => {
                     <div className='w-[340px] h-[470px] relative md:w-[260px] md:h-[380px]'>
                         <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" className='object-cover' />
                         <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'>
-                            <Link href="#" target='_blank'>
+                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil Facebook">
                                 <Image src={facebookIcon} width={40} height={40} alt="Ikona facebooka" className='md:w-[30px] md:h-[30px]' />
                             </Link>
-                            <Link href="#" target='_blank'>
+                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil Linkedin">
                                 <Image src={linkedIcon} width={40} height={40} alt="Ikona linkedin" className='md:w-[30px] md:h-[30px]' />
                             </Link>
                         </div>
@@ -43,10 +43,10 @@ const People = () => {
                     <div className='w-[340px] h-[470px] relative md:w-[260px] md:h-[380px]'>
                         <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" />
                         <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'>
-                            <Link href="#" target='_blank'>
-                                <Image src={facebookIcon} width={40} height={40} alt="Ikona facebooka" className='md:w-[30px] md:h-[30px]' />
+                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil facebook">
+                                <Image src={facebookIcon} width={40} height={40} alt="Ikona Facebooka" className='md:w-[30px] md:h-[30px]' />
                             </Link>
-                            <Link href="#" target='_blank'>
+                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil Linkedin">
                                 <Image src={linkedIcon} width={40} height={40} alt="Ikona linkedin" className='md:w-[30px] md:h-[30px]' />
                             </Link>
                         </div>

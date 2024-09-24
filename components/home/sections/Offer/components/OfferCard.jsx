@@ -6,7 +6,7 @@ import dArrowIcon from '@public/assets/icons/doubleArrow.png'
 const OfferCard = ({ title, technologies, composition }) => {
     return (
         <article className='w-[400px] h-[400px] sm:w-[280px] sm:h-auto sm:pb-[50px] flex flex-col gap-[20px] p-[20px] px-[30px] relative backdrop-blur-[5px] border-[2.5px] border-[#1A1A1A] rounded-[10px] z-10'>
-            <h6 className='text-[20px] lg:text-[18px] tracking-[2px] z-10'>{title}</h6>
+            <h5 className='text-[20px] lg:text-[18px] tracking-[2px] z-10'>{title}</h5>
             <p className='text-[15px] lg:text-[13px] font-light text-[#AEAEAE] z-10'>{technologies.subtitle}</p>
             <div className='z-10'>
                 {
