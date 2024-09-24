@@ -17,7 +17,7 @@ const rootLayout = ({ children }) => {
   // Odczytaj nagłówek 'x-current-path', który został ustawiony przez middleware
   const currentPath = headersList.get('x-current-path');
 
-  console.log("XD", currentPath)
+  console.log(currentPath)
 
   return (
     <html lang="pl-PL" className="scroll-smooth">
