@@ -241,6 +241,20 @@ dialog::backdrop {
   z-index: 5;
 }
 
+@media only screen and (max-width: 480px){
+  .decoration-lines::before,
+  .decoration-lines::after{
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 350px){
+  .decoration-lines::before,
+  .decoration-lines::after{
+    width: 20%;
+  }
+}
+
 /* navbar button */
 
 .nav-button:hover > svg:first-child{

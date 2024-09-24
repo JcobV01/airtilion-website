@@ -43,7 +43,7 @@ const page = ({ params }) => {
 
 
     return (
-        <section className='z-10 flex flex-col items-center gap-[150px]'>
+        <section className='z-10 flex flex-col items-center gap-[150px] sm:gap-[100px]'>
             {data.length > 0 ? 
             <>
                 <article className='w-[1240px] flex flex-col gap-[50px] xl:w-[90%]'>
@@ -53,12 +53,12 @@ const page = ({ params }) => {
                 
                 <PortfolioImages screenshots={data[0]?.Screens}/>
                 <PortfolioWork steps={data[0]?.Work}/>
-                {/* <PortfolioTechnologies technologies={data[0]?.Technologies}/> */}
-                {/* <PortfolioChallanges challange={data[0]?.Challanges}/> */}
-                {/* <PortfolioSteps steps={data[0]?.Steps}/> */}
-                {/* <PortfolioAchivements achivement={data[0]?.Achivements}/> */}
-                {/* <PortfolioClient client={data[0]?.Client}/> */}
-                {/* <PortfolioOpinion client={data[0]?.Client}/> */}
+                <PortfolioTechnologies technologies={data[0]?.Technologies}/>
+                <PortfolioChallanges challange={data[0]?.Challanges}/>
+                <PortfolioSteps steps={data[0]?.Steps}/>
+                <PortfolioAchivements achivement={data[0]?.Achivements}/>
+                <PortfolioClient client={data[0]?.Client}/>
+                <PortfolioOpinion client={data[0]?.Client}/>
 
                 <section className='w-[1240px] xl:w-[90%]'>
                     <Cooperate/>    
