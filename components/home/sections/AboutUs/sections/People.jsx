@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import React from 'react'
-
 import facebookIcon from '@public/assets/icons/home/facebook.png'
 import linkedIcon from '@public/assets/icons/home/linkedin.png'
 import Link from 'next/link'
+
+import lionPlaceholder from '@public/assets/images/contact-lion.webp'
 
 const People = () => {
   return (
@@ -13,8 +13,8 @@ const People = () => {
 
         <section className='flex flex-col items-center mt-[100px] gap-[70px]'>
             <div className='flex gap-[60px] w-[940px] xl:w-[100%] relative p-[25px] lg:flex-col lg:items-center'>
-                <div className='w-[340px] h-[470px] relative border-white border-[2px] md:w-[260px] md:h-[380px]'>
-                    <Image width="auto" height="auto" alt="Zdjęcie jednego z założycieli Airtilionu"/>
+                <div className='w-[340px] h-[470px] relative md:w-[260px] md:h-[380px]'>
+                    <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" className='object-cover'/>
                     <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'>
                         <Link href="" target='_blank'></Link>
                         <Image src={facebookIcon} width={40} height={40} alt="Ikona facebooka" className='md:w-[30px] md:h-[30px]'/>
@@ -37,8 +37,8 @@ const People = () => {
             </div>
 
             <div className='flex flex-row-reverse gap-[60px] w-[940px] xl:w-[100%] relative p-[25px] lg:flex-col lg:items-center'>
-                <div className='w-[340px] h-[470px] relative border-white border-[2px] md:w-[260px] md:h-[380px]'>
-                    <Image width="auto" height="auto" alt="Zdjęcie jednego z założycieli Airtilionu"/>
+                <div className='w-[340px] h-[470px] relative md:w-[260px] md:h-[380px]'>
+                    <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu"/>
                     <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'>
                         <Link href="" target='_blank'></Link>
                         <Image src={facebookIcon} width={40} height={40} alt="Ikona facebooka" className='md:w-[30px] md:h-[30px]'/>

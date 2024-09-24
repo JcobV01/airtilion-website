@@ -81,8 +81,8 @@ const Offer = () => {
             <p className='text-[15px] lg:text-[13px]'>W dobie cyfrowego świata, obecność Twojej firmy w internecie jest kluczowa dla osiągnięcia sukcesu. Nasza oferta obejmuje usługi tworzenia stron oraz sklepów internetowych, aplikacji mobilnych oraz wiele innych rozwiązań, które zapewnią Twojej marce profesjonalny wizerunek w sieci.</p>
 
             <section className='flex flex-wrap justify-center gap-[70px] gap-y-[40px] mt-[40px]'>
-                {offer.map((card) => (
-                    <OfferCard title={card.title} technologies={card.data.technologies} composition={card.data.composition} />
+                {offer.map((card, index) => (
+                    <OfferCard title={card.title} technologies={card.data.technologies} composition={card.data.composition} key={index}/>
                 ))}
             </section>
         </section>
