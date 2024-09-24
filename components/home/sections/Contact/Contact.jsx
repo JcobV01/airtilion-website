@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 
 import bg from '@public/assets/images/contact-lion.webp'
@@ -9,6 +9,7 @@ import FormButton from '@components/FormButton'
 
 import icon from '@public/assets/icons/contact/clock.png'
 import Image from 'next/image'
+import { Icon } from '@iconify/react';
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -17,26 +18,27 @@ const Contact = () => {
     const [text, setText] = useState('');
     const [error, setError] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-    
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        
+
+
         if (!name || !email || !number || !text) {
             setError('Wypełnij wszystkie pola!');
             return;
         }
-        
+
         const emailRegex = /^\S+@\S+\.\S+$/;
         if (!emailRegex.test(email)) {
             setError('Podaj poprawny adres email!');
             setIsSubmitting(false);
             return;
         }
-        
+
         setIsSubmitting(true);
-        
+
         try {
             const response = await fetch('/api/contact/', {
                 method: 'POST',
@@ -50,7 +52,7 @@ const Contact = () => {
                     'Content-Type': 'application/json'
                 }
             });
-            
+
             if (response.ok) {
                 toast.success('Wysłano wiadomość!');
                 setName('');
@@ -64,9 +66,20 @@ const Contact = () => {
             setIsSubmitting(false);
         }
     }
+    
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 1024px)'); // 1024px to standardowy breakpoint dla "lg" w Tailwind
+        setIsLargeScreen(mediaQuery.matches); // Ustaw stan przy ładowaniu
+
+        const handleResize = (e) => setIsLargeScreen(e.matches);
+        mediaQuery.addEventListener('change', handleResize); // Nasłuchuj zmian w rozmiarze
+
+        return () => mediaQuery.removeEventListener('change', handleResize);
+    }, []);
 
     return (
-        <section id="contact" className='relative z-10 w-full flex justify-center'>
+        <section id="contact" className={`relative z-10 w-full flex justify-center xl:w-[90%] m-auto bg-cover bg-no-repeat bg-center`} style={{backgroundImage: isLargeScreen && `url(${bg.src})`}}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -74,7 +87,7 @@ const Contact = () => {
                 height="800"
                 viewBox="0 0 1402 800"
                 fill="none"
-                className='z-10'
+                className='z-10 lg:hidden'
             >
                 <path
                     fillRule="evenodd"
@@ -108,54 +121,56 @@ const Contact = () => {
                 </defs>
             </svg>
 
-            <div className='absolute w-[1100px] h-full top-0 left-[50%] translate-x-[-50%] flex gap-[170px] py-[50px] z-10'>
-                <div className='flex-1 flex flex-col gap-[50px]'>
+            <div className='absolute lg:relative w-[1100px] 2xl:w-[80%] aspect-[1400/800] m-auto h-full top-0 left-[50%] lg:left-auto translate-x-[-50%] lg:translate-x-0 flex lg:flex-col gap-[170px] lg:gap-[50px] py-[50px] z-10'>
+                <div className='flex-1 flex flex-col gap-[50px] xl:gap-[20px] xl:justify-center'>
                     <Heading title="Kontakt" subtitle="ROZPOCZNIJMY WSPÓŁPRACĘ" />
                     <div>
-                        <p className='text-[18px] mb-[5px]'>Chcesz dowiedzieć się więcej o naszych usługach lub potrzebujesz porady? Skontaktuj się z nami!</p>
-                        {error && <span className='text-red-700 font-light tracking-[2px]'>{error}</span>}
+                        <p className='text-[18px] xl:text-[15px] mb-[5px]'>Chcesz dowiedzieć się więcej o naszych usługach lub potrzebujesz porady? Skontaktuj się z nami!</p>
+                        {error && <span className='text-red-700 font-light tracking-[2px] xl:text-[15px]'>{error}</span>}
                     </div>
-                    <form onSubmit={handleSubmit} className='flex flex-col gap-[20px]'>
-                        <input name="Name" value={name} onChange={(e) => setName(e.target.value)} type="text" className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px]' placeholder='IMIĘ I NAZWISKO' />
-                        <input name="Email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px]' placeholder='ADRES EMAIL' />
-                        <input name="Number" value={number} onChange={(e) => setNumber(e.target.value)} type="text" className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px]' placeholder='NUMER TELEFONU' />
-                        <textarea name="Text" value={text} onChange={(e) => setText(e.target.value)} className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] resize-none h-[200px]' placeholder='TREŚĆ'></textarea>
-                        <div className='flex justify-end'>
+                    <form onSubmit={handleSubmit} className='flex flex-col gap-[20px] xl:gap-[15px]'>
+                        <input name="Name" value={name} onChange={(e) => setName(e.target.value)} type="text" className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='IMIĘ I NAZWISKO' />
+                        <input name="Email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='ADRES EMAIL' />
+                        <input name="Number" value={number} onChange={(e) => setNumber(e.target.value)} type="text" className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='NUMER TELEFONU' />
+                        <textarea name="Text" value={text} onChange={(e) => setText(e.target.value)} className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] resize-none h-[200px] xl:h-[100px] xl:text-[13px]' placeholder='TREŚĆ'></textarea>
+                        <div className='flex justify-end sm:justify-center'>
                             <FormButton text="WYŚLIJ" submitting={isSubmitting} />
                         </div>
                     </form>
                 </div>
 
-                <div className='flex-1 flex flex-col justify-center gap-[20px] z-10'>
-                    <p className='text-[25px] font-medium text-[#E2B350]'>Dane kontaktowe</p>
-                    <div className='flex gap-[15px]'>
-                        <Image src={icon} width={40} height={40} alt='ikona' />
-                        <p className='text-[20px] font-light'>720 177 174</p>
+                <div className='flex-1 flex flex-col justify-center lg:items-center gap-[20px] z-10'>
+                    <p className='text-[25px] xl:text-[20px] font-medium text-[#E2B350]'>Dane kontaktowe</p>
+                    <div className='flex gap-[15px] items-center'>
+                        <Icon icon="mdi:phone" width="40" height="40" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:w-[25px] lg:h-[25px]' />
+                        <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>720 177 174</p>
                     </div>
 
-                    <div className='flex gap-[15px]'>
-                        <Image src={icon} width={40} height={40} alt='ikona' />
-                        <p className='text-[20px] font-light'>511 019 652</p>
+                    <div className='flex gap-[15px] items-center'>
+                        <Icon icon="mdi:phone" width="40" height="40" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
+                        <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>511 019 652</p>
                     </div>
 
-                    <div className='flex gap-[15px]'>
-                        <Image src={icon} width={40} height={40} alt='ikona' />
-                        <p className='text-[20px] font-light'>contact@airtilion.pl</p>
+                    <div className='flex gap-[15px] items-center'>
+                        <Icon icon="solar:letter-bold" width="40" height="40" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
+                        <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>contact@airtilion.pl</p>
                     </div>
 
                     <div className='flex gap-[15px]'>
                         <div>
-                            <Image src={icon} width={40} height={40} alt='ikona' />
+                            <Icon icon="mdi:company" width="40" height="40" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
                         </div>
                         <div>
-                            <p className='text-[20px] font-light'>Airtilion Sp. z o.o.</p>
-                            <p className='text-[20px] font-light'>NIP: PL1823478234</p>
-                            <p className='text-[20px] font-light'>REGON: 2384723</p>
-                            <p className='text-[20px] font-light'>KRS: 0000283921</p>
+                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>Airtilion Sp. z o.o.</p>
+                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>NIP: PL1823478234</p>
+                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px]font-light'>REGON: 2384723</p>
+                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>KRS: 0000283921</p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div className='absolute top-0 left-0 w-full h-full bg-[#000000bf] hidden lg:block'></div>
 
             <div className='absolute top-[300px] left-[50%] translate-x-[-50%] z-[1]'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1924" height="868" viewBox="0 0 1864 568" fill="none">
