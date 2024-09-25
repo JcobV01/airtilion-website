@@ -1,6 +1,9 @@
+"use client"
+
 import Heading from '@components/Heading'
 import React from 'react'
 import OfferCard from './components/OfferCard'
+import useIntersectionObserver from '@hooks/useObserver'
 
 const offer = [
     {
@@ -75,14 +78,16 @@ const offer = [
 ]
 
 const Offer = () => {
+    const [ ref, isVisible ] = useIntersectionObserver();
+    
     return (
-        <section className='w-[1400px] 2xl:w-[80%] z-10 m-auto flex flex-col gap-[40px] relative'>
+        <section ref={ref} id="offer" className={`w-[1400px] 2xl:w-[80%] z-10 m-auto flex flex-col gap-[40px] relative transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
             <Heading title="Oferta" subtitle="TWOJE POTRZEBY, NASZA OFERTA" />
             <p className='text-[15px] lg:text-[13px]'>W dobie cyfrowego świata, obecność Twojej firmy w internecie jest kluczowa dla osiągnięcia sukcesu. Nasza oferta obejmuje usługi tworzenia stron oraz sklepów internetowych, aplikacji mobilnych oraz wiele innych rozwiązań, które zapewnią Twojej marce profesjonalny wizerunek w sieci.</p>
 
             <section className='flex flex-wrap justify-center gap-[70px] gap-y-[40px] mt-[40px]'>
                 {offer.map((card, index) => (
-                    <OfferCard title={card.title} technologies={card.data.technologies} composition={card.data.composition} key={index}/>
+                    <OfferCard title={card.title} technologies={card.data.technologies} composition={card.data.composition} key={index} index={index} isVisible={isVisible}/>
                 ))}
             </section>
         </section>

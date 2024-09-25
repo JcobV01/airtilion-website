@@ -1,9 +1,11 @@
+"use client"
 
 import phone from '@public/assets/icons/home/phone.png';
 import gears from '@public/assets/icons/home/gears.png';
 import screen from '@public/assets/icons/home/screen.png';
 import bulb from '@public/assets/icons/home/bulb.png';
 import EncourageCard from './components/EncourageCard';
+import useIntersectionObserver from '@hooks/useObserver';
 
 const data = [
     {
@@ -32,8 +34,11 @@ const data = [
 ]
 
 const Encourage = () => {
+    const [ref, isVisible] = useIntersectionObserver({
+        threshold: 0.1 // 10% widoczności sekcji wystarczy do uruchomienia animacji
+      });
   return (
-    <section className='w-dvh flex justify-center relative z-10'>
+    <section ref={ref} className={`w-dvh flex justify-center relative z-10 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <article className='flex flex-col items-center px-[70px] pb-[70px] pt-[30px] gap-[50px] w-[1240px] 2xl:w-[80%] radial-gradient relative xl:px-[50px] xl:pb-[50px] fold:w-[90%]'>
             <p className='text-[15px] text-center font-extralight lg:text-[13px]'>Od posiadania swojej własnej, nowoczesnej strony dzielą Cię już tylko 4 kroki: </p>
             <div className='flex gap-[50px] items-start lg:flex-wrap'>
