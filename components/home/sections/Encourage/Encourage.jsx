@@ -1,33 +1,29 @@
 "use client"
 
-import phone from '@public/assets/icons/home/phone.png';
-import gears from '@public/assets/icons/home/gears.png';
-import screen from '@public/assets/icons/home/screen.png';
-import bulb from '@public/assets/icons/home/bulb.png';
 import EncourageCard from './components/EncourageCard';
 import useIntersectionObserver from '@hooks/useObserver';
 
 const data = [
     {
-        image: phone,
+        image: "mdi:phone",
         title: "Skontaktuj się z nami",
         desc: "Wybierz pakiet który Cię najbardziej interesuje. Jeśli nie wiesz, który będzie dla Ciebie idealny <span>nie przejmuj się, pomożemy"
     },
 
     {
-        image: gears,
+        image: "fa:gears",
         title: "Uzgodnij szczegóły",
         desc: "Owocna współpraca w naszej firmie zawsze zaczyna się od dokładnej analizy. Podczas rozmowy z nami ustalimy wszystkie szczegóły, tak aby strona była idealna"
     },
 
     {
-        image: screen,
+        image: "jam:screen-f",
         title: "Zaakceptuj projekt",
         desc: "Przed rozpoczęciem pracy w kodzie zawsze tworzymy wizualizację strony. Na tym etapie klient widzi jak będzie wyglądał jego projekt. Jest to też czas na poprawki i dostosowania"
     },
 
     {
-        image: bulb,
+        image: "fluent:lightbulb-checkmark-20-filled",
         title: "Ciesz się nową stroną",
         desc: "Po akceptacji projektu zabieramy się do pracy nad kodem. Po wszystkim klient dostaje gotowy produkt, my ogarniamy wszystko.  Na tym etapie możliwe są do wprowadzenia darmowe poprawki na życzenie klienta"
     },

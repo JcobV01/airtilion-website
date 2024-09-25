@@ -1,7 +1,4 @@
-import Image from 'next/image'
-
-import checkIcon from '@public/assets/icons/home/check.svg'
-import dArrowIcon from '@public/assets/icons/doubleArrow.png'
+import { Icon } from '@iconify/react'
 
 const OfferCard = ({ title, technologies, composition, index, isVisible }) => {
     return (
@@ -11,8 +8,8 @@ const OfferCard = ({ title, technologies, composition, index, isVisible }) => {
             <div className='z-10'>
                 {
                     technologies.list.map((item, index) => (
-                        <div className='flex gap-[20px]' key={index*501}>
-                            <Image src={checkIcon} width={15} height={15} alt='ikona listy'/>
+                        <div className='flex gap-[20px] items-center' key={index * 501}>
+                            <Icon icon='lets-icons:check-fill' width={20} height={20} alt='Ikona listy' className='text-[#E2B350]' />
                             <p className='text-[15px] lg:text-[13px] font-light'>{item}</p>
                         </div>
                     ))
@@ -23,8 +20,8 @@ const OfferCard = ({ title, technologies, composition, index, isVisible }) => {
             <div className='z-10'>
                 {
                     composition.list.map((item, index) => (
-                        <div className='flex gap-[20px]' key={index*1000}>
-                            <Image src={checkIcon} width={15} height={15} alt='ikona listy'/>
+                        <div className='flex gap-[20px] items-center' key={index * 1000}>
+                            <Icon icon='lets-icons:check-fill' width={20} height={20} alt='Ikona listy' className='text-[#E2B350]' />
                             <p className='text-[15px] lg:text-[13px] font-light'>{item}</p>
                         </div>
                     ))
@@ -34,7 +31,7 @@ const OfferCard = ({ title, technologies, composition, index, isVisible }) => {
             <div className='absolute bottom-[20px] right-[20px] flex gap-[4px] z-1'>
                 <p className='text-[15px] lg:text-[13px] font-light'>Poznaj szczegóły oferty</p>
                 <div className='flex items-center'>
-                    <Image src={dArrowIcon} width={15} height={15} alt='ikona strzałki'/>
+                    <Icon icon='ep:d-arrow-right' width={20} height={20} alt='Ikona strzałek w prawo' className='text-[#E2B350]' />
                 </div>
             </div>
         </article>

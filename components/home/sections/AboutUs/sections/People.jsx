@@ -1,14 +1,13 @@
 "use client"
 import Image from 'next/image'
-import facebookIcon from '@public/assets/icons/home/facebook.png'
-import linkedIcon from '@public/assets/icons/home/linkedin.png'
 import Link from 'next/link'
+import { Icon } from '@iconify/react'
 
 import lionPlaceholder from '@public/assets/images/contact-lion.webp'
 import useIntersectionObserver from '@hooks/useObserver'
 
 const People = () => {
-    const [ ref, isVisible ] = useIntersectionObserver();
+    const [ref, isVisible] = useIntersectionObserver();
 
     return (
         <article ref={ref} className={`relative transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
@@ -21,10 +20,10 @@ const People = () => {
                         <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" className='object-cover' />
                         <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'>
                             <Link href="#" target='_blank' aria-label="Odwiedź mój profil Facebook">
-                                <Image src={facebookIcon} width={40} height={40} alt="Ikona facebooka" className='md:w-[30px] md:h-[30px]' />
+                                <Icon icon="bi:facebook" width={30} height={30} alt="Ikona facebooka" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                             </Link>
                             <Link href="#" target='_blank' aria-label="Odwiedź mój profil Linkedin">
-                                <Image src={linkedIcon} width={40} height={40} alt="Ikona linkedin" className='md:w-[30px] md:h-[30px]' />
+                                <Icon icon="bi:linkedin" width={30} height={30} alt="Ikona linkedin" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                             </Link>
                         </div>
                     </div>
@@ -48,10 +47,10 @@ const People = () => {
                         <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" />
                         <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'>
                             <Link href="#" target='_blank' aria-label="Odwiedź mój profil facebook">
-                                <Image src={facebookIcon} width={40} height={40} alt="Ikona Facebooka" className='md:w-[30px] md:h-[30px]' />
+                                <Icon icon="bi:facebook" width={30} height={30} alt="Ikona facebooka" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                             </Link>
                             <Link href="#" target='_blank' aria-label="Odwiedź mój profil Linkedin">
-                                <Image src={linkedIcon} width={40} height={40} alt="Ikona linkedin" className='md:w-[30px] md:h-[30px]' />
+                                <Icon icon="bi:linkedin" width={30} height={30} alt="Ikona linkedin" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                             </Link>
                         </div>
                     </div>
