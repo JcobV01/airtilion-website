@@ -10,6 +10,7 @@ import FormButton from '@components/FormButton'
 import icon from '@public/assets/icons/contact/clock.png'
 import Image from 'next/image'
 import { Icon } from '@iconify/react';
+import useIntersectionObserver from '@hooks/useObserver';
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -20,6 +21,7 @@ const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isLargeScreen, setIsLargeScreen] = useState(false);
 
+    const [ ref, isVisible ] = useIntersectionObserver();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -79,7 +81,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <section id="contact" className={`relative z-10 w-full flex justify-center xl:w-[90%] m-auto bg-cover bg-no-repeat bg-center`} style={{backgroundImage: isLargeScreen && `url(${bg.src})`}}>
+        <section id="contact" ref={ref} className={`relative z-10 w-full flex justify-center xl:w-[90%] m-auto bg-cover bg-no-repeat bg-center transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`} style={{backgroundImage: isLargeScreen && `url(${bg.src})`}}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"

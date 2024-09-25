@@ -1,17 +1,21 @@
+"use client"
 import Image from 'next/image'
 import facebookIcon from '@public/assets/icons/home/facebook.png'
 import linkedIcon from '@public/assets/icons/home/linkedin.png'
 import Link from 'next/link'
 
 import lionPlaceholder from '@public/assets/images/contact-lion.webp'
+import useIntersectionObserver from '@hooks/useObserver'
 
 const People = () => {
+    const [ ref, isVisible ] = useIntersectionObserver();
+
     return (
-        <article>
+        <article ref={ref} className={`relative transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
             <h5 className='text-[20px] xl:text-[18px] lg:text-[15px] tracking-[3px] text-[#E2B350] mb-[20px] text-center'>KIM JESTEŚMY?</h5>
             <p className='text-[16px] xl:text-[15px] lg:text-[13px] font-light mb-[40px] text-center'>Poznając zespół Airtilionu nie rozmawiasz już z anonimowymi ludźmi z odległych krain, dzięki czemu współpraca z nami będzie bardziej efektywna i skuteczna. Poniżej dostępne są dane kontaktowe do każdego z nas oraz krótki opis, zapraszamy do współpracy</p>
 
-            <section className='flex flex-col items-center mt-[100px] gap-[70px]'>
+            <section className={`flex flex-col items-center mt-[100px] gap-[70px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
                 <div className='flex gap-[60px] w-[940px] xl:w-[100%] relative p-[25px] lg:flex-col lg:items-center'>
                     <div className='w-[340px] h-[470px] relative md:w-[260px] md:h-[380px]'>
                         <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" className='object-cover' />
@@ -39,7 +43,7 @@ const People = () => {
                     <span className='w-[1px] h-[20px] bg-[#E2B350] absolute top-0 right-0 fold:hidden'></span>
                 </div>
 
-                <div className='flex flex-row-reverse gap-[60px] w-[940px] xl:w-[100%] relative p-[25px] lg:flex-col lg:items-center'>
+                <div className={`flex flex-row-reverse gap-[60px] w-[940px] xl:w-[100%] relative p-[25px] lg:flex-col lg:items-center transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>
                     <div className='w-[340px] h-[470px] relative md:w-[260px] md:h-[380px]'>
                         <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" />
                         <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'>

@@ -376,3 +376,57 @@ dialog::backdrop {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* przesunięcia do ładowania sekcji */
+
+.about-section {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  visibility: hidden;
+}
+
+.about-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.about-hidden {
+  opacity: 0;
+  transform: translateY(100px);
+  visibility: hidden;
+}
+
+/* Animacja dla kafelków */
+.tile-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tile-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Animacja dla ładowania od boku */
+
+.element-visible-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.element-hidden-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.element-visible-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.element-hidden-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
