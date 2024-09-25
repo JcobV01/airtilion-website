@@ -53,15 +53,15 @@ const page = () => {
       <div className='w-full h-full bg-[#0b0b0bef] flex items-center flex-col justify-between py-[50px]'>
 
         {isLoading ? (
-          <div className='w-[600px] h-[600px] rounded-full border-[#B4A179] border-r-[2px] border-l-[2px] flex justify-center items-center spin'>
+          <div className='w-[600px] rounded-full border-[#B4A179] border-r-[2px] border-l-[2px] flex justify-center items-center spin aspect-square sm:w-[90%] sm:px-[20px] fold:border-none'>
           </div>
         ) : (
 
-          <div className='w-[600px] h-[600px] rounded-full border-[#B4A179] border-r-[2px] border-l-[2px] flex justify-center items-center  sm:w-[90%] sm:px-[20px] fold:border-none'>
-            <Image src={logo} width={400} height="auto" alt="Logo firmy" className='sm:w-[300px] logoOpacity duration-700' />
+          <div className='w-[600px] rounded-full border-[#B4A179] border-r-[2px] border-l-[2px] flex justify-center items-center aspect-square sm:w-[90%] sm:px-[20px] fold:border-none'>
+            <Image src={logo} width={400} height="auto" alt="Logo firmy" className='sm:w-[300px] animationOpacity duration-700' />
           </div>
         )}
-        <Link href="/home" className='relative h-[60px] px-[60px] text-[18px] flex justify-center items-center hover:scale-105 hover:text-[15px] duration-500 sm:h-[50px] sm:text-[14px]'>
+        <Link href="/home" className='relative h-[60px] px-[60px] text-[18px] flex justify-center items-center hover:scale-105 hover:text-[15px] duration-500 animationOpacity sm:h-[50px] sm:text-[14px]'>
           <span className='absolute h-[15px] top-0 left-0 w-[2px] bg-[#E2B350]'></span>
           <span className='absolute h-[2px] top-0 left-0 w-[15px] bg-[#E2B350]'></span>
 
@@ -76,7 +76,7 @@ const page = () => {
           PRZEJDŹ DALEJ
         </Link>
 
-        <p className='font-[Jura] text-[20px] font-extralight text-[#E2B350] tracking-[22.5px] bouncingText lg:tracking-[15px] lg:text-center sm:text-[10px] sm:tracking-[8px] fold:w-[90%]'>PASSION MAKES IT BETTER</p>
+        <p className='font-[Jura] text-[20px] font-extralight text-[#E2B350] tracking-[22.5px] bouncingText animationOpacity lg:tracking-[15px] lg:text-center sm:text-[10px] sm:tracking-[8px] fold:w-[90%]'>PASSION MAKES IT BETTER</p>
       </div>
     </section>
   )

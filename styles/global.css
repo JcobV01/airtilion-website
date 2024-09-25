@@ -41,7 +41,7 @@
   }
 }
 
-.logoOpacity {
+.animationOpacity {
   animation: logoView 500ms ease-in-out;
 }
 
