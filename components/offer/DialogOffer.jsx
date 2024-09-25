@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 
 import CancelButton from '@components/CancelButton';
 import FormButton from '@components/FormButton';
-import logo from '@public/assets/icons/offer/logo.svg'
+import logo from '@public/assets/icons/logo.svg'
 
 const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
     const [name, setName] = useState('');

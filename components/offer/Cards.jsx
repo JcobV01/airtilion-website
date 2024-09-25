@@ -7,7 +7,7 @@ import { Icon } from '@iconify/react';
 
 import orangeGradient from '@public/assets/images/offer/orangeGradient.webp'
 import goldGradient from '@public/assets/images/offer/goldGradient.webp'
-import logo from '@public/assets/icons/offer/logo.svg'
+import logo from '@public/assets/icons/logo.svg'
 import LightButton from '@components/LightButton';
 
 const Cards = ({ offer, isNetto, handleOpenDialog }) => {

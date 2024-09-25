@@ -2,14 +2,12 @@
 
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
+import { Icon } from '@iconify/react';
 
 import bg from '@public/assets/images/contact-lion.webp'
 import Heading from '@components/Heading'
 import FormButton from '@components/FormButton'
 
-import icon from '@public/assets/icons/contact/clock.png'
-import Image from 'next/image'
-import { Icon } from '@iconify/react';
 import useIntersectionObserver from '@hooks/useObserver';
 
 const Contact = () => {
@@ -144,28 +142,28 @@ const Contact = () => {
                 <div className='flex-1 flex flex-col justify-center lg:items-center gap-[20px] z-10'>
                     <p className='text-[25px] xl:text-[20px] font-medium text-[#E2B350]'>Dane kontaktowe</p>
                     <div className='flex gap-[15px] items-center'>
-                        <Icon icon="mdi:phone" width="40" height="40" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:w-[25px] lg:h-[25px]' />
+                        <Icon icon="mdi:phone" width="40" height="40" alt="Ikona telefonu" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:w-[25px] lg:h-[25px]' />
                         <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>720 177 174</p>
                     </div>
 
                     <div className='flex gap-[15px] items-center'>
-                        <Icon icon="mdi:phone" width="40" height="40" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
+                        <Icon icon="mdi:phone" width="40" height="40" alt="Ikona telefonu"  className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
                         <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>511 019 652</p>
                     </div>
 
                     <div className='flex gap-[15px] items-center'>
-                        <Icon icon="solar:letter-bold" width="40" height="40" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
+                        <Icon icon="solar:letter-bold" width="40" height="40" alt="Ikona listu"  className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
                         <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>contact@airtilion.pl</p>
                     </div>
 
                     <div className='flex gap-[15px]'>
                         <div>
-                            <Icon icon="mdi:company" width="40" height="40" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
+                            <Icon icon="mdi:company" width="40" height="40" alt="Ikona budynku firmy"  className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
                         </div>
                         <div>
                             <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>Airtilion Sp. z o.o.</p>
                             <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>NIP: PL1823478234</p>
-                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px]font-light'>REGON: 2384723</p>
+                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>REGON: 2384723</p>
                             <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>KRS: 0000283921</p>
                         </div>
                     </div>

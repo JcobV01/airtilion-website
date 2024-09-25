@@ -1,10 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import arrow from '@public/assets/icons/home/portfolio-arrow.png'
-import dynamic from 'next/dynamic'
+import { Icon } from '@iconify/react'
 
 
-const PortfolioItem = ({title, desc, bg, image}) => {
+const PortfolioItem = ({ title, desc, bg, image }) => {
 
     return (
         <section className='pt-[50px] z-10 sm:mb-[50px] fold:mb-0'>
@@ -24,7 +23,7 @@ const PortfolioItem = ({title, desc, bg, image}) => {
                     <Link href="#">
                         <div className='absolute bottom-[20px] lg:bottom-auto lg:top-[30px] sm:top-[-40px] lg:z-20 right-[40px] sm:right-0 flex gap-[15px]'>
                             <p className='text-[15px] xl:text-[13px]'>Zobacz szczegóły</p>
-                            <Image src={arrow} width={20} height={20} alt='Inkona strzałki' />
+                            <Icon icon="solar:arrow-right-broken" width={20} height={20} alt='Ikona strzałki' className='text-[#E2B350]' />
                         </div>
                     </Link>
                 </div>

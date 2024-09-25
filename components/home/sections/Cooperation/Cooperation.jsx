@@ -1,5 +1,6 @@
-import Heading from '@components/Heading'
 import React from 'react'
+import { Icon } from '@iconify/react'
+import Heading from '@components/Heading'
 
 import CoopCards from './components/Cards'
 

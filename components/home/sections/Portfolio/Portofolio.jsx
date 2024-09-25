@@ -1,14 +1,9 @@
 "use client"
 
 import Heading from '@components/Heading'
-import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
+import { Icon } from '@iconify/react'
 
-import bgTlo from '@public/assets/images/portfolio/organy.webp'
-import bgBienko from '@public/assets/images/portfolio/bienko.webp'
-
-import arrow from '@public/assets/icons/home/portfolio-arrow.png'
-import Link from 'next/link'
 import PortfolioItem from './components/PortfolioItem'
 import useIntersectionObserver from '@hooks/useObserver'
 
@@ -52,7 +47,7 @@ const Portofolio = () => {
 
                 <div className='flex gap-[40px] fold:gap-[10px]'>
                     <p className='text-[15px] lg:text-[13px] sm:text-[11px] tracking-[1.5px]'>Przejdź do pełnego portfolio</p>
-                    <Image src={arrow} width={20} height={20} alt='Inkona strzałki' />
+                    <Icon icon="solar:arrow-right-broken" width={20} height={20} alt='Ikona strzałki' className='text-[#E2B350]' />
                 </div>
 
             </div>

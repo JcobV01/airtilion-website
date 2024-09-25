@@ -1,14 +1,6 @@
 "use client"
 
-import Image from 'next/image'
-
-
-import strongman from '@public/assets/icons/home/strongman.png'
-import order from '@public/assets/icons/home/order.png'
-import business from '@public/assets/icons/home/business-group.png'
-import climbing from '@public/assets/icons/home/climbing.png'
-import increasing from '@public/assets/icons/home/increasing.png'
-
+import { Icon } from '@iconify/react'
 import lion1 from '@public/assets/images/mission/mission-1.webp'
 import lion2 from '@public/assets/images/mission/mission-2.webp'
 import lion3 from '@public/assets/images/mission/mission-3.webp'
@@ -21,31 +13,31 @@ const data = [
     {
         title: 'Indywidualizm',
         desc: 'Każdy klient to oddzielna przygoda, staramy się zadowolić każdego, kto nam zaufał. Robimy wszystko, żeby sprostać nawet najbardziej wymagającym',
-        icon: strongman,
+        icon: 'healthicons:weights',
         bg: lion1,
     },
     {
         title: 'Nieszablonowość',
         desc: 'Większość firm przestała dbać o klienta, kopiując ciągle te same schematy i szablony. U nas tego nie doświadczysz, każda strona jest projektowana osobno, po ustaleniu szczegółów z klientem',
-        icon: order,
+        icon: 'iconoir:medal-1st-solid',
         bg: lion2,
     },
     {
         title: 'Współpraca',
         desc: 'W naszej firmie klient nie jest kolejnym przystankiem do celu, u nas każdy jest tym najważniejszym, dlatego na każdym etapie prac, klient ma możliwość wprowadzenia zmian lub poprawek, za które nie musi nic dopłacać',
-        icon: business,
+        icon: 'mdi:people-group',
         bg: lion3,
     },
     {
         title: 'Postęp',
         desc: 'Nasza firma nie zatrzymuje się i ciągle podąża za najnowszymi trendami technologicznymi. U nas jakość jest jednym z priorytetów, dlatego ciągle się rozwijamy',
-        icon: climbing,
+        icon: 'map:climbing',
         bg: lion4,
     },
     {
         title: 'Nowoczesność',
         desc: 'Większość firm deklaruje używanie nowoczesnych technologii, pisząc o HTML, CSS czy Wordpress, które są bazą. U nas jest inaczej. Oczywiście, używamy wcześniej wspomnianych technologii, ale tworząc w tych faktycznie najnowszych',
-        icon: increasing,
+        icon: 'streamline:graph-bar-increase-solid',
         bg: lion5,
     },
 
@@ -75,12 +67,12 @@ const Mission = () => {
                                 <p className='text-[13px] lg:text-[11px] font-light text-center lg:mt-[15px]'>{item.desc}</p>
                             </div>
 
-                            <Image
-                                src={item.icon}
+                            <Icon
+                                icon={item.icon}
                                 width={40}
                                 height={40}
                                 alt={`Ikona ${item.title}`}
-                                className='absolute bottom-[10px] right-[10px] lg:w-[30px] lg:h-[30px]'
+                                className='text-[#E2B350] absolute bottom-[10px] right-[10px] lg:w-[30px] lg:h-[30px]'
                             />
                         </div>
                     ))
