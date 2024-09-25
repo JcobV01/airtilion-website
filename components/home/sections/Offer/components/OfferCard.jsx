@@ -10,8 +10,8 @@ const OfferCard = ({ title, technologies, composition, index, isVisible }) => {
             <p className='text-[15px] lg:text-[13px] font-light text-[#AEAEAE] z-10'>{technologies.subtitle}</p>
             <div className='z-10'>
                 {
-                    technologies.list.map((item) => (
-                        <div className='flex gap-[20px]'>
+                    technologies.list.map((item, index) => (
+                        <div className='flex gap-[20px]' key={index*501}>
                             <Image src={checkIcon} width={15} height={15} alt='ikona listy'/>
                             <p className='text-[15px] lg:text-[13px] font-light'>{item}</p>
                         </div>
@@ -22,8 +22,8 @@ const OfferCard = ({ title, technologies, composition, index, isVisible }) => {
             <p className='text-[15px] lg:text-[13px] font-light text-[#AEAEAE] z-10'>{composition.subtitle}</p>
             <div className='z-10'>
                 {
-                    composition.list.map((item) => (
-                        <div className='flex gap-[20px]'>
+                    composition.list.map((item, index) => (
+                        <div className='flex gap-[20px]' key={index*1000}>
                             <Image src={checkIcon} width={15} height={15} alt='ikona listy'/>
                             <p className='text-[15px] lg:text-[13px] font-light'>{item}</p>
                         </div>
