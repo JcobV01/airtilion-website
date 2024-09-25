@@ -16,7 +16,7 @@ const home = () => {
       <main className='flex flex-col relative mt-[-250px] gap-[200px] md:gap-[100px]'>
         <Encourage />
         <AboutUs />
-        {/* <Cooperation /> */}
+        <Cooperation />
         <Offer />
         <Portofolio />
         <Contact />
@@ -70,18 +70,18 @@ const home = () => {
 
         {/* Sekcja Współpraca */}
 
-        {/* <div className='absolute top-[4500px] left-[50%] translate-x-[-50%] z-[1] w-full'>
+        <div className='absolute top-[5500px] left-[50%] translate-x-[-50%] z-[1] w-full'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1849" viewBox="0 0 1920 1849" fill="none" className='w-full'>
             <path d="M2217.32 1007.42C2094.37 808.553 1838.69 590.847 1582.41 511.641C1382.21 449.766 1143.27 413.391 900.183 259.34C711.245 139.602 367.382 73.4967 99.5697 212.605C-244.377 391.26 -148.722 84.5441 -289.636 1.81794" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2265.47 1107.86C2142.52 908.989 1886.84 691.282 1630.56 612.076C1430.36 550.202 1191.41 513.827 948.333 359.776C759.395 240.038 415.531 173.932 147.719 313.041C-196.228 491.696 -100.572 184.9797 -241.486 102.25349" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2248.1 1207.34C2125.16 1008.469 1869.47 790.763 1613.2 711.557C1412.99 649.682 1174.05 613.307 930.968 459.256C742.029 339.518 398.166 273.4128 130.354 412.521C-213.593 591.176 -117.938 184.4602 -258.852 101.73395" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2233.34 1287.05C2110.4 1088.178 1854.71 870.472 1598.44 791.266C1398.23 729.391 1159.29 693.016 916.208 538.965C727.27 419.227 383.406 353.1217 115.594 492.23C-228.353 670.885 -132.697 364.1691 -273.611 281.44294" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
           </svg>
-        </div> */}
+        </div>
 
         {/* Sekcja Oferta */}
 
-        <div className='absolute top-[5500px] 2xl:top-[5800px] left-[50%] translate-x-[-50%] z-[1] w-full'>
+        <div className='absolute top-[7200px] 2xl:top-[5800px] left-[50%] translate-x-[-50%] z-[1] w-full'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="885" viewBox="0 0 1864 685" fill="none" className='w-full'>
             <path d="M2225.63 129.498C2018.15 21.7267 1687.02 -34.1963 1426.36 29.1186C1222.74 78.5794 998.911 169.79 711.229 162.071C487.625 156.071 158.468 275.518 -0.22103 532.213C-204.023 861.883 -279.058 549.482 -442.456 550.655" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2225.63 209.498C2018.15 101.7267 1687.02 45.8037 1426.36 109.1186C1222.74 158.579 998.911 249.79 711.229 242.071C487.625 236.071 158.468 355.518 -0.22103 612.213C-204.023 941.883 -279.058 629.482 -442.456 630.655" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
@@ -92,7 +92,7 @@ const home = () => {
 
         {/* Sekcja portfolio */}
 
-        <div className='absolute top-[6500px] 2xl:top-[7200px] left-[50%] translate-x-[-50%] z-[1] w-full'>
+        <div className='absolute top-[8000px] 2xl:top-[7200px] left-[50%] translate-x-[-50%] z-[1] w-full'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1150" viewBox="0 0 1864 650" fill="none" className='w-full'>
             <path d="M2399.94 139.833C2194.53 28.1574 1864.52 -34.0171 1602.71 24.3574C1398.19 69.9589 1172.68 156.921 885.195 143.763C661.744 133.536 330.387 246.737 166.872 500.386C-43.1268 826.143 -112.241 512.379 -275.632 510.461" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2399.94 219.833C2194.53 108.157 1864.52 45.9829 1602.71 104.357C1398.19 149.959 1172.68 236.921 885.195 223.763C661.744 213.536 330.387 326.737 166.872 580.386C-43.1268 906.143 -112.241 592.379 -275.632 590.461" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
@@ -101,7 +101,7 @@ const home = () => {
           </svg>
         </div>
 
-        <div className='absolute top-[7900px] 2xl:top-[8800px] left-[50%] translate-x-[-50%] z-[1] w-full'>
+        <div className='absolute top-[9700px] 2xl:top-[8800px] left-[50%] translate-x-[-50%] z-[1] w-full'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1196" viewBox="0 0 1864 1196" fill="none" className='w-full'>
             <path d="M2226.65 1194.39C2119.13 986.777 1880.69 750.316 1631.15 651.913C1436.21 575.041 1200.71 520.66 970.009 348.627C790.69 214.912 452.826 122.933 175.24 241.341C-181.259 393.412 -62.63 94.8287 -196.868 1.65952" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2226.65 1294.39C2119.13 1086.78 1880.69 850.316 1631.15 751.913C1436.21 675.041 1200.71 620.66 970.009 448.627C790.69 314.912 452.826 222.933 175.24 341.341C-181.259 493.412 -62.63 194.829 -196.868 101.66" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
@@ -112,7 +112,7 @@ const home = () => {
 
         {/* Sekcja kontakt */}
 
-        <div className='absolute top-[9200px] 2xl:top-[10200px] left-[50%] translate-x-[-50%] z-[1] w-full'>
+        <div className='absolute top-[10900px] 2xl:top-[10200px] left-[50%] translate-x-[-50%] z-[1] w-full'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1924" height="868" viewBox="0 0 1864 568" fill="none" className='w-full'>
             <path d="M-111.344 566.97C24.1409 392.47 276.293 222.47 508.015 188.97C689.033 162.8 899.415 168.47 1131.14 58.9701C1311.25 -26.1402 1616.09 -31.5299 1824.69 151.97C2092.6 387.637 2056.95 68.9701 2190.28 11.9701" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M-111.344 646.97C24.1409 472.47 276.293 302.47 508.015 268.97C689.033 242.8 899.415 248.47 1131.14 138.97C1311.25 53.8599 1616.09 48.4701 1824.69 231.97C2092.6 467.637 2056.95 148.97 2190.28 91.9701" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />

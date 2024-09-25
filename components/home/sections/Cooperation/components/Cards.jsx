@@ -1,19 +1,19 @@
+import { Icon } from '@iconify/react'
 import React from 'react'
 
-import Image from 'next/image'
 
-const Cards = ({title, desc, image, flexRow}) => {
+const CoopCard = ({ title, desc, index, icon }) => {    
     return (
-        <div className={`w-[575px] h-[175px] xl:w-[400px] xl:h-[150px] xl:gap-[20px] flex bg-[rgba(27,27,27,0.40)] rounded-[20px] justify-between items-center px-[20px] backdrop-blur-[2px] ${flexRow}`}>
-            <div className='pt-[10px] w-[400px] xl:w-auto xl:flex-1'>
-                <h5 className='text-[22px] xl:text-[18px] tracking-[5px] font-light'>{title}</h5>
-                <p className='text-[14px] xl:text-[10px] tracking-[1.2px] font-extralight mt-[10px]'>{desc}</p>
+        <div key={index} className={`relative w-[1200px] 2xl:w-full flex gap-[60px] md:gap-[30px] items-center py-[40px] px-[60px] sm:px-[30px] ${index % 2 == 1 && 'bg-[#1B1B1B66]'}`}>
+            <span className='absolute left-[30px] sm:left-[10px] top-[50%] translate-y-[-50%] text-[#1c1c1c] text-[150px] font-bold z-[1]'>{index}</span>
+            <div className='z-10 flex flex-col gap-[10px] flex-1'>
+                <h5 className='text-[25px] lg:text-[20px] md:text-[18px] font-extralight tracking-[5px]'>{title}</h5>
+                <div className='w-full h-[1px] bg-[#E2B35099]'></div>
+                <p className='text-[14px] md:text-[12px] font-extralight tracking-[1.4px]'>{desc}</p>
             </div>
-            <div className='flex items-center justify-center bg-[#1B1B1B] rounded-[15px] w-[100px] h-[100px] xl:w-[70px] xl:h-[70px] px-[10px]'>
-                <Image src={image} alt="Ikona lupy" />
-            </div>
+            <Icon icon={icon} width="60" height="60" alt={`Ikona karty ${title}`} className='z-10 lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] text-[#E2B350] fill-[#E2B350]'/>
         </div>
     )
 }
 
-export default Cards
+export default CoopCard
