@@ -1,10 +1,13 @@
-import React from 'react'
-import { Icon } from '@iconify/react'
+"use client"
+
 import Heading from '@components/Heading'
 
 import CoopCards from './components/Cards'
+import useIntersectionObserver from '@hooks/useObserver';
 
 const Cooperation = () => {
+    const [ ref, isVisible ] = useIntersectionObserver();
+
     const cooperation = [
         {
             title: "Analiza potrzeb",
@@ -37,15 +40,16 @@ const Cooperation = () => {
             image: "icon-park-solid:protect",
         }
     ]
+
     return (
-        <section className='relative w-[1240px] 2xl:w-[80%] m-auto z-10'>
+        <section ref={ref} className={`relative w-[1240px] 2xl:w-[80%] m-auto z-10 transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
             <article className='flex flex-col pb-[50px] z-10'>
                 <Heading title="Współpraca" subtitle="ZOBACZ JAK PRZEBIEGA PROCES TWORZENIA TWOICH MARZEŃ" />
                 <p className='text-[16px] xl:text-[15px] lg:text-[13px] mt-[30px]'>Stawiamy na otwartą komunikację i bliską współpracę, aby dokładnie zrozumieć Twoje potrzeby i dostosować nasze rozwiązania. Dzięki elastyczności i zaangażowaniu, dążymy do osiągnięcia najlepszych rezultatów i budowania długotrwałych relacji.</p>
 
                 <div className='flex flex-col gap-[20px] mt-[100px]'>
                     {cooperation.map((coop, index) => (
-                        <CoopCards title={coop.title} desc={coop.desc} index={index + 1} icon={coop.image}/>
+                        <CoopCards title={coop.title} desc={coop.desc} index={index + 1} icon={coop.image} key={index} isVisible={isVisible}/>
                     ))}
                 </div>
                 
