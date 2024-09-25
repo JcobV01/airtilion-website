@@ -1,52 +1,45 @@
-import Heading from '@components/Heading'
 import React from 'react'
+import { Icon } from '@iconify/react'
+import Heading from '@components/Heading'
 import Cards from './components/Cards'
 
-import search from '@public/assets/icons/home/cooperation/search.png'
-import pencil from '@public/assets/icons/home/cooperation/pencil.png'
-import sourceCode from '@public/assets/icons/home/cooperation/source-code.png'
-import checkAll from '@public/assets/icons/home/cooperation/check-all.png'
-import cloud from '@public/assets/icons/home/cooperation/cloud.png'
-import protect from '@public/assets/icons/home/cooperation/protect.png'
-import lines from '@public/assets/icons/home/cooperation/lines.svg'
-import Image from 'next/image'
 
 const Cooperation = () => {
     const cooperation = [
         {
             title: "Analiza potrzeb",
             desc: "Rozpoczynamy od szczegółowej analizy Twoich wymagań i celów. Spotykamy się, aby omówić Twoje oczekiwania, preferencje dotyczące designu oraz funkcjonalności strony.",
-            image: search,
+            image: 'xd',
             flexRow: "flex-row",
         },
         {
             title: "Projektowanie",
             desc: "Na podstawie zebranych informacji tworzymy wizualizacje projekty. Omawiamy je z Tobą, aby upewnić się, że wszystko jest zgodne z Twoją wizją.",
-            image: pencil,
+            image: 'xd',
             flexRow: "flex-row-reverse",
         },
         {
             title: "Realizacja",
             desc: "Po zatwierdzeniu projektu przechodzimy do fazy realizacji. Rozpoczynamy prace nad stroną, implementując wszystkie zaplanowane funkcje i elementy graficzne.",
-            image: sourceCode,
+            image: 'xd',
             flexRow: 'flex-row',
         },
         {
             title: "Testowanie i poprawki",
             desc: "Przeprowadzamy szczegółowe testy funkcjonalności i wydajności strony. Wprowadzamy niezbędne poprawki na podstawie Twoich uwag.",
-            image: checkAll,
+            image: 'xd',
             flexRow: 'flex-row-reverse',
         },
         {
             title: "Uruchomienie",
             desc: "Po finalnym zatwierdzeniu strony, przeprowadzamy jej wdrożenie na serwerze i uruchamiamy. Sprawdzamy, czy wszystko działa zgodnie z planem.",
-            image: cloud,
+            image: 'xd',
             flexRow: 'flex-row',
         },
         {
             title: "Wsparcie i utrzymanie",
             desc: "Zapewniamy wsparcie przez 1 rok po uruchomieniu strony, pomagając w ewentualnych problemach oraz zapewniając aktualizacje i konserwację.",
-            image: protect,
+            image: 'xd',
             flexRow: 'flex-row-reverse',
         }
     ]
@@ -69,7 +62,7 @@ const Cooperation = () => {
                     </div>
 
                     <div className='flex absolute top-[85px] left-[525px]'>
-                        <Image src={lines} alt="Linie z kropkami" width="236" height="1399" />
+                        <Icon icon="bi:facebook" width={30} height={30} alt="Ikona facebooka" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                     </div>
 
                     <div className='flex flex-col gap-[375px] justify-end mt-[275px]'>
