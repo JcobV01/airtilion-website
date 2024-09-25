@@ -10,7 +10,7 @@ import logo from '@public/assets/icons/offer/logo.svg'
 import LightButton from '@components/LightButton';
 
 const CardsWithoutPrice = ({ offer, handleOpenDialog }) => {
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [activeIndex, setActiveIndex] = useState(undefined);
     const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 0);
 
     useEffect(() => {

@@ -44,7 +44,7 @@ const Cards = ({ offer, isNetto, handleOpenDialog }) => {
                 return (
                     <div key={index} className={`transition cursor-pointer ${activeIndex === index ? 'w-[400px] h-[700px] z-10' : 'w-[350px] h-[575px]'} xl:w-[400px] xl:h-[700px] sm:w-[350px] sm:h-[575px] fold:w-[100%] fold:h-[auto]`} onClick={() => handleClick(index)}>
                         <div className="relative rounded-[10px] backdrop-blur-[5px] bg-[rgba(27,27,27,0.40)] flex flex-col h-full px-[20px] fold:pb-[50px]">
-                            <Image className='absolute top-0 left-0 transition xl:w-[400px] sm:w-[350px]' src={index === 1 ? orangeGradient : goldGradient} alt={index === 1 ? "Pomarańczowy gradient" : "Złoty gradient"} width={activeIndex === index ? 400 : 350} height={429} />
+                            <Image className={`absolute top-0 left-0 transition ${activeIndex === index ? 'w-[400px] h-auto' : 'w-[350px] h-auto'} xl:w-[400px] sm:w-[350px]`} src={index === 1 ? orangeGradient : goldGradient} alt={index === 1 ? "Pomarańczowy gradient" : "Złoty gradient"} width={activeIndex === index ? 400 : 350} height={429} />
 
                             {offer.length >= 3 && index === 1 && (
                                 <div className="absolute top-5 right-[-18px] py-[5px] px-[30px] rounded-[11.5px] sm:relative sm:text-center sm:mx-[0px] sm:right-0" style={{ background: 'radial-gradient(50% 50% at 50% 50%, #222 0%, #1E1E1E 100%)' }}>

@@ -28,8 +28,8 @@ const DetailsOffer = ({ offer, isNetto, handleOpenDialog }) => {
                                         {
                                             details.offer.map((detailsItem) => {
                                                 return (
-                                                    <>
-                                                        <p key={detailsItem.name} className='mt-[10px] text-[18px] font-light xl:text-[16px]'>{detailsItem.name}</p>
+                                                    <div key={detailsItem.name}>
+                                                        <p className='mt-[10px] text-[18px] font-light xl:text-[16px]'>{detailsItem.name}</p>
                                                         <ul>
                                                             {
                                                                 detailsItem.list.map((listItem) => {
@@ -44,7 +44,7 @@ const DetailsOffer = ({ offer, isNetto, handleOpenDialog }) => {
                                                                 })
                                                             }
                                                         </ul>
-                                                    </>
+                                                    </div>
                                                 )
                                             })
                                         }

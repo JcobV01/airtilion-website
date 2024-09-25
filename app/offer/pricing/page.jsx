@@ -80,8 +80,6 @@ const pricing = () => {
     };
   };
 
-  console.log(post);
-
   const createPricing = async (e) => {
     e.preventDefault();
     setSubmitting(true);

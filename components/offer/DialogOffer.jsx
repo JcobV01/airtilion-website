@@ -86,7 +86,7 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
                     <input type="text" name="Name" placeholder="Imię i Nazwisko" value={name} onChange={(e) => setName(e.target.value)} className='w-full px-[10px] mt-[25px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
                     <input type="email" name="Email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className='w-full px-[10px] mt-[15px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
                     <input type="text" name="Number" placeholder="Numer telefonu" value={number} onChange={(e) => setNumber(e.target.value)} className='w-full px-[10px] mt-[15px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
-                    <input type="text" name="Package" value={title} className='hidden' />
+                    <input type="text" name="Package" value={title} readOnly className='hidden' />
 
                     <div className='w-full flex justify-between my-[40px] md:flex-col-reverse md:gap-[20px]'>
                         <CancelButton text="Anuluj" handleClose={handleCloseDialog} />
