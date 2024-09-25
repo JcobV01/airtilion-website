@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import bgImage from '@public/assets/images/main-photo.webp'
@@ -8,7 +8,7 @@ import logo from '@public/assets/images/airtilion-logo-dark.png'
 import Image from 'next/image'
 
 const page = () => {
-
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const text = document.querySelector('.bouncingText');
@@ -39,14 +39,28 @@ const page = () => {
     animateLetter();
   }, []);
 
+  useEffect(() => {
+    // Symulacja ładowania strony
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <section style={{ backgroundImage: `url(${bgImage.src})` }} className='w-full h-full bg-cover 2xl:bg-center'>
       <div className='w-full h-full bg-[#0b0b0bef] flex items-center flex-col justify-between py-[50px]'>
 
-        <div className='w-[600px] h-[600px] rounded-full border-[#B4A179] border-r-[2px] border-l-[2px] flex justify-center items-center sm:w-[90%] sm:px-[20px] fold:border-none'>
-          <Image src={logo} width={400} height="auto" alt="Logo firmy" className='sm:w-[300px]'/>
-        </div>
+        {isLoading ? (
+          <div className='w-[600px] h-[600px] rounded-full border-[#B4A179] border-r-[2px] border-l-[2px] flex justify-center items-center spin'>
+          </div>
+        ) : (
 
+          <div className='w-[600px] h-[600px] rounded-full border-[#B4A179] border-r-[2px] border-l-[2px] flex justify-center items-center  sm:w-[90%] sm:px-[20px] fold:border-none'>
+            <Image src={logo} width={400} height="auto" alt="Logo firmy" className='sm:w-[300px] logoOpacity duration-700' />
+          </div>
+        )}
         <Link href="/home" className='relative h-[60px] px-[60px] text-[18px] flex justify-center items-center hover:scale-105 hover:text-[15px] duration-500 sm:h-[50px] sm:text-[14px]'>
           <span className='absolute h-[15px] top-0 left-0 w-[2px] bg-[#E2B350]'></span>
           <span className='absolute h-[2px] top-0 left-0 w-[15px] bg-[#E2B350]'></span>
