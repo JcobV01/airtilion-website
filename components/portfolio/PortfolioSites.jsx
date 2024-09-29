@@ -1,11 +1,17 @@
 "use client"
 
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 
 const PortfolioSites = () => {
   const [items, setItems] = useState([])
   const id = ''
+  const router = useRouter()
+
+  const openProjectHandle = (id) => {
+    router.push(`/portfolio/${id}`)
+  }
 
   useEffect(() => {
     const getData = async () => {
@@ -23,6 +29,7 @@ const PortfolioSites = () => {
           throw new Error('Failed to fetch projects');
         }
         const data = await response.json();
+        console.log(data)
         
         setItems(data);
       } catch (error) {
@@ -33,10 +40,12 @@ const PortfolioSites = () => {
     getData()
   }, [])
 
+
+
   return (
     <article className='flex flex-wrap gap-[25px] justify-center gap-y-[50px]'>
       {items?.map((item, index) => (
-        <div key={index} className="w-[250px] h-[500px] relative flex flex-col items-center justify-center portfolio-item-hovered duration-500 p-[20px] cursor-pointer">
+        <div key={index} className="w-[250px] h-[500px] relative flex flex-col items-center justify-center portfolio-item-hovered duration-500 p-[20px] cursor-pointer" onClick={() => openProjectHandle(item._id)}>
           <div className="absolute top-0 left-0 w-full h-full transparent-y bg-cover bg-center saturate-0 brightness-50 z-10  duration-500" style={{backgroundImage: `url(${item.Background})`}}></div>
           <Image src={item.Logo} width={0} height={0} sizes="100vw" alt={`logo ${item.Name}`} className="w-auto h-[50px] z-20 absolute top-[50px] duration-500"/>
           <p className="z-20 text-[17px] duration-500 absolute bottom-[50%] translate-y-[50%]">{item.Name}</p>
