@@ -458,3 +458,21 @@ dialog::backdrop {
   opacity: 0;
   transform: translateX(-50px);
 }
+
+
+/*Slider w opiniach - paginacja*/
+.swiper-pagination{
+  position: relative !important;
+  background: rgba(16, 16, 16, 0.40);
+  margin-top: 20px;
+  width: 150px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  margin-inline: auto;
+  border-radius: 5px;
+  width: 150px !important;
+}
+
+.swiper-pagination-bullet{background-color: #fff !important;}
+.swiper-pagination-bullet-active{background: #E2B350 !important;}

@@ -5,6 +5,7 @@ import Contact from '@components/home/sections/Contact/Contact'
 import Cooperation from '@components/home/sections/Cooperation/Cooperation'
 import Encourage from '@components/home/sections/Encourage/Encourage'
 import Offer from '@components/home/sections/Offer/Offer'
+import Opinion from '@components/home/sections/Opinion/Opinion'
 import Portofolio from '@components/home/sections/Portfolio/Portofolio'
 import HeaderBg from '@public/assets/images/mainHeader.webp'
 import React from 'react'
@@ -19,6 +20,7 @@ const home = () => {
         <Cooperation />
         <Offer />
         <Portofolio />
+        <Opinion />
         <Contact />
 
         <Footer />
