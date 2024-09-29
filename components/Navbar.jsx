@@ -76,7 +76,9 @@ const Navbar = () => {
     return (
         <>
             <nav className='flex fold:flex-col fold:gap-[20px] justify-between px-[100px] xl:px-[50px] sm:px-[25px] py-[40px] items-center sticky top-0 w-full z-20 duration-500' style={{ backgroundColor: scrolled && '#00000080', backdropFilter: (scrolled && visibility != 'flex') && 'blur(5px)' }}>
-                <Image src={logo} width={260} height="auto" alt="logo spółki Airtilion" className='xl:w-[200px]' />
+                <Link href="/home">
+                    <Image src={logo} width={260} height="auto" alt="logo spółki Airtilion" className='xl:w-[200px]' />
+                </Link>
                 <div className='flex gap-[40px] xl:gap-[30px] items-center lg:hidden'>
 
                     {
@@ -89,11 +91,13 @@ const Navbar = () => {
                         ))
                     }
 
-                    <button className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-500 flex gap-[10px] items-center hover:text-[#d9d9d9] hover:bg-gradient-to-r hover:text-[15px] hover:py-[12px] hover:tracking-[1.5px] nav-button xl:text-[15px]'>
-                        <Icon icon="solar:letter-bold" width="25" height="25" />
-                        <Icon icon="solar:letter-opened-bold" width="25" height="25" className='hidden' />
-                        Zapytaj o wycenę
-                    </button>
+                    <Link href="/offer/pricing">
+                        <button className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-500 flex gap-[10px] items-center hover:text-[#d9d9d9] hover:bg-gradient-to-r hover:text-[15px] hover:py-[12px] hover:tracking-[1.5px] nav-button xl:text-[15px]'>
+                            <Icon icon="solar:letter-bold" width="25" height="25" />
+                            <Icon icon="solar:letter-opened-bold" width="25" height="25" className='hidden' />
+                            Zapytaj o wycenę
+                        </button>
+                    </Link>
                 </div>
 
                 <div id="nav-icon1" className={`z-40 w-[60px] sm:w-[45px] h-[45px] sm:h-[30px] relative hidden lg:block ${visibility == 'flex' && 'lg:fixed lg:right-[50px] fold:right-0 fold:left-[50%] fold:!translate-x-[-50%] open'}`} onClick={changeVisibility}>

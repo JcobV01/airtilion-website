@@ -48,6 +48,7 @@
 
 body {
   background-color: #040404;
+  scroll-behavior: smooth;
 }
 
 .bouncingText span {

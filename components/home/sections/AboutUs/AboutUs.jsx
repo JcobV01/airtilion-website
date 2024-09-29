@@ -27,7 +27,7 @@ const AboutUs = () => {
         <div className='flex flex-col gap-[50px]'>
           <Heading title="O nas" subtitle="poznaj naszą firmę" />
           <p className='text-[16px] font-light xl:text-[15px] lg:text-[13px]'>Jesteśmy zespołem pasjonatów technologii, tworzącym strony i aplikacje internetowe od A do Z, które są dostosowane do Twoich potrzeb. Od wielu lat jesteśmy zafascynowani tą branżą, zauważyliśmy przez ten czas, że coraz więcej firm świadczących podobne usługi staje się coraz bardziej leniwych i skupia się tylko na zyskach, zapominając o jakości i kliencie. Airtilion powstał żeby to zmienić. </p>
-          <LightButton text="Napisz do nas" paddingBlock="11px" paddingInline="30px" rounded="5px" isInCardsOffer={false} />
+          <LightButton text="Napisz do nas" paddingBlock="11px" paddingInline="30px" rounded="5px" isInCardsOffer={false} link="/home/#contact"/>
         </div>
       </article>
 

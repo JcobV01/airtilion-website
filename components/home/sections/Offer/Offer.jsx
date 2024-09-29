@@ -17,7 +17,8 @@ const offer = [
                 subtitle: "W skład oferty wchodzą m. in.:",
                 list: ["Indywidualny projekt graficzny", "SEO", "Bezpłatne wsparcie strony przez rok", "I wiele więcej..."]
             }
-        }
+        },
+        link: "/offer/websites"
     },
 
     {
@@ -31,7 +32,8 @@ const offer = [
                 subtitle: "W skład oferty wchodzą m. in.:",
                 list: ["Wprowadzenie produktów", "SEO", "Integracja płatności i wysyłek", "I wiele więcej..."]
             }
-        }
+        },
+        link: "/offer/shops"
     },
 
     {
@@ -45,7 +47,8 @@ const offer = [
                 subtitle: "W skład oferty wchodzą m. in.:",
                 list: ["Stworzenie strony oraz aplikacjie", "Indywidualny projekt graficzny", "Kompatybilność z Androidem i IOS", "I wiele więcej..."]
             }
-        }
+        },
+        link: "/offer/apps"
     },
 
     {
@@ -59,7 +62,8 @@ const offer = [
                 subtitle: "",
                 list: []
             }
-        }
+        },
+        link: "/offer/pricing"
     },
 
     {
@@ -73,7 +77,8 @@ const offer = [
                 subtitle: "",
                 list: []
             }
-        }
+        },
+        link: "/offer/services"
     }
 ]
 
@@ -87,7 +92,7 @@ const Offer = () => {
 
             <section className='flex flex-wrap justify-center gap-[70px] gap-y-[40px] mt-[40px]'>
                 {offer.map((card, index) => (
-                    <OfferCard title={card.title} technologies={card.data.technologies} composition={card.data.composition} key={index} index={index} isVisible={isVisible}/>
+                    <OfferCard title={card.title} technologies={card.data.technologies} composition={card.data.composition} key={index} index={index} isVisible={isVisible} link={card.link}/>
                 ))}
             </section>
         </section>

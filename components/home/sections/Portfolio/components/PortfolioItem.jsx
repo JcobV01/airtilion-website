@@ -1,12 +1,20 @@
+"use client"
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
+import { useRouter } from 'next/navigation'
 
 
-const PortfolioItem = ({ title, desc, bg, image }) => {
+const PortfolioItem = ({ title, desc, bg, image, id }) => {
+    const router = useRouter()
+
+    const detailsHande = (e) => {
+        router.push(`/portfolio/${e.currentTarget.id}`)
+    }
 
     return (
-        <section className='pt-[50px] z-10 sm:mb-[50px] fold:mb-0'>
+        <section id={id} className='pt-[50px] z-10 sm:mb-[50px] fold:mb-0' onClick={(e) => detailsHande(e)}>
             <article className='relative h-[550px] w-[1100px] m-auto hover:w-[1200px] 2xl:w-[1000px] xl:w-[800px] xl:h-[400px] lg:w-[80%] lg:h-[450px] sm:h-[300px] md:w-[90%] 2xl:hover:w-[1100px] xl:hover:w-[900px] lg:hover:w-[80%] md:hover:w-[90%] lg:hover:h-[500px] sm:hover:h-[350px] transition-all duration-1000 cursor-pointer portfolio-item'>
                 <div className='w-[960px] h-[550px] xl:w-[700px] xl:h-[400px] sm:h-[300px] lg:w-[100%] relative px-[50px] xl:px-0'>
                     <span className='h-[2px] w-[50%] xl:w-[30%] bg-[#E2B35080] z-10 block absolute top-[30px] left-[50%] xl:left-[20%] translate-x-[-50%] lg:hidden'></span>
