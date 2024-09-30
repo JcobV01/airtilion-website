@@ -37,7 +37,9 @@ const page = ({ params }) => {
             }
         };
 
-        fetchProject();
+        fetchProject().then(() => {
+            window.scrollTo(0,0)
+        });
     }, [id])
 
 
