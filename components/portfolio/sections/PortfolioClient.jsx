@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const PortfolioClient = ({client}) => {
     return (
-        <article className='w-full'>
+        <article id="client" className='w-full'>
             <h5 className='text-[20px] tracking-[3px] text-[#E2B350] mb-[60px] text-center sm:w-[90%]'>KILKA SŁÓW O KLIENCIE</h5>
 
             <div className='w-full py-[140px] flex items-center gap-[120px] justify-center relative lg:flex-col fold:gap-[50px]'>

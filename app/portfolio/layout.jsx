@@ -2,7 +2,8 @@ import Footer from '@components/Footer'
 import Header from '@components/Header'
 import Navbar from '@components/Navbar'
 import HeaderBg from '@public/assets/images/headerOfferPortfolio.webp'
-import React from 'react'
+import React, { Suspense } from 'react'
+import Loading from './loading'
 
 const layout = ({ children }) => {
   return (
