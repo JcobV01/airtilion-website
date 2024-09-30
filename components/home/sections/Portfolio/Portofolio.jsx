@@ -47,7 +47,7 @@ const Portofolio = () => {
                 <p className='text-[15px] lg:text-[13px] sm:text-[11px] tracking-[1.5px] text-center'>Prezentujemy tu jedynie nasze najnowsze projekty, aby dać Ci przedsmak naszych umiejętności i kreatywności. Każdy projekt to unikalna historia, dopasowana do indywidualnych potrzeb klientów. Chcesz zobaczyć więcej? </p>
 
                 <Link href="/portfolio">
-                    <div className='flex gap-[40px] fold:gap-[10px]'>
+                    <div className='flex gap-[40px] fold:gap-[10px] duration-700 hover:scale-110'>
                         <p className='text-[15px] lg:text-[13px] sm:text-[11px] tracking-[1.5px]'>Przejdź do pełnego portfolio</p>
                         <Icon icon="solar:arrow-right-broken" width={20} height={20} alt='Ikona strzałki' className='text-[#E2B350]' />
                     </div>
