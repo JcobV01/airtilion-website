@@ -30,7 +30,7 @@ const OfferCard = ({ title, technologies, composition, index, isVisible, link })
             </div>
 
             <Link href={link}>
-                <div className='absolute bottom-[20px] right-[20px] flex gap-[4px] z-1'>
+                <div className='absolute bottom-[20px] right-[20px] flex gap-[4px] z-1 transition duration-[700ms] hover:tracking-[2px]'>
                     <p className='text-[15px] lg:text-[13px] font-light'>Poznaj szczegóły oferty</p>
                     <div className='flex items-center'>
                         <Icon icon='ep:d-arrow-right' width={20} height={20} alt='Ikona strzałek w prawo' className='text-[#E2B350]' />
