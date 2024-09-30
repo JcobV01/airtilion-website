@@ -2,10 +2,14 @@ import React from 'react'
 import { Icon } from '@iconify/react'
 import gradient from '@public/assets/images/offer/detailsGradient.webp'
 import ButtonBuy from './ButtonBuy'
+import useIntersectionObserver from '@hooks/useObserver';
 
 const DetailsOffer = ({ offer, isNetto, handleOpenDialog }) => {
+    const [ref, isVisible] = useIntersectionObserver({
+        threshold: 0.1 // 10% widoczności sekcji wystarczy do uruchomienia animacji
+      });
     return (
-        <div className='flex flex-col gap-[150px] xl:gap-[75px]'>
+        <div ref={ref} className={`flex flex-col gap-[150px] xl:gap-[75px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             {
                 offer.map((details, index) => {
                     const price = isNetto ? details.priceNetto : details.priceBrutto;
