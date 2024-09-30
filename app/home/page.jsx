@@ -94,7 +94,7 @@ const home = () => {
 
         {/* Sekcja portfolio */}
 
-        {/* <div className='absolute top-[8000px] 2xl:top-[7200px] left-[50%] translate-x-[-50%] z-[1] w-full'>
+        <div className='absolute top-[8000px] 2xl:top-[8700px] xl:top-[9000px] lg:top-[10500px] md:top-[11200px] sm:top-[11300px] fold:hidden left-[50%] translate-x-[-50%] z-[1] w-full'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1150" viewBox="0 0 1864 650" fill="none" className='w-full'>
             <path d="M2399.94 139.833C2194.53 28.1574 1864.52 -34.0171 1602.71 24.3574C1398.19 69.9589 1172.68 156.921 885.195 143.763C661.744 133.536 330.387 246.737 166.872 500.386C-43.1268 826.143 -112.241 512.379 -275.632 510.461" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2399.94 219.833C2194.53 108.157 1864.52 45.9829 1602.71 104.357C1398.19 149.959 1172.68 236.921 885.195 223.763C661.744 213.536 330.387 326.737 166.872 580.386C-43.1268 906.143 -112.241 592.379 -275.632 590.461" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
@@ -103,18 +103,18 @@ const home = () => {
           </svg>
         </div>
 
-        <div className='absolute top-[9700px] 2xl:top-[8800px] left-[50%] translate-x-[-50%] z-[1] w-full'>
+        <div className='absolute top-[9700px] 2xl:top-[10300px] lg:top-[11900px] md:top-[12200px] sm:top-[12500px] left-[50%] translate-x-[-50%] z-[1] w-full'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1196" viewBox="0 0 1864 1196" fill="none" className='w-full'>
             <path d="M2226.65 1194.39C2119.13 986.777 1880.69 750.316 1631.15 651.913C1436.21 575.041 1200.71 520.66 970.009 348.627C790.69 214.912 452.826 122.933 175.24 241.341C-181.259 393.412 -62.63 94.8287 -196.868 1.65952" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2226.65 1294.39C2119.13 1086.78 1880.69 850.316 1631.15 751.913C1436.21 675.041 1200.71 620.66 970.009 448.627C790.69 314.912 452.826 222.933 175.24 341.341C-181.259 493.412 -62.63 194.829 -196.868 101.66" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2226.65 1394.39C2119.13 1186.78 1880.69 950.316 1631.15 851.913C1436.21 775.041 1200.71 720.66 970.009 548.627C790.69 414.912 452.826 322.933 175.24 441.341C-181.259 593.412 -62.63 294.829 -196.868 201.66" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2226.65 1494.39C2119.13 1286.78 1880.69 1050.32 1631.15 951.913C1436.21 875.041 1200.71 820.66 970.009 648.627C790.69 514.912 452.826 422.933 175.24 541.341C-181.259 693.412 -62.63 394.829 -196.868 301.66" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
           </svg>
-        </div> */}
+        </div>
 
         {/* Sekcja kontakt */}
 
-        <div className='absolute top-[10900px] 2xl:top-[10200px] left-[50%] translate-x-[-50%] z-[1] w-full'>
+        <div className='absolute top-[10900px] 2xl:top-[11500px] lg:top-[13200px] sm:top-[13500px] fold:hidden left-[50%] translate-x-[-50%] z-[1] w-full'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1924" height="868" viewBox="0 0 1864 568" fill="none" className='w-full'>
             <path d="M-111.344 566.97C24.1409 392.47 276.293 222.47 508.015 188.97C689.033 162.8 899.415 168.47 1131.14 58.9701C1311.25 -26.1402 1616.09 -31.5299 1824.69 151.97C2092.6 387.637 2056.95 68.9701 2190.28 11.9701" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M-111.344 646.97C24.1409 472.47 276.293 302.47 508.015 268.97C689.033 242.8 899.415 248.47 1131.14 138.97C1311.25 53.8599 1616.09 48.4701 1824.69 231.97C2092.6 467.637 2056.95 148.97 2190.28 91.9701" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
