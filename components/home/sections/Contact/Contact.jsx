@@ -133,7 +133,7 @@ const Contact = () => {
                         <input name="Email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='ADRES EMAIL' />
                         <input name="Number" value={number} onChange={(e) => setNumber(e.target.value)} type="text" className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='NUMER TELEFONU' />
                         <textarea name="Text" value={text} onChange={(e) => setText(e.target.value)} className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] resize-none h-[200px] xl:h-[100px] xl:text-[13px]' placeholder='TREŚĆ'></textarea>
-                        <div className='flex justify-end sm:justify-center'>
+                        <div className='flex duration-700 hover:translate-y-[5px] justify-end sm:justify-center'>
                             <FormButton text="WYŚLIJ" submitting={isSubmitting} />
                         </div>
                     </form>

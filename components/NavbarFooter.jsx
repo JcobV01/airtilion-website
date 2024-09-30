@@ -37,7 +37,7 @@ const NavbarFooter = () => {
             <div className='flex gap-[40px] text-[18px] font-light lg:flex-wrap lg:justify-center lg:gap-[30px] sm:flex-col sm:items-center sm:text-center'>
                 {
                     menuFooter.map((item, index) => (
-                        <Link href={item.link} key={index}>
+                        <Link href={item.link} key={index} className='duration-700 hover:scale-90 hover:text-[#E2B350]'>
                             {item.name}
                         </Link>
                     ))

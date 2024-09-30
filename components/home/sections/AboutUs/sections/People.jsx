@@ -19,10 +19,10 @@ const People = () => {
                     <div className='w-[340px] h-[470px] relative md:w-[260px] md:h-[380px]'>
                         <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" className='object-cover' />
                         <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'>
-                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil Facebook">
+                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil Facebook" className='duration-700 hover:scale-75'>
                                 <Icon icon="bi:facebook" width={30} height={30} alt="Ikona facebooka" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                             </Link>
-                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil Linkedin">
+                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil Linkedin" className='duration-700 hover:scale-75'>
                                 <Icon icon="bi:linkedin" width={30} height={30} alt="Ikona linkedin" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                             </Link>
                         </div>
@@ -46,10 +46,10 @@ const People = () => {
                     <div className='w-[340px] h-[470px] relative md:w-[260px] md:h-[380px]'>
                         <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" />
                         <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'>
-                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil facebook">
+                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil facebook" className='duration-700 hover:scale-75'>
                                 <Icon icon="bi:facebook" width={30} height={30} alt="Ikona facebooka" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                             </Link>
-                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil Linkedin">
+                            <Link href="#" target='_blank' aria-label="Odwiedź mój profil Linkedin" className='duration-700 hover:scale-75'>
                                 <Icon icon="bi:linkedin" width={30} height={30} alt="Ikona linkedin" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                             </Link>
                         </div>
