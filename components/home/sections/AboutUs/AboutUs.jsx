@@ -18,7 +18,7 @@ const AboutUs = () => {
   });
 
   return (
-    <section  className='relative w-[1240px] 2xl:w-[80%] m-auto flex flex-col gap-[150px] z-10 observer-navbar'>
+    <section id="nav-aboutus" className='relative w-[1240px] 2xl:w-[80%] m-auto flex flex-col gap-[150px] z-10 observer-navbar'>
 
       <article ref={ref} className={`relative flex gap-[50px] z-10 xl:gap-[30px] lg:gap-[50px] lg:flex-col about-section transition-all duration-1000 ease-in-out ${
         isVisible ? 'about-visible' : 'about-hidden'
