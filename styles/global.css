@@ -511,3 +511,22 @@ dialog::backdrop {
     background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(0% - 2px),100% calc(100% + 2px);
  }
 }
+
+/* kropki portfolio */
+
+.portfolio-dots{
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  width: max-content;
+  white-space: nowrap;
+  transform: translateX(calc(-100% - 10px)) translateY(-50%);
+  visibility: hidden;
+  transition-duration: 500ms;
+  opacity: 0;
+}
+
+.dot-container:hover > .portfolio-dots{
+  visibility: visible;
+  opacity: 1;
+}

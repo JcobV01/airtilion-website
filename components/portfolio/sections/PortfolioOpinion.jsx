@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react'
 
 const PortfolioOpinion = ({client}) => {
     return (
-        <article id="opinion" className='w-[1240px] xl:w-[90%]'>
+        <article id="opinion" className='w-[1240px] xl:w-[90%] observer'>
             <h5 className='text-[20px] tracking-[3px] text-[#E2B350] mb-[60px] text-center'>REFERENCJA</h5>
 
             <div className='flex flex-col w-full justify-center items-center gap-[40px] relative fold:gap-[20px]'>

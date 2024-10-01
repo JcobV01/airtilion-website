@@ -15,14 +15,38 @@ import PortfolioOpinion from '@components/portfolio/sections/PortfolioOpinion'
 import Dot from '@components/portfolio/dot'
 
 const dotsData = [
-    '#images',
-    '#work',
-    '#technologies',
-    '#challanges',
-    '#steps',
-    '#achivements',
-    '#client',
-    '#opinion'
+    {
+        link: '#images',
+        text: 'Zdjęcia',
+    },
+    {
+        link: '#work',
+        text: 'Zakres Prac',
+    },
+    {
+        link: '#technologies',
+        text: 'Technologie',
+    },
+    {
+        link: '#challanges',
+        text: 'Wyzwania',
+    },
+    {
+        link: '#steps',
+        text: 'Realizacja',
+    },
+    {
+        link: '#achivements',
+        text: 'Osiągnięcia',
+    },
+    {
+        link: '#client',
+        text: 'O Kliencie',
+    },
+    {
+        link: '#opinion',
+        text: 'Referencja',
+    },
 ]
 
 const page = ({ params }) => {
@@ -65,12 +89,40 @@ const page = ({ params }) => {
         });
     }, [id])
 
+    useEffect(() => {
+        const sections = document.querySelectorAll('.observer'); 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {                    
+                    if(entry.target.id == 'images'){updateDots(0)}
+                    else if(entry.target.id == 'work'){updateDots(1)}
+                    else if(entry.target.id == 'technologies'){updateDots(2)}
+                    else if(entry.target.id == 'challanges'){updateDots(3)}
+                    else if(entry.target.id == 'steps'){updateDots(4)}
+                    else if(entry.target.id == 'achivements'){updateDots(5)}
+                    else if(entry.target.id == 'client'){updateDots(6)}
+                    else if(entry.target.id == 'opinion'){updateDots(7)}
+                }
+            });
+        }, { threshold: 0.8 });
+    
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    
+        return () => {
+            sections.forEach(section => {
+                observer.unobserve(section);
+            });
+        };
+    },[data])
+
 
     return (
         <section className='z-10 flex flex-col items-center gap-[150px] sm:gap-[100px]'>
             {data.length > 0 ?
                 <>
-                    <article className='w-[1240px] flex flex-col gap-[50px] xl:w-[90%]'>
+                    <article id="description" className='w-[1240px] flex flex-col gap-[50px] xl:w-[90%] observer'>
                         <Heading title={data[0]?.Name} subtitle="NASZE PORTFOLIO" />
                         <p className='text-[15px]'>{data[0]?.Description}</p>
                     </article>
@@ -89,7 +141,7 @@ const page = ({ params }) => {
                     </section>
                     <aside className='fixed z-20 right-[10px] top-[50%] translate-y-[-50%] flex flex-col items-center justify-center gap-[10px] w-[20px] py-[20px] bg-[#0000006d] backdrop-blur-[5px] rounded-full'>
                         {dotsData.map((dot, index) => (
-                            <Dot dots={dots} updateDots={updateDots} index={index} link={dot} key={index}/>
+                            <Dot dots={dots} updateDots={updateDots} index={index} link={dot.link} text={dot.text} key={index}/>
                         ))}
                     </aside>
                 </>
