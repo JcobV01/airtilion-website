@@ -42,7 +42,7 @@ const Cooperation = () => {
     ]
 
     return (
-        <section ref={ref} className={`relative w-[1240px] 2xl:w-[80%] m-auto z-10 transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
+        <section ref={ref} className={`relative w-[1240px] 2xl:w-[80%] m-auto z-10 transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'} observer-navbar`}>
             <article className='flex flex-col pb-[50px] z-10'>
                 <Heading title="Współpraca" subtitle="ZOBACZ JAK PRZEBIEGA PROCES TWORZENIA TWOICH MARZEŃ" id="cooperation"/>
                 <p className='text-[16px] xl:text-[15px] lg:text-[13px] mt-[30px]'>Stawiamy na otwartą komunikację i bliską współpracę, aby dokładnie zrozumieć Twoje potrzeby i dostosować nasze rozwiązania. Dzięki elastyczności i zaangażowaniu, dążymy do osiągnięcia najlepszych rezultatów i budowania długotrwałych relacji.</p>

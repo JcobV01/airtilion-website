@@ -1,3 +1,5 @@
+"use client"
+
 import Footer from '@components/Footer'
 import Header from '@components/Header'
 import AboutUs from '@components/home/sections/AboutUs/AboutUs'
@@ -8,9 +10,31 @@ import Offer from '@components/home/sections/Offer/Offer'
 import Opinion from '@components/home/sections/Opinion/Opinion'
 import Portofolio from '@components/home/sections/Portfolio/Portofolio'
 import HeaderBg from '@public/assets/images/mainHeader.webp'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const home = () => {
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('.observer-navbar'); 
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {                    
+              console.log(entry);
+            }
+        });
+    }, { threshold: 0.8 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    return () => {
+        sections.forEach(section => {
+            observer.unobserve(section);
+        });
+    };
+},[])
+
   return (
     <>
       <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBg} />

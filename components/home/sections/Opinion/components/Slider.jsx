@@ -68,9 +68,9 @@ const Slider = () => {
                 }}
             >
                 {slide.map((slide, index) => (
-                    <SwiperSlide>
+                    <SwiperSlide key={index}>
                         <div className='flex justify-center items-center'>
-                            <SliderCard author={slide.author} page={slide.page} desc={slide.desc} key={index} />
+                            <SliderCard author={slide.author} page={slide.page} desc={slide.desc} />
                         </div>
                     </SwiperSlide>
                 ))}
