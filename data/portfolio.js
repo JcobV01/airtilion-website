@@ -7,6 +7,8 @@ export const technologies = {
     "Google SC": "devicon-plain:google",
     "CSS": "devicon-plain:css3",
     "JavaScript": "devicon-plain:javascript",
+    "Google Analytics": "simple-icons:googleanalytics",
+    "PHP": "akar-icons:php-fill",
 }
 
 /*Wyzwania*/
@@ -17,11 +19,13 @@ export const challanges = {
     "Chart": "streamline:graph-bar-increase-solid",
     "Rodo": "streamline:user-protection-2-solid",
     "Map": "gis:map",
+    "Code": "mdi:code",
 }
 
 /*Osiągnięcia*/
 
 export const achivements = {
+    "Speed": "material-symbols:speed",
     "ThreeArrowUp" : "tabler:chart-arrows-vertical",
     "Chat" : "raphael:chat",
     "Cursor" : "fluent:cursor-click-20-filled",
