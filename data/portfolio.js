@@ -9,6 +9,7 @@ export const technologies = {
     "JavaScript": "devicon-plain:javascript",
     "Google Analytics": "simple-icons:googleanalytics",
     "PHP": "akar-icons:php-fill",
+    "MySQL": "simple-icons:mysql",
 }
 
 /*Wyzwania*/
@@ -20,6 +21,8 @@ export const challanges = {
     "Rodo": "streamline:user-protection-2-solid",
     "Map": "gis:map",
     "Code": "mdi:code",
+    "Migration": "material-symbols:drive-file-move",
+    "Speed": "material-symbols:speed",
 }
 
 /*Osiągnięcia*/
@@ -30,4 +33,5 @@ export const achivements = {
     "Chat" : "raphael:chat",
     "Cursor" : "fluent:cursor-click-20-filled",
     "PersonWalking" : "fa6-solid:person-walking",
+    "Rodo": "streamline:user-protection-2-solid",
 }
