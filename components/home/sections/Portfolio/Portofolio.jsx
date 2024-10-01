@@ -20,7 +20,6 @@ const Portofolio = () => {
                     throw new Error('Failed to fetch projects');
                 }
                 const data = await response.json();
-                console.log(data);
 
                 setData(data); // Przechowujemy dane w stanie
             } catch (error) {
@@ -33,8 +32,8 @@ const Portofolio = () => {
     }, [])
 
     return (
-        <section id="portfolio" ref={ref} className={`z-10 w-[1240px] xl:w-[80%] m-auto flex flex-col gap-[50px] relative transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
-            <Heading title="Portfolio" subtitle="ZOBACZ NASZE REALIZACJE" />
+        <section  ref={ref} id="nav-portfolio" className={`z-10 w-[1240px] xl:w-[80%] m-auto flex flex-col gap-[50px] relative transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'} observer-navbar`}>
+            <Heading title="Portfolio"  subtitle="ZOBACZ NASZE REALIZACJE" id="portfolio" />
 
             <p className='text-[15px] lg:text-[13px]'>Zapraszamy do zapoznania się z naszymi najnowszymi realizacjami! Poniżej znajdziesz trzy najnowsze projekty, które pokazują naszą pasję do tworzenia nowoczesnych i funkcjonalnych stron oraz aplikacji internetowych. Każda realizacja posiada swoją dedykowaną podstronę z pełnym opisem i szczegółami projektu, abyś mógł dokładnie zobaczyć, jak podchodzimy do każdego zadania. Jeśli chcesz zobaczyć więcej naszych prac i dowiedzieć się, jak możemy pomóc Tobie w rozwoju Twojego biznesu, zapraszamy do odwiedzenia pełnego portfolio na dedykowanej podstronie.</p>
 

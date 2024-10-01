@@ -1,3 +1,5 @@
+"use client"
+
 import Footer from '@components/Footer'
 import Header from '@components/Header'
 import AboutUs from '@components/home/sections/AboutUs/AboutUs'
@@ -8,9 +10,52 @@ import Offer from '@components/home/sections/Offer/Offer'
 import Opinion from '@components/home/sections/Opinion/Opinion'
 import Portofolio from '@components/home/sections/Portfolio/Portofolio'
 import HeaderBg from '@public/assets/images/mainHeader.webp'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const home = () => {
+
+  const changeMenu = (id) => {
+    const menuItems = document.querySelectorAll('.menu-button')
+    menuItems.forEach((item) => item.classList.remove('menu-active'))
+    menuItems[id].classList.add('menu-active')
+  }
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('.observer-navbar');
+
+    const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.id === 'nav-aboutus') {
+                    changeMenu(0);
+                } else if (entry.target.id === 'nav-coop') {
+                    changeMenu(1);
+                } else if (entry.target.id === 'nav-offer') {
+                    changeMenu(2);
+                } else if (entry.target.id === 'nav-portfolio') {
+                    changeMenu(3);
+                } else if (entry.target.id === 'nav-contact') {
+                    changeMenu(4);
+                }
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback);
+
+    sections.forEach(section => {
+        const threshold = section.offsetHeight > 500 ? 0.3 : 0.1;
+        observer.observe(section);
+    });
+
+    return () => {
+        sections.forEach(section => {
+            observer.unobserve(section);
+        });
+    };
+}, []);
+
+
   return (
     <>
       <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBg} />
@@ -62,7 +107,7 @@ const home = () => {
         {/* Sekcja o nas - założyciele */}
 
         <div className='absolute hidden 2xl:block 2xl:top-[4200px]  left-[50%] translate-x-[-50%] z-[1] w-full'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1849" viewBox="0 0 1864 1849" fill="none" className='w-full'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1849" viewBox="0 0 1864 1849" fill="none" className='w-full'>
             <path d="M-47.8027 147.746C141.849 34.4395 438.55 -32.2625 666.596 20.7691C844.743 62.1967 1038.67 143.96 1294.34 126.192C1493.07 112.381 1779.01 218.181 1906.63 464.961C2070.54 781.897 2153.18 472.074 2298.11 467.446" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M-47.8027 227.746C141.849 114.4395 438.55 47.7375 666.596 100.769C844.743 142.197 1038.67 223.96 1294.34 206.192C1493.07 192.381 1779.01 298.181 1906.63 544.961C2070.54 861.897 2153.18 552.074 2298.11 547.446" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M-47.8027 307.746C141.849 194.4395 438.55 127.738 666.596 180.769C844.743 222.197 1038.67 303.96 1294.34 286.192C1493.07 272.381 1779.01 378.181 1906.63 624.961C2070.54 941.897 2153.18 632.074 2298.11 627.446" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
