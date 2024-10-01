@@ -11,27 +11,33 @@ import { Icon } from '@iconify/react'
 const menu = [
     {
         name: "O nas",
-        link: "/home#about"
+        link: "/home#about",
+        id: "#about"
     },
     {
         name: "Współpraca",
-        link: "/home#cooperation"
+        link: "/home#cooperation",
+        id: "#cooperation"
     },
     {
         name: "Oferta",
-        link: "/home#offer"
+        link: "/home#offer",
+        id: "#offer"
     },
     {
         name: "Portfolio",
-        link: "/home#portfolio"
+        link: "/home#portfolio",
+        id: "#portfolio"
     },
     // {
     //     name: "Nasze projekty",
-    //     link: "home/projects"
+    //     link: "home/projects",
+    //        id: ''
     // },
     {
         name: "Kontakt",
-        link: "/home#contact"
+        link: "/home#contact",
+        id: "#contact"
     },
 ]
 
@@ -72,6 +78,14 @@ const Navbar = () => {
         e.currentTarget.classList.add('menu-active')
     }
 
+    const handleMenu = (e, id) => {
+        e.preventDefault()
+        const target = id.length > 0 ? document.querySelector(id) : null;
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }
 
     return (
         <>
@@ -83,7 +97,7 @@ const Navbar = () => {
 
                     {
                         menu.map((item, index) => (
-                            <Link href={item.link} key={index}>
+                            <Link href={item.link} key={index} onClick={(e) => handleMenu(e, item.id)}>
                                 <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xl:text-[15px]' onClick={(e) => handleMenuClick(e)}>
                                     {item.name}
                                 </button>
@@ -110,7 +124,7 @@ const Navbar = () => {
                     {
                         menu.map((item, index) => (
                             <Link href={item.link} key={index}>
-                                <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xl:text-[15px]' onClick={(e) => {handleMenuClick(e); changeVisibility()}}>
+                                <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xl:text-[15px]' onClick={(e) => { handleMenuClick(e); changeVisibility() }}>
                                     {item.name}
                                 </button>
                             </Link>

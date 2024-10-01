@@ -86,8 +86,8 @@ const Offer = () => {
     const [ ref, isVisible ] = useIntersectionObserver();
     
     return (
-        <section ref={ref} id="offer" className={`w-[1400px] 2xl:w-[80%] z-10 m-auto flex flex-col gap-[40px] relative transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
-            <Heading title="Oferta" subtitle="TWOJE POTRZEBY, NASZA OFERTA" />
+        <section ref={ref} className={`w-[1400px] 2xl:w-[80%] z-10 m-auto flex flex-col gap-[40px] relative transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
+            <Heading title="Oferta" id="offer" subtitle="TWOJE POTRZEBY, NASZA OFERTA" />
             <p className='text-[15px] lg:text-[13px]'>W dobie cyfrowego świata, obecność Twojej firmy w internecie jest kluczowa dla osiągnięcia sukcesu. Nasza oferta obejmuje usługi tworzenia stron oraz sklepów internetowych, aplikacji mobilnych oraz wiele innych rozwiązań, które zapewnią Twojej marce profesjonalny wizerunek w sieci.</p>
 
             <section className='flex flex-wrap justify-center gap-[70px] gap-y-[40px] mt-[40px]'>

@@ -79,7 +79,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <section id="contact" ref={ref} className={`relative z-10 w-full flex justify-center xl:w-[90%] m-auto bg-cover bg-no-repeat bg-center transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`} style={{backgroundImage: isLargeScreen && `url(${bg.src})`}}>
+        <section ref={ref} className={`relative z-10 w-full flex justify-center xl:w-[90%] m-auto bg-cover bg-no-repeat bg-center transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`} style={{backgroundImage: isLargeScreen && `url(${bg.src})`}}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -123,7 +123,7 @@ const Contact = () => {
 
             <div className='absolute lg:relative w-[1100px] 2xl:w-[80%] aspect-[1400/800] m-auto h-full top-0 left-[50%] lg:left-auto translate-x-[-50%] lg:translate-x-0 flex lg:flex-col gap-[170px] lg:gap-[50px] py-[50px] z-10'>
                 <div className='flex-1 flex flex-col gap-[50px] xl:gap-[20px] xl:justify-center'>
-                    <Heading title="Kontakt" subtitle="ROZPOCZNIJMY WSPÓŁPRACĘ" />
+                    <Heading title="Kontakt" subtitle="ROZPOCZNIJMY WSPÓŁPRACĘ" id="contact" />
                     <div>
                         <p className='text-[18px] xl:text-[15px] mb-[5px]'>Chcesz dowiedzieć się więcej o naszych usługach lub potrzebujesz porady? Skontaktuj się z nami!</p>
                         {error && <span className='text-red-700 font-light tracking-[2px] xl:text-[15px]'>{error}</span>}

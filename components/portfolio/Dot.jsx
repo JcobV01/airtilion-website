@@ -10,10 +10,7 @@ const Dot = ({ dots, updateDots, index, link, text }) => {
       behavior: 'smooth',
       block: 'center'
     });
-  }
-
-  console.log("xD", text);
-  
+  }  
 
   return (
     <Link href={link} onClick={(e) => scrollHandle(e, link)}>
