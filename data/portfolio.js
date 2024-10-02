@@ -10,6 +10,11 @@ export const technologies = {
     "Google Analytics": "simple-icons:googleanalytics",
     "PHP": "akar-icons:php-fill",
     "MySQL": "simple-icons:mysql",
+    "Next.js": "devicon-plain:nextjs",
+    "MongoDB": "bxl:mongodb",
+    "Tailwind": "mdi:tailwind",
+    "Firebase": "ri:firebase-fill",
+    "React": "teenyicons:react-solid",
 }
 
 /*Wyzwania*/
@@ -23,8 +28,11 @@ export const challanges = {
     "Code": "mdi:code",
     "Migration": "material-symbols:drive-file-move",
     "Speed": "material-symbols:speed",
+    "Admin": "ri:admin-fill",
+    "Gallery": "solar:gallery-add-bold",
+    "Time": "carbon:time-filled",
+    "Settings": "lets-icons:setting-line",
 }
-
 /*Osiągnięcia*/
 
 export const achivements = {
@@ -34,4 +42,7 @@ export const achivements = {
     "Cursor" : "fluent:cursor-click-20-filled",
     "PersonWalking" : "fa6-solid:person-walking",
     "Rodo": "streamline:user-protection-2-solid",
+    "Optymalization": "fluent:settings-cog-multiple-20-filled",
+    "Time": "carbon:time-filled",
+    "Settings": "lets-icons:setting-line",
 }
