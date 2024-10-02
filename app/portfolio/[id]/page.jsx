@@ -12,7 +12,7 @@ import PortfolioSteps from '@components/portfolio/sections/PortfolioSteps'
 import PortfolioAchivements from '@components/portfolio/sections/PortfolioAchivements'
 import PortfolioClient from '@components/portfolio/sections/PortfolioClient'
 import PortfolioOpinion from '@components/portfolio/sections/PortfolioOpinion'
-import Dot from '@components/portfolio/dot'
+import Dot from '@components/portfolio/Dot'
 
 const dotsData = [
     {

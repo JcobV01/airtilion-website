@@ -123,7 +123,7 @@ const Navbar = () => {
                 <div className={`fixed ${visibility} bg-[#000000b5] w-dvw h-dvh top-0 left-0 p-[50px] z-30 flex flex-col gap-[30px] justify-center fold:items-center backdrop-blur-[5px]`}>
                     {
                         menu.map((item, index) => (
-                            <Link href={item.link} key={index}>
+                            <Link href={item.link} key={index} onClick={(e) => handleMenu(e, item.id)}>
                                 <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xl:text-[15px]' onClick={(e) => { handleMenuClick(e); changeVisibility() }}>
                                     {item.name}
                                 </button>

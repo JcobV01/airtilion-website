@@ -24,7 +24,7 @@ const PortfolioItem = ({ title, desc, bg, image, id }) => {
                         <p className='text-[15px] xl:text-[13px] lg:[11px] text-[#AFAFAF] relative z-10 md:line-clamp-3 sm:text-center'>{desc}</p>
                     </div>
 
-                    <Image src={bg} width={960} height={550} alt="Tlo" className='w-full h-full absolute top-0 left-0 z-0' />
+                    <Image src={bg} width={960} height={550} alt="Tlo" className='object-cover w-full h-full absolute top-0 left-0 z-0' />
                     <div className='absolute w-full h-full top-0 left-0 z-1 bg-[#000000e0]'></div>
                     <span className='h-[2px] w-[50%] xl:w-[30%] bg-[#E2B35080] z-10 block absolute bottom-[30px] left-[50%] xl:left-[20%] translate-x-[-50%] lg:hidden'></span>
 
