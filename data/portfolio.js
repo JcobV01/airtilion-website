@@ -15,6 +15,9 @@ export const technologies = {
     "Tailwind": "mdi:tailwind",
     "Firebase": "ri:firebase-fill",
     "React": "teenyicons:react-solid",
+    "TypeScript": "simple-icons:typescript",
+    "ReactNative": "teenyicons:react-solid",
+    "Expo": "cib:expo"
 }
 
 /*Wyzwania*/
@@ -45,4 +48,5 @@ export const achivements = {
     "Optymalization": "fluent:settings-cog-multiple-20-filled",
     "Time": "carbon:time-filled",
     "Settings": "lets-icons:setting-line",
+    "Smartphone": "material-symbols-light:smartphone-sharp",
 }
