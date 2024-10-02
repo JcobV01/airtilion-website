@@ -10,11 +10,11 @@ const layout = ({ children }) => {
     <>
       <Navbar />
       <Header title="Odkryj nowe horyzonty z Naszą wyjątkową ofertą" subtitle="Przekraczaj granice możliwości - Twoja przygoda z Nami zaczyna się tutaj" img={HeaderBg} />
-      <main className='flex flex-col relative mt-[-400px] items-center'>
+      <main className='flex flex-col relative mt-[-250px] items-center background'>
         <NavbarOffer />
         {children}
-      </main>
       <Footer />
+      </main>
     </>
   )
 }

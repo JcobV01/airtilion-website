@@ -2,10 +2,10 @@ import React from 'react'
 
 const DesktopHomeLines = () => {
     return (
-        <div className='w-full h-full absolute top-0 md:hidden'>
+        <div className='w-full h-full absolute top-0 lg:hidden opacity-50'>
             {/* Sekcja o nas */}
 
-            <div className='absolute top-[550px] 2xl:top-[400px] xl:top-[300px] lg:top-[600px] md:top-[550px] sm:top-[800px] fold:hidden left-[50%] translate-x-[-50%] z-[1] w-full'>
+            <div className='absolute top-[550px] 2xl:top-[400px] xl:top-[300px] lg:top-[600px] fold:hidden left-[50%] translate-x-[-50%] z-[1] w-full'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1849" viewBox="0 0 1864 1849" fill="none" className='w-full'>
                     <path d="M-47.8027 147.746C141.849 34.4395 438.55 -32.2625 666.596 20.7691C844.743 62.1967 1038.67 143.96 1294.34 126.192C1493.07 112.381 1779.01 218.181 1906.63 464.961C2070.54 781.897 2153.18 472.074 2298.11 467.446" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
                     <path d="M-47.8027 227.746C141.849 114.4395 438.55 47.7375 666.596 100.769C844.743 142.197 1038.67 223.96 1294.34 206.192C1493.07 192.381 1779.01 298.181 1906.63 544.961C2070.54 861.897 2153.18 552.074 2298.11 547.446" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />

@@ -517,7 +517,6 @@ dialog::backdrop {
 .portfolio-dots{
   position: absolute;
   top: 50%;
-  height: 100%;
   width: max-content;
   white-space: nowrap;
   transform: translateX(calc(-100% - 10px)) translateY(-50%);
