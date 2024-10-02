@@ -17,7 +17,7 @@ const People = () => {
             <section className={`flex flex-col items-center mt-[100px] gap-[70px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
                 <div className='flex gap-[60px] w-[940px] xl:w-[100%] relative p-[25px] lg:flex-col lg:items-center'>
                     <div className='w-[340px] h-[470px] relative md:w-[260px] md:h-[380px]'>
-                        <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" className='object-cover' />
+                        <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" className='object-cover h-full' />
                         <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'>
                             <Link href="#" target='_blank' aria-label="Odwiedź mój profil Facebook" className='duration-700 hover:scale-75'>
                                 <Icon icon="bi:facebook" width={30} height={30} alt="Ikona facebooka" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
@@ -44,7 +44,7 @@ const People = () => {
 
                 <div className={`flex flex-row-reverse gap-[60px] w-[940px] xl:w-[100%] relative p-[25px] lg:flex-col lg:items-center transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>
                     <div className='w-[340px] h-[470px] relative md:w-[260px] md:h-[380px]'>
-                        <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" />
+                        <Image width={340} height={470} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" className='object-cover h-full'/>
                         <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'>
                             <Link href="#" target='_blank' aria-label="Odwiedź mój profil facebook" className='duration-700 hover:scale-75'>
                                 <Icon icon="bi:facebook" width={30} height={30} alt="Ikona facebooka" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />

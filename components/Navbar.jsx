@@ -7,6 +7,7 @@ import logo from '@public/assets/images/airtilion-logo-dark.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
+import { usePathname, useRouter } from 'next/navigation'
 
 const menu = [
     {
@@ -42,6 +43,8 @@ const menu = [
 ]
 
 const Navbar = () => {
+
+    const path = usePathname()
 
     const [scrolled, setScrolled] = useState(false);
     const [visibility, setVisibility] = useState('hidden')
@@ -97,7 +100,7 @@ const Navbar = () => {
 
                     {
                         menu.map((item, index) => (
-                            <Link href={item.link} key={index} onClick={(e) => handleMenu(e, item.id)}>
+                            <Link href={item.link} key={index} onClick={(e) => {path == '/home' && handleMenu(e, item.id)}}>
                                 <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xl:text-[15px]' onClick={(e) => handleMenuClick(e)}>
                                     {item.name}
                                 </button>
