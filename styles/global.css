@@ -157,6 +157,36 @@ body::-webkit-scrollbar-thumb {
   background-image: radial-gradient(900px 700px at 13% 34%, #23232335 0%, #00FFFF00 100%), radial-gradient(1400px 500px at 81% 60%, #23232335 0%, #00FFFF00 100%), radial-gradient(75% 75% at 50% 50%, #040404 0%, #040404 100%);
 }
 
+/* Dla tabletów */
+@media (max-width: 1024px) {
+  .background {
+    background-size: 100%; /* Ustawienie rozmiaru na 100% */
+    background-image: radial-gradient(600px 500px at 15% 30%, #23232335 0%, #00FFFF00 100%),
+                      radial-gradient(1000px 400px at 75% 55%, #23232335 0%, #00FFFF00 100%),
+                      radial-gradient(60% 60% at 50% 50%, #040404 0%, #040404 100%);
+  }
+}
+
+/* Dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  .background {
+    background-size: 100%; /* Ustawienie rozmiaru na 100% */
+    background-image: radial-gradient(50vw 40vh at 20% 30%, #23232335 0%, #00FFFF00 100%),
+                      radial-gradient(75vw 30vh at 70% 50%, #23232335 0%, #00FFFF00 100%),
+                      radial-gradient(30vw 30vh at 50% 50%, #040404 0%, #040404 100%);
+  }
+}
+
+/* Dla małych urządzeń mobilnych */
+@media (max-width: 480px) {
+  .background {
+    background-size: 100%; /* Ustawienie rozmiaru na 100% */
+    background-image: radial-gradient(30vw 20vh at 25% 30%, #23232335 0%, #00FFFF00 100%),
+                      radial-gradient(50vw 15vh at 60% 40%, #23232335 0%, #00FFFF00 100%),
+                      radial-gradient(20vw 20vh at 50% 50%, #040404 0%, #040404 100%);
+  }
+}
+
 /* portfolio saturation */
 
 .portfolio-item>img {
