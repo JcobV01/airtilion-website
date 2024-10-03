@@ -100,7 +100,7 @@ const Navbar = () => {
 
                     {
                         menu.map((item, index) => (
-                            <Link href={item.link} key={index} onClick={(e) => {path == '/home' && handleMenu(e, item.id)}}>
+                            <Link href={item.link} key={index} onClick={(e) => { path == '/home' && handleMenu(e, item.id) }}>
                                 <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xl:text-[15px]' onClick={(e) => handleMenuClick(e)}>
                                     {item.name}
                                 </button>
@@ -134,11 +134,13 @@ const Navbar = () => {
                         ))
                     }
 
-                    <button className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-500 flex gap-[10px] items-center w-max hover:text-[#d9d9d9] hover:bg-gradient-to-r hover:text-[15px] hover:py-[12px] hover:tracking-[1.5px] nav-button xl:text-[15px]'>
-                        <Icon icon="solar:letter-bold" width="25" height="25" />
-                        <Icon icon="solar:letter-opened-bold" width="25" height="25" className='hidden' />
-                        Zapytaj o wycenę
-                    </button>
+                    <Link href="/offer/pricing">
+                        <button className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-500 flex gap-[10px] items-center w-max hover:text-[#d9d9d9] hover:bg-gradient-to-r hover:text-[15px] hover:py-[12px] hover:tracking-[1.5px] nav-button xl:text-[15px]'>
+                            <Icon icon="solar:letter-bold" width="25" height="25" />
+                            <Icon icon="solar:letter-opened-bold" width="25" height="25" className='hidden' />
+                            Zapytaj o wycenę
+                        </button>
+                    </Link>
                 </div>
             </nav>
 
