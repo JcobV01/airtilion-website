@@ -19,7 +19,7 @@ const Header = ({ title, subtitle, img }) => {
           className='w-full h-dvh absolute object-cover'
           loading='eager'
           priority
-          unoptimized={img.width == 1545 ? true : false}
+          unoptimized={true}
           quality={100}
 
         />
