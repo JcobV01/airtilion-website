@@ -13,7 +13,7 @@ const Header = ({ title, subtitle, img }) => {
           fetchPriority='high'
           className='w-full h-dvh'
           loading='eager'
-          // unoptimized={true}
+          unoptimized={true}
           quality={100}
 
         />
