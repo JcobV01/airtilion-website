@@ -20,7 +20,7 @@ const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'
 
 const home = () => {
 
-  const width = useWindowWidth()
+  // const width = useWindowWidth()
 
   const changeMenu = (id) => {
     const menuItems = document.querySelectorAll('.menu-button')
