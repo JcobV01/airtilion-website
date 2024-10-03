@@ -17,14 +17,14 @@ import HeaderBg from '@public/assets/images/mainHeader.webp'
 // import MobileHomeLines from '@components/lines/MobileHomeLines'
 
 const Header = dynamic(() => import('@components/Header'),{ssr: true,});
-const Footer = dynamic(() => import('@components/Footer'),{ssr: true,});
 const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'),{ssr: false,});
-const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'),{ssr: false,});
-const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'),{ssr: false,});
 const Encourage = dynamic(() => import('@components/home/sections/Encourage/Encourage'),{ssr: false,});
+const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'),{ssr: false,});
 const Offer = dynamic(() => import('@components/home/sections/Offer/Offer'),{ssr: false,});
-const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'),{ssr: false,});
 const Portfolio = dynamic(() => import('@components/home/sections/Portfolio/Portfolio'),{ssr: false,});
+const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'),{ssr: false,});
+const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'),{ssr: false,});
+const Footer = dynamic(() => import('@components/Footer'),{ssr: true,});
 const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLines'),{ssr: false,});
 const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'),{ssr: false,});
 
