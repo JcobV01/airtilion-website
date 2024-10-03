@@ -1,5 +1,9 @@
 "use client"
 
+import React, { useEffect } from 'react'
+import dynamic from 'next/dynamic'
+import HeaderBg from '@public/assets/images/mainHeader.webp'
+
 // import Footer from '@components/Footer'
 // import Header from '@components/Header'
 // import AboutUs from '@components/home/sections/AboutUs/AboutUs'
@@ -11,9 +15,6 @@
 // import Portfolio from '@components/home/sections/Portfolio/Portfolio'
 // import DesktopHomeLines from '@components/lines/DesktopHomeLines'
 // import MobileHomeLines from '@components/lines/MobileHomeLines'
-// import HeaderBg from '@public/assets/images/mainHeader.webp'
-// import dynamic from 'next/dynamic'
-// import React, { useEffect } from 'react'
 
 const Header = dynamic(() => import('@components/Header'),{ssr: true,});
 const Footer = dynamic(() => import('@components/Footer'),{ssr: true,});
