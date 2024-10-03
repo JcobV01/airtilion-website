@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 
-const PortfolioSites = () => {
+const PortfolioApps = () => {
   const [items, setItems] = useState([]);
   const [displayedItems, setDisplayedItems] = useState([]);
   const [page, setPage] = useState(1);
@@ -35,7 +35,7 @@ const PortfolioSites = () => {
 
         const data = await response.json();
         const filteredData = data
-          .filter((item) => item.Type === "website")
+          .filter((item) => item.Type === "app")
           .sort((a, b) => new Date(b.Date) - new Date(a.Date));
         
         setItems(filteredData);
@@ -94,4 +94,4 @@ const PortfolioSites = () => {
   );
 };
 
-export default PortfolioSites;
+export default PortfolioApps;
