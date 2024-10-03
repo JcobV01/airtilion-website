@@ -20,7 +20,7 @@ const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'
 
 const home = () => {
 
-  // const width = useWindowWidth()
+  const width = useWindowWidth()
 
   const changeMenu = (id) => {
     const menuItems = document.querySelectorAll('.menu-button')
@@ -68,7 +68,7 @@ const home = () => {
 
   return (
     <>
-      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBgDesktop} />
+      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={width < 1023 ? HeaderBg : HeaderBgDesktop} />
       <main className='flex flex-col relative mt-[-250px] gap-[200px] md:gap-[100px]'>
         <Encourage />
         <AboutUs />
@@ -81,12 +81,12 @@ const home = () => {
         <Footer />
         <div className='absolute top-0 left-0 w-full h-full background'></div>
 
-        {/* {
+        {
           width > 1023 ? 
           <DesktopHomeLines/>
           :
           <MobileHomeLines/>
-        } */}
+        }
       </main>
     </>
   )
