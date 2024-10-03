@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 
 const Header = ({ title, subtitle, img }) => {
+  console.log(img);
+  
   return (
     <header className='w-full h-dvh relative top-[-133px] flex justify-center items-center z-10'>
       <Image
@@ -14,7 +16,7 @@ const Header = ({ title, subtitle, img }) => {
           fetchPriority='high'
           className='w-full h-dvh absolute object-cover'
           loading='eager'
-          // unoptimized={true}
+          unoptimized={img.width == 1545 ? true : false}
           quality={100}
 
         />

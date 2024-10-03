@@ -3,6 +3,8 @@
 import React, { useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import HeaderBg from '@public/assets/images/Header_xD.png'
+import HeaderBgDesktop from '@public/assets/images/mainHeader.webp'
+import useWindowWidth from '@hooks/useWindowWidth';
 
 const Header = dynamic(() => import('@components/Header'),{ssr: true,});
 const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'),{ssr: false,});
@@ -17,6 +19,8 @@ const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLine
 const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'),{ssr: false,});
 
 const home = () => {
+
+  const width = useWindowWidth()
 
   const changeMenu = (id) => {
     const menuItems = document.querySelectorAll('.menu-button')
@@ -60,9 +64,11 @@ const home = () => {
   }, []);
 
 
+
+
   return (
     <>
-      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBg} />
+      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={width < 1023 ? HeaderBg : HeaderBgDesktop} />
       <main className='flex flex-col relative mt-[-250px] gap-[200px] md:gap-[100px]'>
         <Encourage />
         <AboutUs />
@@ -75,8 +81,12 @@ const home = () => {
         <Footer />
         <div className='absolute top-0 left-0 w-full h-full background'></div>
 
-        <DesktopHomeLines/>
-        <MobileHomeLines/>
+        {
+          width > 1023 ? 
+          <DesktopHomeLines/>
+          :
+          <MobileHomeLines/>
+        }
       </main>
     </>
   )
