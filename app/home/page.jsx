@@ -4,23 +4,11 @@ import React, { useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import HeaderBg from '@public/assets/images/mainHeader.webp'
 
-// import Footer from '@components/Footer'
-// import Header from '@components/Header'
-// import AboutUs from '@components/home/sections/AboutUs/AboutUs'
-// import Contact from '@components/home/sections/Contact/Contact'
-// import Cooperation from '@components/home/sections/Cooperation/Cooperation'
-// import Encourage from '@components/home/sections/Encourage/Encourage'
-// import Offer from '@components/home/sections/Offer/Offer'
-// import Opinion from '@components/home/sections/Opinion/Opinion'
-// import Portfolio from '@components/home/sections/Portfolio/Portfolio'
-// import DesktopHomeLines from '@components/lines/DesktopHomeLines'
-// import MobileHomeLines from '@components/lines/MobileHomeLines'
-
 const Header = dynamic(() => import('@components/Header'),{ssr: true,});
-const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'),{ssr: true,});
+const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'),{ssr: false,});
 const Encourage = dynamic(() => import('@components/home/sections/Encourage/Encourage'),{ssr: false, });
 const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'),{ssr: false,});
-const Offer = dynamic(() => import('@components/home/sections/Offer/Offer'),{ssr: true,});
+const Offer = dynamic(() => import('@components/home/sections/Offer/Offer'),{ssr: false,});
 const Portfolio = dynamic(() => import('@components/home/sections/Portfolio/Portfolio'),{ssr: false,});
 const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'),{ssr: false,});
 const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'),{ssr: false,});
