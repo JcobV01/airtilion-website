@@ -1,27 +1,32 @@
 "use client"
 
-import Footer from '@components/Footer'
-import Header from '@components/Header'
-// import AboutUs from '@components/home/sections/AboutUs/AboutUs'
-import Contact from '@components/home/sections/Contact/Contact'
-// import Cooperation from '@components/home/sections/Cooperation/Cooperation'
-import Encourage from '@components/home/sections/Encourage/Encourage'
-import Offer from '@components/home/sections/Offer/Offer'
-import Opinion from '@components/home/sections/Opinion/Opinion'
-import Portofolio from '@components/home/sections/Portfolio/Portofolio'
-import DesktopHomeLines from '@components/lines/DesktopHomeLines'
-import MobileHomeLines from '@components/lines/MobileHomeLines'
-import HeaderBg from '@public/assets/images/mainHeader.webp'
-import dynamic from 'next/dynamic'
 import React, { useEffect } from 'react'
+import dynamic from 'next/dynamic'
+import HeaderBg from '@public/assets/images/mainHeader.webp'
 
-const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'),{
-  ssr: false,
-});
+// import Footer from '@components/Footer'
+// import Header from '@components/Header'
+// import AboutUs from '@components/home/sections/AboutUs/AboutUs'
+// import Contact from '@components/home/sections/Contact/Contact'
+// import Cooperation from '@components/home/sections/Cooperation/Cooperation'
+// import Encourage from '@components/home/sections/Encourage/Encourage'
+// import Offer from '@components/home/sections/Offer/Offer'
+// import Opinion from '@components/home/sections/Opinion/Opinion'
+// import Portfolio from '@components/home/sections/Portfolio/Portfolio'
+// import DesktopHomeLines from '@components/lines/DesktopHomeLines'
+// import MobileHomeLines from '@components/lines/MobileHomeLines'
 
-const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'),{
-  ssr: false,
-});
+const Header = dynamic(() => import('@components/Header'),{ssr: true, suspense: true});
+const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'),{ssr: false, suspense: true});
+const Encourage = dynamic(() => import('@components/home/sections/Encourage/Encourage'),{ssr: false, suspense: true});
+const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'),{ssr: false, suspense: true});
+const Offer = dynamic(() => import('@components/home/sections/Offer/Offer'),{ssr: false, suspense: true});
+const Portfolio = dynamic(() => import('@components/home/sections/Portfolio/Portfolio'),{ssr: false, suspense: true});
+const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'),{ssr: false, suspense: true});
+const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'),{ssr: false, suspense: true});
+const Footer = dynamic(() => import('@components/Footer'),{ssr: false, suspense: true});
+const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLines'),{ssr: false, suspense: true});
+const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'),{ssr: false, suspense: true});
 
 const home = () => {
 
@@ -75,7 +80,7 @@ const home = () => {
         <AboutUs />
         <Cooperation />
         <Offer />
-        <Portofolio />
+        <Portfolio />
         <Opinion />
         <Contact />
 
