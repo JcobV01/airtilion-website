@@ -13,8 +13,8 @@ const Portfolio = dynamic(() => import('@components/home/sections/Portfolio/Port
 // const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'),{ssr: false,});
 // const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'),{ssr: false,});
 // const Footer = dynamic(() => import('@components/Footer'),{ssr: false,});
-// const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLines'),{ssr: false,});
-// const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'),{ssr: false,});
+const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLines'),{ssr: false,});
+const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'),{ssr: false,});
 
 const home = () => {
 
@@ -73,10 +73,10 @@ const home = () => {
         <Contact />
 
         <Footer />
-        <div className='absolute top-0 left-0 w-full h-full background'></div>
+        <div className='absolute top-0 left-0 w-full h-full background'></div> */}
 
         <DesktopHomeLines/>
-        <MobileHomeLines/> */}
+        <MobileHomeLines/>
       </main>
     </>
   )
