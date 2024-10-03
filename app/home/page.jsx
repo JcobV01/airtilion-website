@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react'
 import dynamic from 'next/dynamic'
-import HeaderBg from '@public/assets/images/mainHeader.webp'
+import HeaderBg from '@public/assets/images/Header_xD.png'
 
 const Header = dynamic(() => import('@components/Header'),{ssr: true,});
 const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'),{ssr: false,});
