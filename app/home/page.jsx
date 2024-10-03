@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic'
 import HeaderBgDesktop from '@public/assets/images/mainHeader.webp'
 import useWindowWidth from '@hooks/useWindowWidth';
 
-const Header = dynamic(() => import('@components/Header'), { ssr: false, });
+const Header = dynamic(() => import('@components/Header'), { ssr: true, });
 const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'), { ssr: false, });
 const Encourage = dynamic(() => import('@components/home/sections/Encourage/Encourage'), { ssr: false, });
 const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'), { ssr: false, });
