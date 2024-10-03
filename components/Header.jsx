@@ -12,7 +12,7 @@ const Header = ({ title, subtitle, img }) => {
           objectFit="cover" // Pokrywa cały obszar
           objectPosition="center calc(100% + 10px)" // Pozycjonowanie obrazu
           fetchPriority='high'
-          className='absolute'
+          className='w-full h-dvh absolute object-cover'
           loading='eager'
           // unoptimized={true}
           quality={100}
