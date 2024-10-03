@@ -12,6 +12,7 @@ import Portofolio from '@components/home/sections/Portfolio/Portofolio'
 import DesktopHomeLines from '@components/lines/DesktopHomeLines'
 import MobileHomeLines from '@components/lines/MobileHomeLines'
 import HeaderBg from '@public/assets/images/mainHeader.webp'
+import Head from 'next/head'
 import React, { useEffect } from 'react'
 
 const home = () => {
