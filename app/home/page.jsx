@@ -2,9 +2,9 @@
 
 import Footer from '@components/Footer'
 import Header from '@components/Header'
-import AboutUs from '@components/home/sections/AboutUs/AboutUs'
+// import AboutUs from '@components/home/sections/AboutUs/AboutUs'
 import Contact from '@components/home/sections/Contact/Contact'
-import Cooperation from '@components/home/sections/Cooperation/Cooperation'
+// import Cooperation from '@components/home/sections/Cooperation/Cooperation'
 import Encourage from '@components/home/sections/Encourage/Encourage'
 import Offer from '@components/home/sections/Offer/Offer'
 import Opinion from '@components/home/sections/Opinion/Opinion'
@@ -12,7 +12,16 @@ import Portofolio from '@components/home/sections/Portfolio/Portofolio'
 import DesktopHomeLines from '@components/lines/DesktopHomeLines'
 import MobileHomeLines from '@components/lines/MobileHomeLines'
 import HeaderBg from '@public/assets/images/mainHeader.webp'
+import dynamic from 'next/dynamic'
 import React, { useEffect } from 'react'
+
+const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'),{
+  ssr: false,
+});
+
+const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'),{
+  ssr: false,
+});
 
 const home = () => {
 
