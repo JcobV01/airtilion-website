@@ -24,7 +24,7 @@ const Offer = dynamic(() => import('@components/home/sections/Offer/Offer'),{ssr
 const Portfolio = dynamic(() => import('@components/home/sections/Portfolio/Portfolio'),{ssr: false,});
 const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'),{ssr: false,});
 const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'),{ssr: false,});
-const Footer = dynamic(() => import('@components/Footer'),{ssr: true,});
+const Footer = dynamic(() => import('@components/Footer'),{ssr: false,});
 const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLines'),{ssr: false,});
 const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'),{ssr: false,});
 
