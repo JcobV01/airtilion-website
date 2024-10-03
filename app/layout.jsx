@@ -1,13 +1,20 @@
 import { headers } from "next/headers";
 import { ToastContainer } from 'react-toastify'
+import { Poppins } from 'next/font/google';
 import 'react-toastify/dist/ReactToastify.css';
 import "../styles/global.css"
+
+
 
 export const metadata = {
   title: "Airtilion",
   description: "Airtilion - najlepsza firma, która zmienia rynek stron internetowych"
 }
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
+})
 
 
 const rootLayout = ({ children }) => {
@@ -20,7 +27,7 @@ const rootLayout = ({ children }) => {
 
   return (
     <html lang="pl-PL" className="scroll-smooth">
-      <body className={`w-dvw ${currentPath == '/' && 'h-dvh'} overflow-x-hidden bg-center`}>
+      <body className={`${poppins.className} w-dvw ${currentPath == '/' && 'h-dvh'} overflow-x-hidden bg-center`}>
         {children}
         <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
       </body>
