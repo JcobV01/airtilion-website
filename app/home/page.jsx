@@ -60,6 +60,9 @@ const home = () => {
 
   return (
     <>
+      <Head>
+        <link rel="preload" as="image" href={HeaderBg.src} />
+      </Head>
       <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBg} />
       <main className='flex flex-col relative mt-[-250px] gap-[200px] md:gap-[100px]'>
         <Encourage />
