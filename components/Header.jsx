@@ -10,8 +10,10 @@ const Header = ({ title, subtitle, img }) => {
           layout="fill" // Zajmuje cały obszar nagłówka
           objectFit="cover" // Pokrywa cały obszar
           objectPosition="center calc(100% + 10px)" // Pozycjonowanie obrazu
-          priority // Ważny obraz
+          fetchPriority='high'
           className='w-full h-dvh'
+          role='presentation'
+          unoptimized={true}
           quality={100}
 
         />
