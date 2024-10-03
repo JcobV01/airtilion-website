@@ -36,7 +36,10 @@ const PortfolioItemSchema = new Schema({
     },
     Logo: {
         type: String, required: true
-    }
+    },
+    Type: {type: String, required: true},
+    Date: {type: Date, required: true},
+    Link: {type: String, required: true}
 }, { collection: 'portfolio' }); // Ustawienie nazwy kolekcji
 
 const PortfolioItem = models?.PortfolioItem || model('PortfolioItem', PortfolioItemSchema);
