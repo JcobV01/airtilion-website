@@ -12,6 +12,7 @@ const Header = ({ title, subtitle, img }) => {
           objectPosition="center calc(100% + 10px)" // Pozycjonowanie obrazu
           fetchPriority='high'
           className='w-full h-dvh'
+          loading='eager'
           // unoptimized={true}
           quality={100}
 
