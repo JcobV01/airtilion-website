@@ -1,6 +1,8 @@
 "use client"
 
 import Heading from '@components/Heading'
+import PortfolioApps from '@components/portfolio/PortfolioApps'
+import PortfolioShops from '@components/portfolio/PortfolioShops'
 import PortfolioSites from '@components/portfolio/PortfolioSites'
 import React, { useState } from 'react'
 
@@ -18,14 +20,14 @@ const page = () => {
           
           <nav className='flex relative gap-[40px] px-[40px] py-[20px] w-max m-auto md:w-[90%] md:flex-wrap md:justify-center'>
               <span className='absolute w-[326px] h-full top-0 left-0 rounded-full border-[#E2B350] border-l-[3px] z-10 sm:w-[30px]'></span>
-              <button className={`rounded-full w-[180px] h-[50px] border-[1px] border-[#7A6B4E] duration-700 z-20 ${active === 'sites' ? 'cursor-default' : 'hover:scale-90'} ${active ? '' : 'hover:scale-90'} ${active === 'sites' && 'bg-gradient-to-r from-[#CEA75B] to-[#7A6B4E]'}`} onClick={() => setActive('sites')}>Strony</button>
-              <button className={`rounded-full w-[180px] h-[50px] border-[1px] border-[#7A6B4E] duration-700 z-20 ${active === 'shops' ? 'cursor-default' : 'hover:scale-90'} ${active === 'shops' && 'bg-gradient-to-r from-[#CEA75B] to-[#7A6B4E]'}`} onClick={() => setActive('shops')}>Sklepy</button>
-              <button className={`rounded-full w-[180px] h-[50px] border-[1px] border-[#7A6B4E] duration-700 z-20 ${active === 'apps' ? 'cursor-default' : 'hover:scale-90'} ${active === 'apps' && 'bg-gradient-to-r from-[#CEA75B] to-[#7A6B4E]'}`} onClick={() => setActive('apps')}>Aplikacje</button>
+              <button className={`rounded-full w-[180px] h-[50px] border-[1px] border-[#7A6B4E] duration-700 z-10 ${active === 'sites' ? 'cursor-default' : 'hover:scale-90'} ${active ? '' : 'hover:scale-90'} ${active === 'sites' && 'bg-gradient-to-r from-[#CEA75B] to-[#7A6B4E]'}`} onClick={() => setActive('sites')}>Strony</button>
+              <button className={`rounded-full w-[180px] h-[50px] border-[1px] border-[#7A6B4E] duration-700 z-10 ${active === 'shops' ? 'cursor-default' : 'hover:scale-90'} ${active === 'shops' && 'bg-gradient-to-r from-[#CEA75B] to-[#7A6B4E]'}`} onClick={() => setActive('shops')}>Sklepy</button>
+              <button className={`rounded-full w-[180px] h-[50px] border-[1px] border-[#7A6B4E] duration-700 z-10 ${active === 'apps' ? 'cursor-default' : 'hover:scale-90'} ${active === 'apps' && 'bg-gradient-to-r from-[#CEA75B] to-[#7A6B4E]'}`} onClick={() => setActive('apps')}>Aplikacje</button>
               <span className='absolute w-[326px] h-full top-0 right-0 rounded-full border-[#E2B350] border-r-[3px] z-10 sm:w-[30px]'></span>
           </nav>
 
           {
-            active == 'sites' ? <PortfolioSites/> : active == 'shops' ? '' : ''
+            active == 'sites' ? <PortfolioSites/> : active == 'shops' ? <PortfolioShops/> : <PortfolioApps/>
           }
       </section>
 
