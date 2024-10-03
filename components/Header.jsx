@@ -11,6 +11,7 @@ const Header = ({ title, subtitle, img }) => {
           objectFit="cover" // Pokrywa cały obszar
           objectPosition="center calc(100% + 10px)" // Pozycjonowanie obrazu
           priority // Ważny obraz
+          className='w-full h-dvh'
         />
       <article className='flex flex-col items-center justify-center sm:gap-[20px] relative header-border h-[230px] 2xl:h-[180px] md:h-[120px] sm:h-auto px-[120px] 2xl:px-[80px] md:px-[40px] lg:mx-[30px]'>
         <p className='text-[#E2B350] text-[15px] 2xl:text-[13px] lg:text-[10px] font-light lg:text-center'>TWÓJ SUKCES ZACZYNA SIĘ TUTAJ</p>
