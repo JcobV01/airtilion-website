@@ -79,14 +79,15 @@ const home = () => {
         <Contact />
 
         <Footer />
+        <div></div>
         {/* <div className='absolute top-0 left-0 w-full h-full background'></div> */}
 
-        {/* {
+        {
           width > 1023 ? 
           <DesktopHomeLines/>
           :
           <MobileHomeLines/>
-        } */}
+        }
       </main>
     </>
   )
