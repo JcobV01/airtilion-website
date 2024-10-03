@@ -7,11 +7,12 @@ const Header = ({ title, subtitle, img }) => {
       <Image
           src={img.src}
           alt="Tło nagłówka"
-          layout="fill" // Zajmuje cały obszar nagłówka
+          width={1920}
+          height={1080}
           objectFit="cover" // Pokrywa cały obszar
           objectPosition="center calc(100% + 10px)" // Pozycjonowanie obrazu
           priority // Ważny obraz
-          className='w-full h-dvh'
+          className='w-full h-dvh absolute object-cover'
           unoptimized={true}
           quality={70}
         />
