@@ -8,7 +8,7 @@ import PortfolioItem from './components/PortfolioItem'
 import useIntersectionObserver from '@hooks/useObserver'
 import Link from 'next/link'
 
-const Portofolio = () => {
+const Portfolio = () => {
     const [ ref, isVisible ] = useIntersectionObserver();
 
     const [data, setData] = useState([])
@@ -57,4 +57,4 @@ const Portofolio = () => {
     )
 }
 
-export default Portofolio
+export default Portfolio
