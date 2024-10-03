@@ -16,6 +16,7 @@ const Header = ({ title, subtitle, img }) => {
           fetchPriority='high'
           className='w-full h-dvh absolute object-cover'
           loading='eager'
+          priority
           unoptimized={img.width == 1545 ? true : false}
           quality={100}
 
