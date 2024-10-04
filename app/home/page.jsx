@@ -2,9 +2,8 @@
 
 import React, { useEffect } from 'react'
 import dynamic from 'next/dynamic'
-import HeaderBg from '@public/assets/images/Header_xD.png'
+// import HeaderBg from '@public/assets/images/Header_xD.png'
 import HeaderBgDesktop from '@public/assets/images/mainHeader.webp'
-import HeaderBgDesktop2 from '@public/assets/images/mainHeader-BigSize.webp'
 import useWindowWidth from '@hooks/useWindowWidth';
 
 const Header = dynamic(() => import('@components/Header'), { ssr: true, });
@@ -69,7 +68,7 @@ const home = () => {
 
   return (
     <>
-      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBgDesktop} mobile={width > 1023 ? true : false}/>
+      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBgDesktop} />
       <main className='flex flex-col relative mt-[-250px] gap-[200px] md:gap-[100px]'>
         <Encourage />
         <AboutUs />
