@@ -7,16 +7,16 @@ import HeaderBgDesktop from '@public/assets/images/mainHeader.webp'
 import useWindowWidth from '@hooks/useWindowWidth';
 
 const Header = dynamic(() => import('@components/Header'), { ssr: true, });
-const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'), { ssr: false, });
-const Encourage = dynamic(() => import('@components/home/sections/Encourage/Encourage'), { ssr: false, });
-const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'), { ssr: false, });
-const Offer = dynamic(() => import('@components/home/sections/Offer/Offer'), { ssr: false, });
-const Portfolio = dynamic(() => import('@components/home/sections/Portfolio/Portfolio'), { ssr: false, });
-const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'), { ssr: false, });
-const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'), { ssr: false, });
+const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'), { ssr: true, loading: () => <p>loading...</p>});
+const Encourage = dynamic(() => import('@components/home/sections/Encourage/Encourage'), { ssr: false, loading: () => <p>loading...</p>});
+const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'), { ssr: false, loading: () => <p>loading...</p>});
+const Offer = dynamic(() => import('@components/home/sections/Offer/Offer'), { ssr: false, loading: () => <p>loading...</p>});
+const Portfolio = dynamic(() => import('@components/home/sections/Portfolio/Portfolio'), { ssr: false, loading: () => <p>loading...</p>});
+const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'), { ssr: false, loading: () => <p>loading...</p>});
+const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'), { ssr: false, loading: () => <p>loading...</p>});
 const Footer = dynamic(() => import('@components/Footer'), { ssr: false, });
-const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLines'), { ssr: false, });
-const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'), { ssr: false, });
+const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLines'), { ssr: false, loading: () => <p>loading...</p>});
+const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'), { ssr: false, loading: () => <p>loading...</p>});
 
 const home = () => {
 
