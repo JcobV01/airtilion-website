@@ -8,7 +8,7 @@ import HeaderBgDesktop2 from '@public/assets/images/mainHeader-BigSize.webp'
 import useWindowWidth from '@hooks/useWindowWidth';
 import Head from 'next/head'
 
-const Header = dynamic(() => import('@components/Header'), { ssr: true, });
+const Header = dynamic(() => import('@components/Header'), { ssr: true, loading: () => <div className="loader"></div>});
 const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'), { ssr: true, loading: () => <div className="loader"></div>});
 const Encourage = dynamic(() => import('@components/home/sections/Encourage/Encourage'), { ssr: false, loading: () => <div className="loader"></div>});
 const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'), { ssr: false, loading: () => <div className="loader"></div>});
