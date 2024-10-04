@@ -1,7 +1,7 @@
 "use client"
 import useWindowWidth from '@hooks/useWindowWidth'
 import Image from 'next/image'
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 
 const Header = ({ title, subtitle, img, mobile=true }) => {
   const width = useWindowWidth()
