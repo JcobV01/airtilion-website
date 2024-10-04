@@ -1,6 +1,5 @@
 "use client"
 import useWindowWidth from '@hooks/useWindowWidth'
-import Head from 'next/head'
 import Image from 'next/image'
 import {useEffect, useState} from 'react'
 
@@ -13,11 +12,6 @@ const Header = ({ title, subtitle, img, mobile=true }) => {
   }, [])
   
   return (
-    <>
-    <Head>
-        <link rel="preload" href={img.src} as="image" fetchPriority="high" />
-    </Head>
-
     <header className='w-full h-dvh relative top-[-133px] flex justify-center items-center z-10'>
       {isClient &&
       <Image
@@ -40,7 +34,6 @@ const Header = ({ title, subtitle, img, mobile=true }) => {
         <h2 className='text-[#E2B350] text-[20px] 2xl:text-[18px] lg:text-[13px] md:text-[11px] lg:text-center'>{subtitle}</h2>
       </article>
     </header>
-    </>
   )
 }
 
