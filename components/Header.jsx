@@ -1,9 +1,10 @@
 "use client"
+import useWindowWidth from '@hooks/useWindowWidth'
 import Image from 'next/image'
 import React from 'react'
 
 const Header = ({ title, subtitle, img, mobile=true }) => {
-  console.log(img);
+  const width = useWindowWidth()
   
   return (
     <header className='w-full h-dvh relative top-[-133px] flex justify-center items-center z-10'>
@@ -18,7 +19,7 @@ const Header = ({ title, subtitle, img, mobile=true }) => {
           priority
           quality={100}
           fetchPriority="auto"
-          unoptimized={mobile}
+          unoptimized={width > 1023 && true}
         />
       <article className='flex flex-col items-center justify-center sm:gap-[20px] relative header-border h-[230px] 2xl:h-[180px] md:h-[120px] sm:h-auto px-[120px] 2xl:px-[80px] md:px-[40px] lg:mx-[30px]'>
         <p className='text-[#E2B350] text-[15px] 2xl:text-[13px] lg:text-[10px] font-light lg:text-center'>TWÓJ SUKCES ZACZYNA SIĘ TUTAJ</p>
