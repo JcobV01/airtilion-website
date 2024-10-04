@@ -6,6 +6,7 @@ import HeaderBg from '@public/assets/images/Header_xD.png'
 import HeaderBgDesktop from '@public/assets/images/mainHeader.webp'
 import HeaderBgDesktop2 from '@public/assets/images/mainHeader-BigSize.webp'
 import useWindowWidth from '@hooks/useWindowWidth';
+import Head from 'next/head'
 
 const Header = dynamic(() => import('@components/Header'), { ssr: true, });
 const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'), { ssr: true, loading: () => <div className="loader"></div>});
@@ -22,6 +23,8 @@ const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'
 const home = () => {
 
   const width = useWindowWidth()
+  console.log(width);
+  
 
   const changeMenu = (id) => {
     const menuItems = document.querySelectorAll('.menu-button')
@@ -69,6 +72,10 @@ const home = () => {
 
   return (
     <>
+      <Head>
+        <link rel="preload" href={HeaderBgDesktop} as="image" />
+      </Head>
+
       <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBgDesktop} mobile={width > 1023 ? true : false}/>
       <main className='flex flex-col relative mt-[-250px] gap-[200px] md:gap-[100px]'>
         <Encourage />

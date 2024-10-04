@@ -11,6 +11,7 @@ const Header = ({ title, subtitle, img, mobile=true }) => {
           alt="Tło nagłówka"
           fill 
           sizes="(max-width: 1024px) 100vw, 1920px"
+          // sizes="100vw"
           className='w-full h-dvh absolute object-cover'
           loading='eager'
           priority
