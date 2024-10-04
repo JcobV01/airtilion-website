@@ -12,7 +12,7 @@ const Header = ({ title, subtitle, img }) => {
           fill 
           sizes="100vw"
           className='w-full h-dvh absolute object-cover'
-          // loading='eager'
+          loading='eager'
           priority
           quality={90}
           fetchpriority="auto"
