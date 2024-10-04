@@ -47,7 +47,7 @@ const Cooperation = () => {
                 <Heading title="Współpraca" subtitle="ZOBACZ JAK PRZEBIEGA PROCES TWORZENIA TWOICH MARZEŃ" id="cooperation"/>
                 <p className='text-[16px] xl:text-[15px] lg:text-[13px] mt-[30px]'>Stawiamy na otwartą komunikację i bliską współpracę, aby dokładnie zrozumieć Twoje potrzeby i dostosować nasze rozwiązania. Dzięki elastyczności i zaangażowaniu, dążymy do osiągnięcia najlepszych rezultatów i budowania długotrwałych relacji.</p>
 
-                <div className='flex flex-col gap-[20px] mt-[100px]'>
+                <div className='flex flex-col gap-[20px] mt-[100px] overflow-hidden'>
                     {cooperation.map((coop, index) => (
                         <CoopCards title={coop.title} desc={coop.desc} index={index + 1} icon={coop.image} key={index} isVisible={isVisible}/>
                     ))}

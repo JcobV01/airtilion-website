@@ -7,7 +7,7 @@ const Work = () => {
     const [ ref, isVisible ] = useIntersectionObserver();
 
     return (
-        <article ref={ref} className={`flex gap-[120px] xl:gap-[70px] items-center relative lg:flex-col about-section transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
+        <article ref={ref} className={`flex gap-[120px] xl:gap-[70px] items-center relative overflow-x-hidden lg:flex-col about-section transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
             
             <div className={`flex-1 element-visible-right transition-all duration-1000 delay-500 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
                 <h5 className='text-[20px] xl:text-[18px] lg:text-[15px] tracking-[3px] text-[#E2B350] mb-[20px]'>CZYM DOKŁADNIE SIĘ ZAJMUJEMY?</h5>

@@ -10,7 +10,7 @@ const People = () => {
     const [ref, isVisible] = useIntersectionObserver();
 
     return (
-        <article ref={ref} className={`relative transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
+        <article ref={ref} className={`relative transition-all duration-1000 overflow-x-hidden ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
             <h5 className='text-[20px] xl:text-[18px] lg:text-[15px] tracking-[3px] text-[#E2B350] mb-[20px] text-center'>KIM JESTEŚMY?</h5>
             <p className='text-[16px] xl:text-[15px] lg:text-[13px] font-light mb-[40px] text-center'>Poznając zespół Airtilionu nie rozmawiasz już z anonimowymi ludźmi z odległych krain, dzięki czemu współpraca z nami będzie bardziej efektywna i skuteczna. Poniżej dostępne są dane kontaktowe do każdego z nas oraz krótki opis, zapraszamy do współpracy</p>
 
