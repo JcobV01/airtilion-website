@@ -20,7 +20,7 @@ const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'
 
 const home = () => {
 
-  // const width = useWindowWidth()
+  const width = useWindowWidth()
 
   const changeMenu = (id) => {
     const menuItems = document.querySelectorAll('.menu-button')
@@ -81,12 +81,12 @@ const home = () => {
         <Footer />
         <div className='absolute top-0 left-0 w-full h-full background'></div>
 
-        {/* {
-          width > 1023 ? */}
+        {
+          width > 1023 ?
             <DesktopHomeLines />
-            {/* : */}
+            :
             <MobileHomeLines />
-        {/* } */}
+        }
       </main>
     </>
   )
