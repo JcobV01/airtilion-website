@@ -8,17 +8,17 @@ import HeaderBgDesktop2 from '@public/assets/images/mainHeader-BigSize.webp'
 import useWindowWidth from '@hooks/useWindowWidth';
 import Head from 'next/head'
 
-const Header = dynamic(() => import('@components/Header'), { ssr: false, loading: () => <div className="loader"></div>});
+const Header = dynamic(() => import('@components/Header'), { ssr: true, loading: () => <div className="loader"></div>});
 const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'), { ssr: true, loading: () => <div className="loader"></div>});
-const Encourage = dynamic(() => import('@components/home/sections/Encourage/Encourage'), { ssr: false, loading: () => <div className="loader"></div>});
-const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'), { ssr: false, loading: () => <div className="loader"></div>});
-const Offer = dynamic(() => import('@components/home/sections/Offer/Offer'), { ssr: false, loading: () => <div className="loader"></div>});
-const Portfolio = dynamic(() => import('@components/home/sections/Portfolio/Portfolio'), { ssr: false, loading: () => <div className="loader"></div>});
-const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'), { ssr: false, loading: () => <div className="loader"></div>});
-const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'), { ssr: false, loading: () => <div className="loader"></div>});
-const Footer = dynamic(() => import('@components/Footer'), { ssr: false, });
-const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLines'), { ssr: false, loading: () => <div className="loader"></div>});
-const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'), { ssr: false, loading: () => <div className="loader"></div>});
+const Encourage = dynamic(() => import('@components/home/sections/Encourage/Encourage'), { ssr: true, loading: () => <div className="loader"></div>});
+const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'), { ssr: true, loading: () => <div className="loader"></div>});
+const Offer = dynamic(() => import('@components/home/sections/Offer/Offer'), { ssr: true, loading: () => <div className="loader"></div>});
+const Portfolio = dynamic(() => import('@components/home/sections/Portfolio/Portfolio'), { ssr: true, loading: () => <div className="loader"></div>});
+const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'), { ssr: true, loading: () => <div className="loader"></div>});
+const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'), { ssr: true, loading: () => <div className="loader"></div>});
+const Footer = dynamic(() => import('@components/Footer'), { ssr: true, });
+const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLines'), { ssr: true, loading: () => <div className="loader"></div>});
+const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'), { ssr: true, loading: () => <div className="loader"></div>});
 
 const home = () => {
 
