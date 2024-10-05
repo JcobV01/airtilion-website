@@ -3,7 +3,7 @@ import useWindowWidth from '@hooks/useWindowWidth'
 import Image from 'next/image'
 import {useEffect, useState} from 'react'
 
-const Header = ({ title, subtitle, img, mobile=true }) => {
+const Header = ({ title, subtitle, img, positionBottom=true }) => {
   const width = useWindowWidth()
   const [isClient, setIsClient] = useState(false)
 
@@ -20,7 +20,7 @@ const Header = ({ title, subtitle, img, mobile=true }) => {
       fill 
       sizes="(max-width: 1024px) 100vw, 1920px"
       // sizes="100vw"
-      className='w-full h-dvh absolute object-cover object-bottom'
+      className={`w-full h-dvh absolute object-cover object-bottom ${positionBottom && 'object-bottom'}`}
       loading='eager'
       priority
       quality={100}
