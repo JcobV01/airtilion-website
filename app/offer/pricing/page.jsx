@@ -174,32 +174,35 @@ const pricing = () => {
                 </div>
                 <p className='font-normal'>Wsparcie techniczne przez 1 rok w tym:</p>
               </li>
-              <ul className='pl-[20px]  space-y-[5px]'>
-                <li className='flex items-center gap-[5px]'>
-                  <div className='w-[12px] h-[12px]'>
-                    <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
-                  </div>
-                  <p>Regularne aktualizacje wtyczek: Zapewnienie najnowszych wersji wtyczek i motywów dla bezpieczeństwa i funkcjonalności.</p>
-                </li>
-                <li className='flex items-center gap-[5px]'>
-                  <div className='w-[12px] h-[12px]'>
-                    <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
-                  </div>
-                  <p>Co miesięczny backup strony.</p>
-                </li>
-                <li className='flex items-center gap-[5px]'>
-                  <div className='w-[12px] h-[12px]'>
-                    <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
-                  </div>
-                  <p>Naprawa ewentualnych błędów.</p>
-                </li>
-                <li className='flex items-center gap-[5px]'>
-                  <div className='w-[12px] h-[12px]'>
-                    <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
-                  </div>
-                  <p>Dodawanie nowych treści (do 2 godzin miesięcznie).</p>
-                </li>
-              </ul>
+              <li>
+
+                <ul className='pl-[20px]  space-y-[5px]'>
+                  <li className='flex items-center gap-[5px]'>
+                    <div className='w-[12px] h-[12px]'>
+                      <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                    </div>
+                    <p>Regularne aktualizacje wtyczek: Zapewnienie najnowszych wersji wtyczek i motywów dla bezpieczeństwa i funkcjonalności.</p>
+                  </li>
+                  <li className='flex items-center gap-[5px]'>
+                    <div className='w-[12px] h-[12px]'>
+                      <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                    </div>
+                    <p>Co miesięczny backup strony.</p>
+                  </li>
+                  <li className='flex items-center gap-[5px]'>
+                    <div className='w-[12px] h-[12px]'>
+                      <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                    </div>
+                    <p>Naprawa ewentualnych błędów.</p>
+                  </li>
+                  <li className='flex items-center gap-[5px]'>
+                    <div className='w-[12px] h-[12px]'>
+                      <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
+                    </div>
+                    <p>Dodawanie nowych treści (do 2 godzin miesięcznie).</p>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
           <form id="form" onSubmit={createPricing} className={`mt-[100px] flex flex-col text-[18px] font-extralight space-y-[50px] bg-[rgba(27,27,27,0.20)] rounded-[10px] backdrop-blur-[5px] py-[40px] px-[50px] sm:px-[10px] sm:mt-[50px]`}>
