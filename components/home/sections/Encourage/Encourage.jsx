@@ -7,7 +7,7 @@ const data = [
     {
         image: "mdi:phone",
         title: "Skontaktuj się z nami",
-        desc: "Wybierz pakiet który Cię najbardziej interesuje. Jeśli nie wiesz, który będzie dla Ciebie idealny <span>nie przejmuj się, pomożemy"
+        desc: "Wybierz pakiet który Cię najbardziej interesuje. Jeśli nie wiesz, który będzie dla Ciebie idealny nie przejmuj się, pomożemy"
     },
 
     {
