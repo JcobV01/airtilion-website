@@ -20,7 +20,7 @@ const Header = ({ title, subtitle, img, mobile=true }) => {
       fill 
       sizes="(max-width: 1024px) 100vw, 1920px"
       // sizes="100vw"
-      className='w-full h-dvh absolute object-cover'
+      className='w-full h-dvh absolute object-cover object-bottom'
       loading='eager'
       priority
       quality={100}
