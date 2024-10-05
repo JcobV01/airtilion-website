@@ -78,9 +78,9 @@ const home = () => {
 
       <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBgDesktop} mobile={width > 1023 ? true : false}/>
       {/* <main className='flex flex-col relative mt-[-250px] gap-[200px] md:gap-[100px]'> */}
-        {/* <Encourage />
+        {/* <Encourage /> */}
         <AboutUs />
-        <Cooperation />
+        {/* <Cooperation />
         <Offer />
         <Portfolio />
         <Opinion /> */}
