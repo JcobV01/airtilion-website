@@ -6,6 +6,12 @@ import Link from 'next/link'
 import bgImage from '@public/assets/images/main-photo.webp'
 import logo from '@public/assets/images/airtilion-logo-dark.png'
 import Image from 'next/image'
+import { Jura } from 'next/font/google'
+
+const jura = Jura({
+  subsets: ['latin'],
+  weight: ['300'],
+})
 
 const page = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -76,7 +82,7 @@ const page = () => {
           PRZEJDŹ DALEJ
         </Link>
 
-        <p className='font-[Jura] text-[20px] font-extralight text-[#E2B350] tracking-[22.5px] bouncingText animationOpacity lg:tracking-[15px] lg:text-center sm:text-[10px] sm:tracking-[8px] fold:w-[90%]'>PASSION MAKES IT BETTER</p>
+        <p className={`${jura.className} text-[20px] font-extralight text-[#E2B350] tracking-[22.5px] bouncingText animationOpacity lg:tracking-[15px] lg:text-center sm:text-[12px] sm:tracking-[6px] fold:w-[90%]`}>PASSION MAKES IT BETTER</p>
       </div>
     </section>
   )
