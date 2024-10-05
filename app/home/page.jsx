@@ -8,23 +8,23 @@ import HeaderBgDesktop2 from '@public/assets/images/mainHeader-BigSize.webp'
 import useWindowWidth from '@hooks/useWindowWidth';
 import Head from 'next/head'
 
-const Header = dynamic(() => import('@components/Header'), { ssr: true, loading: () => <div className="loader"></div>});
-const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'), { ssr: true, loading: () => <div className="loader"></div>});
-const Encourage = dynamic(() => import('@components/home/sections/Encourage/Encourage'), { ssr: true, loading: () => <div className="loader"></div>});
-const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'), { ssr: true, loading: () => <div className="loader"></div>});
-const Offer = dynamic(() => import('@components/home/sections/Offer/Offer'), { ssr: true, loading: () => <div className="loader"></div>});
-const Portfolio = dynamic(() => import('@components/home/sections/Portfolio/Portfolio'), { ssr: true, loading: () => <div className="loader"></div>});
-const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'), { ssr: true, loading: () => <div className="loader"></div>});
-const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'), { ssr: true, loading: () => <div className="loader"></div>});
-const Footer = dynamic(() => import('@components/Footer'), { ssr: true, });
-const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLines'), { ssr: true, loading: () => <div className="loader"></div>});
-const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'), { ssr: true, loading: () => <div className="loader"></div>});
+const Header = dynamic(() => import('@components/Header'), { ssr: true, loading: () => <div className="loader"></div> });
+const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'), { ssr: true, loading: () => <div className="loader"></div> });
+const Encourage = dynamic(() => import('@components/home/sections/Encourage/Encourage'), { loading: () => <div className="loader"></div> });
+const Cooperation = dynamic(() => import('@components/home/sections/Cooperation/Cooperation'), { loading: () => <div className="loader"></div> });
+const Offer = dynamic(() => import('@components/home/sections/Offer/Offer'), { loading: () => <div className="loader"></div> });
+const Portfolio = dynamic(() => import('@components/home/sections/Portfolio/Portfolio'), { loading: () => <div className="loader"></div> });
+const Opinion = dynamic(() => import('@components/home/sections/Opinion/Opinion'), { loading: () => <div className="loader"></div> });
+const Contact = dynamic(() => import('@components/home/sections/Contact/Contact'), { loading: () => <div className="loader"></div> });
+const Footer = dynamic(() => import('@components/Footer'), { loading: () => <div className="loader"></div> });
+const DesktopHomeLines = dynamic(() => import('@components/lines/DesktopHomeLines'), { loading: () => <div className="loader"></div> });
+const MobileHomeLines = dynamic(() => import('@components/lines/MobileHomeLines'), { loading: () => <div className="loader"></div> });
 
 const home = () => {
 
   const width = useWindowWidth()
   console.log(width);
-  
+
 
   const changeMenu = (id) => {
     const menuItems = document.querySelectorAll('.menu-button')
@@ -76,7 +76,7 @@ const home = () => {
         <link rel="preload" href={HeaderBgDesktop} as="image" fetchPriority="high" />
       </Head>
 
-      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBgDesktop} mobile={width > 1023 ? true : false}/>
+      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBgDesktop} mobile={width > 1023 ? true : false} />
       <main className='flex flex-col relative mt-[-250px] gap-[200px] md:gap-[100px]'>
         <Encourage />
         <AboutUs />
