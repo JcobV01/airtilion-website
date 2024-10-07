@@ -121,7 +121,7 @@ const Contact = () => {
                 </defs>
             </svg>
 
-            <div className='absolute lg:relative w-[1100px] 2xl:w-[80%] aspect-[1400/800] m-auto h-full top-0 left-[50%] lg:left-auto translate-x-[-50%] lg:translate-x-0 flex lg:flex-col gap-[170px] lg:gap-[50px] py-[50px] z-10'>
+            <div className='absolute lg:relative w-[1100px] 2xl:w-[80%]  m-auto h-full top-0 left-[50%] lg:left-auto translate-x-[-50%] lg:translate-x-0 flex lg:flex-col gap-[170px] lg:gap-[50px] py-[50px] z-10'>
                 <div className='flex-1 flex flex-col gap-[50px] xl:gap-[20px] xl:justify-center'>
                     <Heading title="Kontakt" subtitle="ROZPOCZNIJMY WSPÓŁPRACĘ" id="contact" />
                     <div>
