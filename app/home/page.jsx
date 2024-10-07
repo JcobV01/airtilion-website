@@ -76,7 +76,7 @@ const home = () => {
         <link rel="preload" href={HeaderBgDesktop} as="image" fetchPriority="high" />
       </Head>
 
-      <Header title="Budujemy przyszłość Twojej Marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBgDesktop} positionBottom={false} />
+      <Header title="Budujemy przyszłość Twojej marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBgDesktop} positionBottom={false} />
       <main className='flex flex-col relative mt-[-250px] gap-[200px] md:gap-[100px]'>
         <Encourage />
         <AboutUs />
