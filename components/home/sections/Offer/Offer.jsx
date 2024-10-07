@@ -55,7 +55,7 @@ const offer = [
         title: "Darmowa wycena",
         data: {
             technologies: {
-                subtitle: "TNie znalazłeś idealnej oferty stworzonej właśnie dla Ciebie? Nie przejmuj się! Przechodząc dalej możesz spersonalizować własną usługę. ",
+                subtitle: "Nie znalazłeś idealnej oferty stworzonej właśnie dla Ciebie? Nie przejmuj się! Przechodząc dalej możesz spersonalizować własną usługę. ",
                 list: ["Kontakt do 3 dni roboczych", "Możliwość dowolnej personalizacji projektów"],
             },
             composition: {

@@ -10,7 +10,9 @@ const OfferCard = ({ title, technologies, composition, index, isVisible, link })
                 {
                     technologies.list.map((item, index) => (
                         <div className='flex gap-[20px] items-center' key={index * 501}>
-                            <Icon icon='lets-icons:check-fill' width={20} height={20} alt='Ikona listy' className='text-[#E2B350]' />
+                            <div className="flex justify-center items-center">
+                                <Icon icon='lets-icons:check-fill' width={20} height={20} alt='Ikona listy' className='text-[#E2B350]' />
+                            </div>
                             <p className='text-[15px] lg:text-[13px] font-light'>{item}</p>
                         </div>
                     ))
@@ -22,7 +24,9 @@ const OfferCard = ({ title, technologies, composition, index, isVisible, link })
                 {
                     composition.list.map((item, index) => (
                         <div className='flex gap-[20px] items-center' key={index * 1000}>
-                            <Icon icon='lets-icons:check-fill' width={20} height={20} alt='Ikona listy' className='text-[#E2B350]' />
+                            <div className="flex justify-center items-center">
+                                <Icon icon='lets-icons:check-fill' width={20} height={20} alt='Ikona listy' className='text-[#E2B350]' />
+                            </div>
                             <p className='text-[15px] lg:text-[13px] font-light'>{item}</p>
                         </div>
                     ))
