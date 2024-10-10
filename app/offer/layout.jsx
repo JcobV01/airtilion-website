@@ -1,6 +1,5 @@
 import Footer from '@components/Footer'
 import Header from '@components/Header'
-import Navbar from '@components/Navbar'
 import NavbarOffer from '@components/offer/NavbarOffer'
 import HeaderBg from '@public/assets/images/headerOfferPortfolio.webp'
 import React from 'react'
