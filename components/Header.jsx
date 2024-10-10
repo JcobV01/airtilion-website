@@ -17,7 +17,7 @@ const Header = ({ title, subtitle, img, positionBottom=true, dialogVisible }) =>
   });
   
   return (
-    <header ref={ref} className={`w-full h-dvh relative top-[-133px] flex justify-center items-center z-10  transition-opacity duration-1000 ${(isVisible && !dialogVisible) ? 'opacity-100' : 'opacity-0'}`}>
+    <header ref={ref} className={`w-full h-dvh relative top-[-133px] flex justify-center items-center z-10  transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       {isClient &&
       <Image
       src={img.src}
@@ -26,10 +26,10 @@ const Header = ({ title, subtitle, img, positionBottom=true, dialogVisible }) =>
       sizes="(max-width: 1024px) 100vw, 1920px"
       // sizes="100vw"
       className={`w-full h-dvh absolute object-cover object-bottom ${positionBottom && 'object-bottom'}`}
-      loading='lazy'
-      // priority
+      loading='eager'
+      priority
       quality={100}
-      // fetchPriority="auto"
+      fetchPriority="auto"
       unoptimized={width > 1023}
       style={{objectPosition: positionBottom == true ? 'center bottom' : 'center center' }}
       />
