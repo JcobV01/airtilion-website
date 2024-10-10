@@ -146,13 +146,13 @@ const apps = () => {
   return (
     <>
       <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px] offerForm xl:gap-[100px] fold:w-[100%] z-10'>
-        <article className='flex flex-col w-[1240px] mt-[100px] xl:w-[90%]'>
+        <article className='flex flex-col w-[1240px] mt-[100px] xxl:w-[1500px] xl:w-[90%]'>
           <Heading title="Aplikacje mobilne" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
-          <p className='mt-[50px] text-[18px] font-light sm:text-[14px]'>Zainteresowany stworzeniem aplikacji mobilnej i strony internetowej? Skorzystaj z naszego intuicyjnego formularza, aby uzyskać darmową wycenę! Wybierz opcje, które najlepiej odpowiadają Twoim potrzebom, a my przygotujemy spersonalizowaną ofertę. Wypełnij formularz, aby pomóc nam lepiej zrozumieć Twoje wymagania:</p>
+          <p className='mt-[50px] text-[18px] font-light xxl:text-[25px] sm:text-[14px]'>Zainteresowany stworzeniem aplikacji mobilnej i strony internetowej? Skorzystaj z naszego intuicyjnego formularza, aby uzyskać darmową wycenę! Wybierz opcje, które najlepiej odpowiadają Twoim potrzebom, a my przygotujemy spersonalizowaną ofertę. Wypełnij formularz, aby pomóc nam lepiej zrozumieć Twoje wymagania:</p>
           <div className='mt-[50px] flex flex-col'>
-            <h5 className='text-[22px] sm:text-[18px]'>Informacje ogólne</h5>
-            <p className='mt-[15px] text-[18px] font-extralight sm:text-[16px]'>W pakiecie każda strona internetowa obejmuje:</p>
-            <ul className='flex flex-col pl-[10px] text-[16px] font-extralight mt-[10px] space-y-[10px] tracking-[1.1px] sm:text-[14px]'>
+            <h5 className='text-[22px] xxl:text-[30px] sm:text-[18px]'>Informacje ogólne</h5>
+            <p className='mt-[15px] text-[18px] font-extralight xxl:text-[24px] sm:text-[16px]'>W pakiecie każda strona internetowa obejmuje:</p>
+            <ul className='flex flex-col pl-[10px] text-[16px] font-extralight mt-[10px] space-y-[10px] tracking-[1.1px] xxl:text-[20px] sm:text-[14px]'>
               <li className='flex items-center gap-[10px]'>
                 <div className='w-[12px] h-[12px]'>
                   <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
@@ -207,10 +207,10 @@ const apps = () => {
               </li>
             </ul>
           </div>
-          <form id="form" onSubmit={createPricing} className='mt-[100px] flex flex-col text-[18px] font-extralight space-y-[50px] bg-[rgba(27,27,27,0.20)] rounded-[10px] backdrop-blur-[5px] py-[40px] px-[50px] sm:px-[10px] sm:mt-[50px]'>
+          <form id="form" onSubmit={createPricing} className='mt-[100px] flex flex-col text-[18px] font-extralight space-y-[50px] bg-[rgba(27,27,27,0.20)] rounded-[10px] backdrop-blur-[5px] py-[40px] px-[50px] xxl:text-[22px] sm:px-[10px] sm:mt-[50px]'>
             {error && <span className='text-red-700 font-light tracking-[2px] mb-[5px]'>{error}</span>}
             <div>
-              <h5 className='text-[20px] font-normal sm:text-[18px]'>1. Rodzaj strony internetowej</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>1. Rodzaj strony internetowej</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px] lg:flex-col-reverse lg:gap-[15px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -231,7 +231,7 @@ const apps = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal sm:text-[18px]'>2. Rodzaj aplikacji mobilnej</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>2. Rodzaj aplikacji mobilnej</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -245,7 +245,7 @@ const apps = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal sm:text-[18px]'>3. Liczba podstron strony internetowej</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>3. Liczba podstron strony internetowej</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -258,7 +258,7 @@ const apps = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal sm:text-[18px]'>4. Funkcjonalności strony internetowej</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>4. Funkcjonalności strony internetowej</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px] xl:flex-col-reverse xl:gap-[15px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -285,7 +285,7 @@ const apps = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal sm:text-[18px]'>4a. Jeśli w poprzednim punkcie wybrałeś/aś system zarządzania treścią, zaznacz interesującą Cię opcje.</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>4a. Jeśli w poprzednim punkcie wybrałeś/aś system zarządzania treścią, zaznacz interesującą Cię opcje.</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -299,7 +299,7 @@ const apps = () => {
             </div>
 
             <div>
-              <h5 className='text-[20px] font-normal sm:text-[18px]'>5. Funkcjonalności aplikacji mobilnej</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>5. Funkcjonalności aplikacji mobilnej</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -318,7 +318,7 @@ const apps = () => {
             </div>
 
             <div>
-              <h5 className='text-[20px] font-normal sm:text-[18px]'>6. Optymalizacja i dodatkowe usługi</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>6. Optymalizacja i dodatkowe usługi</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -333,7 +333,7 @@ const apps = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal sm:text-[18px]'>7. Integracje</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>7. Integracje</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -348,7 +348,7 @@ const apps = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal sm:text-[18px]'>8. Budżet</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>8. Budżet</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -363,7 +363,7 @@ const apps = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal sm:text-[18px]'>9. Termin realizacji</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>9. Termin realizacji</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -378,7 +378,7 @@ const apps = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal sm:text-[18px]'>10. Dodatkowe usługi</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>10. Dodatkowe usługi</h5>
               <div className='mt-[20px] px-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px] w-full'>
 
@@ -392,10 +392,10 @@ const apps = () => {
               <hr className='w-[800px] bg-[rgba(226,179,80,0.50)] h-[1px] border-none md:w-[90%]'></hr>
             </div>
 
-            <div style={{ backgroundImage: `url(${imageBackground.src})` }} className='h-[600px] rounded-[10px] lg:w-[95%] lg:flex lg:mx-auto lg:flex-col lg:bg-center sm:h-[650px] sm:bg-cover sm:bg-no-repeat'>
-              <h5 className='text-[20px] font-normal text-center pt-[50px] sm:text-[18px]'>Podstawowe informacje o kliencie</h5>
+            <div style={{ backgroundImage: `url(${imageBackground.src})` }} className='h-[600px] rounded-[10px] xxl:h-[700px] xxl:bg-cover xxl:bg-no-repeat lg:w-[95%] lg:flex lg:mx-auto lg:flex-col lg:bg-center sm:h-[650px] sm:bg-cover sm:bg-no-repeat'>
+              <h5 className='text-[20px] font-normal text-center pt-[50px] xxl:text-[24px] sm:text-[18px]'>Podstawowe informacje o kliencie</h5>
               <div className='mt-[20px] pl-[25px] flex justify-center gap-[200px] lg:pl-[0px]'>
-                <div className='flex flex-col gap-[15px] w-[800px] lg:w-[90%] sm:text-[16px]'>
+                <div className='flex flex-col gap-[15px] w-[800px] xxl:text-[24px] lg:w-[90%] sm:text-[16px]'>
 
                   <input type="text" name="Name" placeholder="IMIĘ I NAZWISKO" onChange={handleInputChange} className='bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none' />
                   <input type="email" name="Email" placeholder="EMAIL" onChange={handleInputChange} className='bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none' />
@@ -403,14 +403,14 @@ const apps = () => {
                   <input type="text" name="Company" placeholder="NAZWA FIRMY (OPCJONALNIE)" onChange={handleInputChange} className='bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none' />
                   <input type="text" name="Industry" placeholder="BRANŻA (OPCJONALNIE)" onChange={handleInputChange} className='bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none' />
 
-                  <div className='flex items-center gap-[10px] mt-[20px] sm:text-[13px]'>
+                  <div className='flex items-center gap-[10px] mt-[20px] xxl:text-[24px] sm:text-[13px]'>
                     <input type="checkbox" name="Privacy_policy" id="privacy" value="Polityka prywatności" onChange={handleInputChange} className='hidden peer' />
                     <label htmlFor='privacy' className='flex items-center cursor-pointer'>
                       <span className='quadBefore flex items-center'>Polityka prywatności</span>
                     </label>
                   </div>
 
-                  <div className='flex items-center gap-[10px] sm:text-[13px]'>
+                  <div className='flex items-center gap-[10px] xxl:text-[24px] sm:text-[13px]'>
                     <input type="checkbox" name="Processing_of_personal_data" value="Zgoda na przetwarzanie danych osobowych" id="processing" onChange={handleInputChange} className='hidden peer' />
                     <label htmlFor='processing' className='flex items-center cursor-pointer'>
                       <span className='quadBefore flex items-center'>Zgoda na przetwarzanie danych osobowych</span>

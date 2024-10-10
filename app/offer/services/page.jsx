@@ -64,10 +64,10 @@ const services = () => {
   return (
     <>
       <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px] xl:gap-[100px] fold:w-[100%] z-10'>
-        <article className='flex flex-col w-[1240px] mt-[100px] xl:w-[90%]'>
+        <article className='flex flex-col w-[1240px] mt-[100px] xl:w-[90%] xxl:w-[1500px]'>
           <Heading title="Pozostałe usługi" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
           <div className='mt-[50px]'>
-            <p className='text-[18px] font-light'>Zainteresowany optymalizacją lub kompleksową opieką nad swoją stroną internetową? Skorzystaj z naszej oferty, aby zapewnić sobie pełną funkcjonalność i wydajność witryny. Wybierz odpowiedni pakiet, a my zajmiemy się resztą!</p>
+            <p className='text-[18px] font-light xxl:text-[25px]'>Zainteresowany optymalizacją lub kompleksową opieką nad swoją stroną internetową? Skorzystaj z naszej oferty, aby zapewnić sobie pełną funkcjonalność i wydajność witryny. Wybierz odpowiedni pakiet, a my zajmiemy się resztą!</p>
             <CardsWithoutPrice offer={cardsSwitcher} handleOpenDialog={handleOpenDialog} />
             <DialogOffer dialogRef={dialogRef} handleCloseDialog={handleCloseDialog} title={dialogTitle} isOpen={isOpen} />
           </div>

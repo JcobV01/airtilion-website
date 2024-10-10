@@ -14,8 +14,8 @@ const DetailsOffer = ({ offer, isNetto, handleOpenDialog }) => {
                 offer.map((details, index) => {
                     const price = isNetto ? details.priceNetto : details.priceBrutto;
                     return (
-                        <div id={details.id} key={index} className='relative w-full h-[900px] 2xl:bg-cover 2xl:bg-no-repeat 2xl:h-auto 2xl:bg-center' style={{ backgroundImage: `url(${details.img.src})` }}>
-                            <div className='absolute inset-0 2xl:bg-cover 2xl:bg-no-repeat' style={{ backgroundImage: `url(${gradient.src})` }}></div>
+                        <div id={details.id} key={index} className='relative w-full h-[900px] xxl:bg-cover xxl:bg-no-repeat xxl:h-[1050px] 2xl:bg-cover 2xl:bg-no-repeat 2xl:h-auto 2xl:bg-center' style={{ backgroundImage: `url(${details.img.src})` }}>
+                            <div className='absolute inset-0 2xl:bg-cover 2xl:bg-no-repeat xxl:bg-cover xxl:bg-no-repeat' style={{ backgroundImage: `url(${gradient.src})` }}></div>
                             <div className='absolute inset-0 bg-black opacity-80'></div>
                             <div className='relative z-10 h-full'>
                                 <div className='flex justify-center'>
@@ -25,15 +25,15 @@ const DetailsOffer = ({ offer, isNetto, handleOpenDialog }) => {
                                     <span className={`absolute w-[2px] h-[200px] bg-[rgba(255,255,255,0.60)] ${index === 1 ? 'left-[25px] sm:left-[15px]' : 'right-[25px] sm:right-[15px]'} bottom-[25px] 2xl:bottom-[27px] sm:h-auto sm:inset-y-[15px]`}></span>
                                 </div>
                                 <div className='flex flex-col 2xl:pb-[60px] md:pb-[120px]'>
-                                    <div className='px-[75px] py-[50px] text-[16px] lg:px-[50px] lg:py-[40px] fold:px-[25px]'>
-                                        <h5 className={`text-[25px] text-[#E2B350] font-medium tracking-[2.5px] ${index === 1 ? 'text-right' : 'text-left'} xl:text-[22px] sm:text-center`}>{details.title}</h5>
-                                        <p className='text-[18px] font-light tracking-[1.8px] 2xl:text-[16px] xl:text-[15px]'>{details.desc}<span className='font-semibold'>&nbsp;{details.descBold}</span></p>
-                                        <p className='text-[20px] font-medium mt-[25px] 2xl:mt-[10px] xl:text-[17px]'>Kupując ten pakiet otrzymujesz:</p>
+                                    <div className='px-[75px] py-[50px] text-[16px] xxl:text-[20px] lg:px-[50px] lg:py-[40px] fold:px-[25px]'>
+                                        <h5 className={`text-[25px] text-[#E2B350] font-medium tracking-[2.5px] ${index === 1 ? 'text-right' : 'text-left'} xxl:text-[30px] xl:text-[22px] sm:text-center`}>{details.title}</h5>
+                                        <p className='text-[18px] font-light tracking-[1.8px] xxl:text-[22px] 2xl:text-[16px] xl:text-[15px]'>{details.desc}<span className='font-semibold'>&nbsp;{details.descBold}</span></p>
+                                        <p className='text-[20px] font-medium mt-[25px] xxl:text-[24px] 2xl:mt-[10px] xl:text-[17px]'>Kupując ten pakiet otrzymujesz:</p>
                                         {
                                             details.offer.map((detailsItem) => {
                                                 return (
                                                     <div key={detailsItem.name}>
-                                                        <p className='mt-[10px] text-[18px] font-light xl:text-[16px]'>{detailsItem.name}</p>
+                                                        <p className='mt-[10px] text-[18px] font-light xxl:text-[22px] xl:text-[16px]'>{detailsItem.name}</p>
                                                         <ul>
                                                             {
                                                                 detailsItem.list.map((listItem) => {
@@ -52,9 +52,9 @@ const DetailsOffer = ({ offer, isNetto, handleOpenDialog }) => {
                                                 )
                                             })
                                         }
-                                        <p className={`text-[25px] font-semibold tracking-[2.5px] absolute bottom-[25px] ${index === 1 ? 'right-[50px]' : 'left-[50px]'} md:bottom-[110px] md:inset-x-0 md:text-center`}>{price}&nbsp;<span className='text-[16px] tracking-[1.5px] font-medium'>{isNetto ? 'netto' : 'brutto'}</span></p>
+                                        <p className={`text-[25px] font-semibold tracking-[2.5px] absolute bottom-[25px] ${index === 1 ? 'right-[50px]' : 'left-[50px]'} xxl:text-[30px] md:bottom-[110px] md:inset-x-0 md:text-center`}>{price}&nbsp;<span className='text-[16px] tracking-[1.5px] font-medium xxl:text-[20px]'>{isNetto ? 'netto' : 'brutto'}</span></p>
                                     </div>
-                                    <div className={`absolute bottom-[35px] ${index === 1 ? 'left-[225px]' : 'right-[225px]'} md:inset-x-0 md:flex md:justify-center md:bottom-[40px]`}>
+                                    <div className={`absolute bottom-[35px] ${index === 1 ? 'left-[225px] xxl:left-[190px]' : 'right-[225px] xxl:right-[190px]'} md:inset-x-0 md:flex md:justify-center md:bottom-[40px]`}>
                                         <ButtonBuy handleOpenDialog={() => handleOpenDialog(details.title)} />
                                     </div>
                                 </div>
