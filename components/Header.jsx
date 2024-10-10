@@ -1,5 +1,4 @@
 "use client"
-import useIntersectionObserver from '@hooks/useObserver'
 import useWindowWidth from '@hooks/useWindowWidth'
 import Image from 'next/image'
 import {useEffect, useState} from 'react'
@@ -11,13 +10,9 @@ const Header = ({ title, subtitle, img, positionBottom=true }) => {
   useEffect(() => {
     setIsClient(true)
   }, [])
-
-  const [ref, isVisible] = useIntersectionObserver({
-    threshold: 0.1
-  });
   
   return (
-    <header ref={ref} className={`w-full h-dvh relative top-[-133px] flex justify-center items-center z-10  transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <header className='w-full h-dvh relative top-[-133px] flex justify-center items-center z-10'>
       {isClient &&
       <Image
       src={img.src}
