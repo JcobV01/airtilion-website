@@ -4,32 +4,28 @@ import React from 'react'
 const NavbarFooter = () => {
     const menuFooter = [
         {
-            name: "Home",
-            link: "/home"
-        },
-        {
             name: "O nas",
-            link: "#about"
+            link: "/#about"
         },
         {
             name: "Współpraca",
-            link: "#cooperation"
+            link: "/#cooperation"
         },
         {
             name: "Oferta",
-            link: "#offer"
+            link: "/#offer"
         },
         {
             name: "Portfolio",
-            link: "#portfolio"
+            link: "/#portfolio"
         },
         {
             name: "Nasze projekty",
-            link: "home/projects"
+            link: "/projects"
         },
         {
             name: "Kontakt",
-            link: "#contact"
+            link: "/#contact"
         },
     ]
     return (

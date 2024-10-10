@@ -12,25 +12,39 @@ const Footer = () => {
         <footer className='z-10 w-full'>
             <article className='flex justify-center bg-cover lg:bg-center' style={{ backgroundImage: `url(${FooterSmoke.src})` }}>
                 <div className='flex flex-col mt-[100px] items-center'>
-                    <div className='w-[255px] mt-[100px]'>
-                        <Image src={AirtilionLogo} alt='Logo Airtilionu' />
-                    </div>
+                    <Link href="/">
+                        <div className='w-[255px] mt-[100px]'>
+                            <Image src={AirtilionLogo} alt='Logo Airtilionu' />
+                        </div>
+                    </Link>
                     <div className='flex'>
                         <hr className='mt-[25px] w-[200px] h-[2.5px] bg-[D9D9D9] flex justify-center' />
                     </div>
                     <p className='text-center mt-[25px] text-[20px] font-light xxl:text-[22px]'>Znajdziesz nas tutaj</p>
-                    <div className='flex gap-[25px] mt-[40px]'>
+                    <div className='flex gap-[25px] mt-[35px]'>
                         <Link href="/" aria-label="Znajdź nas na Facebooku" className='duration-700 hover:scale-75'>
-                            <Icon icon="bi:facebook" width="40px" height="40px" alt="Ikona Facebooka" className='text-[#E2B350]' />
+                            <Icon icon="bi:facebook" width="35px" height="35px" alt="Ikona Facebooka" className='text-[#E2B350]' />
                         </Link>
                         <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75'>
-                            <Icon icon="bi:linkedin" width="40px" height="40px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
+                            <Icon icon="ri:instagram-line" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
+                        </Link>
+                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75'>
+                            <Icon icon="bi:linkedin" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
+                        </Link>
+                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75'>
+                            <Icon icon="pajamas:twitter" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
+                        </Link>
+                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75'>
+                            <Icon icon="hugeicons:threads" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
+                        </Link>
+                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75'>
+                            <Icon icon="mdi:pinterest" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
                         </Link>
                     </div>
-                    <div className='mt-[30px]'>
+                    <div className='mt-[35px]'>
                         <NavbarFooter />
                     </div>
-                    <p className='text-center text-[15px] text-[#EEE] font-light tracking-[1.5px] mt-[30px] mb-[15px]'>© 2024 Airtilion sp. z o.o.</p>
+                    <p className='text-center text-[15px] text-[#EEE] font-light tracking-[1.5px] mt-[35px] mb-[15px]'>© 2024 Airtilion sp. z o.o.</p>
                 </div>
             </article>
         </footer>
