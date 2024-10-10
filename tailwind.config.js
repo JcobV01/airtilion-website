@@ -13,6 +13,9 @@ module.exports = {
       },
     },
     screens: {
+      '2xl': { 'min': '1900px' },
+      // => @media (min-width: 1900px) { ... }
+
       '2xl': { 'max': '1535px' },
       // => @media (max-width: 1535px) { ... }
   
