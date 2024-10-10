@@ -77,7 +77,7 @@ const services = () => {
       <section>
         {/* Oferta services - 1 linia */}
 
-        <div className='absolute top-[800px] xl:top-[500px] lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
+        <div className='absolute top-[800px] xxl:hidden xl:top-[500px] lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1924" height="868" viewBox="0 0 1864 568" fill="none" className='w-full'>
             <path d="M-111.344 566.97C24.1409 392.47 276.293 222.47 508.015 188.97C689.033 162.8 899.415 168.47 1131.14 58.9701C1311.25 -26.1402 1616.09 -31.5299 1824.69 151.97C2092.6 387.637 2056.95 68.9701 2190.28 11.9701" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M-111.344 646.97C24.1409 472.47 276.293 302.47 508.015 268.97C689.033 242.8 899.415 248.47 1131.14 138.97C1311.25 53.8599 1616.09 48.4701 1824.69 231.97C2092.6 467.637 2056.95 148.97 2190.28 91.9701" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />

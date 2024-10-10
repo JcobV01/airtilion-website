@@ -2,7 +2,7 @@ import React from 'react'
 
 const DesktopPortfolioDetailsLines = () => {
     return (
-        <div className='w-full h-full absolute top-0 lg:hidden opacity-50'>
+        <div className='w-full h-full absolute top-0 xxl:hidden lg:hidden opacity-50'>
             {/* Sekcja images*/}
 
             <div className='absolute top-[250px] 2xl:top-[0px] xl:top-[100px] left-[50%] translate-x-[-50%] z-[1] w-full'>

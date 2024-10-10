@@ -2,7 +2,7 @@ import React from 'react'
 
 const DesktopHomeLines = () => {
     return (
-        <div className='w-full h-full absolute top-0 lg:hidden opacity-50'>
+        <div className='w-full h-full absolute top-0 lg:hidden opacity-50 xxl:hidden'>
             {/* Sekcja o nas */}
 
             <div className='absolute top-[550px] 2xl:top-[400px] xl:top-[300px] lg:top-[600px] fold:hidden left-[50%] translate-x-[-50%] z-[1] w-full'>

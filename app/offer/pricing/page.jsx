@@ -395,7 +395,7 @@ const pricing = () => {
       <section>
         {/* Oferta pricing - 1 linia */}
 
-        <div className='absolute top-[1050px] xl:top-[800px] lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
+        <div className='absolute top-[1050px] xxl:hidden xl:top-[800px] lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1849" viewBox="0 0 1864 1849" fill="none" className='w-full'>
             <path d="M-47.8027 147.746C141.849 34.4395 438.55 -32.2625 666.596 20.7691C844.743 62.1967 1038.67 143.96 1294.34 126.192C1493.07 112.381 1779.01 218.181 1906.63 464.961C2070.54 781.897 2153.18 472.074 2298.11 467.446" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M-47.8027 227.746C141.849 114.4395 438.55 47.7375 666.596 100.769C844.743 142.197 1038.67 223.96 1294.34 206.192C1493.07 192.381 1779.01 298.181 1906.63 544.961C2070.54 861.897 2153.18 552.074 2298.11 547.446" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
@@ -406,7 +406,7 @@ const pricing = () => {
 
         {/* Oferta pricing - 2 linia */}
 
-        <div className='absolute top-[2250px] lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
+        <div className='absolute top-[2250px] xxl:hidden lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1924" height="868" viewBox="0 0 1864 568" fill="none" className='w-full'>
             <path d="M-111.344 566.97C24.1409 392.47 276.293 222.47 508.015 188.97C689.033 162.8 899.415 168.47 1131.14 58.9701C1311.25 -26.1402 1616.09 -31.5299 1824.69 151.97C2092.6 387.637 2056.95 68.9701 2190.28 11.9701" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M-111.344 646.97C24.1409 472.47 276.293 302.47 508.015 268.97C689.033 242.8 899.415 248.47 1131.14 138.97C1311.25 53.8599 1616.09 48.4701 1824.69 231.97C2092.6 467.637 2056.95 148.97 2190.28 91.9701" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
@@ -417,7 +417,7 @@ const pricing = () => {
 
         {/* Oferta pricing - 3 linia */}
 
-        <div className='absolute top-[3250px] lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
+        <div className='absolute top-[3250px] xxl:hidden lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1533" viewBox="0 0 1864 1133" fill="none" className='w-full'>
             <path d="M2647.39 1089.59C2406.7 1157.58 2042.76 1145.41 1774.92 1024.24C1565.68 929.589 1342.08 787.24 1032.99 734.185C792.739 692.946 461.368 498.878 336.2 198.315C175.45 -187.693 40.9091 121.159 -133.685 85.247" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2647.39 1169.59C2406.7 1237.58 2042.76 1225.41 1774.92 1104.24C1565.68 1009.59 1342.08 867.24 1032.99 814.185C792.739 772.946 461.368 578.878 336.2 278.315C175.45 -107.693 40.9091 201.159 -133.685 165.247" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
