@@ -18,7 +18,7 @@ const data = [
     },
     {
         title: 'Nieszablonowość',
-        desc: 'Większość firm przestała dbać o klienta, kopiując ciągle te same schematy i szablony. U nas tego nie doświadczysz, każda strona jest projektowana osobno, po ustaleniu szczegółów z klientem',
+        desc: 'Zamiast stosować gotowe schematy, tworzymy unikalne strony, które odzwierciedlają potrzeby i oczekiwania naszych klientów.',
         icon: 'iconoir:medal-1st-solid',
         bg: lion2,
     },
@@ -36,7 +36,7 @@ const data = [
     },
     {
         title: 'Nowoczesność',
-        desc: 'Większość firm deklaruje używanie nowoczesnych technologii, pisząc o HTML, CSS czy Wordpress, które są bazą. U nas jest inaczej. Oczywiście, używamy wcześniej wspomnianych technologii, ale tworząc w tych faktycznie najnowszych',
+        desc: 'Idziemy o krok dalej niz standardowe podejście, korzystając z nowoczesnych technologii. Oczywiście, stosujemy HTML, CSS czy WordPress, które stanowią solidną bazę, ale skupiamy się na najnowszych rozwiązaniach dostępnych na rynku.',
         icon: 'streamline:graph-bar-increase-solid',
         bg: lion5,
     },
