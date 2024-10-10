@@ -26,10 +26,10 @@ const Header = ({ title, subtitle, img, positionBottom=true, dialogVisible }) =>
       sizes="(max-width: 1024px) 100vw, 1920px"
       // sizes="100vw"
       className={`w-full h-dvh absolute object-cover object-bottom ${positionBottom && 'object-bottom'}`}
-      loading='eager'
-      priority
+      loading='lazy'
+      // priority
       quality={100}
-      fetchPriority="auto"
+      // fetchPriority="auto"
       unoptimized={width > 1023}
       style={{objectPosition: positionBottom == true ? 'center bottom' : 'center center' }}
       />

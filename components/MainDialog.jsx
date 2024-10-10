@@ -66,7 +66,7 @@ const MainDialog = ({setDialogV}) => {
                     ) : (
 
                         <div className='w-[600px] rounded-full border-[#B4A179] border-r-[2px] border-l-[2px] flex justify-center items-center aspect-square sm:w-[90%] sm:px-[20px] fold:border-none'>
-                            <Image src={logo} width={400} height="auto" alt="Logo firmy" className='sm:w-[300px] animationOpacity duration-700' />
+                            <Image src={logo} width={400} height="auto" alt="Logo firmy" loading="eager" priority className='sm:w-[300px] animationOpacity duration-700' />
                         </div>
                     )}
                     <button onClick={() => { setDialogV(false); dialogRef.current.close() }} className='relative h-[60px] px-[60px] text-[18px] flex justify-center items-center hover:scale-105 hover:text-[15px] duration-500 animationOpacity sm:h-[50px] sm:text-[14px]'>
