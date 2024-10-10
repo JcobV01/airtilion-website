@@ -37,7 +37,7 @@ const Cooperation = () => {
         {
             title: "Wsparcie i utrzymanie",
             desc: "Zapewniamy wsparcie przez 1 rok po uruchomieniu strony, pomagając w ewentualnych problemach oraz zapewniając aktualizacje i konserwację.",
-            image: "icon-park-solid:protect",
+            image: "fluent:shield-48-filled",
         }
     ]
 
