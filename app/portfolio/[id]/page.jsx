@@ -136,7 +136,7 @@ const page = ({ params }) => {
                     <PortfolioClient client={data[0]?.Client} />
                     <PortfolioOpinion client={data[0]?.Client} />
 
-                    <section className='w-[1240px] xl:w-[90%]'>
+                    <section className='w-[1240px] xl:w-[90%] xxl:w-[1500px]'>
                         <Cooperate />
                     </section>
                     <aside className='fixed z-20 right-[10px] top-[50%] translate-y-[-50%] flex flex-col items-center justify-center gap-[10px] w-[20px] py-[20px] bg-[#0000006d] backdrop-blur-[5px] rounded-full'>
