@@ -157,6 +157,13 @@ body::-webkit-scrollbar-thumb {
   background-image: radial-gradient(900px 700px at 13% 34%, #23232335 0%, #00FFFF00 100%), radial-gradient(1400px 500px at 81% 60%, #23232335 0%, #00FFFF00 100%), radial-gradient(75% 75% at 50% 50%, #040404 0%, #040404 100%);
 }
 
+/* Dla > 1920px */
+@media (min-width: 1920px) {
+  .background{
+    background-size: 100%;
+  }
+}
+
 /* Dla tabletów */
 @media (max-width: 1024px) {
   .background {
