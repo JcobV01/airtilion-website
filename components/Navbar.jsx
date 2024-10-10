@@ -36,6 +36,11 @@ const menu = [
     //        id: ''
     // },
     {
+        name: "FAQ",
+        link: "/faq",
+        id: ""
+    },
+    {
         name: "Kontakt",
         link: "/#contact",
         id: "#contact"
@@ -82,12 +87,14 @@ const Navbar = () => {
     }
 
     const handleMenu = (e, id) => {
-        e.preventDefault()
-        const target = id.length > 0 ? document.querySelector(id) : null;
-        target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-        });
+        if(id.length > 0){
+            e.preventDefault()
+            const target = id.length > 0 ? document.querySelector(id) : null;
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
     }
 
     return (

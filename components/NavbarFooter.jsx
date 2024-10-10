@@ -24,6 +24,10 @@ const NavbarFooter = () => {
             link: "/projects"
         },
         {
+            name: "FAQ",
+            link: "/faq"
+        },
+        {
             name: "Kontakt",
             link: "/#contact"
         },
