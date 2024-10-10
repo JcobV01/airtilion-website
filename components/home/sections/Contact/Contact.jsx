@@ -5,10 +5,12 @@ import { toast } from 'react-toastify';
 import { Icon } from '@iconify/react';
 
 import bg from '@public/assets/images/contact-lion.webp'
-import Heading from '@components/Heading'
-import FormButton from '@components/FormButton'
 
 import useIntersectionObserver from '@hooks/useObserver';
+import dynamic from 'next/dynamic';
+
+const Heading = dynamic(() => import('@components/Heading'), { ssr: true, loading: () => <div className="loader"></div> });
+const FormButton = dynamic(() => import('@components/FormButton'), { ssr: true, loading: () => <div className="loader"></div> });
 
 const Contact = () => {
     const [name, setName] = useState('');

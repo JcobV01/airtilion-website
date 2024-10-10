@@ -1,16 +1,18 @@
 "use client"
 
-import Heading from '@components/Heading'
-import LightButton from '@components/LightButton'
 import Image from 'next/image'
 import React from 'react'
-
 import mainImage from '@public/assets/images/aboutUsMain.webp'
-import Mission from './sections/Mission'
-import Work from './sections/Work'
-import People from './sections/People'
-import Cooperate from './sections/Cooperate'
 import useIntersectionObserver from '@hooks/useObserver'
+import dynamic from 'next/dynamic'
+
+const Heading = dynamic(() => import('@components/Heading'), { ssr: true, loading: () => <div className="loader"></div> });
+const LightButton = dynamic(() => import('@components/LightButton'), { ssr: true, loading: () => <div className="loader"></div> });
+const Mission = dynamic(() => import('./sections/Mission'), { ssr: true, loading: () => <div className="loader"></div> });
+const Work = dynamic(() => import('./sections/Work'), { ssr: true, loading: () => <div className="loader"></div> });
+const People = dynamic(() => import('./sections/People'), { ssr: true, loading: () => <div className="loader"></div> });
+const Cooperate = dynamic(() => import('./sections/Cooperate'), { ssr: true, loading: () => <div className="loader"></div> });
+
 
 const AboutUs = () => {
   const [ref, isVisible] = useIntersectionObserver({

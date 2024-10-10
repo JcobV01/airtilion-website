@@ -1,12 +1,14 @@
 "use client"
 
-import Heading from '@components/Heading'
 import React, { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react'
 
-import PortfolioItem from './components/PortfolioItem'
 import useIntersectionObserver from '@hooks/useObserver'
 import Link from 'next/link'
+import dynamic from 'next/dynamic';
+
+const Heading = dynamic(() => import('@components/Heading'), { ssr: true, loading: () => <div className="loader"></div> });
+const PortfolioItem = dynamic(() => import('./components/PortfolioItem'), { ssr: true, loading: () => <div className="loader"></div> });
 
 const Portfolio = () => {
     const [ ref, isVisible ] = useIntersectionObserver();

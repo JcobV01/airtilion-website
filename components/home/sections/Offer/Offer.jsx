@@ -1,9 +1,11 @@
 "use client"
 
-import Heading from '@components/Heading'
 import React from 'react'
-import OfferCard from './components/OfferCard'
 import useIntersectionObserver from '@hooks/useObserver'
+import dynamic from 'next/dynamic';
+
+const Heading = dynamic(() => import('@components/Heading'), { ssr: true, loading: () => <div className="loader"></div> });
+const OfferCard = dynamic(() => import('./components/OfferCard'), { ssr: true, loading: () => <div className="loader"></div> });
 
 const offer = [
     {

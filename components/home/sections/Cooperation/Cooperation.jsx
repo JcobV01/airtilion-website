@@ -1,10 +1,11 @@
 "use client"
 
-import Heading from '@components/Heading'
 
+import dynamic from 'next/dynamic';
 import CoopCards from './components/Cards'
 import useIntersectionObserver from '@hooks/useObserver';
 
+const Heading = dynamic(() => import('@components/Heading'), { ssr: true, loading: () => <div className="loader"></div> });
 const Cooperation = () => {
     const [ ref, isVisible ] = useIntersectionObserver();
 
