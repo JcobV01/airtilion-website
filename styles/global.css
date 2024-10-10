@@ -160,7 +160,7 @@ body::-webkit-scrollbar-thumb {
 /* Dla > 1920px */
 @media (min-width: 1920px) {
   .background{
-    background-size: 100%;
+    background-size: 100% 2400px;
   }
 }
 
