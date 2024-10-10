@@ -6,6 +6,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SliderCard from './SliderCard';
+import { Icon } from '@iconify/react';
 
 const slide = [
     {
@@ -68,10 +69,11 @@ const Slider = () => {
                 }}
             >
                 {slide.map((slide, index) => (
-                    <SwiperSlide key={index}>
-                        <div className='flex justify-center items-center'>
+                    <SwiperSlide key={index} className="backdrop-blur-[2.5px]">
+                        <div className='flex justify-center items-center z-10 relative'>
                             <SliderCard author={slide.author} page={slide.page} desc={slide.desc} />
                         </div>
+                        <Icon icon="bi:quote" width={200} height={200} alt="Ikona cytatu" className='text-[#121212] absolute right-[-20px] top-[-20px] z-[5]' />
                     </SwiperSlide>
                 ))}
             </Swiper>
