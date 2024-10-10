@@ -122,9 +122,9 @@ const page = ({ params }) => {
         <section className='z-10 flex flex-col items-center gap-[150px] sm:gap-[100px]'>
             {data.length > 0 ?
                 <>
-                    <article id="description" className='w-[1240px] flex flex-col gap-[50px] xl:w-[90%] observer'>
+                    <article id="description" className='w-[1240px] flex flex-col gap-[50px] xxl:w-[1500px] xl:w-[90%] observer'>
                         <Heading title={data[0]?.Name} subtitle="NASZE PORTFOLIO" />
-                        <p className='text-[15px]'>{data[0]?.Description}</p>
+                        <p className='text-[15px] xxl:text-[22px]'>{data[0]?.Description}</p>
                     </article>
 
                     <PortfolioImages screenshots={data[0]?.Screens} />
