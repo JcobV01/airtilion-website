@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className='flex'>
                         <hr className='mt-[25px] w-[200px] h-[2.5px] bg-[D9D9D9] flex justify-center' />
                     </div>
-                    <p className='text-center mt-[25px] text-[20px] font-light'>Znajdziesz nas tutaj</p>
+                    <p className='text-center mt-[25px] text-[20px] font-light xxl:text-[22px]'>Znajdziesz nas tutaj</p>
                     <div className='flex gap-[25px] mt-[40px]'>
                         <Link href="/" aria-label="Znajdź nas na Facebooku" className='duration-700 hover:scale-75'>
                             <Icon icon="bi:facebook" width="40px" height="40px" alt="Ikona Facebooka" className='text-[#E2B350]' />
