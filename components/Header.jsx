@@ -4,7 +4,7 @@ import useWindowWidth from '@hooks/useWindowWidth'
 import Image from 'next/image'
 import {useEffect, useState} from 'react'
 
-const Header = ({ title, subtitle, img, positionBottom=true, dialogVisible }) => {
+const Header = ({ title, subtitle, img, positionBottom=true }) => {
   const width = useWindowWidth()
   const [isClient, setIsClient] = useState(false)
 
