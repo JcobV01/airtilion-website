@@ -5,7 +5,7 @@ const PortfolioSteps = ({ steps }) => {
 
     return (
         <article id="steps" className="w-[1240px] xl:w-[90%] observer">
-            <h5 className='text-[20px] tracking-[3px] text-[#E2B350] mb-[60px] sm:text-center'>JAK PRZEBIEGŁA REALIZACJA?</h5>
+            <h5 className='text-[20px] tracking-[3px] text-[#E2B350] mb-[60px] xxl:text-[24px] sm:text-center'>JAK PRZEBIEGŁA REALIZACJA?</h5>
             <div className='flex justify-start gap-[30px] w-[1170px] m-auto relative xl:w-[960px] lg:w-[90%] lg:justify-center lg:items-center lg:flex-wrap lg:gap-[50px] sm:flex-col'>
                 {steps.slice(0, 4).map((step, index) => (
                     <Realization arrow={index === 3 ? 'line' : index === steps.length - 1 ? 'line' : index > 3 ? 'left' : 'right'} title={step.title} desc={step.description} accent={index === 0 ? 'przygotowanie' : index === 1 ? 'start' : index === steps.length - 1 ? 'koniec' : ''} key={index} />

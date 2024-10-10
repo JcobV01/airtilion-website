@@ -10,8 +10,8 @@ const Achivement = ({icon, title, description}) => {
             <Icon icon={achivements[icon]} width="50" height="50" alt={`Ikona ${title}`} className='text-[#E2B350]' style={{color: '#e2b350'}}/>
         </div>
         <div className='flex-1'>
-            <h6 className='text-[20px] font-bold w-[100px] mb-[20px]'>{title}</h6>
-            <p className='text-[13px] font-light'>{description}</p>
+            <h6 className='text-[20px] font-bold w-[100px] mb-[20px] xxl:text-[24px]'>{title}</h6>
+            <p className='text-[13px] font-light xxl:text-[16px]'>{description}</p>
         </div>
     </div>
   )

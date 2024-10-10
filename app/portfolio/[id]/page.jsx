@@ -122,9 +122,9 @@ const page = ({ params }) => {
         <section className='z-10 flex flex-col items-center gap-[150px] sm:gap-[100px]'>
             {data.length > 0 ?
                 <>
-                    <article id="description" className='w-[1240px] flex flex-col gap-[50px] xl:w-[90%] observer'>
+                    <article id="description" className='w-[1240px] flex flex-col gap-[50px] xxl:w-[1500px] xl:w-[90%] observer'>
                         <Heading title={data[0]?.Name} subtitle="NASZE PORTFOLIO" />
-                        <p className='text-[15px]'>{data[0]?.Description}</p>
+                        <p className='text-[15px] xxl:text-[22px]'>{data[0]?.Description}</p>
                     </article>
 
                     <PortfolioImages screenshots={data[0]?.Screens} />
@@ -136,7 +136,7 @@ const page = ({ params }) => {
                     <PortfolioClient client={data[0]?.Client} />
                     <PortfolioOpinion client={data[0]?.Client} />
 
-                    <section className='w-[1240px] xl:w-[90%]'>
+                    <section className='w-[1240px] xl:w-[90%] xxl:w-[1500px]'>
                         <Cooperate />
                     </section>
                     <aside className='fixed z-20 right-[10px] top-[50%] translate-y-[-50%] flex flex-col items-center justify-center gap-[10px] w-[20px] py-[20px] bg-[#0000006d] backdrop-blur-[5px] rounded-full'>

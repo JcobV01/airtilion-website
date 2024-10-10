@@ -13,7 +13,7 @@ module.exports = {
       },
     },
     screens: {
-      'xxl': { 'min': '1900px' },
+      'xxl': { 'min': '2000px' },
       // => @media (min-width: 1900px) { ... }
 
       '2xl': { 'max': '1535px' },
