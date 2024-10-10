@@ -12,22 +12,22 @@ import { usePathname, useRouter } from 'next/navigation'
 const menu = [
     {
         name: "O nas",
-        link: "/home#about",
+        link: "/#about",
         id: "#about"
     },
     {
         name: "Współpraca",
-        link: "/home#cooperation",
+        link: "/#cooperation",
         id: "#cooperation"
     },
     {
         name: "Oferta",
-        link: "/home#offer",
+        link: "/#offer",
         id: "#offer"
     },
     {
         name: "Portfolio",
-        link: "/home#portfolio",
+        link: "/#portfolio",
         id: "#portfolio"
     },
     // {
@@ -37,7 +37,7 @@ const menu = [
     // },
     {
         name: "Kontakt",
-        link: "/home#contact",
+        link: "/#contact",
         id: "#contact"
     },
 ]
