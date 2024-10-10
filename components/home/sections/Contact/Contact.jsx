@@ -125,14 +125,14 @@ const Contact = () => {
                 <div className='flex-1 flex flex-col gap-[50px] xl:gap-[20px] xl:justify-center'>
                     <Heading title="Kontakt" subtitle="ROZPOCZNIJMY WSPÓŁPRACĘ" id="contact" />
                     <div>
-                        <p className='text-[18px] xl:text-[15px] mb-[5px]'>Chcesz dowiedzieć się więcej o naszych usługach lub potrzebujesz porady? Skontaktuj się z nami!</p>
+                        <p className='text-[18px] xxl:text-[] xl:text-[15px] mb-[5px]'>Chcesz dowiedzieć się więcej o naszych usługach lub potrzebujesz porady? Skontaktuj się z nami!</p>
                         {error && <span className='text-red-700 font-light tracking-[2px] xl:text-[15px]'>{error}</span>}
                     </div>
                     <form onSubmit={handleSubmit} className='flex flex-col gap-[20px] xl:gap-[15px]'>
-                        <input name="Name" value={name} onChange={(e) => setName(e.target.value)} type="text" className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='IMIĘ I NAZWISKO' />
-                        <input name="Email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='ADRES EMAIL' />
-                        <input name="Number" value={number} onChange={(e) => setNumber(e.target.value)} type="text" className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='NUMER TELEFONU' />
-                        <textarea name="Text" value={text} onChange={(e) => setText(e.target.value)} className='bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] resize-none h-[200px] xl:h-[100px] xl:text-[13px]' placeholder='TREŚĆ'></textarea>
+                        <input name="Name" value={name} onChange={(e) => setName(e.target.value)} type="text" className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='IMIĘ I NAZWISKO' />
+                        <input name="Email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='ADRES EMAIL' />
+                        <input name="Number" value={number} onChange={(e) => setNumber(e.target.value)} type="text" className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='NUMER TELEFONU' />
+                        <textarea name="Text" value={text} onChange={(e) => setText(e.target.value)} className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] resize-none h-[200px] xl:h-[100px] xl:text-[13px]' placeholder='TREŚĆ'></textarea>
                         <div className='flex duration-700 hover:translate-y-[5px] justify-end sm:justify-center'>
                             <FormButton text="WYŚLIJ" submitting={isSubmitting} />
                         </div>

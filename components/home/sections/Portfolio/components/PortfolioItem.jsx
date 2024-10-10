@@ -20,13 +20,13 @@ const PortfolioItem = ({ title, desc, bg, image, id }) => {
 
     return (
         <section id={id} className='pt-[50px] z-10 sm:mb-[50px] fold:mb-0' onClick={(e) => detailsHande(e)}>
-            <article className='relative h-[550px] w-[1100px] m-auto hover:w-[1200px] 2xl:w-[1000px] xl:w-[800px] xl:h-[400px] lg:w-[80%] lg:h-[450px] sm:h-[300px] md:w-[90%] 2xl:hover:w-[1100px] xl:hover:w-[900px] lg:hover:w-[80%] md:hover:w-[90%] lg:hover:h-[500px] sm:hover:h-[350px] transition-all duration-1000 cursor-pointer portfolio-item'>
-                <div className='w-[960px] h-[550px] xl:w-[700px] xl:h-[400px] sm:h-[300px] lg:w-[100%] relative px-[50px] xl:px-0'>
+            <article className='relative h-[550px] w-[1100px] xxl:h-[650px] m-auto hover:w-[1200px] 2xl:w-[1000px] xl:w-[800px] xl:h-[400px] lg:w-[80%] lg:h-[450px] sm:h-[300px] md:w-[90%] 2xl:hover:w-[1100px] xl:hover:w-[900px] lg:hover:w-[80%] md:hover:w-[90%] lg:hover:h-[500px] sm:hover:h-[350px] transition-all duration-1000 cursor-pointer portfolio-item'>
+                <div className='w-[960px] h-[550px] xxl:h-[650px] xl:w-[700px] xl:h-[400px] sm:h-[300px] lg:w-[100%] relative px-[50px] xl:px-0'>
                     <span className='h-[2px] w-[50%] xl:w-[30%] bg-[#E2B35080] z-10 block absolute top-[30px] left-[50%] xl:left-[20%] translate-x-[-50%] lg:hidden'></span>
 
                     <div className='w-[400px] h-full lg:w-full lg:h-auto flex flex-col gap-[30px] justify-center bg-[#00000082] relative z-20 px-[50px] lg:py-[20px] sm:px-[20px]'>
                         <h5 className={`${kaushan.className} text-[25px] xl:text-[20px] relative z-10 sm:text-center`}>{title}</h5>
-                        <p className='text-[15px] xl:text-[13px] lg:[11px] text-[#AFAFAF] relative z-10 md:line-clamp-3 sm:text-center'>{desc}</p>
+                        <p className='text-[15px] xxl:text-[18px] xl:text-[13px] lg:[11px] text-[#AFAFAF] relative z-10 md:line-clamp-3 sm:text-center'>{desc}</p>
                     </div>
 
                     <Image src={bg} width={960} height={550} alt="Tlo" className='object-cover w-full h-full absolute top-0 left-0 z-0' />
