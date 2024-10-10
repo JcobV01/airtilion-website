@@ -95,7 +95,6 @@ const home = () => {
         { width > 1023 ? <DesktopHomeLines /> : <MobileHomeLines /> }
       </main>
 
-      <MainDialog setDialogV={setDialogVisible}/>
     </>
   )
 }
