@@ -56,9 +56,9 @@ const CustomAccordion = () => {
         <div className="space-y-5 mt-[20px]">
             {
                 faq.map((details, index) => (
-                    <Accordion open={open === details.id} icon={<Icon id={details.id} open={open} key={index} />}>
-                        <AccordionHeader onClick={() => handleOpen(details.id)} className="text-[18px] tracking-[1.1px] font-light border-solid border-b-2 border-[#e2b45080] pb-[15px]">{details.question}</AccordionHeader>
-                        <AccordionBody className="text-[16px] font-extralight mt-[15px]" dangerouslySetInnerHTML={{ __html: details.answer }}></AccordionBody>
+                    <Accordion open={open === details.id} icon={<Icon id={details.id} open={open} />} key={index}>
+                        <AccordionHeader onClick={() => handleOpen(details.id)} className="text-[18px] tracking-[1.1px] font-light border-solid border-b-2 border-[#e2b45080] pb-[15px] xxl:text-[22px] lg:text-[15px]">{details.question}</AccordionHeader>
+                        <AccordionBody className="text-[16px] font-extralight mt-[15px] xxl:text-[20px] xl:text-[15px] lg:text-[13px]" dangerouslySetInnerHTML={{ __html: details.answer }}></AccordionBody>
                     </Accordion>
                 ))
             }
