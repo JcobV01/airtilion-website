@@ -93,14 +93,14 @@ const Navbar = () => {
     return (
         <>
             <nav className='flex fold:flex-col fold:gap-[20px] justify-between px-[100px] xl:px-[50px] sm:px-[25px] py-[40px] items-center sticky top-0 w-full z-20 duration-500' style={{ backgroundColor: scrolled && '#00000080', backdropFilter: (scrolled && visibility != 'flex') && 'blur(5px)' }}>
-                <Link href="/home">
+                <Link href="/">
                     <Image src={logo} width={260} height="auto" alt="logo spółki Airtilion" className='xl:w-[200px]' />
                 </Link>
                 <div className='flex gap-[40px] xl:gap-[30px] items-center lg:hidden'>
 
                     {
                         menu.map((item, index) => (
-                            <Link href={item.link} key={index} onClick={(e) => { path == '/home' && handleMenu(e, item.id) }}>
+                            <Link href={item.link} key={index} onClick={(e) => { path == '/' && handleMenu(e, item.id) }}>
                                 <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xxl:text-[20px] xl:text-[15px]' onClick={(e) => handleMenuClick(e)}>
                                     {item.name}
                                 </button>
