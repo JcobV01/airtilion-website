@@ -1,12 +1,10 @@
 import React from 'react'
 import errorImage from '@public/assets/images/404.webp'
-import Navbar from '@components/Navbar'
 import Link from 'next/link'
 
 const Custom404 = () => {
   return (
     <main className='h-dvh bg-no-repeat bg-cover md:bg-center' style={{ backgroundImage: `url(${errorImage.src})` }}>
-      <Navbar />
       <section className='flex justify-end items-center px-[110px] lg:px-[50px]'>
         <div className='w-[950px] flex flex-col items-end mt-[100px] lg:w-[100%] sm:items-center fold:mt-0'>
           <h1 className='text-[150px] text-[#E2B350] font-bold my-0 xl:text-[100px] sm:text-[70px]'>404</h1>
