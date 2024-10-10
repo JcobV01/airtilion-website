@@ -4,7 +4,7 @@ const ButtonPrice = ({isNetto, tooglePrice}) => {
 
     return (
         <div className='flex items-center justify-center gap-[25px] text-[17px] tracking-[1.5px] font-light mt-[60px] xl:mb-[40px]'>
-            <span>Netto</span>
+            <span className="xxl:text-[24px]">Netto</span>
             <div>
                 <input type="checkbox" id="toggle" className='sr-only' checked={!isNetto} onChange={tooglePrice} aria-label="Toggle switch" />
                 <label htmlFor="toggle" className='block w-16 h-8 rounded-[30px] cursor-pointer relative' style={{
@@ -17,7 +17,7 @@ const ButtonPrice = ({isNetto, tooglePrice}) => {
                     }}></span>
                 </label>
             </div>
-            <span>Brutto</span>
+            <span className="xxl:text-[24px]">Brutto</span>
         </div>
     )
 }
