@@ -7,6 +7,7 @@ import lion3 from '@public/assets/images/mission/mission-3.webp'
 import lion4 from '@public/assets/images/mission/mission-4.webp'
 import lion5 from '@public/assets/images/mission/mission-5.webp'
 import useIntersectionObserver from '@hooks/useObserver'
+import Image from 'next/image'
 
 
 const data = [
@@ -56,10 +57,13 @@ const Mission = () => {
                         <div className={`relative w-[370px] h-[370px] xxl:w-[400px] xxl:h-[400px] lg:w-[300px] lg:h-[300px] rounded-[10px] bg-gradient-to-t from-[#0C0C0C] to-[#10101000] flex justify-center items-center transition-all duration-1000 ease-in-out opacity-0 translate-y-[50px] delay-${index * 200}ms ${isVisible ? 'tile-visible' : 'tile-hidden'}`} key={index}
                             style={{ transitionDelay: `${index * 200}ms` }} // Opóźnienie dla każdego kafelka
                         >
-                            <div
+                            <Image
                                 className='absolute w-[320px] h-[320px] xxl:w-[350px] xxl:h-[350px] xxl:bg-cover lg:scale-[80%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10 bg-no-repeat'
-                                style={{ backgroundImage: `url(${item.bg.src})` }}
-                            ></div>
+                                src={item.bg.src}
+                                width={320}
+                                height={320}
+                                quality={100}
+                            />
                             <div className='relative z-20 bg-[#161616CC] w-[280px] h-[280px] xxl:w-[310px] xxl:h-[310px] lg:w-[210px] lg:h-[210px] rounded-[5px] p-[15px] lg:p-[7px] flex flex-col justify-center items-start rect-cut'>
                                 <h6 className='text-[20px] xxl:text-[22px] xl:text-[18px] lg:text-[15px] font-medium text-center absolute top-[30px] lg:top-[15px] left-[50%] translate-x-[-50%]'>
                                     {item.title}
