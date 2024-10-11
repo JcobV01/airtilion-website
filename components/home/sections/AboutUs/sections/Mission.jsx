@@ -58,7 +58,7 @@ const Mission = () => {
                             style={{ transitionDelay: `${index * 200}ms` }} // Opóźnienie dla każdego kafelka
                         >
                             <Image
-                                className='absolute w-[320px] h-[320px] xxl:w-[350px] xxl:h-[350px] xxl:bg-cover lg:scale-[80%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10 bg-no-repeat'
+                                className='absolute w-[320px] h-[320px] xxl:w-[350px] xxl:h-[350px] xxl:bg-cover lg:w-[80%] lg:h-[80%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10 bg-no-repeat'
                                 src={item.bg.src}
                                 width={320}
                                 height={320}
