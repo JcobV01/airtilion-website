@@ -28,7 +28,7 @@ const rootLayout = ({ children }) => {
 
   return (
     <html lang="pl-PL" className="scroll-smooth">
-      <body className={`${poppins.className} w-dvw ${currentPath == '/' && 'h-dvh'} overflow-x-hidden bg-center`}>
+      <body className={`${poppins.className} w-dvw overflow-x-hidden bg-center`}>
         <Navbar/>
         {children}
         <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
