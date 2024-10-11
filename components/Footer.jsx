@@ -21,23 +21,23 @@ const Footer = () => {
                         <hr className='mt-[25px] w-[200px] h-[2.5px] bg-[D9D9D9] flex justify-center' />
                     </div>
                     <p className='text-center mt-[25px] text-[20px] font-light xxl:text-[22px]'>Znajdziesz nas tutaj</p>
-                    <div className='flex gap-[25px] mt-[35px]'>
-                        <Link href="/" aria-label="Znajdź nas na Facebooku" className='duration-700 hover:scale-75'>
+                    <div className='flex sm:flex-wrap sm:items-center sm:justify-center gap-[25px] mt-[35px]'>
+                        <Link href="/" aria-label="Znajdź nas na Facebooku" className='justify-center duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
                             <Icon icon="bi:facebook" width="35px" height="35px" alt="Ikona Facebooka" className='text-[#E2B350]' />
                         </Link>
-                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75'>
+                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
                             <Icon icon="ri:instagram-line" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
                         </Link>
-                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75'>
+                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
                             <Icon icon="bi:linkedin" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
                         </Link>
-                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75'>
+                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
                             <Icon icon="pajamas:twitter" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
                         </Link>
-                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75'>
+                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
                             <Icon icon="hugeicons:threads" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
                         </Link>
-                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75'>
+                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
                             <Icon icon="mdi:pinterest" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
                         </Link>
                     </div>
