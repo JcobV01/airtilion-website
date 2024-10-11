@@ -52,7 +52,7 @@ const Slider = () => {
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
                 autoplay={{
-                    delay: 1000500,
+                    delay: 5500,
                     disableOnInteraction: false,
                 }}
                 speed={1500}
