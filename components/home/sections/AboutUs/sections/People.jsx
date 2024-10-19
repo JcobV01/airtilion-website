@@ -12,7 +12,7 @@ const People = () => {
     return (
         <article ref={ref} className={`relative transition-all duration-1000 overflow-x-hidden ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
             <h5 className='text-[20px] xxl:text-[24px] xl:text-[18px] lg:text-[15px] tracking-[3px] text-[#E2B350] mb-[20px] text-center'>KIM JESTEŚMY?</h5>
-            <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] font-light mb-[40px] text-center'>Poznając zespół Airtilionu nie rozmawiasz już z anonimowymi ludźmi z odległych krain, dzięki czemu współpraca z nami będzie bardziej efektywna i skuteczna. Poniżej dostępne są dane kontaktowe do każdego z nas oraz krótki opis, zapraszamy do współpracy</p>
+            <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] font-light mb-[40px] text-center'>Poznając zespół Airtilion, zyskujesz bezpośredni kontakt z naszymi specjalistami, co przekłada się na sprawniejszą i bardziej efektywną współpracę. Dzięki bardziej bezpośredniej komunikacji możemy lepiej zrozumieć Twoje potrzeby i szybciej odpowiadać na wszelkie wyzwania. Poniżej znajdziesz dane kontaktowe do każdego oraz kilka informacji o nas. Zapraszamy do kontaktu i wspólnego działania!</p>
 
             <section className={`flex flex-col items-center mt-[100px] gap-[70px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
                 <div className='flex gap-[60px] w-[940px] xl:w-[100%] relative p-[25px] lg:flex-col lg:items-center'>
@@ -35,7 +35,7 @@ const People = () => {
                             <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] text-[#AEAEAE] tracking-[2px]'>Email: jakubwadycki@airtilion.com</p>
                         </div>
 
-                        <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] font-light lg:text-center'>Programista full stack z pasją do technologii. Moim głównym językiem programowania jest JavaScript, w którym czuję się jak ryba w wodzie. Poza codzienną pracą uwielbiam zgłębiać tajniki druku 3D i prostą elektronikę – to dla mnie świetny sposób na kreatywne wyrażanie siebie i eksperymentowanie z nowymi pomysłami. <br /><br /> Moim głównym celem jest przekształcenie branży stron internetowych poprzez innowacyjne podejście i nowoczesne rozwiązania. Zawsze dążę do tworzenia efektywnych i eleganckich rozwiązań, które spełniają najwyższe standardy. Zapraszam do współpracy i wspólnego tworzenia rzeczy, które naprawdę mają znaczenie!</p>
+                        <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] font-light lg:text-center'>Programista full stack z pasją do technologii. Moim głównym językiem programowania jest JavaScript, w którym czuję się jak ryba w wodzie. Poza codzienną pracą uwielbiam zgłębiać tajniki druku 3D i prostą elektronikę – to dla mnie świetny sposób eksperymentowanie z nowymi pomysłami i spędzanie wolnego czasu. <br /><br /> Moim głównym celem jest przekształcenie branży stron internetowych poprzez innowacyjne podejście i nowoczesne rozwiązania. Zawsze dążę do tworzenia efektywnych i eleganckich rozwiązań, które spełniają najwyższe standardy. Zapraszam do współpracy i wspólnego tworzenia rzeczy, które naprawdę tworzą przyszłość!</p>
                     </div>
 
                     <span className='h-[1px] w-[20px] bg-[#E2B350] absolute top-0 right-0 fold:hidden'></span>
