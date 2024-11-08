@@ -49,6 +49,26 @@ const CustomAccordion = () => {
             id: 8,
             question: "Czy oferujecie strony internetowe dopasowane do urządzeń mobilnych?",
             answer: "Tak, wszystkie nasze strony internetowe są projektowane z myślą o responsywności, co oznacza, że będą dobrze wyglądały i działały na różnych urządzeniach, w tym telefonach komórkowych i tabletach.",
+        },
+        {
+            id: 9,
+            question: "W jakich rejonach prowadzą Państwo działaność?",
+            answer: "Airtilion wywodzi się z Tarnowa, natomiast działamy w dużej mierze online, dlatego wykonujemy zlecenia z całej Polski i nie tylko. Odległość nie jest dla nas przeszkodą.",
+        },
+        {
+            id: 10,
+            question: "Czy możecie pomóc w optymalizacji istniejącej strony lub aplikacji?",
+            answer: "Tak, zajmujemy się także stronami już istniejącymi. Nasza strona zawiera odpowiednią ofertę.",
+        },
+        {
+            id: 11,
+            question: "Czy mogę zamówić tylko projekt graficzny strony bez kodowania?",
+            answer: "Jak najbardziej, oferujemy takie rozwiązanie. Należy jednak pamiętać, że najbardziej opłacalna będzie od razu zbudowana strona na podstawie przygotowanego przez nas projektu.",
+        },
+        {
+            id: 12,
+            question: "Czy tworzycie strony zgodne z wytycznymi dostępności dla osób niepełnosprawnych?",
+            answer: "Tak, jeśli klient tego wymaga to stosujemy takie wytyczne. Wszystko ustalamy na etapie początkowego wywiadu.",
         }
     ]
 
