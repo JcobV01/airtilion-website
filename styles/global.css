@@ -250,12 +250,14 @@ body::-webkit-scrollbar-thumb {
   content: "";
   height: 20px;
   width: 20px;
+  min-width: 20px;
   border: 2px solid #E2B350;
   transition-duration: 700ms;
   margin-right: 10px;
 }
 
-.offerForm .peer:checked+label .quadBefore::before {
+.offerForm .peer:checked+label .quadBefore::before,
+.orderForm .peer:checked+label .quadBefore::before{
   border-color: #000000;
   background-color: #E2B350;
 }

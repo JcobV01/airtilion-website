@@ -15,6 +15,10 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
     const [email, setEmail] = useState('');
     const [number, setNumber] = useState('');
     const [error, setError] = useState('');
+    const [checkboxValue, setCheckboxValue] = useState({
+        privacy_policy: false,
+        personal_data_processing: false
+    })
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const router = useRouter();
@@ -26,9 +30,21 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
             setEmail('');
             setNumber('');
             setError('');
+            setCheckboxValue({
+                privacy_policy: false,
+                personal_data_processing: false
+            });
             setIsSubmitting(false);
         }
     }, [isOpen]);
+
+    const handleCheckboxChange = (e) => {
+        const { id, checked } = e.target;
+        setCheckboxValue((prev) => ({
+            ...prev,
+            [id]: checked,
+        }));
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -43,6 +59,12 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
         const emailRegex = /^\S+@\S+\.\S+$/;
         if (!emailRegex.test(email)) {
             setError('Podaj poprawny adres email!');
+            setIsSubmitting(false);
+            return;
+        }
+
+        if (!checkboxValue.privacy_policy || !checkboxValue.personal_data_processing) {
+            setError('Musisz zaakceptować politykę prywatności i zgodę na przetwarzanie danych.');
             setIsSubmitting(false);
             return;
         }
@@ -81,13 +103,26 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
                 </div>
                 <h2 className='text-[25px] text-[#E2B350] font-medium tracking-[2.5px] mt-[20px] xxl:text-[35px] md:text-center'>Zamów {title}</h2>
                 {error && <span className='text-red-700 font-light tracking-[2px] my-[5px] xxl:text-[20px]'>{error}</span>}
-                <form onSubmit={handleSubmit} className='flex flex-col items-center px-[100px] mt-[20px] w-[75%] xxl:w-[90%] md:px-[50px] sm:px-0 sm:w-[90%]'>
+                <form onSubmit={handleSubmit} className='flex flex-col items-center px-[100px] mt-[20px] w-[75%] xxl:w-[90%] md:px-[50px] sm:px-0 sm:w-[90%] orderForm'>
 
-                    <p className='text-[16px] text-center tracking-[1px] xxl:text-[20px]'>Aby złożyć zamówienie na <span className='text-[#E2B350]'>{title}</span>, prosimy o podanie kilku informacji kontaktowych. Skontaktujemy się z Tobą w ciągu 2 dni roboczych, aby omówić szczegóły.</p>
+                    <p className='text-[16px] text-center tracking-[1px] xxl:text-[20px]'>Aby złożyć zapytanie o <span className='text-[#E2B350]'>{title}</span>, prosimy o podanie kilku informacji kontaktowych. Skontaktujemy się z Tobą w ciągu 2 dni roboczych, aby omówić szczegóły.</p>
                     <input type="text" name="Name" placeholder="Imię i Nazwisko" value={name} onChange={(e) => setName(e.target.value)} className='xxl:text-[20px] w-full px-[10px] mt-[25px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
                     <input type="email" name="Email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className='xxl:text-[20px] w-full px-[10px] mt-[15px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
                     <input type="text" name="Number" placeholder="Numer telefonu" value={number} onChange={(e) => setNumber(e.target.value)} className='xxl:text-[20px] w-full px-[10px] mt-[15px] bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none font-light' />
                     <input type="text" name="Package" value={title} readOnly className='hidden' />
+
+                    <div className='w-full flex gap-[10px] mt-[15px]'>
+                        <input type="checkbox" id="privacy_policy" checked={checkboxValue.privacy_policy} onChange={handleCheckboxChange} className='hidden peer' />
+                        <label htmlFor="privacy_policy" className='flex items-center cursor-pointer'>
+                            <span className='quadBefore flex items-center tracking-[1px]'>Akceptuję politykę prywatności</span>
+                        </label>
+                    </div>
+                    <div className='w-full flex gap-[10px] mt-[5px]'>
+                        <input type="checkbox" id="personal_data_processing" checked={checkboxValue.personal_data_processing} onChange={handleCheckboxChange} className='hidden peer' />
+                        <label htmlFor="personal_data_processing" className='flex items-center cursor-pointer'>
+                            <span className='quadBefore flex items-center tracking-[1px]'>Zgoda na przetwarzanie danych osobowych</span>
+                        </label>
+                    </div>
 
                     <div className='w-full flex justify-between my-[40px] md:flex-col-reverse md:gap-[20px]'>
                         <CancelButton text="Anuluj" handleClose={handleCloseDialog} />
