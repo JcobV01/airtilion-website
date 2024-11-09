@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 
 
-import logo from '@public/assets/images/airtilion-logo-dark.png'
+import logo from '@public/assets/images/logo-500x.webp'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'

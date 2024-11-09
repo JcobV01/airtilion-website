@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import FooterSmoke from '@public/assets/images/footerSmoke.webp'
-import AirtilionLogo from '@public/assets/images/airtilion-logo-dark.png'
+import AirtilionLogo from '@public/assets/images/logo-500x.webp'
 import Link from 'next/link'
 import NavbarFooter from './NavbarFooter'
 import { Icon } from '@iconify/react'
