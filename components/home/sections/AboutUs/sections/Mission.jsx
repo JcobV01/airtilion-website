@@ -63,6 +63,7 @@ const Mission = () => {
                                 width={320}
                                 height={320}
                                 quality={100}
+                                alt='Część obrazka z lewm'
                             />
                             <div className='relative z-20 bg-[#161616CC] w-[280px] h-[280px] xxl:w-[310px] xxl:h-[310px] lg:w-[210px] lg:h-[210px] rounded-[5px] p-[15px] lg:p-[7px] flex flex-col justify-center items-start rect-cut'>
                                 <h6 className='text-[20px] xxl:text-[22px] xl:text-[18px] lg:text-[15px] font-medium text-center absolute top-[30px] lg:top-[15px] left-[50%] translate-x-[-50%]'>
