@@ -78,11 +78,11 @@ const shops = () => {
           list: [
             {
               sectionType: 'Zakres:',
-              description: 'Sklep internetowy, obejmujący wprowadzenie do 30 produktów oraz braku limitu kategorii',
+              description: 'Sklep internetowy, obejmujący wprowadzenie do 30 produktów oraz braku limitu kategorii.',
             },
             {
               sectionType: 'Projekt Graficzny:',
-              description: 'Szablonowy wyglad projektu',
+              description: 'Szablonowy wyglad projektu.',
             },
             {
               sectionType: 'Responsywność:',
@@ -167,7 +167,7 @@ const shops = () => {
           list: [
             {
               sectionType: 'Zakres:',
-              description: 'Sklep internetowy, obejmujący wprowadzenie nielimitowanej liczby produktów oraz braku limitu kategorii',
+              description: 'Sklep internetowy, obejmujący wprowadzenie nielimitowanej liczby produktów oraz braku limitu kategorii.',
             },
             {
               sectionType: 'Projekt Graficzny:',
@@ -210,7 +210,7 @@ const shops = () => {
           list: [
             {
               sectionType: 'Integracja:',
-              description: 'Google Search Console oraz Google Analytics',
+              description: 'Google Search Console oraz Google Analytics.',
             }
           ]
         },

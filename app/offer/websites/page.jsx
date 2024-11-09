@@ -187,7 +187,7 @@ const websites = () => {
           list: [
             {
               sectionType: 'Zakres:',
-              description: 'Strona do 12 podstron. W ramach tego pakietu możliwe jest stworzenie bardziej złożonych sekcji, takich jak "Sklep", "FAQ", "Opinie klientów".',
+              description: 'Strona do 12 podstron. W ramach tego pakietu możliwe jest stworzenie bardziej złożonych sekcji, takich jak "FAQ", "Opinie klientów".',
             },
             {
               sectionType: 'Projekt Graficzny:',
@@ -221,7 +221,7 @@ const websites = () => {
             },
             {
               sectionType: 'Aktualizacje:',
-              description: 'Dodawanie nowych treści (do 5 godzin miesięcznie), takich jak aktualizacje tekstów i zdjęć.'
+              description: 'Dodawanie nowych treści (do 3 godzin miesięcznie), takich jak aktualizacje tekstów i zdjęć.'
             },
           ]
         },
@@ -289,7 +289,7 @@ const websites = () => {
             },
             {
               sectionType: 'Aktualizacje:',
-              description: 'Dodawanie nowych treści (do 10 godzin miesięcznie), takich jak aktualizacje tekstów i zdjęć.'
+              description: 'Dodawanie nowych treści (do 5 godzin miesięcznie), takich jak aktualizacje tekstów i zdjęć.'
             },
           ]
         },
