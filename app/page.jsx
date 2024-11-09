@@ -32,7 +32,6 @@ const home = () => {
   }
 
   useEffect(() => {
-    const sections = document.querySelectorAll('.observer-navbar');
 
     const observerCallback = (entries) => {
       entries.forEach(entry => {
@@ -46,23 +45,40 @@ const home = () => {
           } else if (entry.target.id === 'nav-portfolio') {
             changeMenu(3);
           } else if (entry.target.id === 'nav-contact') {
-            changeMenu(4);
+            changeMenu(5);
           }
         }
-      });
+      });      
     };
 
-    const observer = new IntersectionObserver(observerCallback);
+    let threshold
 
-    sections.forEach(section => {
-      const threshold = section.offsetHeight > 500 ? 0.3 : 0.1;
-      observer.observe(section);
+    const observer = new IntersectionObserver(observerCallback, { threshold });
+
+    const observeSections = () => {
+      const sections = document.querySelectorAll('.observer-navbar');
+      threshold = 
+      sections.forEach(section => {
+        section.offsetHeight > 500 ? threshold = 0.3 : threshold = 0.1; 
+        observer.observe(section);
+      })
+    }
+
+    observeSections();
+
+    const observerMutation = new MutationObserver((mutations) => {
+      mutations.forEach(mutation => {
+        if (mutation.type === 'childList') {
+          observeSections();
+        }
+      });
     });
 
+    observerMutation.observe(document.body, { childList: true, subtree: true });
+
     return () => {
-      sections.forEach(section => {
-        observer.unobserve(section);
-      });
+      observer.disconnect();
+      observerMutation.disconnect();
     };
   }, []);
 

@@ -85,7 +85,9 @@ const offer = [
 ]
 
 const Offer = () => {
-    const [ ref, isVisible ] = useIntersectionObserver();
+    const [ ref, isVisible ] = useIntersectionObserver({
+        threshold: 0.1
+      });
     
     return (
         <section ref={ref} id="nav-offer" className={`w-[1400px] xxl:w-[1700px] 2xl:w-[80%] z-10 m-auto flex flex-col gap-[40px] relative transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'} observer-navbar`}>
