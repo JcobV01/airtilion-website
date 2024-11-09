@@ -257,7 +257,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .offerForm .peer:checked+label .quadBefore::before,
-.orderForm .peer:checked+label .quadBefore::before{
+.orderForm .peer:checked+label .quadBefore::before,
+.contactForm .peer:checked+label .quadBefore::before{
   border-color: #000000;
   background-color: #E2B350;
 }

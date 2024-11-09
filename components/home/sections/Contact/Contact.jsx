@@ -18,10 +18,22 @@ const Contact = () => {
     const [number, setNumber] = useState('');
     const [text, setText] = useState('');
     const [error, setError] = useState('');
+    const [checkboxValue, setCheckboxValue] = useState({
+        privacy_policy: false,
+        personal_data_processing: false
+    })
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-    const [ ref, isVisible ] = useIntersectionObserver();
+    const [ref, isVisible] = useIntersectionObserver();
+
+    const handleCheckboxChange = (e) => {
+        const { id, checked } = e.target;
+        setCheckboxValue((prev) => ({
+            ...prev,
+            [id]: checked,
+        }));
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -35,6 +47,12 @@ const Contact = () => {
         const emailRegex = /^\S+@\S+\.\S+$/;
         if (!emailRegex.test(email)) {
             setError('Podaj poprawny adres email!');
+            setIsSubmitting(false);
+            return;
+        }
+
+        if (!checkboxValue.privacy_policy || !checkboxValue.personal_data_processing) {
+            setError('Musisz zaakceptować politykę prywatności i zgodę na przetwarzanie danych.');
             setIsSubmitting(false);
             return;
         }
@@ -61,6 +79,11 @@ const Contact = () => {
                 setEmail('');
                 setNumber('');
                 setText('');
+                setCheckboxValue({
+                    privacy_policy: false,
+                    personal_data_processing: false
+                });
+                setError('');
             }
         } catch (error) {
             setError('Wystąpił nieoczekiwany błąd.');
@@ -68,10 +91,10 @@ const Contact = () => {
             setIsSubmitting(false);
         }
     }
-    
+
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 1024px)'); // 1024px to standardowy breakpoint dla "lg" w Tailwind
+        const mediaQuery = window.matchMedia('(max-width: 1023px)'); // 1023px to standardowy breakpoint dla "lg" w Tailwind
         setIsLargeScreen(mediaQuery.matches); // Ustaw stan przy ładowaniu
 
         const handleResize = (e) => setIsLargeScreen(e.matches);
@@ -81,7 +104,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <section ref={ref} id="nav-contact" className={`relative z-10 w-full flex justify-center xl:w-[90%] m-auto bg-cover bg-no-repeat bg-center transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'} observer-navbar`} style={{backgroundImage: isLargeScreen && `url(${bg.src})`}}>
+        <section ref={ref} id="nav-contact" className={`relative z-10 w-full flex justify-center xl:w-[90%] m-auto bg-cover bg-no-repeat bg-center transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'} observer-navbar`} style={{ backgroundImage: isLargeScreen && `url(${bg.src})` }}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -124,17 +147,31 @@ const Contact = () => {
             </svg>
 
             <div className='absolute lg:relative w-[1100px] 2xl:w-[80%]  m-auto h-full top-0 left-[50%] lg:left-auto translate-x-[-50%] lg:translate-x-0 flex lg:flex-col gap-[170px] lg:gap-[50px] py-[50px] z-10'>
-                <div className='flex-1 flex flex-col gap-[50px] xl:gap-[20px] xl:justify-center'>
+                <div className='flex-1 flex flex-col gap-[25px] xl:gap-[20px] xl:justify-center'>
                     <Heading title="Kontakt" subtitle="ROZPOCZNIJMY WSPÓŁPRACĘ" id="contact" />
                     <div>
-                        <p className='text-[18px] xxl:text-[] xl:text-[15px] mb-[5px]'>Chcesz dowiedzieć się więcej o naszych usługach lub potrzebujesz porady? Skontaktuj się z nami!</p>
-                        {error && <span className='text-red-700 font-light tracking-[2px] xl:text-[15px]'>{error}</span>}
+                        <p className='text-[18px] xl:text-[15px]'>Chcesz dowiedzieć się więcej o naszych usługach lub potrzebujesz porady? Skontaktuj się z nami!</p>
+                        {error && <span className='text-red-500 font-light tracking-[2px] xl:text-[15px]'>{error}</span>}
                     </div>
-                    <form onSubmit={handleSubmit} className='flex flex-col gap-[20px] xl:gap-[15px]'>
+                    <form onSubmit={handleSubmit} className='flex flex-col gap-[20px] xl:gap-[15px] contactForm'>
                         <input name="Name" value={name} onChange={(e) => setName(e.target.value)} type="text" className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='IMIĘ I NAZWISKO' />
                         <input name="Email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='ADRES EMAIL' />
                         <input name="Number" value={number} onChange={(e) => setNumber(e.target.value)} type="text" className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='NUMER TELEFONU' />
-                        <textarea name="Text" value={text} onChange={(e) => setText(e.target.value)} className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] resize-none h-[200px] xl:h-[100px] xl:text-[13px]' placeholder='TREŚĆ'></textarea>
+                        <textarea name="Text" value={text} onChange={(e) => setText(e.target.value)} className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] resize-none h-[150px] xl:h-[100px] xl:text-[13px]' placeholder='TREŚĆ'></textarea>
+                       
+                        <div className='w-full flex gap-[10px] mt-[15px]'>
+                            <input type="checkbox" id="privacy_policy" checked={checkboxValue.privacy_policy} onChange={handleCheckboxChange} className='hidden peer' />
+                            <label htmlFor="privacy_policy" className='flex items-center cursor-pointer'>
+                                <span className='quadBefore flex items-center tracking-[1px] xl:text-[15px]'>Akceptuję politykę prywatności</span>
+                            </label>
+                        </div>
+                        <div className='w-full flex gap-[10px]'>
+                            <input type="checkbox" id="personal_data_processing" checked={checkboxValue.personal_data_processing} onChange={handleCheckboxChange} className='hidden peer' />
+                            <label htmlFor="personal_data_processing" className='flex items-center cursor-pointer'>
+                                <span className='quadBefore flex items-center tracking-[1px] xl:text-[15px]'>Zgoda na przetwarzanie danych osobowych</span>
+                            </label>
+                        </div>
+
                         <div className='flex duration-700 hover:translate-y-[5px] justify-end sm:justify-center'>
                             <FormButton text="WYŚLIJ" submitting={isSubmitting} />
                         </div>
@@ -149,18 +186,18 @@ const Contact = () => {
                     </div>
 
                     <div className='flex gap-[15px] items-center'>
-                        <Icon icon="mdi:phone" width="40" height="40" alt="Ikona telefonu"  className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
+                        <Icon icon="mdi:phone" width="40" height="40" alt="Ikona telefonu" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
                         <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>511 019 652</p>
                     </div>
 
                     <div className='flex gap-[15px] items-center'>
-                        <Icon icon="solar:letter-bold" width="40" height="40" alt="Ikona listu"  className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
+                        <Icon icon="solar:letter-bold" width="40" height="40" alt="Ikona listu" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
                         <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>contact@airtilion.pl</p>
                     </div>
 
                     <div className='flex gap-[15px]'>
                         <div>
-                            <Icon icon="mdi:company" width="40" height="40" alt="Ikona budynku firmy"  className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
+                            <Icon icon="mdi:company" width="40" height="40" alt="Ikona budynku firmy" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
                         </div>
                         <div>
                             <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>Airtilion Sp. z o.o.</p>
