@@ -160,13 +160,13 @@ const pricing = () => {
                 <div className='w-[12px] h-[12px]'>
                   <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
                 </div>
-                <p><span className='font-normal'>Certyfikat SSL:&nbsp;</span>Integracja certyfikatu SSL. Koszt zakupu po stronie klienta</p>
+                <p><span className='font-normal'>Certyfikat SSL:&nbsp;</span>Integracja certyfikatu SSL. Koszt zakupu po stronie klienta.</p>
               </li>
               <li className='flex items-center gap-[10px]'>
                 <div className='w-[12px] h-[12px]'>
                   <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
                 </div>
-                <p><span className='font-normal'>Hosting i domena:&nbsp;</span>Koszt zakupu po stronie klienta</p>
+                <p><span className='font-normal'>Hosting i domena:&nbsp;</span>Koszt zakupu po stronie klienta.</p>
               </li>
               <li className='flex items-center gap-[10px]'>
                 <div className='w-[12px] h-[12px]'>

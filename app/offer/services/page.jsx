@@ -54,7 +54,7 @@ const services = () => {
       price: 'Cena usługi ustalana jest indywidualnie w zależności od zakresu potrzeb. Skontaktuj się z nami, aby uzyskać szczegółową wycenę.',
       points: [
         'Kilka wersji projektu',
-        'Wersje projektu na urządzeniach mobilynch',
+        'Wersje projektu na urządzeniach mobilnych',
         'Możliwość poprawek',
         'Opis funkcjonalności',
       ],
