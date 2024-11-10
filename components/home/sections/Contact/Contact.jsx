@@ -146,20 +146,20 @@ const Contact = () => {
                 </defs>
             </svg>
 
-            <div className='absolute lg:relative w-[1100px] 2xl:w-[80%]  m-auto h-full top-0 left-[50%] lg:left-auto translate-x-[-50%] lg:translate-x-0 flex lg:flex-col gap-[170px] lg:gap-[50px] py-[50px] z-10'>
-                <div className='flex-1 flex flex-col gap-[25px] xl:gap-[20px] xl:justify-center'>
+            <div className='absolute lg:relative w-[1100px] 2xl:w-[80%]  m-auto h-full top-0 left-[50%] lg:left-auto translate-x-[-50%] lg:translate-x-0 flex lg:flex-col gap-[170px] lg:gap-[50px] py-[50px] z-10 xl:gap-[50px]'>
+                <div className='flex-1 flex flex-col gap-[25px] xl:gap-[0px] xl:justify-center lg:gap-[20px]'>
                     <Heading title="Kontakt" subtitle="ROZPOCZNIJMY WSPÓŁPRACĘ" id="contact" />
                     <div>
-                        <p className='text-[18px] xl:text-[15px]'>Chcesz dowiedzieć się więcej o naszych usługach lub potrzebujesz porady? Skontaktuj się z nami!</p>
+                        <p className='text-[18px] xl:text-[15px] xl:w-[475px] xl:mt-[10px] lg:w-auto lg:mt-[0px]'>Chcesz dowiedzieć się więcej o naszych usługach lub potrzebujesz porady? Skontaktuj się z nami!</p>
                         {error && <span className='text-red-500 font-light tracking-[2px] xl:text-[15px]'>{error}</span>}
                     </div>
-                    <form onSubmit={handleSubmit} className='flex flex-col gap-[20px] xl:gap-[15px] contactForm'>
+                    <form onSubmit={handleSubmit} className='flex flex-col gap-[20px] xl:gap-[0px] lg:gap-[15px] contactForm '>
                         <input name="Name" value={name} onChange={(e) => setName(e.target.value)} type="text" className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='IMIĘ I NAZWISKO' />
                         <input name="Email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='ADRES EMAIL' />
                         <input name="Number" value={number} onChange={(e) => setNumber(e.target.value)} type="text" className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='NUMER TELEFONU' />
                         <textarea name="Text" value={text} onChange={(e) => setText(e.target.value)} className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] resize-none h-[150px] xl:h-[100px] xl:text-[13px]' placeholder='TREŚĆ'></textarea>
                        
-                        <div className='w-full flex gap-[10px] mt-[15px]'>
+                        <div className='w-full flex gap-[10px] mt-[15px] xl:mt-[10px]'>
                             <input type="checkbox" id="privacy_policy" checked={checkboxValue.privacy_policy} onChange={handleCheckboxChange} className='hidden peer' />
                             <label htmlFor="privacy_policy" className='flex items-center cursor-pointer'>
                                 <span className='quadBefore flex items-center tracking-[1px] xl:text-[15px]'>Akceptuję politykę prywatności</span>
@@ -172,7 +172,7 @@ const Contact = () => {
                             </label>
                         </div>
 
-                        <div className='flex duration-700 hover:translate-y-[5px] justify-end sm:justify-center'>
+                        <div className='flex duration-700 hover:translate-y-[5px] justify-end xl:mt-[10px] lg:mt-[0px] sm:justify-center'>
                             <FormButton text="WYŚLIJ" submitting={isSubmitting} />
                         </div>
                     </form>
