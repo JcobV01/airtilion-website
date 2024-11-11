@@ -44,7 +44,21 @@ const Footer = () => {
                     <div className='mt-[35px]'>
                         <NavbarFooter />
                     </div>
-                    <p className='text-center text-[15px] text-[#EEE] font-light tracking-[1.5px] mt-[35px] mb-[15px]'>© 2024 Airtilion sp. z o.o.</p>
+                    <div className='mt-[35px] w-full px-[50px] flex justify-between xl:flex-col-reverse xl:justify-center'>
+                        <p className='text-center text-[15px] text-[#EEE] font-light tracking-[1.5px] xl:mt-[20px]'>© 2024 Airtilion sp. z o.o.</p>
+                        <div className='text-[14px] flex gap-[20px] font-light xl:justify-center xl:flex-wrap xl:gap-[10px] xl:text-center'>
+                            <Link href="/" aria-label="Przejdź do Polityki prywatności">
+                                <span className='text-[#EEE] hover:text-[#E2B350] duration-500'>Polityka prywatności</span>
+                            </Link>
+                            <Link href="/" aria-label="Przejdź do Polityki Ochrony Danych Osobowych">
+                                <span className='text-[#EEE] hover:text-[#E2B350] duration-500'>Polityka Ochrony Danych Osobowych</span>
+                            </Link>
+                            <Link href="/" aria-label="Przejdź do Polityki Ochrony Danych Osobowych">
+                                <span className='text-[#EEE] hover:text-[#E2B350] duration-500'>Regulamin świadczenia usług drogą elektroniczną</span>
+                            </Link>
+                        </div>
+                    </div>
+                    <p className='mt-[35px] mb-[15px] px-[50px] text-[10px] text-[#969696] sm:text-center'>Airtilion Sp. z o.o. ul. xxx, 33-101 Tarnów, wpisana do rejestru przedsiębiorców Krajowego rejestru Sądowego przez Sąd Rejonowy dla Krakowa-Śródmieścia w Krakowie, XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod nr KRS xxx, kapitał zakładowy w kwocie 5 000,00 zł w całości opłacony, NIP: xxx</p>
                 </div>
             </article>
         </footer>
