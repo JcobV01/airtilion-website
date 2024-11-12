@@ -104,7 +104,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='flex fold:flex-col fold:gap-[20px] justify-between px-[100px] xl:px-[50px] sm:px-[25px] py-[40px] items-center sticky top-0 w-full z-40 duration-500' style={{ backgroundColor: scrolled && '#00000080', backdropFilter: (scrolled && visibility != 'flex') && 'blur(5px)' }}>
+            <nav className='flex fold:flex-col fold:gap-[20px] justify-between px-[100px] 2xl:px-[80px] xl:px-[30px] sm:px-[25px] py-[40px] items-center sticky top-0 w-full z-40 duration-500' style={{ backgroundColor: scrolled && '#00000080', backdropFilter: (scrolled && visibility != 'flex') && 'blur(5px)' }}>
                 <Link href="/" onClick={clearMenu}>
                     <Image src={logo} width={260} height="auto" alt="logo spółki Airtilion" priority loading='eager' className='xl:w-[200px]' />
                 </Link>
