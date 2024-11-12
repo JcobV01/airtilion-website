@@ -17,7 +17,7 @@ const CityComponent = ({ city }) => {
                     </button>
                 </Link>
             </article>
-            <article className='flex-1'>
+            <article className='flex-1 xl:pb-[50px]'>
                 <Image src={map} width="751" className='aspect-[1028/960] xl:m-auto' alt="Zdjęcie mapy z obszarami działania"/>
             </article>
         </section>
