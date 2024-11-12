@@ -17,7 +17,7 @@ const Header = ({ title, subtitle, img, positionBottom=true }) => {
   });
   
   return (
-    <header ref={ref} className={`w-full h-dvh relative top-[-133px] flex justify-center items-center z-10  transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <header ref={ref} className={`w-full h-dvh relative top-[-133px] flex justify-center items-center z-10  transition-opacity duration-1000 fold:top-[-180px] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       {isClient &&
       <Image
       src={img.src}
