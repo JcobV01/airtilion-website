@@ -71,7 +71,6 @@ const Navbar = () => {
                 setScrolled(false);
             }
 
-            console.log(window.scrollY);
             
         };
 
