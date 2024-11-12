@@ -111,7 +111,7 @@ const websites = () => {
           list: [
             {
               sectionType: 'Wordpress:',
-              description: 'Możliwość implementacja intuicyjnego systemu zarządzania treścią, który umożliwia zarządzanie treścią bez potrzeby znajomości kodu.',
+              description: 'Możliwość implementacji intuicyjnego systemu CMS, który umożliwia zarządzanie treścią bez potrzeby znajomości kodu.',
             },
             {
               sectionType: 'React lub inne:',

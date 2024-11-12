@@ -12,7 +12,7 @@ const slide = [
     {
         author: 'Szymon Mikos',
         page: 'stowarzyszeni.amos.org.pl',
-        desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum'
+        desc: 'Firma godna polecenia. Przy realizacji projektu podzielili się z nami swoim doświadczeniem i zaproponowali nowoczesne rozwiązania, które w perspektywie czasu przyniosły oczekiwane efekty.'
     },
     {
         author: 'Kasia Nowak',

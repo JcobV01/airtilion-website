@@ -95,7 +95,7 @@ const shops = () => {
           list: [
             {
               sectionType: 'Wordpress (woocoomerce) lub Prestashop:',
-              description: 'Implementacja intuicyjnego systemu zarządzania treścią, który umożliwia zarządzanie treścią bez potrzeby znajomości kodu.',
+              description: 'Implementacja intuicyjnego systemu CMS, który umożliwia zarządzanie treścią bez potrzeby znajomości kodu.',
             },
             {
               sectionType: 'Szkolenie:',
