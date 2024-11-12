@@ -183,10 +183,6 @@ const shops = () => {
           name: 'Zarządzanie treścią',
           list: [
             {
-              sectionType: 'Dodatkowe funkcjonalności:',
-              description: 'Uzupełnić',
-            },
-            {
               sectionType: 'Szkolenie:',
               description: 'Trwające do 3 godzin, obejmujące dodawanie treści, edytowanie strony i zarządzanie mediami.',
             }
