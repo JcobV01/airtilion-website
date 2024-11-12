@@ -24,8 +24,6 @@ const rootLayout = ({ children }) => {
   // Odczytaj nagłówek 'x-current-path', który został ustawiony przez middleware
   const currentPath = headersList.get('x-current-path');
 
-  console.log(currentPath)
-
   return (
     <html lang="pl-PL" className="scroll-smooth">
       <body className={`${poppins.className} w-dvw overflow-x-hidden bg-center`}>
