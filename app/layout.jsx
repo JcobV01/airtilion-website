@@ -9,7 +9,7 @@ import Navbar from "@components/Navbar";
 
 export const metadata = {
   title: "Airtilion",
-  description: "Airtilion - najlepsza firma, która zmienia rynek stron internetowych"
+  description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Skontaktuj się z nami, aby poznać naszą ofertę i rozwiązania dla Ciebie!"
 }
 
 const poppins = Poppins({
