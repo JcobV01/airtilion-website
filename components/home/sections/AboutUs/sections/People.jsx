@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
 
-import lionPlaceholder from '@public/assets/images/portret3.webp'
+import lionPlaceholder from '@public/assets/images/portret4.webp'
 import lionPlaceholder2 from '@public/assets/images/contact-lion.webp'
 import useIntersectionObserver from '@hooks/useObserver'
 
@@ -18,7 +18,7 @@ const People = () => {
             <section className={`flex flex-col items-center mt-[100px] gap-[70px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
                 <div className='flex gap-[60px] w-[940px] xl:w-[100%] relative p-[25px] lg:flex-col lg:items-center'>
                     <div className='w-[340px] h-[470px] relative xxl:w-[auto] xxl:h-[auto] md:w-[260px] md:h-[380px]'>
-                        <Image width={340} height={470} quality={100} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" className='object-cover h-full rounded-[5px]' />
+                        <Image width={340} height={470} quality={100} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" placeholder='blur' blurDataURL='data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADQAQCdASoEAAMAAUAmJZwCdAEO+KiwAAD+8b67vDtfksrPCUjtmS9uqoCAAA==' className='object-cover h-full rounded-[5px]' />
                         {/* <div className='absolute bottom-[10px] left-[10px] flex gap-[10px]'> */}
                         <Link href="#" target='_blank' aria-label="Odwiedź mój profil Facebook" className='duration-700 hover:scale-75 absolute bottom-[10px] left-[10px]'>
                             <Icon icon="bi:facebook" width={30} height={30} alt="Ikona facebooka" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
