@@ -22,23 +22,23 @@ const Footer = () => {
                     </div>
                     <p className='text-center mt-[25px] text-[20px] font-light xxl:text-[22px]'>Znajdziesz nas tutaj</p>
                     <div className='flex sm:flex-wrap sm:items-center sm:justify-center gap-[25px] mt-[35px]'>
-                        <Link href="/" aria-label="Znajdź nas na Facebooku" className='justify-center duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
+                        <Link href="https://www.facebook.com/profile.php?id=61571219580688" aria-label="Znajdź nas na Facebooku" className='justify-center duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
                             <Icon icon="bi:facebook" width="35px" height="35px" alt="Ikona Facebooka" className='text-[#E2B350]' />
                         </Link>
-                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
-                            <Icon icon="ri:instagram-line" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
+                        <Link href="https://www.instagram.com/airtilion/?utm_source=ig_web_button_share_sheet" aria-label="Znajdź nas na Instagramie" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
+                            <Icon icon="ri:instagram-line" width="35px" height="35px" alt="Ikona Instagrama" className='text-[#E2B350]' />
                         </Link>
-                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
+                        <Link href="https://www.linkedin.com/company/airtilion/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
                             <Icon icon="bi:linkedin" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
                         </Link>
-                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
-                            <Icon icon="pajamas:twitter" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
+                        <Link href="https://x.com/airtilion" aria-label="Znajdź nas na X" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
+                            <Icon icon="pajamas:twitter" width="35px" height="35px" alt="Ikona X" className='text-[#E2B350]' />
                         </Link>
-                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
-                            <Icon icon="hugeicons:threads" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
+                        <Link href="https://www.threads.net/@airtilion/replies" aria-label="Znajdź nas na Threads" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
+                            <Icon icon="hugeicons:threads" width="35px" height="35px" alt="Ikona Threads" className='text-[#E2B350]' />
                         </Link>
-                        <Link href="/" aria-label="Znajdź nas na Linkedin" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
-                            <Icon icon="mdi:pinterest" width="35px" height="35px" alt="Ikona LinkedIn" className='text-[#E2B350]' />
+                        <Link href="https://pin.it/6HuC1cc8y" aria-label="Znajdź nas na Pinterest" className='duration-700 hover:scale-75 sm:basis-[33%] sm:flex sm:items-center sm:justify-center'>
+                            <Icon icon="mdi:pinterest" width="35px" height="35px" alt="Ikona Pinterest" className='text-[#E2B350]' />
                         </Link>
                     </div>
                     <div className='mt-[35px]'>
@@ -58,7 +58,7 @@ const Footer = () => {
                             </Link>
                         </div>
                     </div>
-                    <p className='mt-[35px] mb-[15px] px-[50px] text-[10px] text-[#969696] sm:text-center'>Airtilion Sp. z o.o. ul. xxx, 33-101 Tarnów, wpisana do rejestru przedsiębiorców Krajowego rejestru Sądowego przez Sąd Rejonowy dla Krakowa-Śródmieścia w Krakowie, XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod nr KRS xxx, kapitał zakładowy w kwocie 5 000,00 zł w całości opłacony, NIP: xxx</p>
+                    <p className='mt-[35px] mb-[15px] px-[50px] text-[10px] text-[#969696] sm:text-center'>Airtilion Sp. z o.o. ul. Słoneczna 32/9, 33-100 Tarnów, wpisana do rejestru przedsiębiorców Krajowego rejestru Sądowego przez Sąd Rejonowy dla Krakowa-Śródmieścia w Krakowie, XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod nr KRS 0001143482, kapitał zakładowy w kwocie 5 000,00 zł w całości opłacony, NIP: 8733299720</p>
                 </div>
             </article>
         </footer>

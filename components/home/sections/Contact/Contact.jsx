@@ -201,9 +201,9 @@ const Contact = () => {
                         </div>
                         <div>
                             <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>Airtilion Sp. z o.o.</p>
-                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>NIP: PL1823478234</p>
-                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>REGON: 2384723</p>
-                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>KRS: 0000283921</p>
+                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>NIP: 8733299720</p>
+                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>REGON: 540390460</p>
+                            <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>KRS: 0001143482</p>
                         </div>
                     </div>
                 </div>
