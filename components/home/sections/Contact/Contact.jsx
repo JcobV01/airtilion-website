@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 import { Icon } from '@iconify/react';
+import Link from 'next/link';
 
 import bg from '@public/assets/images/contact-lion.webp'
 
@@ -158,18 +159,21 @@ const Contact = () => {
                         <input name="Email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='ADRES EMAIL' />
                         <input name="Number" value={number} onChange={(e) => setNumber(e.target.value)} type="text" className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] xl:text-[13px]' placeholder='NUMER TELEFONU' />
                         <textarea name="Text" value={text} onChange={(e) => setText(e.target.value)} className='xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] resize-none h-[150px] xl:h-[100px] xl:text-[13px]' placeholder='TREŚĆ'></textarea>
-                       
-                        <div className='w-full flex gap-[10px] mt-[15px] xl:mt-[10px]'>
+
+                        <div className='w-full flex gap-[5px] mt-[15px] xl:mt-[10px] sm:flex-col sm:items-center'>
                             <input type="checkbox" id="privacy_policy" checked={checkboxValue.privacy_policy} onChange={handleCheckboxChange} className='hidden peer' />
                             <label htmlFor="privacy_policy" className='flex items-center cursor-pointer'>
-                                <span className='quadBefore flex items-center tracking-[1px] xl:text-[15px]'>Akceptuję politykę prywatności</span>
+                                <span className='quadBefore flex items-center tracking-[1px] xl:text-[15px]'>Akceptuję</span>
                             </label>
+                            <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] text-center">politykę prywatności</Link>
                         </div>
-                        <div className='w-full flex gap-[10px]'>
+
+                        <div className='w-full flex flex-col gap-[0px] sm:items-center'>
                             <input type="checkbox" id="personal_data_processing" checked={checkboxValue.personal_data_processing} onChange={handleCheckboxChange} className='hidden peer' />
                             <label htmlFor="personal_data_processing" className='flex items-center cursor-pointer'>
-                                <span className='quadBefore flex items-center tracking-[1px] xl:text-[15px]'>Zgoda na przetwarzanie danych osobowych</span>
+                                <span className='quadBefore flex items-center tracking-[1px] xl:text-[15px]'>Wyrażam zgodę na</span>
                             </label>
+                            <Link href="/" aria-label="Przejdź do ochrony danych osobowych" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] pl-[30px] sm:text-center">przetwarzanie danych osobowych</Link>
                         </div>
 
                         <div className='flex duration-700 hover:translate-y-[5px] justify-end xl:mt-[10px] lg:mt-[0px] sm:justify-center'>

@@ -9,6 +9,7 @@ import { Icon } from '@iconify/react';
 import imageBackground from '@public/assets/images/offer/formPricing.webp'
 import Form from '@components/offer/Form'
 import FormButton from '@components/FormButton'
+import Link from 'next/link';
 
 const pricing = () => {
   const [submitting, setSubmitting] = useState(false);
@@ -367,18 +368,20 @@ const pricing = () => {
                   <input type="text" name="Company" placeholder="NAZWA FIRMY (OPCJONALNIE)" onChange={handleInputChange} className='bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none' />
                   <input type="text" name="Industry" placeholder="BRANŻA (OPCJONALNIE)" onChange={handleInputChange} className='bg-inherit border-b-[1px] border-[#FFF] py-[5px] tracking-[1px] outline-none' />
 
-                  <div className='flex items-center gap-[10px] mt-[20px] xxl:text-[24px] sm:text-[13px]'>
+                  <div className='flex items-center gap-[10px] mt-[20px] xxl:text-[24px] sm:text-[13px] md:flex-col'>
                     <input type="checkbox" name="Privacy_policy" id="privacy" value="Polityka prywatności" onChange={handleInputChange} className='hidden peer' />
                     <label htmlFor='privacy' className='flex items-center cursor-pointer'>
-                      <span className='quadBefore flex items-center'>Polityka prywatności</span>
+                      <span className='quadBefore flex items-center'>Akceptuję</span>
                     </label>
+                    <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] text-center">politykę prywatności</Link>
                   </div>
 
-                  <div className='flex items-center gap-[10px] xxl:text-[24px] sm:text-[13px]'>
+                  <div className='flex items-center gap-[10px] xxl:text-[24px] sm:text-[13px] md:flex-col'>
                     <input type="checkbox" name="Processing_of_personal_data" value="Zgoda na przetwarzanie danych osobowych" id="processing" onChange={handleInputChange} className='hidden peer' />
                     <label htmlFor='processing' className='flex items-center cursor-pointer'>
-                      <span className='quadBefore flex items-center'>Zgoda na przetwarzanie danych osobowych</span>
+                      <span className='quadBefore flex items-center'>Wyrażam zgodę na</span>
                     </label>
+                    <Link href="/" aria-label="Przejdź do ochrony danych osobowych" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] text-center">przetwarzanie danych osobowych</Link>
                   </div>
 
                   <div className='flex justify-center mt-[50px]'>
