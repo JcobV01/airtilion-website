@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "../styles/global.css"
 import Navbar from "@components/Navbar";
 import CookiesTemplate from "@components/CookiesTemplate";
+import Script from "next/script";
 
 
 
@@ -27,8 +28,23 @@ const rootLayout = ({ children }) => {
 
   return (
     <html lang="pl-PL" className="scroll-smooth">
+      <head>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=G-NGHDG87L2Y`} strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-NGHDG87L2Y');
+        `}
+        </Script>
+      </head>
       <body className={`${poppins.className} w-dvw overflow-x-hidden bg-center`}>
-        <Navbar/>
+        <noscript>
+          <iframe src="https://www.googletagmanager.com/gtag/js?id=G-NGHDG87L2Y" height="0" width="0" style={{display: "none", visibility: "hidden"}}></iframe>
+        </noscript>
+        <Navbar />
         {children}
         <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
         <CookiesTemplate />
