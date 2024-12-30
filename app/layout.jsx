@@ -4,6 +4,7 @@ import { Poppins } from 'next/font/google';
 import 'react-toastify/dist/ReactToastify.css';
 import "../styles/global.css"
 import Navbar from "@components/Navbar";
+import CookiesTemplate from "@components/CookiesTemplate";
 
 
 
@@ -30,6 +31,7 @@ const rootLayout = ({ children }) => {
         <Navbar/>
         {children}
         <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
+        <CookiesTemplate />
       </body>
     </html>
   )

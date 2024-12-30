@@ -258,9 +258,22 @@ body::-webkit-scrollbar-thumb {
 
 .offerForm .peer:checked+label .quadBefore::before,
 .orderForm .peer:checked+label .quadBefore::before,
-.contactForm .peer:checked+label .quadBefore::before{
+.contactForm .peer:checked+label .quadBefore::before,
+.cookies .peer:checked+label .quadBefore::before{
   border-color: #000000;
   background-color: #E2B350;
+}
+
+/*Do plików cookie checkbox zaznaczony*/
+.quadBeforeChecked::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  border: 2px solid #000000;
+  background-color: #E2B350;
+  transition-duration: 700ms;
+  margin-right: 10px;
 }
 
 /*dialog w ofercie*/
