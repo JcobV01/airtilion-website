@@ -22,6 +22,14 @@ const CookiesTemplate = () => {
     const handleAcceptAll = () => {
         setPreferences({ required: true, marketing: true });
         savePreferences({ required: true, marketing: true });
+
+        gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted'
+        });
+    
+        enableGoogleAnalytics();
+        setIsVisible(false);
     };
 
     const handleSavePreferences = () => {
@@ -37,8 +45,17 @@ const CookiesTemplate = () => {
         setPreferences((prev) => ({ ...prev, [type]: !prev[type] }));
     };
 
+    
+    const enableGoogleAnalytics = () => {
+        if (typeof window !== "undefined" && window.gtag) {
+            window.gtag("event", "page_view", {
+                page_path: window.location.pathname,
+            });
+        }
+    };
+    
     if (!isVisible) return null;
-
+    
     return (
         <>
             <div className={`fixed inset-0 bg-black bg-opacity-50 z-[999] ${isVisible ? "block" : "hidden"}`}></div>
