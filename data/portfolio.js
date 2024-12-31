@@ -35,6 +35,7 @@ export const challanges = {
     "Gallery": "solar:gallery-add-bold",
     "Time": "carbon:time-filled",
     "Settings": "lets-icons:setting-line",
+    "Tool": "qlementine-icons:tool-16",
 }
 /*Osiągnięcia*/
 
