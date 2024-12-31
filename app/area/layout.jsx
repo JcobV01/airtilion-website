@@ -2,6 +2,10 @@ import Footer from '@components/Footer'
 import React from 'react'
 import errorImage from '@public/assets/images/404.webp'
 
+export const metadata = {
+  title: "Airtilion - Działamy bez ograniczeń w całej Polsce",
+}
+
 const layout = ({children}) => {
   return (
     <>

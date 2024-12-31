@@ -31,10 +31,10 @@ const People = () => {
                         <h5 className='text-[25px] xl:text-[23px] lg:text-[20px] sm:text-[17px] text-[#E2B350] tracking-[9px]'>Jakub Wadycki</h5>
                         <div>
                             <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] text-[#AEAEAE] tracking-[2px]'>Tel. 720 177 174</p>
-                            <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] text-[#AEAEAE] tracking-[2px]'>Email: jakubwadycki@airtilion.com</p>
+                            <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] text-[#AEAEAE] tracking-[2px]'>Email: jakubwadycki@gmail.com</p>
                         </div>
 
-                        <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] font-light lg:text-center'>Programista full stack z pasją do technologii. Moim głównym językiem programowania jest JavaScript, w którym czuję się jak ryba w wodzie. Poza codzienną pracą uwielbiam zgłębiać tajniki druku 3D i prostą elektronikę – to dla mnie świetny sposób eksperymentowanie z nowymi pomysłami i spędzanie wolnego czasu. <br /><br /> Moim głównym celem jest przekształcenie branży stron internetowych poprzez innowacyjne podejście i nowoczesne rozwiązania. Zawsze dążę do tworzenia efektywnych i eleganckich rozwiązań, które spełniają najwyższe standardy. Zapraszam do współpracy i wspólnego tworzenia rzeczy, które naprawdę tworzą przyszłość!</p>
+                        <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] font-light lg:text-center'>Programista full stack, pasjonat technologii. Moim głównym językiem programowania jest JavaScript, w którym czuję się jak ryba w wodzie. Poza codzienną pracą uwielbiam zgłębiać tajniki druku 3D i prostą elektronikę – to dla mnie świetny sposób eksperymentowanie z nowymi pomysłami i spędzanie wolnego czasu. <br /><br /> Moim głównym celem jest przekształcenie branży stron internetowych poprzez innowacyjne podejście i nowoczesne rozwiązania. Zawsze dążę do tworzenia efektywnych i eleganckich rozwiązań, które spełniają najwyższe standardy. Zapraszam do współpracy i wspólnego tworzenia rzeczy, które naprawdę tworzą przyszłość!</p>
                     </div>
 
                     <span className='h-[1px] w-[20px] bg-[#E2B350] absolute top-0 right-0 fold:hidden'></span>
@@ -56,7 +56,7 @@ const People = () => {
                         <h5 className='text-[25px] xl:text-[23px] lg:text-[20px] sm:text-[17px] text-[#E2B350] tracking-[9px]'>Artur Plebańczyk</h5>
                         <div>
                             <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] text-[#AEAEAE] tracking-[2px]'>Tel. 511 019 652</p>
-                            <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] text-[#AEAEAE] tracking-[2px]'>Email: arturplebanczyk@airtilion.com</p>
+                            <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] text-[#AEAEAE] tracking-[2px]'>Email: plebanczyk.artur@gmail.com</p>
                         </div>
 
                         <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] font-light lg:text-center'>To właśnie pasja do technologii i informatyki skierowała mnie na ścieżkę programowania. Od czterech lat rozwijam swoje umiejętności jako full stack developer. W mojej pracy szczególnie cenię sobie połączenie technologii z kreatywnymi pomysłami, co pozwala mi dostarczać nowoczesne i funkcjonalne rozwiązania.<br /><br />Moją misją jest rozwijanie branży stron i sklepów internetowych poprzez wdrażanie zaawansowanych technologii, które nie tylko odpowiadają na potrzeby klientów, ale także wprowadzają nowe standardy. Stawiam na świeże, dynamiczne podejście, które łączy innowacyjność z dbałością o klienta.</p>

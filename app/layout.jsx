@@ -10,7 +10,7 @@ import Script from "next/script";
 
 
 export const metadata = {
-  title: "Airtilion",
+  title: "Airtilion - Strony internetowe na miarę przyszłości",
   description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Skontaktuj się z nami, aby poznać naszą ofertę i rozwiązania dla Ciebie!"
 }
 

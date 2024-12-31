@@ -3,6 +3,10 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 import HeaderBg from '@public/assets/images/headerOfferPortfolio.webp'
 
+export const metadata = {
+    title: "Airtilion - FAQ - Znajdź odpiowiedź na swoje pytania"  
+}
+
 const layout = ({ children }) => {
     return (
         <>

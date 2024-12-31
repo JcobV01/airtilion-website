@@ -4,6 +4,10 @@ import NavbarOffer from '@components/offer/NavbarOffer'
 import HeaderBg from '@public/assets/images/headerOfferPortfolio.webp'
 import React from 'react'
 
+export const metadata = {
+  title: "Airtilion - Oferta - Odkryj nowe horyzonty"
+}
+
 const layout = ({ children }) => {
   return (
     <>
