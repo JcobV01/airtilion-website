@@ -7,6 +7,12 @@ export default function sitemap() {
         priority: 1,
       },
       {
+        url: 'https://airtilion.com/area',
+        lastModified: new Date(),
+        changeFrequency: 'yearly',
+        priority: 0.7,
+      },
+      {
         url: 'https://airtilion.com/area/bialystok',
         lastModified: new Date(),
         changeFrequency: 'yearly',
@@ -127,7 +133,7 @@ export default function sitemap() {
         priority: 0.7,
       },
       {
-        url: 'https://airtilion.com/area/faq',
+        url: 'https://airtilion.com/faq',
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.8,

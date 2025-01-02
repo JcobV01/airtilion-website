@@ -20,16 +20,16 @@ const NavbarFooter = () => {
             link: "/#portfolio"
         },
         {
-            name: "Nasze projekty",
-            link: "/projects"
-        },
-        {
             name: "FAQ",
             link: "/faq"
         },
         {
             name: "Kontakt",
             link: "/#contact"
+        },
+        {
+            name: "Obszar działania",
+            link: "/area"
         },
     ]
     return (
