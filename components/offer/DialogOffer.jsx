@@ -117,7 +117,7 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
                         <label htmlFor="privacy_policy" className='flex items-center cursor-pointer'>
                             <span className='quadBefore flex items-center tracking-[1px]'>Akceptuję</span>
                         </label>
-                        <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className='text-[#E2B350]'>politykę prywatności</Link>
+                        <Link href="/assets/files/Polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className='text-[#E2B350]'>politykę prywatności</Link>
                     </div>
                     <div className='w-full flex items-center gap-[5px] mt-[5px] xl:flex-col'>
                         <input type="checkbox" id="personal_data_processing" checked={checkboxValue.personal_data_processing} onChange={handleCheckboxChange} className='hidden peer' />
