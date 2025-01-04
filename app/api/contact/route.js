@@ -2,11 +2,11 @@ import Contact from "@models/Contact";
 import { connectToDB } from "@utils/database";
 
 export const POST = async (req) => {
-    const { Name, Email, Number, Text } = await req.json();
+    const { Name, Email, Number, Text, Date } = await req.json();
 
     try {
         await connectToDB();
-        const newContact = new Contact({Name, Email, Number, Text});
+        const newContact = new Contact({Name, Email, Number, Text, Date});
 
         await newContact.save();
         return new Response(JSON.stringify(newContact), { status: 201 });

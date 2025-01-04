@@ -5,6 +5,7 @@ const ContactSchema = new Schema({
     Email: { type: String, required: true },
     Number: { type: String, required: true },
     Text: { type: String, required: true },
+    Date: { type: Date, required: true},
 }, { collection: 'kontakt' });
 
 const Contact = models?.Contact || model('Contact', ContactSchema);

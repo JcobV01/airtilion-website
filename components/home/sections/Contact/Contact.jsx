@@ -68,6 +68,7 @@ const Contact = () => {
                     Email: email,
                     Number: number,
                     Text: text,
+                    Date: new Date().toISOString(),
                 }),
                 headers: {
                     'Content-Type': 'application/json'
