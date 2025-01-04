@@ -79,6 +79,7 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
                     Number: number,
                     Package: title,
                     Type: pathname,
+                    Date: new Date().toISOString(),
                 }),
                 headers: {
                     'Content-Type': 'application/json'
