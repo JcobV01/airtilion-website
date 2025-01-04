@@ -89,7 +89,7 @@ const pricing = () => {
       const response = await fetch('/api/offer/new', {
         method: 'POST',
         body: JSON.stringify({
-          post: post,
+          post: post
         }),
         headers: {
           'Content-Type': 'application/json'

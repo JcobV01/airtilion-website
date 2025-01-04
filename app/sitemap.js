@@ -169,7 +169,7 @@ export default function sitemap() {
         priority: 0.9,
       },
       {
-        url: 'https://airtilion.com/offer/portfolio',
+        url: 'https://airtilion.com/portfolio',
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.6,

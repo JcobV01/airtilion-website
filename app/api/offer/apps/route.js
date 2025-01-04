@@ -6,7 +6,7 @@ export const POST = async (req) => {
 
     try {
         await connectToDB();
-        const newApps = new Apps(post);
+        const newApps = new Apps( post );
 
         await newApps.save();
         return new Response(JSON.stringify(newApps), { status: 201 });

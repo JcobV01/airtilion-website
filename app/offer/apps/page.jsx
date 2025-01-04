@@ -90,7 +90,7 @@ const apps = () => {
       const response = await fetch('/api/offer/apps', {
         method: 'POST',
         body: JSON.stringify({
-          post: post,
+          post: post
         }),
         headers: {
           'Content-Type': 'application/json'
