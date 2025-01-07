@@ -17,6 +17,7 @@ const PricingSchema = new Schema({
     Additional_services: { type: String },
     Privacy_policy: { type: String, required: true },
     Processing_of_personal_data: { type: Boolean, required: true },
+    Date: { type: Date, requried: true },
 }, { collection: 'wyceny' });
 
 const Pricing = models?.Pricing || model('Pricing', PricingSchema);

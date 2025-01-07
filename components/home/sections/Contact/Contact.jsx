@@ -61,6 +61,9 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
+            const now = new Date();
+            const polishTimeZone = new Date(now.getTime() + 60 * 60 * 1000);
+
             const response = await fetch('/api/contact/', {
                 method: 'POST',
                 body: JSON.stringify({
@@ -68,7 +71,7 @@ const Contact = () => {
                     Email: email,
                     Number: number,
                     Text: text,
-                    Date: new Date().toISOString(),
+                    Date: polishTimeZone,
                 }),
                 headers: {
                     'Content-Type': 'application/json'
@@ -166,7 +169,7 @@ const Contact = () => {
                             <label htmlFor="privacy_policy" className='flex items-center cursor-pointer'>
                                 <span className='quadBefore flex items-center tracking-[1px] xl:text-[15px]'>Akceptuję</span>
                             </label>
-                            <Link href="/assets/files/Polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] text-center">politykę prywatności</Link>
+                            <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] text-center">politykę prywatności</Link>
                         </div>
 
                         <div className='w-full flex flex-col gap-[0px] sm:items-center'>

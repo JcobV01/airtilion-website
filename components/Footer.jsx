@@ -47,7 +47,7 @@ const Footer = () => {
                     <div className='mt-[35px] w-full px-[50px] flex justify-between xl:flex-col-reverse xl:justify-center'>
                         <p className='text-center text-[15px] text-[#EEE] font-light tracking-[1.5px] xl:mt-[20px]'>© 2024 Airtilion sp. z o.o.</p>
                         <div className='text-[14px] flex gap-[20px] font-light xl:justify-center xl:flex-wrap xl:gap-[10px] xl:text-center'>
-                            <Link href="/assets/files/Polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer">
+                            <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer">
                                 <span className='text-[#EEE] hover:text-[#E2B350] duration-500'>Polityka prywatności</span>
                             </Link>
                             <Link href="/" aria-label="Przejdź do Polityki Ochrony Danych Osobowych" target="_blank" rel="noopener noreferrer">

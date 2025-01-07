@@ -86,10 +86,18 @@ const pricing = () => {
     setSubmitting(true);
 
     try {
+      const now = new Date();
+      const polishTimeZone = new Date(now.getTime() + 60 * 60 * 1000);
+
+      const postData = {
+        ...post,
+        Date: polishTimeZone
+      };
+
       const response = await fetch('/api/offer/new', {
         method: 'POST',
         body: JSON.stringify({
-          post: post
+          post: postData
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -373,7 +381,7 @@ const pricing = () => {
                     <label htmlFor='privacy' className='flex items-center cursor-pointer'>
                       <span className='quadBefore flex items-center'>Akceptuję</span>
                     </label>
-                    <Link href="/assets/files/Polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] text-center">politykę prywatności</Link>
+                    <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] text-center">politykę prywatności</Link>
                   </div>
 
                   <div className='flex items-center gap-[10px] xxl:text-[24px] sm:text-[13px] md:flex-col'>
