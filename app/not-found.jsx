@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Custom404 = () => {
   return (
-    <main className='h-dvh bg-no-repeat bg-cover md:bg-center absolute top-0 left-0 w-full flex justify-end items-center' >
+    <main className='h-dvh absolute top-0 left-0 w-full flex justify-end items-center' >
       <Image src={errorImage} width={1920} height={1080} alt="Obrazek tła strony 404" className='h-dvh w-full absolute top-0 left-0 object-cover' />
       <section className='flex justify-end items-center px-[110px] lg:px-[50px] z-10'>
         <div className='w-[950px] flex flex-col items-end lg:w-[100%] sm:items-center fold:mt-0'>

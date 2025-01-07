@@ -6,7 +6,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <section className='flex justify-center px-[130px] gap-[100px] mt-[100px] 2xl:gap-[50px] 2xl:px-[100px] xl:flex-col xl:gap-[100px] sm:px-[40px]'>
+    <section className='flex justify-center px-[130px] gap-[100px] mt-[100px] 2xl:gap-[50px] 2xl:px-[100px] xl:flex-col xl:gap-[100px] sm:px-[40px] z-10'>
             <article className='flex flex-col gap-[32px] flex-1 justify-center xl:items-center'>
                 <h1 className='text-[48px] 2xl:text-[40px] lg:text-[30px] font-medium xl:text-center'>Strony i aplikacje internetowe w całej Polsce</h1>
                 <h2 className='text-[#E2B350] text-[20px] 2xl:text-[18px] lg:text-[15px] font-light xl:text-center'>Tworzymy nowoczesne i eleganckie strony internetowe dopasowane do potrzeb klientów na terenie całej Polski. Działamy przede wszystkim online, dlatego nie mamy ograniczeń. Skontaktuj się z nami, a wszystko wyjaśnimy.</h2>
