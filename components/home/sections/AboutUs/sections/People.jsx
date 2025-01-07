@@ -19,10 +19,10 @@ const People = () => {
                 <div className='flex gap-[60px] w-[940px] xl:w-[100%] relative p-[25px] lg:flex-col lg:items-center'>
                     <div className='w-[340px] h-[470px] relative xxl:w-[auto] xxl:h-[auto] md:w-[260px] md:h-[380px]'>
                         <Image width={340} height={470} quality={100} src={lionPlaceholder.src} alt="Zdjęcie jednego z założycieli Airtilionu" placeholder='blur' blurDataURL='data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADQAQCdASoEAAMAAUAmJZwCdAEO+KiwAAD+8b67vDtfksrPCUjtmS9uqoCAAA==' className='object-cover h-full rounded-[5px]' />
-                        <Link href="#" target='_blank' aria-label="Odwiedź mój profil Facebook" className='duration-700 hover:scale-75 absolute bottom-[10px] left-[10px]'>
+                        <Link href="https://www.facebook.com/jakub.wadycki" target='_blank' rel="noopener noreferrer" aria-label="Odwiedź mój profil Facebook" className='duration-700 hover:scale-75 absolute bottom-[10px] left-[10px]'>
                             <Icon icon="bi:facebook" width={30} height={30} alt="Ikona facebooka" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                         </Link>
-                        <Link href="#" target='_blank' aria-label="Odwiedź mój profil Linkedin" className='duration-700 hover:scale-75 absolute bottom-[10px] left-[50px]'>
+                        <Link href="https://www.linkedin.com/in/jakub-wadycki-906149275/" target='_blank' aria-label="Odwiedź mój profil Linkedin" rel="noopener noreferrer" className='duration-700 hover:scale-75 absolute bottom-[10px] left-[50px]'>
                             <Icon icon="bi:linkedin" width={30} height={30} alt="Ikona linkedin" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                         </Link>
                     </div>
@@ -44,10 +44,10 @@ const People = () => {
                 <div className={`flex flex-row-reverse gap-[60px] w-[940px] xl:w-[100%] relative p-[25px] lg:flex-col lg:items-center transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>
                     <div className='w-[340px] h-[470px] relative xxl:w-[auto] xxl:h-[auto] md:w-[260px] md:h-[380px]'>
                         <Image width={340} height={470} quality={100} src={lionPlaceholder2.src} alt="Zdjęcie jednego z założycieli Airtilionu" className='object-cover h-full rounded-[5px]' />
-                        <Link href="#" target='_blank' aria-label="Odwiedź mój profil Facebook" className='duration-700 hover:scale-75 absolute bottom-[10px] left-[10px]'>
+                        <Link href="https://www.facebook.com/artur.plebanczyk.88" target='_blank' aria-label="Odwiedź mój profil Facebook" rel="noopener noreferrer" className='duration-700 hover:scale-75 absolute bottom-[10px] left-[10px]'>
                             <Icon icon="bi:facebook" width={30} height={30} alt="Ikona facebooka" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                         </Link>
-                        <Link href="#" target='_blank' aria-label="Odwiedź mój profil Linkedin" className='duration-700 hover:scale-75 absolute bottom-[10px] left-[50px]'>
+                        <Link href="https://www.linkedin.com/in/artur-plebańczyk-10105728b/" target='_blank' aria-label="Odwiedź mój profil Linkedin" rel="noopener noreferrer" className='duration-700 hover:scale-75 absolute bottom-[10px] left-[50px]'>
                             <Icon icon="bi:linkedin" width={30} height={30} alt="Ikona linkedin" className='text-[#E2B350] md:w-[30px] md:h-[30px]' />
                         </Link>
                     </div>
