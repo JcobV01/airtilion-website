@@ -1,11 +1,13 @@
 import React from 'react'
 import errorImage from '@public/assets/images/404.webp'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Custom404 = () => {
   return (
-    <main className='h-dvh bg-no-repeat bg-cover md:bg-center absolute top-0 left-0 w-full flex justify-end items-center' style={{ backgroundImage: `url(${errorImage.src})` }}>
-      <section className='flex justify-end items-center px-[110px] lg:px-[50px]'>
+    <main className='h-dvh bg-no-repeat bg-cover md:bg-center absolute top-0 left-0 w-full flex justify-end items-center' >
+      <Image src={errorImage} width={1920} height={1080} alt="Obrazek tła strony 404" className='h-dvh w-full absolute top-0 left-0 object-cover' />
+      <section className='flex justify-end items-center px-[110px] lg:px-[50px] z-10'>
         <div className='w-[950px] flex flex-col items-end lg:w-[100%] sm:items-center fold:mt-0'>
           <h1 className='text-[150px] text-[#E2B350] font-bold my-0 xl:text-[100px] sm:text-[70px]'>404</h1>
           <h2 className='text-[70px] text-[#C79E47] font-bold my-0 mt-[-20px] xl:text-[50px] sm:text-center sm:text-[30px]'>Ups, coś poszło nie tak 🦁</h2>
