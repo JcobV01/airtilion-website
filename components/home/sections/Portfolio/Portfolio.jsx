@@ -40,7 +40,7 @@ const Portfolio = () => {
             <p className='text-[15px] xxl:text-[20px] lg:text-[13px]'>Zapraszamy do zapoznania się z naszymi najnowszymi realizacjami! Poniżej znajdziesz trzy najnowsze projekty, które pokazują naszą pasję do tworzenia nowoczesnych i funkcjonalnych stron oraz aplikacji internetowych. Każda realizacja posiada swoją dedykowaną podstronę z pełnym opisem i szczegółami projektu, abyś mógł dokładnie zobaczyć, jak podchodzimy do każdego zadania. Jeśli chcesz zobaczyć więcej naszych prac i dowiedzieć się, jak możemy pomóc Tobie w rozwoju Twojego biznesu, zapraszamy do odwiedzenia pełnego portfolio na dedykowanej podstronie.</p>
 
             {data?.slice(0, 3).map((item) => (
-                <PortfolioItem title={item.Name} desc={item.Description} bg={item.Background} image={item.Screens[0]} key={item._id} id={item._id}/>
+                <PortfolioItem title={item.Name} desc={item.Description} bg={item.Background} image={item.Screens[0]} key={item._id} id={item._id} client={item.Client}/>
             ))}
 
             <div className='flex flex-col gap-[30px] items-center mt-[50px] z-10'>
