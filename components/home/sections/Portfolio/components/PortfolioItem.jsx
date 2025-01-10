@@ -11,7 +11,7 @@ const kaushan = Kaushan_Script({
     weight: ['400'],
   })
 
-const PortfolioItem = ({ title, desc, bg, image, id }) => {
+const PortfolioItem = ({ title, desc, bg, image, id, client }) => {
     const router = useRouter()
 
     const detailsHande = (e) => {
@@ -29,7 +29,15 @@ const PortfolioItem = ({ title, desc, bg, image, id }) => {
                         <p className='text-[15px] xxl:text-[18px] xl:text-[13px] lg:[11px] text-[#AFAFAF] relative z-10 md:line-clamp-3 sm:text-center'>{desc}</p>
                     </div>
 
-                    <Image src={bg} width={960} height={550} alt="Tlo" className='object-cover w-full h-full absolute top-0 left-0 z-0' />
+                    <Image 
+                        src={`https://api.airtilion.com/uploads/projects/${client}/${bg.file}`} 
+                        placeholder='blur'
+                        blurDataURL={`data:image/webp;base64,${bg.base64}`}
+                        width={960} 
+                        height={550} 
+                        alt="Tlo" 
+                        className='object-cover w-full h-full absolute top-0 left-0 z-0' 
+                    />
                     <div className='absolute w-full h-full top-0 left-0 z-1 bg-[#000000e0]'></div>
                     <span className='h-[2px] w-[50%] xl:w-[30%] bg-[#E2B35080] z-10 block absolute bottom-[30px] left-[50%] xl:left-[20%] translate-x-[-50%] lg:hidden'></span>
 
@@ -41,7 +49,15 @@ const PortfolioItem = ({ title, desc, bg, image, id }) => {
                     </Link>
                 </div>
 
-                <Image src={image} width={830} height={430} alt="Strona" className='absolute right-0 top-[50%] sm:top-[55%] md:top-[50%] lg:translate-y-0 translate-y-[-50%] lg:left-[50%] lg:right-auto lg:translate-x-[-50%] saturate-0 xl:w-[80%] sm:w-[95%]' />
+                <Image 
+                    src={`https://api.airtilion.com/uploads/projects/${client}/${image.file}`} 
+                    placeholder='blur'
+                    blurDataURL={`data:image/webp;base64,${image.base64}`}
+                    width={830} 
+                    height={430} 
+                    alt="Strona" 
+                    className='absolute right-0 top-[50%] sm:top-[55%] md:top-[50%] lg:translate-y-0 translate-y-[-50%] lg:left-[50%] lg:right-auto lg:translate-x-[-50%] saturate-0 xl:w-[80%] sm:w-[95%]' 
+                />
             </article>
         </section>
     )

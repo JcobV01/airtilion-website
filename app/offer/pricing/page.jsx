@@ -201,7 +201,7 @@ const pricing = () => {
                     <div className='w-[12px] h-[12px]'>
                       <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
                     </div>
-                    <p>Naprawa ewentualnych błędów.</p>
+                    <p>Naprawa ewentualnych błędów (wywołanych np. przez aktualizację zewnętrznego oprogramowania połączonego ze stroną).</p>
                   </li>
                   <li className='flex items-center gap-[5px]'>
                     <div className='w-[12px] h-[12px]'>

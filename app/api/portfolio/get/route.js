@@ -1,4 +1,3 @@
-
 import PortfolioItem from '@models/PortfolioItem';
 import { connectToDB } from '@utils/database';
 

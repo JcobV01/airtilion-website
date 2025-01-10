@@ -3,7 +3,10 @@ import { Schema, model, models } from 'mongoose';
 const PortfolioItemSchema = new Schema({
     Name: { type: String, required: true },
     Description: { type: String, required: true },
-    Screens: [{ type: String }],
+    Screens: [{ 
+        file: String,
+        base64: String,
+     }],
     Work: [{ type: String }],
     Technologies: [{ type: String }],
     Challanges: [
@@ -26,20 +29,20 @@ const PortfolioItemSchema = new Schema({
             description: String,
         },
     ],
-    Client: {
-        logo: String,
-        name: String,
-        description: String,
-        opinion: String,
-        author: String,
-        background: String,
-    },
+    Client: { type: String, required: true},
     Logo: {
-        type: String, required: true
+        file: String,
+        base64: String,
+    },
+    Background: {
+        file: String,
+        base64: String,
     },
     Type: {type: String, required: true},
     Date: {type: Date, required: true},
-    Link: {type: String, required: true}
+    Link: {type: String, required: true},
+    Opinion: {type: String, required: true},
+    Author: {type: String, required: true},
 }, { collection: 'portfolio' }); // Ustawienie nazwy kolekcji
 
 const PortfolioItem = models?.PortfolioItem || model('PortfolioItem', PortfolioItemSchema);
