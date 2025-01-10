@@ -87,12 +87,11 @@ const apps = () => {
     setSubmitting(true);
 
     try {
-      const now = new Date();
-      const polishTimeZone = new Date(now.getTime() + 60 * 60 * 1000);
+      const date = new Date().toISOString();
 
       const postData = {
         ...post,
-        Date: polishTimeZone
+        Date: date
       };
 
       const response = await fetch('/api/offer/apps', {

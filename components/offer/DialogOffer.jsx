@@ -71,8 +71,7 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
         }
 
         try {
-            const now = new Date();
-            const polishTimeZone = new Date(now.getTime() + 60 * 60 * 1000);
+            const date = new Date().toISOString();
 
             const response = await fetch('/api/offer/order', {
                 method: 'POST',
@@ -82,7 +81,7 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
                     Number: number,
                     Package: title,
                     Type: pathname,
-                    Date: polishTimeZone,
+                    Date: date,
                 }),
                 headers: {
                     'Content-Type': 'application/json'

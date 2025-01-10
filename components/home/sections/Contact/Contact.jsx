@@ -61,8 +61,7 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
-            const now = new Date();
-            const polishTimeZone = new Date(now.getTime() + 60 * 60 * 1000);
+            const date = new Date().toISOString();
 
             const response = await fetch('/api/contact/', {
                 method: 'POST',
@@ -71,7 +70,7 @@ const Contact = () => {
                     Email: email,
                     Number: number,
                     Text: text,
-                    Date: polishTimeZone,
+                    Date: date,
                 }),
                 headers: {
                     'Content-Type': 'application/json'
