@@ -15,6 +15,42 @@ export const metadata = {
   alternates: {
     canonical: 'https://airtilion.com/',
   },
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/ico',
+      url: '/favicon/favicon.ico'
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      url: '/favicon/favicon-32x32.png'
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      url: '/favicon/favicon-16x16.png'
+    },
+    {
+      rel: 'icon',
+      type: "image/png",
+      sizes: "192x192",
+      url: "/favicon/android-chrome-192x192.png"
+    },
+    {
+      rel: 'icon',
+      type: "image/png",
+      sizes: "512x512",
+      url: "/favicon/android-chrome-512x512.png"
+    },
+    {
+      rel: 'apple-icon',
+      sizes: '180x180',
+      url: '/favicon/apple-touch-icon.png'
+    }
+  ],
 }
 
 const poppins = Poppins({
@@ -34,7 +70,7 @@ const rootLayout = ({ children }) => {
       <head>
         <Script src={`https://www.googletagmanager.com/gtag/js?id=G-NGHDG87L2Y`} strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
-        {`
+          {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
@@ -50,7 +86,7 @@ const rootLayout = ({ children }) => {
       </head>
       <body className={`${poppins.className} w-dvw overflow-x-hidden bg-center`}>
         <noscript>
-          <iframe src="https://www.googletagmanager.com/gtag/js?id=G-NGHDG87L2Y" height="0" width="0" style={{display: "none", visibility: "hidden"}}></iframe>
+          <iframe src="https://www.googletagmanager.com/gtag/js?id=G-NGHDG87L2Y" height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe>
         </noscript>
         <Navbar />
         {children}

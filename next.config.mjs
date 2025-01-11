@@ -2,7 +2,12 @@
 const nextConfig = {
     compress: true,
     images: {
-        domains: ['api.airtilion.com'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'api.airtilion.com',
+            }
+        ],
     },
 };
 export default nextConfig;
