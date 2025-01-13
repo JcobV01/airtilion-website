@@ -83,6 +83,7 @@ const rootLayout = ({ children }) => {
           gtag('config', 'G-NGHDG87L2Y');
         `}
         </Script>
+        <meta name="robots" content="noodp,noydir"></meta>
       </head>
       <body className={`${poppins.className} w-dvw overflow-x-hidden bg-center`}>
         <noscript>
