@@ -17,7 +17,7 @@ const Cooperation = () => {
         },
         {
             title: "Projektowanie",
-            desc: "Na podstawie zebranych informacji tworzymy wizualizacje projekty. Omawiamy je z Tobą, aby upewnić się, że wszystko jest zgodne z Twoją wizją.",
+            desc: "Na podstawie zebranych informacji tworzymy wizualizacje projektu. Omawiamy je z Tobą, aby upewnić się, że wszystko jest zgodne z Twoją wizją.",
             image: "bxs:pencil",
         },
         {
