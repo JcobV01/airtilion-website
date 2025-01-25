@@ -18,6 +18,14 @@ export const metadata = {
     type: "website",
     url: "https://airtilion.com",
     siteName: "Airtilion - Strony internetowe na miarę przyszłości",
+    images: [
+      {
+        url: "https://airtilion.com/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Airtilion - Strony internetowe na miarę przyszłości"
+      }
+    ]
   },
   alternates: {
     canonical: 'https://airtilion.com/',
