@@ -12,14 +12,6 @@ import lion from '@public/assets/images/offer/lion.webp'
 import leader from '@public/assets/images/offer/leaderOfThePack.webp'
 import DialogOffer from '@components/offer/DialogOffer'
 
-export const metadata = {
-  title: "Nowoczesne Strony Internetowe - Profesjonalne Rozwiązania - Airtilion",
-  description: "Tworzymy nowoczesne, szybkie i responsywne strony internetowe dopasowane do Twoich potrzeb. Sprawdź naszą ofertę i postaw na profesjonalne rozwiązania!",
-  alternates: {
-    canonical: 'https://airtilion.com/offer/websites',
-  },
-}
-
 const websites = () => {
   const [isNetto, setIsNetto] = useState(true);
   const [dialogTitle, setDialogTitle] = useState(false);
