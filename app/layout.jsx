@@ -27,19 +27,6 @@ export const metadata = {
       }
     ]
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Airtilion - Strony internetowe na miarę przyszłości TEST',
-    description: 'Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Skontaktuj się z nami, aby poznać naszą ofertę i rozwiązania dla Ciebie!',
-    images: [
-      {
-        url: "https://airtilion.com/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Airtilion - Strony internetowe na miarę przyszłości"
-      }
-    ]
-  },
   alternates: {
     canonical: 'https://airtilion.com/',
   },
