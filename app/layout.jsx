@@ -20,7 +20,7 @@ export const metadata = {
     siteName: "Airtilion - Strony internetowe na miarę przyszłości",
     images: [
       {
-        url: "https://airtilion.com/opengraph-image.png",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Airtilion - Strony internetowe na miarę przyszłości"
