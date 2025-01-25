@@ -8,9 +8,11 @@ export const metadata = {
   },
 }
 
-const layout = ({children}) => {
+const layout = ({ children }) => {
   return (
-    {children}
+    <>
+      {children}
+    </>
   )
 }
 

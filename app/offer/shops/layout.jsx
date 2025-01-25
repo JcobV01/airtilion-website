@@ -9,9 +9,11 @@ export const metadata = {
 }
 
 const layout = ({ children }) => {
-    return (
-        { children }
-    )
+  return (
+    <>
+      {children}
+    </>
+  )
 }
 
 export default layout
