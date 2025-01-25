@@ -2,7 +2,10 @@ import React from 'react'
 
 export const metadata = {
     title: "Airtilion - Toruń",
-    description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Działamy w Toruniu i okolicach - sprawdź naszą ofertę!"
+    description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Działamy w Toruniu i okolicach - sprawdź naszą ofertę!",
+    alternates: {
+        canonical: 'https://airtilion.com/area/torun',
+    },
 }
 
 const layout = ({ children }) => {

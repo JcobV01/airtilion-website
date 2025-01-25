@@ -12,6 +12,14 @@ import Heading from '@components/Heading'
 import FormButton from '@components/FormButton'
 import Form from '@components/offer/Form'
 
+export const metadata = {
+  title: "Aplikacje mobilne - Airtilion",
+  description: "Tworzymy innowacyjne aplikacje mobilne dostosowane do Twoich potrzeb. Oferujemy kompleksowe rozwiązania na iOS i Android. Sprawdź naszą ofertę i rozpocznij projekt!",
+  alternates: {
+    canonical: 'https://airtilion.com/offer/apps',
+  },
+}
+
 const apps = () => {
   const [submitting, setSubmitting] = useState(false);
   const [post, setPost] = useState({});

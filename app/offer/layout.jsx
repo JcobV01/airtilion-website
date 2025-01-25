@@ -5,7 +5,11 @@ import HeaderBg from '@public/assets/images/headerOfferPortfolio.webp'
 import React from 'react'
 
 export const metadata = {
-  title: "Airtilion - Oferta - Odkryj nowe horyzonty"
+  title: "Airtilion - Oferta - Odkryj nowe horyzonty",
+  description: "Sprawdź naszą ofertę usług webowych, w tym projektowanie stron internetowych, sklepów online i aplikacji mobilnych. Tworzymy rozwiązania dopasowane do Twoich potrzeb.",
+  alternates: {
+    canonical: 'https://airtilion.com/offer',
+  },
 }
 
 const layout = ({ children }) => {

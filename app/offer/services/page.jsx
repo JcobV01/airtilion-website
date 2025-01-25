@@ -5,6 +5,14 @@ import CardsWithoutPrice from '@components/offer/CardsWithoutPrice'
 import DialogOffer from '@components/offer/DialogOffer'
 import React, { useRef, useState } from 'react'
 
+export const metadata = {
+  title: "Profesjonalna optymalizacja i opieka nad stronami internetowymi - Airtilion",
+  description: "Oferujemy optymalizację SEO, poprawę wydajności, naprawę błędów oraz kompleksową opiekę nad Twoją stroną. Zapewnij sobie pełną funkcjonalność i bezpieczeństwo online!",
+  alternates: {
+    canonical: 'https://airtilion.com/offer/services',
+  },
+}
+
 const services = () => {
   const [dialogTitle, setDialogTitle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);

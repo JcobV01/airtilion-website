@@ -11,6 +11,14 @@ import lionCub from '@public/assets/images/offer/lionCub.webp'
 import lion from '@public/assets/images/offer/lion.webp'
 import DialogOffer from '@components/offer/DialogOffer';
 
+export const metadata = {
+  title: "Sklepy Internetowe - Nowoczesne Rozwiązania eCommerce - Airtilion",
+  description: "Projektujemy nowoczesne sklepy internetowe, które zwiększają sprzedaż. Oferujemy szybkie, responsywne i zoptymalizowane rozwiązania eCommerce. Sprawdź naszą ofertę!",
+  alternates: {
+    canonical: 'https://airtilion.com/offer/shops',
+  },
+}
+
 const shops = () => {
   const [isNetto, setIsNetto] = useState(true);
   const [dialogTitle, setDialogTitle] = useState(false);
