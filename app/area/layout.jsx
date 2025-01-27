@@ -5,6 +5,10 @@ import Image from '@node_modules/next/image'
 
 export const metadata = {
   title: "Airtilion - Działamy bez ograniczeń w całej Polsce",
+  description: "Airtilion oferuje usługi webowe w całej Polsce. Tworzymy strony internetowe, sklepy online oraz aplikacje mobilne, dostosowane do Twoich potrzeb biznesowych.",
+  alternates: {
+    canonical: 'https://airtilion.com/area',
+  },
 }
 
 const layout = ({children}) => {

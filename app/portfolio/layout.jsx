@@ -4,7 +4,11 @@ import HeaderBg from '@public/assets/images/headerOfferPortfolio.webp'
 import React from 'react'
 
 export const metadata = {
-  title: "Airtilion - Portfolio - Zobacz nasze realizacje"
+  title: "Airtilion - Portfolio - Zobacz nasze realizacje",
+  description: "Zobacz nasze portfolio! Tworzymy nowoczesne strony internetowe, aplikacje webowe i mobilne. Sprawdź nasze projekty i przekonaj się o jakości naszej pracy.",
+  alternates: {
+    canonical: 'https://airtilion.com/portfolio',
+  },
 }
 
 const layout = ({ children }) => {

@@ -4,7 +4,11 @@ import Footer from '@components/Footer'
 import HeaderBg from '@public/assets/images/headerOfferPortfolio.webp'
 
 export const metadata = {
-    title: "Airtilion - FAQ - Znajdź odpiowiedź na swoje pytania"  
+    title: "Airtilion - FAQ - Znajdź odpiowiedź na swoje pytania",
+    description: "Masz pytania? Sprawdź nasze FAQ! Znajdziesz tutaj odpowiedzi na najczęściej zadawane pytania dotyczące naszych usług i procesów współpracy.",
+    alternates: {
+        canonical: 'https://airtilion.com/faq',
+    },
 }
 
 const layout = ({ children }) => {
