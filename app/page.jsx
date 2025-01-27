@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import HeaderBgDesktop from '@public/assets/images/mainHeader.webp'
 import useWindowWidth from '@hooks/useWindowWidth';
 import Head from 'next/head'
+import useScrollObserver from '@hooks/useScrollbarObserver';
 
 const Header = dynamic(() => import('@components/Header'), { ssr: true, loading: () => <div className="loader"></div> });
 const AboutUs = dynamic(() => import('@components/home/sections/AboutUs/AboutUs'), { ssr: true, loading: () => <div className="loader"></div> });
@@ -28,59 +29,7 @@ const home = () => {
     menuItems[id].classList.add('menu-active')
   }
 
-  useEffect(() => {
-
-    const observerCallback = (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (entry.target.id === 'nav-aboutus') {
-            changeMenu(0);
-          } else if (entry.target.id === 'nav-coop') {
-            changeMenu(1);
-          } else if (entry.target.id === 'nav-offer') {
-            changeMenu(2);
-          } else if (entry.target.id === 'nav-portfolio') {
-            changeMenu(3);
-          } else if (entry.target.id === 'nav-contact') {
-            changeMenu(5);
-          }
-        }
-      });      
-    };
-
-    let threshold
-
-    const observer = new IntersectionObserver(observerCallback, { threshold });
-
-    const observeSections = () => {
-      const sections = document.querySelectorAll('.observer-navbar');
-      threshold = 
-      sections.forEach(section => {
-        section.offsetHeight > 500 ? threshold = 0.3 : threshold = 0.1; 
-        observer.observe(section);
-      })
-    }
-
-    observeSections();
-
-    const observerMutation = new MutationObserver((mutations) => {
-      mutations.forEach(mutation => {
-        if (mutation.type === 'childList') {
-          observeSections();
-        }
-      });
-    });
-
-    observerMutation.observe(document.body, { childList: true, subtree: true });
-
-    return () => {
-      observer.disconnect();
-      observerMutation.disconnect();
-    };
-  }, []);
-
-
-
+  useScrollObserver(changeMenu);
 
   return (
     <>
