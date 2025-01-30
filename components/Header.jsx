@@ -24,7 +24,7 @@ const Header = ({ title, subtitle, img, positionBottom = true }) => {
         sizes="(max-width: 1024px) 100vw, 1920px"
         className={`absolute object-cover ${positionBottom ? 'object-bottom' : ''}`}
         priority
-        quality={75}
+        quality={100}
         // placeholder="blur" // Wymaga dodania blurDataURL w propsach obrazu
         style={{
           objectPosition: positionBottom ? 'center bottom' : 'center calc(100% + 10px)'
