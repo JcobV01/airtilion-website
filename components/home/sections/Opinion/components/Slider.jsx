@@ -24,21 +24,21 @@ const slide = [
         page: 'page-one-site.pl',
         desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum'
     },
-    {
-        author: 'Józek Nowak',
-        page: 'page-one-site.pl',
-        desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum'
-    },
-    {
-        author: 'Józek Nowak',
-        page: 'page-one-site.pl',
-        desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum'
-    },
-    {
-        author: 'Józek Nowak',
-        page: 'page-one-site.pl',
-        desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum'
-    },
+    // {
+    //     author: 'Józek Nowak',
+    //     page: 'page-one-site.pl',
+    //     desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum'
+    // },
+    // {
+    //     author: 'Józek Nowak',
+    //     page: 'page-one-site.pl',
+    //     desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum'
+    // },
+    // {
+    //     author: 'Józek Nowak',
+    //     page: 'page-one-site.pl',
+    //     desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum'
+    // },
 ]
 
 const Slider = () => {
