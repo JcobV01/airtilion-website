@@ -17,13 +17,13 @@ const Portfolio = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch('/api/portfolio/get', { method: "POST" }); // Fetch do lokalnego endpointa
+                const response = await fetch('/api/portfolio/getLatest', { method: "POST" });
                 if (!response.ok) {
                     throw new Error('Failed to fetch projects');
                 }
                 const data = await response.json();
 
-                setData(data); // Przechowujemy dane w stanie
+                setData(data);
             } catch (error) {
                 console.log(error);
             }
@@ -39,7 +39,7 @@ const Portfolio = () => {
 
             <p className='text-[15px] xxl:text-[20px] lg:text-[13px]'>Zapraszamy do zapoznania się z naszymi najnowszymi realizacjami! Poniżej znajdziesz trzy najnowsze projekty, które pokazują naszą pasję do tworzenia nowoczesnych i funkcjonalnych stron oraz aplikacji internetowych. Każda realizacja posiada swoją dedykowaną podstronę z pełnym opisem i szczegółami projektu, abyś mógł dokładnie zobaczyć, jak podchodzimy do każdego zadania. Jeśli chcesz zobaczyć więcej naszych prac i dowiedzieć się, jak możemy pomóc Tobie w rozwoju Twojego biznesu, zapraszamy do odwiedzenia pełnego portfolio na dedykowanej podstronie.</p>
 
-            {data?.slice(0, 3).map((item) => (
+            {data?.map((item) => (
                 <PortfolioItem title={item.Name} desc={item.Description} bg={item.Background} image={item.Screens[0]} key={item._id} id={item._id} client={item.Client}/>
             ))}
 
