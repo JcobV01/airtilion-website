@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
-import HeaderBgDesktop from '@public/assets/images/TestBG.webp'
+import HeaderBgDesktop from '@public/assets/images/3.webp'
 import useWindowWidth from '@hooks/useWindowWidth';
 import Head from 'next/head'
 import useScrollObserver from '@hooks/useScrollbarObserver';

@@ -9,7 +9,6 @@ const Header = ({ title, subtitle, img, positionBottom = true }) => {
     triggerOnce: true
   });
 
-  // Dodaj to jeśli obraz jest dynamiczny (Next.js 14+)
   noStore();
 
   return (
@@ -25,9 +24,9 @@ const Header = ({ title, subtitle, img, positionBottom = true }) => {
         className={`absolute object-cover ${positionBottom ? 'object-bottom' : ''}`}
         priority
         quality={100}
-        // placeholder="blur" // Wymaga dodania blurDataURL w propsach obrazu
         style={{
-          objectPosition: positionBottom ? 'center bottom' : 'center calc(100% + 10px)'
+          objectPosition: positionBottom ? 'center bottom' : 'center calc(100% + 10px)',
+          filter: "blur(0.3px) brightness(0.7)"
         }}
       />
 
