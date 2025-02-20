@@ -27,8 +27,8 @@ const menu = [
     },
     {
         name: "Portfolio",
-        link: "/#portfolio",
-        id: "#portfolio"
+        link: "/portfolio",
+        id: ""
     },
     // {
     //     name: "Nasze projekty",
