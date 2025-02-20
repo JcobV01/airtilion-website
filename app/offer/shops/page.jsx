@@ -230,7 +230,7 @@ const shops = () => {
         <article className='flex flex-col w-[1240px] mt-[100px] xl:w-[90%] xxl:w-[1500px]'>
           <Heading title="Sklepy" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
           <div className='mt-[50px]'>
-            <p className='text-[18px] font-light xxl:text-[25px]'>Nasza oferta obejmuje różnorodne pakiety usług tworzenia sklepów internetowych, które zostały zaprojektowane z myślą o indywidualnych potrzebach klientów oraz specyfice ich branży. Oferujemy rozwiązania, które umożliwiają skuteczne prowadzenie sprzedaży online, niezależnie od wielkości Twojego biznesu. Dzięki naszym usługom, Twoja firma zyska profesjonalnie zaprojektowany sklep, który będzie intuicyjny w obsłudze zarówno dla Ciebie, jak i Twoich klientów.</p>
+            <p className='text-[18px] font-light xxl:text-[25px] sm:text-[16px] fold:text-[14px]'>Nasza oferta obejmuje różnorodne pakiety usług tworzenia sklepów internetowych, które zostały zaprojektowane z myślą o indywidualnych potrzebach klientów oraz specyfice ich branży. Oferujemy rozwiązania, które umożliwiają skuteczne prowadzenie sprzedaży online, niezależnie od wielkości Twojego biznesu. Dzięki naszym usługom, Twoja firma zyska profesjonalnie zaprojektowany sklep, który będzie intuicyjny w obsłudze zarówno dla Ciebie, jak i Twoich klientów.</p>
             <ButtonPrice isNetto={isNetto} tooglePrice={tooglePrice} />
             <Cards isNetto={isNetto} offer={cardsSwitcher} handleOpenDialog={handleOpenDialog} />
             <InfoAboutOffer />
