@@ -8,7 +8,6 @@ import PortfolioSites from '@components/portfolio/PortfolioSites'
 
 const page = () => {
   const [active, setActive] = useState('sites')
-  console.log(active);
 
   return (
     <>
