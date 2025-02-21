@@ -149,7 +149,7 @@ const Navbar = () => {
                     }
 
                     <Link href="/offer/pricing">
-                        <button className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-500 flex gap-[10px] items-center w-max hover:text-[#d9d9d9] hover:bg-gradient-to-r hover:text-[15px] hover:py-[12px] hover:tracking-[1.5px] nav-button xl:text-[15px]'>
+                        <button onClick={changeVisibility} className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-500 flex gap-[10px] items-center w-max hover:text-[#d9d9d9] hover:bg-gradient-to-r hover:text-[15px] hover:py-[12px] hover:tracking-[1.5px] nav-button xl:text-[15px]'>
                             <Icon icon="solar:letter-bold" width="25" height="25" />
                             <Icon icon="solar:letter-opened-bold" width="25" height="25" className='hidden' />
                             Zapytaj o wycenę
