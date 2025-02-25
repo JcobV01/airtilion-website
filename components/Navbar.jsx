@@ -27,8 +27,8 @@ const menu = [
     },
     {
         name: "Portfolio",
-        link: "/#portfolio",
-        id: "#portfolio"
+        link: "/portfolio",
+        id: ""
     },
     // {
     //     name: "Nasze projekty",
@@ -71,7 +71,7 @@ const Navbar = () => {
                 setScrolled(false);
             }
 
-            
+
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -88,14 +88,22 @@ const Navbar = () => {
         e.currentTarget.classList.add('menu-active')
     }
 
-    const handleMenu = (e, id) => {
-        if(id.length > 0){
-            e.preventDefault()
-            const target = id.length > 0 ? document.querySelector(id) : null;
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
+    const handleMenu = (e, link) => {
+        const [basePath, hash] = link.split('#');
+        const currentPath = path;
+
+        // Sprawdź, czy obecna ścieżka zgadza się z docelową (bez hasha)
+        if (currentPath === (basePath || '/')) {
+            e.preventDefault();
+            if (hash) {
+                const target = document.querySelector(`#${hash}`);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            }
         }
     }
 
@@ -114,7 +122,7 @@ const Navbar = () => {
 
                     {
                         menu.map((item, index) => (
-                            <Link href={item.link} key={index} onClick={(e) => { path == '/' && handleMenu(e, item.id) }}>
+                            <Link href={item.link} key={index} onClick={(e) => handleMenu(e, item.link)}>
                                 <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xxl:text-[20px] xl:text-[15px]' onClick={(e) => handleMenuClick(e)}>
                                     {item.name}
                                 </button>
@@ -140,7 +148,7 @@ const Navbar = () => {
                 <div className={`fixed ${visibility} bg-[#000000b5] w-dvw h-dvh top-0 left-0 p-[50px] z-30 flex flex-col gap-[30px] justify-center fold:items-center backdrop-blur-[5px]`}>
                     {
                         menu.map((item, index) => (
-                            <Link href={item.link} key={index} onClick={(e) => handleMenu(e, item.id)}>
+                            <Link href={item.link} key={index} onClick={(e) => handleMenu(e, item.link)}>
                                 <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xl:text-[15px]' onClick={(e) => { handleMenuClick(e); changeVisibility() }}>
                                     {item.name}
                                 </button>
@@ -149,7 +157,7 @@ const Navbar = () => {
                     }
 
                     <Link href="/offer/pricing">
-                        <button className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-500 flex gap-[10px] items-center w-max hover:text-[#d9d9d9] hover:bg-gradient-to-r hover:text-[15px] hover:py-[12px] hover:tracking-[1.5px] nav-button xl:text-[15px]'>
+                        <button onClick={changeVisibility} className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-500 flex gap-[10px] items-center w-max hover:text-[#d9d9d9] hover:bg-gradient-to-r hover:text-[15px] hover:py-[12px] hover:tracking-[1.5px] nav-button xl:text-[15px]'>
                             <Icon icon="solar:letter-bold" width="25" height="25" />
                             <Icon icon="solar:letter-opened-bold" width="25" height="25" className='hidden' />
                             Zapytaj o wycenę

@@ -67,7 +67,7 @@ const services = () => {
         <article className='flex flex-col w-[1240px] mt-[100px] xl:w-[90%] xxl:w-[1500px]'>
           <Heading title="Pozostałe usługi" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
           <div className='mt-[50px]'>
-            <p className='text-[18px] font-light xxl:text-[25px]'>Zainteresowany optymalizacją lub kompleksową opieką nad swoją stroną internetową? Skorzystaj z naszej oferty, aby zapewnić sobie pełną funkcjonalność i wydajność witryny. Wybierz odpowiedni pakiet, a my zajmiemy się resztą!</p>
+            <p className='text-[18px] font-light xxl:text-[25px] sm:text-[16px] fold:text-[14px]'>Zainteresowany optymalizacją lub kompleksową opieką nad swoją stroną internetową? Skorzystaj z naszej oferty, aby zapewnić sobie pełną funkcjonalność i wydajność witryny. Wybierz odpowiedni pakiet, a my zajmiemy się resztą!</p>
             <CardsWithoutPrice offer={cardsSwitcher} handleOpenDialog={handleOpenDialog} />
             <DialogOffer dialogRef={dialogRef} handleCloseDialog={handleCloseDialog} title={dialogTitle} isOpen={isOpen} />
             <p className='text-[13px] text-[#EEEEEE] text-center mt-[20px] xxl:text-[16px]'>Przedstawiona oferta cenowa ma charakter informacyjny i nie stanowi oferty handlowej w rozumieniu Art.66 par.1 Kodeksu Cywilnego.<br />Podane informacje stanowią jedynie zaproszenie do składania ofert i zawarcia umowy określone w art. 71 Kodeksu cywilnego</p>

@@ -52,6 +52,12 @@ const PortfolioSites = () => {
     getData();
   }, []);
 
+  useEffect(() => {
+    if(!loading){
+      window.scrollTo({top: 0, behavior: "smooth"});
+    }
+  }, [loading]);
+
   const loadMoreItems = () => {
     const nextPage = page + 1;
     const newItems = items.slice(0, nextPage * itemsPerPage);
