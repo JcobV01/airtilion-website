@@ -199,7 +199,7 @@ const Contact = () => {
 
                     <div className='flex gap-[15px] items-center'>
                         <Icon icon="solar:letter-bold" width="40" height="40" alt="Ikona listu" className='text-[#E2B350] xl:w-[30px] xl:h-[30px] lg:h-[25px]' />
-                        <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>contact@airtilion.pl</p>
+                        <p className='text-[20px] xl:text-[18px] lg:text-[15px] sm:text-[13px] font-light'>contact@airtilion.com</p>
                     </div>
 
                     <div className='flex gap-[15px]'>
