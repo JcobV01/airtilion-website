@@ -115,8 +115,8 @@ const cityData = {
 const page = () => {
   return (
     <>
-      <CityComponent city="w Tarnowie" />
-      <WhyCity data={cityData.firstSection} />
+      {/* <CityComponent city="w Tarnowie" />
+      <WhyCity data={cityData.firstSection} /> */}
 
       <OfferCity data={cityData.offer} />
       <CityFaq data={cityData.accordion} />
