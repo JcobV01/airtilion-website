@@ -5,6 +5,7 @@ import WhyCity from '@components/area/WhyCity'
 
 import tarnow from '@public/assets/images/area/tarnow.webp'
 import CityPortfolio from '@components/area/CityPortfolio'
+import CityFaq from '@components/area/faq/CityFaq'
 
 const cityData = {
   firstSection: {
@@ -40,14 +41,39 @@ const cityData = {
         }
       ]
     }
+  },
+  accordion: {
+    elements: [
+      {
+        id: 1,
+        question: "Jak długo trwa stworzenie strony internetowej w Tarnowie?",
+        answer: "Czas realizacji zależy od skomplikowania projektu oraz Twoich indywidualnych wymagań. Standardowo proces ten trwa od kilku tygodni do kilku miesięcy. Po wstępnej analizie potrzeb możemy przedstawić dokładniejszy harmonogram."
+      },
+      {
+        id: 2,
+        question: "Ile kosztuje strona internetowa w Tarnowie?",
+        answer: "Koszt zależy od wielu czynników, takich jak zakres funkcjonalności, stopień skomplikowania projektu oraz dodatkowe usługi. Po zapoznaniu się z Twoimi wymaganiami przygotujemy indywidualną wycenę."
+      },
+      {
+        id: 3,
+        question: "Czy będę mógł samodzielnie zarządzać treścią na mojej stronie?",
+        answer: "Tak, nasze strony są wyposażone w intuicyjne systemy zarządzania treścią (CMS), które pozwalają na łatwe dodawanie i edytowanie treści bez potrzeby posiadania wiedzy programistycznej."
+      },
+      {
+        id: 4,
+        question: "Jakie informacje są potrzebne do rozpoczęcia współpracy?",
+        answer: "Na początek potrzebujemy poznać Twoje oczekiwania i cele związane ze stroną, informacje o Twojej firmie, preferencje dotyczące designu oraz funkcjonalności, a także ewentualne materiały, takie jak logo czy treści."
+      },
+    ]
   }
 }
 
 const page = () => {
   return (
     <>
-      {/* <CityComponent city="w Tarnowie"/>
-      <WhyCity data={cityData.firstSection}/> */}
+      <CityComponent city="w Tarnowie"/>
+      <WhyCity data={cityData.firstSection}/>
+      <CityFaq data={cityData.accordion}/>
       <CityPortfolio city="w Tarnowie" />
     </>
   )
