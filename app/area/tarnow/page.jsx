@@ -4,6 +4,7 @@ import CityComponent from '@components/area/CityComponent'
 import WhyCity from '@components/area/WhyCity'
 
 import tarnow from '@public/assets/images/area/tarnow.webp'
+import CityPortfolio from '@components/area/CityPortfolio'
 
 const cityData = {
   firstSection: {
@@ -45,8 +46,9 @@ const cityData = {
 const page = () => {
   return (
     <>
-      <CityComponent city="w Tarnowie"/>
-      <WhyCity data={cityData.firstSection}/>
+      {/* <CityComponent city="w Tarnowie"/>
+      <WhyCity data={cityData.firstSection}/> */}
+      <CityPortfolio city="w Tarnowie" />
     </>
   )
 }
