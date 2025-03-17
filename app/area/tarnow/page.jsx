@@ -18,6 +18,8 @@ import secondllustration from '@public/assets/images/area/offer/illustration-2.s
 import thirdllustration from '@public/assets/images/area/offer/illustration-3.svg'
 import Cooperate from '@components/home/sections/AboutUs/sections/Cooperate'
 import ProcessCity from '@components/area/ProcessCity'
+import SliderSection from '@components/area/Slider'
+import { technologies } from '@data/portfolio'
 
 const cityData = {
   firstSection: {
@@ -53,6 +55,37 @@ const cityData = {
         }
       ]
     }
+  },
+  technologies: {
+    title: "TECHNOLOGIE",
+    desc: "Tworzymy funkcjonalne, estetyczne i responsywne strony internetowe w Tarnowie oparte o nowoczesne technologie, które zapewniają niezawodność, szybkość i łatwość użytkowania. Nasze projekty są zaprojektowane z myślą o użytkownikach, dzięki czemu Twoja strona będzie nie tylko piękna, ale również intuicyjna i łatwa w nawigacji. Wykorzystujemy najnowsze technologie, które pozwalają na szybkie ładowanie stron, lepszą optymalizację pod kątem SEO oraz pełną responsywność.",
+    techs: [
+      {
+        name: "TypeScript",
+        slug: ["BEZPIECZEŃSTWO", "PRZEJRZYSTOŚĆ"],
+        icon: "akar-icons:typescript-fill"
+      },
+      {
+        name: "NextJS",
+        slug: ["ELASTYCZNOŚĆ", "SKALOWALNOŚĆ"],
+        icon: "akar-icons:nextjs-fill"
+      },
+      {
+        name: "ReactJS",
+        slug: ["SZYBKOŚĆ", "WYDAJNOŚĆ"],
+        icon: "mdi:react"
+      },
+      {
+        name: "Wordpress",
+        slug: ["POPULARNOŚĆ", "PROSTOTA"],
+        icon: "ic:baseline-wordpress"
+      },
+      {
+        name: "Tailwind",
+        slug: ["MINIMALIZM", "SWOBODA"],
+        icon: "mdi:tailwind"
+      }
+    ]
   },
   process: {
     title: "PROCES TWORZENIA STRON INTERNETOWYCH W TARNOWIE",
@@ -145,6 +178,7 @@ const page = () => {
     <>
       <CityComponent city="w Tarnowie" />
       <WhyCity data={cityData.firstSection} />
+      <SliderSection data={cityData.technologies}/>
       <ProcessCity data={cityData.process} />
       <OfferCity data={cityData.offer} />
       <CityFaq data={cityData.accordion} />
