@@ -3,9 +3,20 @@ import React from 'react'
 import CityComponent from '@components/area/CityComponent'
 import WhyCity from '@components/area/WhyCity'
 
-import tarnow from '@public/assets/images/area/tarnow.webp'
 import CityPortfolio from '@components/area/CityPortfolio'
 import CityFaq from '@components/area/faq/CityFaq'
+import OfferCity from '@components/area/OfferCity'
+
+import tarnow from '@public/assets/images/area/tarnow.webp'
+import firstCard from '@public/assets/images/area/offer/card-1.webp'
+import secondCard from '@public/assets/images/area/offer/card-2.webp'
+import thirdCard from '@public/assets/images/area/offer/card-3.webp'
+import fourthCard from '@public/assets/images/area/offer/card-4.webp'
+import fifthCard from '@public/assets/images/area/offer/card-5.webp'
+import firstIllustration from '@public/assets/images/area/offer/illustration-1.svg'
+import secondllustration from '@public/assets/images/area/offer/illustration-2.svg'
+import thirdllustration from '@public/assets/images/area/offer/illustration-3.svg'
+import Cooperate from '@components/home/sections/AboutUs/sections/Cooperate'
 
 const cityData = {
   firstSection: {
@@ -42,6 +53,39 @@ const cityData = {
       ]
     }
   },
+  offer: {
+    desc: "Tworzymy nowoczesne, szybkie i przyjazne SEO strony internetowe, które przyciągną klientów z Tarnowa i okolic. Specjalizujemy się w:",
+    elements: [
+      {
+        title: "Strony wizytówki",
+        desc: "Idealne dla małych firm i freelancerów z Tarnowa, które chcą zaprezentować się online.",
+        bg: firstCard,
+        illustration: firstIllustration
+      },
+      {
+        title: "Strony firmowe",
+        desc: "Kompleksowe rozwiązania dla przedsiębiorstw, wspierające wizerunek i sprzedaż w regionie.",
+        bg: secondCard,
+        illustration: secondllustration
+      },
+      {
+        title: "Sklepy internetowe",
+        desc: "Bezpieczne i funkcjonalne sklepy dostosowane do potrzeb lokalnego rynku.",
+        bg: thirdCard,
+        illustration: thirdllustration
+      },
+      {
+        title: "Landing page",
+        desc: "Skuteczne strony docelowe, które zwiększą konwersję Twoich kampanii reklamowych.",
+        bg: fourthCard
+      },
+      {
+        title: "Darmowa wycena w 48h!",
+        desc: "Masz pytania? Chcesz poznać koszt strony dostosowanej do Twoich potrzeb? Wypełnij formularz, a przygotujemy dla Ciebie spersonalizowaną ofertę dla strony internetowej w Tarnowie!",
+        bg: fifthCard
+      },
+    ],
+  },
   accordion: {
     elements: [
       {
@@ -71,10 +115,13 @@ const cityData = {
 const page = () => {
   return (
     <>
-      <CityComponent city="w Tarnowie"/>
-      <WhyCity data={cityData.firstSection}/>
-      <CityFaq data={cityData.accordion}/>
+      <CityComponent city="w Tarnowie" />
+      <WhyCity data={cityData.firstSection} />
+
+      <OfferCity data={cityData.offer} />
+      <CityFaq data={cityData.accordion} />
       <CityPortfolio city="w Tarnowie" />
+      {/* <Cooperate /> */}
     </>
   )
 }

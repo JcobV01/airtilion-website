@@ -11,6 +11,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backdropBlur: {
+        '35': '35px',
+      }
     },
     screens: {
       'xxl': { 'min': '2000px' },

@@ -13,7 +13,7 @@ const CityPortfolio = ({city}) => {
             <p className='font-light text-[16px] lg:mt-[8px] sm:text-[14px]'><span className='font-bold'>Masz pomysł na stronę internetową {city}?</span> Skontaktuj się z nami i stwórzmy razem coś wyjątkowego!</p>
             
             <div className='mt-[32px]'>
-                <ButtonArea text="Przejdź do portfolio" width={270} />
+                <ButtonArea text="Przejdź do portfolio" width={270} link="/portfolio" margin={32} />
             </div>
 
         </article>
