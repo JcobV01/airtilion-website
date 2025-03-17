@@ -17,6 +17,7 @@ import firstIllustration from '@public/assets/images/area/offer/illustration-1.s
 import secondllustration from '@public/assets/images/area/offer/illustration-2.svg'
 import thirdllustration from '@public/assets/images/area/offer/illustration-3.svg'
 import Cooperate from '@components/home/sections/AboutUs/sections/Cooperate'
+import ProcessCity from '@components/area/ProcessCity'
 
 const cityData = {
   firstSection: {
@@ -52,6 +53,33 @@ const cityData = {
         }
       ]
     }
+  },
+  process: {
+    title: "PROCES TWORZENIA STRON INTERNETOWYCH W TARNOWIE",
+    desc: "Tworzenie stron internetowych w Tarnowie",
+    question: "Chcesz stworzyć profesjonalną stronę internetową w Tarnowie?",
+    elements: [
+      {
+        icon: "mdi:clipboard-text",
+        title: "Analiza potrzeb klienta",
+        desc: "Na początku poznajemy specyfikę Twojej działalności oraz cele biznesowe, aby stworzyć stronę internetową w Tarnowie dopasowaną do Twoich oczekiwań."
+      },
+      {
+        icon: "solar:pallete-2-bold",
+        title: "Projekt graficzny",
+        desc: "Projektujemy nowoczesne, responsywne i przyciągające uwagę layouty, które wyróżnią Twoją firmę. Każda strona internetowa jest tworzona z myślą o przejrzystości i wygodzie użytkownika."
+      },
+      {
+        icon: "fa6-solid:laptop-code",
+        title: "Programowanie",
+        desc: "Wdrażamy stronę z użyciem najnowszych technologii. Dbamy o szybkość działania i bezpieczeństwo strony, zapewniając pełną funkcjonalność."
+      },
+      {
+        icon: "material-symbols:rocket",
+        title: "Wdrożenie i wsparcie",
+        desc: "Publikujemy gotową stronę w Tarnowie i oferujemy pomoc techniczną po jej uruchomieniu, aby wszystko działało sprawnie od samego początku."
+      },
+    ],
   },
   offer: {
     desc: "Tworzymy nowoczesne, szybkie i przyjazne SEO strony internetowe, które przyciągną klientów z Tarnowa i okolic. Specjalizujemy się w:",
@@ -115,9 +143,9 @@ const cityData = {
 const page = () => {
   return (
     <>
-      {/* <CityComponent city="w Tarnowie" />
-      <WhyCity data={cityData.firstSection} /> */}
-
+      <CityComponent city="w Tarnowie" />
+      <WhyCity data={cityData.firstSection} />
+      <ProcessCity data={cityData.process} />
       <OfferCity data={cityData.offer} />
       <CityFaq data={cityData.accordion} />
       <CityPortfolio city="w Tarnowie" />
