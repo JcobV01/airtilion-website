@@ -23,7 +23,7 @@ const CityComponent = ({ city }) => {
             </article>
 
             <article className='flex-1 xl:pb-[50px] mt-[130px] left-right-animation z-10 sm:mt-[96px]'>
-                <Image src={map} width="751" className='aspect-[1028/960] xl:m-auto testowe' alt="Zdjęcie mapy z oznaczonymi obszarami gdzie tworzymy strony internetowe" />
+                <Image src={map} width="751" className='aspect-[1028/960] xl:m-auto testowe' alt={`Zdjęcie mapy z oznaczonymi obszarami gdzie tworzymy strony internetowe ${city}`} loading='eager'/>
             </article>
 
             {/* `<div className='absolute bottom-[16px] left-[50%] translate-x-[-50%] flex flex-col items-center gap-[8px]'>

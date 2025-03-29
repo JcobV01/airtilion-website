@@ -24,7 +24,7 @@ const CityPortfolio = ({city}) => {
             </div>
 
         </article>
-        <Image src={bg} width={1920} height={500} quality={100} className='w-full h-full absolute top-0 left-0 object-cover brightness-[0.1] z-10'/>
+        <Image src={bg} width={1920} height={500} quality={100} alt='Zdjecie przedstawiające grafikę portfolio strony internetowej w Tarnowie' className='w-full h-full absolute top-0 left-0 object-cover brightness-[0.1] z-10'/>
     </section>
   )
 }

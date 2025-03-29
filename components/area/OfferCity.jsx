@@ -62,11 +62,11 @@ const OfferCity = ({ data }) => {
                             )}
                             {index === 0 ?
                                 <>
-                                    <Image src={element.bg} alt="Tło kafelka" className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-10 lg:hidden'/>
-                                    <Image src={mobilePhoto} alt="Tło kafelka" className='hidden object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-10 rotate-[180deg] lg:block'/>
+                                    <Image src={element.bg} alt="Tło kafelka z widokiem strony internetowej w Tarnowie" className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0 lg:hidden'/>
+                                    <Image src={mobilePhoto} alt="Tło kafelka z widokiem strony internetowej w Tarnowie" className='hidden object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0 rotate-[180deg] lg:block'/>
                                 </>
                                 :
-                                <Image src={element.bg} alt="Tło kafelka" className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-10' />
+                                <Image src={element.bg} alt="Tło kafelka z widokiem strony internetowej w Tarnowie" className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0' />
                             }
                         </div>
                     ))}
