@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const metadata = {
-    title: "Airtilion - Strony internetowe i aplikacje Tarnów",
-    description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Działamy w Tarnowie i okolicach - sprawdź naszą ofertę!",
+    title: "Strony internetowe Tarnów - Airtilion",
+    description: "Nowoczesne strony internetowe w Tarnowie – projektujemy strony, sklepy online, grafiki oraz aplikacje mobilne. Działamy w Tarnowie i okolicach – sprawdź ofertę!",
     alternates: {
         canonical: 'https://airtilion.com/area/tarnow',
     },
