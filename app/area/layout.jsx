@@ -14,8 +14,8 @@ export const metadata = {
 const layout = ({children}) => {
   return (
     <>
-        <main className='xl:h-auto mt-[-131px] w-full flex flex-col justify-end items-center gap-[128px] xl:overflow-y-scroll xl:pt-[150px] sm:pt-[200px]' >
-            <Image src={errorImage} width={1920} height={1080} alt="Obrazek tła" className='h-dvh w-full fixed top-0 left-0 object-cover' />
+        <main className='xl:h-auto mt-[-131px] w-full flex flex-col overflow-x-hidden justify-end items-center gap-[128px] xl:overflow-y-scroll xl:pt-[150px] sm:pt-[200px]' >
+            <Image src={errorImage} width={1920} height={1080} alt="Obrazek tła" className='h-dvh w-full fixed top-0 left-0 object-cover brightness-[0.6]' />
             {children}
         </main>
 

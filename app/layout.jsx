@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify'
 import { Poppins } from 'next/font/google';
 import 'react-toastify/dist/ReactToastify.css';
 import "../styles/global.css"
+import "../styles/slider.css"
 import Navbar from "@components/Navbar";
 import CookiesTemplate from "@components/CookiesTemplate";
 import Script from "next/script";

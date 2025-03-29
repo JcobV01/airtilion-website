@@ -502,6 +502,15 @@ dialog::backdrop {
   transform: translateX(-50px);
 }
 
+.element-visible-bottom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.element-hidden-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+}
 
 /*Slider w opiniach - paginacja*/
 .swiper-pagination{
@@ -572,70 +581,20 @@ dialog::backdrop {
   opacity: 1;
 }
 
-/*perspective style*/
+/* ---area-animations--- */
 
-.perspective-container{
-  perspective: 330px;
+@keyframes left-right-animation{
+  from{transform: translateX(50px);}
+  to{transform: translateX(0);}
 }
 
-.perspective-container > div > div{
-  box-shadow: inset 0px 4px 10px #00000080;
+.left-right-animation{animation: left-right-animation 1s ease-in-out;}
+
+@keyframes right-left-animation{
+  from{transform: translateX(-50px);}
+  to{transform: translateX(0);}
 }
 
-.perspective-container > div:nth-child(1){
-  transform: translateX(-50%) rotateX(0deg) rotateY(-35deg);
-  transform-style: preserve-3d;
-  height: 230px;
-  left: calc(50% - 272px);
-}
+.right-left-animation{animation: right-left-animation 1s ease-in-out;}
 
-.perspective-container > div:nth-child(2){
-  transform: translateX(-50%) rotateX(0deg) rotateY(-22deg);
-  transform-style: preserve-3d;
-  height: 300px;
-  
-  left: calc(50% - 170px);
-}
-
-.perspective-container > div:nth-child(3){
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.perspective-container > div:nth-child(4){
-  transform: translateX(-50%) rotateX(0deg) rotateY(22deg);
-  transform-style: preserve-3d;
-  height: 300px;
-  left: calc(50% + 170px);
-}
-
-.perspective-container > div:nth-child(5){
-  transform: translateX(-50%) rotateX(0deg) rotateY(35deg);
-  transform-style: preserve-3d;
-  height: 230px;
-  left: calc(50% + 272px);
-}
-
-.perspective-container > div:nth-child(1) > div,
-.perspective-container > div:nth-child(5) > div{
-  width: 90px;
-  height: 90px;
-}
-
-.perspective-container > div:nth-child(1) > div > svg,
-.perspective-container > div:nth-child(5) > div > svg{
-  width: 50px;
-  height: 50px;
-}
-
-.perspective-container > div:nth-child(2) > div,
-.perspective-container > div:nth-child(4) > div{
-  width: 100px;
-  height: 100px;
-}
-
-.perspective-container > div:nth-child(2) > div > svg,
-.perspective-container > div:nth-child(4) > div > svg{
-  width: 70px;
-  height: 70px;
-}
+.testowe{mask-image: linear-gradient(90deg, #040404 50%, #04040400 100%);}

@@ -181,9 +181,12 @@ const page = () => {
       <SliderSection data={cityData.technologies}/>
       <ProcessCity data={cityData.process} />
       <OfferCity data={cityData.offer} />
-      <CityFaq data={cityData.accordion} />
       <CityPortfolio city="w Tarnowie" />
-      {/* <Cooperate /> */}
+      <CityFaq data={cityData.accordion} />
+      <section className='w-[1240px] 2xl:w-[960px] lg:w-[90%] mx-auto'>
+        <Cooperate />
+
+      </section>
     </>
   )
 }

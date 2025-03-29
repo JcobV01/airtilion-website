@@ -1,21 +1,30 @@
+"use client"
+
 import Image from '@node_modules/next/image'
 import React from 'react'
 import ButtonArea from './ButtonArea'
+import useIntersectionObserver from '@hooks/useObserver';
+
+import mobilePhoto from '@public/assets/images/area/offer/card-4.webp'
 
 const OfferCity = ({ data }) => {
+    const [ref, isVisible] = useIntersectionObserver();
+
     return (
-        <section className="z-10 relative">
-            <article className='mx-auto w-[1240px] xl:w-[1000px] lg:w-[95%] sm:w-[90%]'>
-                <h3 className='text-[25px] text-[#E2B350] tracking-[2.5px] font-medium'>NASZA OFERTA</h3>
-                <p className='mt-[16px] text-[18px] font-light lg:text-[16px]'>{data.desc}</p>
+        <section ref={ref} className="z-10 relative">
+            <article className={`mx-auto w-[1240px] xl:w-[1000px] lg:w-[95%] sm:w-[90%]`}>
+                <h3 className={`text-[25px] text-[#E2B350] tracking-[2.5px] font-medium transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>NASZA OFERTA</h3>
+                <p className={`mt-[16px] text-[18px] font-light lg:text-[16px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>{data.desc}</p>
 
                 <div className='mt-[64px] flex gap-[30px] flex-wrap lg:justify-center'>
                     {data?.elements.map((element, index) => (
                         <div key={index} className={`flex rounded-[15px] relative backdrop-blur-35 shadow-[0_4px_15px_0_rgba(0,_0,_0,_0.25)] lg:flex-col sm:py-[16px]
-                        ${index === 0 ? 'w-[300px] h-[300px]' : ''}
+                        ${index === 0 ? 'w-[300px] h-[300px] lg:w-[605px] sm:w-full' : ''}
                         ${index === 1 ? 'w-[910px] h-[300px] xl:w-[670px] lg:w-[605px] sm:w-full' : ''}
                         ${index === 2 || index === 3 ? 'w-[605px] h-[250px] xl:w-[485px] lg:w-[605px] sm:w-full' : ''}
-                        ${index === 4 ? 'w-full h-[150px] justify-between items-center lg:w-[605px] lg:h-[250px] lg:justify-center sm:w-full sm:h-full' : ''}`}>
+                        ${index === 4 ? 'w-full h-[150px] justify-between items-center lg:w-[605px] lg:h-[250px] lg:justify-center sm:w-full sm:h-full' : ''}
+                        transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-bottom' : 'element-hidden-bottom'}
+                        `}>
 
                             <div className={`w-full h-full relative z-10 px-[32px] flex flex-col justify-center sm:px-[16px]
                                 ${index === 4 ? 'w-[675px] lg:w-full max-h-max sm:w-full' : ''} ${index === 3 ? 'mx-auto flex items-center' : ''} 
@@ -51,8 +60,14 @@ const OfferCity = ({ data }) => {
                                     <ButtonArea text="Przejdź do darmowej wyceny" link="/offer/pricing" margin={0} width={300} />
                                 </div>
                             )}
-
-                            <Image src={element.bg} alt="Tło kafelka" className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0' />
+                            {index === 0 ?
+                                <>
+                                    <Image src={element.bg} alt="Tło kafelka" className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-10 lg:hidden'/>
+                                    <Image src={mobilePhoto} alt="Tło kafelka" className='hidden object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-10 rotate-[180deg] lg:block'/>
+                                </>
+                                :
+                                <Image src={element.bg} alt="Tło kafelka" className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-10' />
+                            }
                         </div>
                     ))}
                 </div>
