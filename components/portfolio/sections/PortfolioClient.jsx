@@ -25,7 +25,7 @@ const PortfolioClient = ({client}) => {
                     className='w-auto h-[100px] relative z-20 sm:w-[90%] sm:h-[auto]' />
                 <div className='z-20 relative w-[40%] md:w-[75%]'>
                     <h6 className='text-[25px] font-semibold mb-[20px] xxl:text-[27px]'>{client?.Name}</h6>
-                    <p className='text-[17px] xxl:text-[19px]'>{client?.Descritpion}</p>
+                    <p className='text-[17px] xxl:text-[19px]'>{client?.Description}</p>
                 </div>
             </div>
 
