@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const metadata = {
-    title: "Airtilion - Strony internetowe i aplikacje Kielce",
-    description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Działamy w Kielcach i okolicach - sprawdź naszą ofertę!",
+    title: "Strony internetowe Kielce - Airtilion",
+    description: "Nowoczesne strony internetowe w Kielcach – projektujemy strony, sklepy online, grafiki oraz aplikacje mobilne. Działamy w Kielcach i okolicach – sprawdź ofertę!",
     alternates: {
         canonical: 'https://airtilion.com/area/kielce',
     },
