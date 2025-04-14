@@ -2,12 +2,14 @@ import React from 'react'
 
 import CityComponent from '@components/area/CityComponent'
 import WhyCity from '@components/area/WhyCity'
-
 import CityPortfolio from '@components/area/CityPortfolio'
 import CityFaq from '@components/area/faq/CityFaq'
 import OfferCity from '@components/area/OfferCity'
+import Cooperate from '@components/home/sections/AboutUs/sections/Cooperate'
+import ProcessCity from '@components/area/ProcessCity'
+import SliderSection from '@components/area/Slider'
 
-import tarnow from '@public/assets/images/area/tarnow.webp'
+import tarnow from '@public/assets/images/area/cities/tarnow.webp'
 import firstCard from '@public/assets/images/area/offer/card-1.webp'
 import secondCard from '@public/assets/images/area/offer/card-2.webp'
 import thirdCard from '@public/assets/images/area/offer/card-3.webp'
@@ -16,10 +18,6 @@ import fifthCard from '@public/assets/images/area/offer/card-5.webp'
 import firstIllustration from '@public/assets/images/area/offer/illustration-1.svg'
 import secondllustration from '@public/assets/images/area/offer/illustration-2.svg'
 import thirdllustration from '@public/assets/images/area/offer/illustration-3.svg'
-import Cooperate from '@components/home/sections/AboutUs/sections/Cooperate'
-import ProcessCity from '@components/area/ProcessCity'
-import SliderSection from '@components/area/Slider'
-import { technologies } from '@data/portfolio'
 
 const cityData = {
   firstSection: {
