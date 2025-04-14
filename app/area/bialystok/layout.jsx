@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const metadata = {
-    title: "Airtilion - Strony internetowe i aplikacje Białystok",
-    description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Działamy w Białymstoku i okolicach - sprawdź naszą ofertę!",
+    title: "Strony internetowe Białystok - Airtilion",
+    description: "Nowoczesne strony internetowe w Białymstoku – projektujemy strony, sklepy online, grafiki oraz aplikacje mobilne. Działamy w Białymstoku i okolicach – sprawdź ofertę!",
     alternates: {
         canonical: 'https://airtilion.com/area/bialystok',
     },
