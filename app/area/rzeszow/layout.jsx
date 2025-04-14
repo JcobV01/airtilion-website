@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const metadata = {
-    title: "Airtilion - Strony internetowe i aplikacje Rzeszów",
-    description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Działamy w Rzeszowie i okolicach - sprawdź naszą ofertę!",
+    title: "Strony internetowe Tarnów - Airtilion",
+    description: "Nowoczesne strony internetowe w Rzeszowie – projektujemy strony, sklepy online, grafiki oraz aplikacje mobilne. Działamy w Rzeszowie i okolicach – sprawdź ofertę!",
     alternates: {
         canonical: 'https://airtilion.com/area/rzeszow',
     },
