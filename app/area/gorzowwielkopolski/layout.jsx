@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const metadata = {
-    title: "Airtilion - Strony internetowe i aplikacje Gorzów Wielkopolski",
-    description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Działamy w Gorzowie Wielkopolskim i okolicach - sprawdź naszą ofertę!",
+    title: "Strony internetowe Gorzów Wielkopolski - Airtilion",
+    description: "Nowoczesne strony internetowe w Gorzowie Wielkopolskim – projektujemy strony, sklepy online, grafiki oraz aplikacje mobilne. Działamy w Gorzowie Wielkopolskim i okolicach – sprawdź ofertę!",
     alternates: {
         canonical: 'https://airtilion.com/area/gorzowwielkopolski',
     },

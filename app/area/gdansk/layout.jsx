@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const metadata = {
-    title: "Airtilion - Strony internetowe i aplikacje Gdańsk",
-    description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Działamy w Gdańsku i okolicach - sprawdź naszą ofertę!",
+    title: "Strony internetowe Gdańsk - Airtilion",
+    description: "Nowoczesne strony internetowe w Gdańsku – projektujemy strony, sklepy online, grafiki oraz aplikacje mobilne. Działamy w Gdańsku i okolicach – sprawdź ofertę!",
     alternates: {
         canonical: 'https://airtilion.com/area/gdansk',
     },

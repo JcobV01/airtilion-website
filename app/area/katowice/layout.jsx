@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const metadata = {
-    title: "Airtilion - Strony internetowe i aplikacje Katowice",
-    description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Działamy w Katowicach i okolicach - sprawdź naszą ofertę!",
+    title: "Strony internetowe Katowice - Airtilion",
+    description: "Nowoczesne strony internetowe w Katowicach – projektujemy strony, sklepy online, grafiki oraz aplikacje mobilne. Działamy w Katowicach i okolicach – sprawdź ofertę!",
     alternates: {
         canonical: 'https://airtilion.com/area/katowice',
     },

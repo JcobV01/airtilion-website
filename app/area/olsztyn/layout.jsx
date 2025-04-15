@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const metadata = {
-    title: "Airtilion - Strony internetowe i aplikacje Olsztyn",
-    description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Działamy w Olsztynie i okolicach - sprawdź naszą ofertę!",
+    title: "Strony internetowe Olsztyn - Airtilion",
+    description: "Nowoczesne strony internetowe w Olsztynie – projektujemy strony, sklepy online, grafiki oraz aplikacje mobilne. Działamy w Olsztynie i okolicach – sprawdź ofertę!",
     alternates: {
         canonical: 'https://airtilion.com/area/olsztyn',
     },

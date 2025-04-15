@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const metadata = {
-  title: "Airtilion - Strony internetowe i aplikacje Bydgoszcz",
-  description: "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Działamy w Bydgoszczy i okolicach - sprawdź naszą ofertę!",
+  title: "Strony internetowe Bydgoszcz - Airtilion",
+  description: "Nowoczesne strony internetowe w Bydgoszczy – projektujemy strony, sklepy online, grafiki oraz aplikacje mobilne. Działamy w Bydgoszczy i okolicach – sprawdź ofertę!",
   alternates: {
     canonical: 'https://airtilion.com/area/bydgoszcz',
   },
