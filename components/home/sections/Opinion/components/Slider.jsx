@@ -8,16 +8,22 @@ import 'swiper/css/pagination';
 import SliderCard from './SliderCard';
 import { Icon } from '@iconify/react';
 
+import edumocni from '@public/assets/images/opinion/edumocni.webp'
+import amos from '@public/assets/images/opinion/amos.webp'
+
+
 const slide = [
     {
         author: 'Radosław Jaźwiec',
         page: 'aktywnekobiety.com',
-        desc: 'Z pełnym przekonaniem rekomendujemy firmę Airtilion Sp. z o.o. jako solidnego, rzetelnego i profesjonalnego partnera w realizacji projektów internetowych. Efekt ich pracy w pełni odpowiada naszym założeniom.'
+        desc: 'Z pełnym przekonaniem rekomendujemy firmę Airtilion Sp. z o.o. jako solidnego, rzetelnego i profesjonalnego partnera w realizacji projektów internetowych. Efekt ich pracy w pełni odpowiada naszym założeniom.',
+        icon: edumocni,
     },
     {
         author: 'Edyta Kożuch',
         page: 'stowarzyszenie.amos.org.pl',
-        desc: 'Z przyjemnością rekomendujemy firmę Airtilion. Za realizację usługi odpowiedzialni byli panowie Jakub Wadycki oraz Artur Plebańczyk, którzy wykazali sięwysokimi kompetencjami, zaangażowaniem oraz terminowością.'
+        desc: 'Z przyjemnością rekomendujemy firmę Airtilion. Za realizację usługi odpowiedzialni byli panowie Jakub Wadycki oraz Artur Plebańczyk, którzy wykazali sięwysokimi kompetencjami, zaangażowaniem oraz terminowością.',
+        icon: amos
     },
     {
         author: 'Lorem ipsum',
@@ -71,7 +77,7 @@ const Slider = () => {
                 {slide.map((slide, index) => (
                     <SwiperSlide key={index} className="backdrop-blur-[2.5px]">
                         <div className='flex flex-col z-10 h-[250px] w-full xxl:h-[300px] xxl:w-[470px] bg-[rgba(16,16,16,0.40)] rounded-[10px] px-[15px] py-[15px] relative'>
-                            <SliderCard author={slide.author} page={slide.page} desc={slide.desc} />
+                            <SliderCard author={slide.author} page={slide.page} desc={slide.desc} icon={slide.icon}/>
                         </div>
                         <Icon icon="bi:quote" width={200} height={200} alt="Ikona cytatu" className='text-[#121212] absolute right-[-20px] top-[-20px] z-[5]' />
                     </SwiperSlide>

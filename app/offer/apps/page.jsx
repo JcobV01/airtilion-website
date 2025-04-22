@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { toast } from 'react-toastify';
 import { Icon } from '@iconify/react';
@@ -151,6 +151,11 @@ const apps = () => {
     }
     router.push('#form');
   };
+
+  useEffect(() => {
+      window.scrollTo({top: 0, behavior: 'auto'})
+    },[])
+
   return (
     <>
       <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px] offerForm xl:gap-[100px] fold:w-[100%] z-10'>

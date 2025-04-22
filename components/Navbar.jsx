@@ -12,8 +12,8 @@ import { usePathname, useRouter } from 'next/navigation'
 const menu = [
     {
         name: "O nas",
-        link: "/#about",
-        id: "#about"
+        link: "/#about-us",
+        id: "#about-us"
     },
     {
         name: "Współpraca",
@@ -30,11 +30,6 @@ const menu = [
         link: "/portfolio",
         id: ""
     },
-    // {
-    //     name: "Nasze projekty",
-    //     link: "home/projects",
-    //        id: ''
-    // },
     {
         name: "FAQ",
         link: "/faq",
@@ -48,8 +43,8 @@ const menu = [
 ]
 
 const Navbar = () => {
-
-    const path = usePathname()
+    const router = useRouter();
+    const pathname = usePathname()
 
     const [scrolled, setScrolled] = useState(false);
     const [visibility, setVisibility] = useState('hidden')
@@ -85,36 +80,53 @@ const Navbar = () => {
     const handleMenuClick = (e) => {
         const menuItems = document.querySelectorAll('.menu-button')
         menuItems.forEach((item) => item.classList.remove('menu-active'))
-        e.currentTarget.classList.add('menu-active')
+        e.currentTarget.children[0].classList.add('menu-active')
     }
 
-    const handleMenu = (e, link) => {
-        const [basePath, hash] = link.split('#');
-        const currentPath = path;
+    const scrollToSection = (hash, isFromOutside) => {
+        const element = document.getElementById(hash);
+        if (element) {
+            const offset = 128;
+            const visibilityTax = element.classList.contains('about-hidden') || isFromOutside ? 100 : 0;
+            const y = element.getBoundingClientRect().y + window.pageYOffset - offset - visibilityTax;
+            console.log(element.getBoundingClientRect().y)
+            window.scrollTo({top: y, behavior: 'smooth'});
+        }
+    };
 
-        // Sprawdź, czy obecna ścieżka zgadza się z docelową (bez hasha)
-        if (currentPath === (basePath || '/')) {
+    const handleLinkClick = (e, link) => {
+        const isHomePage = pathname === '/';
+        handleMenuClick(e)
+        if (link.startsWith('/#')) {
             e.preventDefault();
-            if (hash) {
-                const target = document.querySelector(`#${hash}`);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
-                    });
-                }
+            const hash = link.split('#')[1];
+            if (isHomePage) {
+                scrollToSection(hash);
+                window.history.pushState(null, '', `#${hash}`);
+            } else {
+                router.push(`/#${hash}`);
             }
         }
-    }
+        else{
+            window.scrollTo({top: 0, behavior: 'auto'})
+        }
+    };
 
     const clearMenu = () => {
         const menuItems = document.querySelectorAll('.menu-button')
         menuItems.forEach((item) => item.classList.remove('menu-active'))
     }
 
+    useEffect(() => {
+        if (pathname === '/' && window.location.hash) {
+            const hash = window.location.hash.slice(1);
+            setTimeout(() => scrollToSection(hash, true), 100);
+        }
+    }, [pathname]);
+
     return (
         <>
-            <nav className='flex fold:flex-col fold:gap-[20px] justify-between px-[100px] 2xl:px-[80px] xl:px-[30px] sm:px-[25px] py-[40px] items-center sticky top-0 w-full z-40 duration-500' style={{ backgroundColor: scrolled && '#00000080', backdropFilter: (scrolled && visibility != 'flex') && 'blur(5px)' }}>
+            <nav className='flex fold:flex-col fold:gap-[20px] justify-between px-[100px] 2xl:px-[80px] xl:px-[30px] sm:px-[25px] py-[40px] items-center fixed top-0 w-full z-40 duration-500' style={{ backgroundColor: scrolled && '#00000080', backdropFilter: (scrolled && visibility != 'flex') && 'blur(5px)' }}>
                 <Link href="/" onClick={clearMenu}>
                     <Image src={logo} width={260} height="auto" alt="logo spółki Airtilion" priority loading='eager' className='xl:w-[200px]' />
                 </Link>
@@ -122,8 +134,8 @@ const Navbar = () => {
 
                     {
                         menu.map((item, index) => (
-                            <Link href={item.link} key={index} onClick={(e) => handleMenu(e, item.link)}>
-                                <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xxl:text-[20px] xl:text-[15px]' onClick={(e) => handleMenuClick(e)}>
+                            <Link href={item.link} key={index} onClick={(e) => handleLinkClick(e, item.link)}>
+                                <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xxl:text-[20px] xl:text-[15px]'>
                                     {item.name}
                                 </button>
                             </Link>
@@ -148,8 +160,8 @@ const Navbar = () => {
                 <div className={`fixed ${visibility} bg-[#000000b5] w-dvw h-dvh top-0 left-0 p-[50px] z-30 flex flex-col gap-[30px] justify-center fold:items-center backdrop-blur-[5px]`}>
                     {
                         menu.map((item, index) => (
-                            <Link href={item.link} key={index} onClick={(e) => handleMenu(e, item.link)}>
-                                <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xl:text-[15px]' onClick={(e) => { handleMenuClick(e); changeVisibility() }}>
+                            <Link href={item.link} key={index} onClick={(e) => {handleLinkClick(e, item.link); changeVisibility()}}>
+                                <button className='relative overflow-hidden duration-500 py-[5px] menu-button hover:text-[#E2B350] xl:text-[15px]'>
                                     {item.name}
                                 </button>
                             </Link>

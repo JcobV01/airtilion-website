@@ -76,13 +76,8 @@ const poppins = Poppins({
 
 
 const rootLayout = ({ children }) => {
-  const headersList = headers();
-
-  // Odczytaj nagłówek 'x-current-path', który został ustawiony przez middleware
-  const currentPath = headersList.get('x-current-path');
-
   return (
-    <html lang="pl-PL" className="scroll-smooth">
+    <html lang="pl-PL">
       <head>
         <Script src={`https://www.googletagmanager.com/gtag/js?id=G-NGHDG87L2Y`} strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">

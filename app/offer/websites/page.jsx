@@ -5,7 +5,7 @@ import ButtonPrice from '@components/offer/ButtonPrice'
 import Cards from '@components/offer/Cards'
 import DetailsOffer from '@components/offer/DetailsOffer'
 import InfoAboutOffer from '@components/offer/InfoAboutOffer'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import lionCub from '@public/assets/images/offer/lionCub.webp'
 import lion from '@public/assets/images/offer/lion.webp'
@@ -34,6 +34,10 @@ const websites = () => {
       dialogRef.current.close();
     }
   }
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'auto'})
+  },[])
 
   const cardsSwitcher = [
     {

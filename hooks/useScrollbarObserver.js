@@ -5,15 +5,15 @@ const useScrollObserver = (changeMenu) => {
     const observerCallback = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          if (entry.target.id === 'nav-aboutus') {
+          if (entry.target.id === 'about-us') {
             changeMenu(0);
-          } else if (entry.target.id === 'nav-coop') {
+          } else if (entry.target.id === 'cooperation') {
             changeMenu(1);
-          } else if (entry.target.id === 'nav-offer') {
+          } else if (entry.target.id === 'offer') {
             changeMenu(2);
-          } else if (entry.target.id === 'nav-portfolio') {
+          } else if (entry.target.id === 'portfolio') {
             changeMenu(3);
-          } else if (entry.target.id === 'nav-contact') {
+          } else if (entry.target.id === 'contact') {
             changeMenu(5);
           }
         }

@@ -106,9 +106,7 @@ const page = ({ params }) => {
             }
         };
 
-        fetchProject().then(() => {
-            window.scrollTo(0, 0)
-        });
+        fetchProject()
     }, [id])
 
     useEffect(() => {
@@ -139,6 +137,7 @@ const page = ({ params }) => {
         };
     },[data])
 
+    useEffect(() => window.scrollTo({ top: 0, behavior: 'auto' }), [])
 
     return (
         <section className='z-10 flex flex-col items-center gap-[150px] sm:gap-[100px]'>

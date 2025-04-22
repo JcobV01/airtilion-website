@@ -3,7 +3,7 @@
 import Heading from '@components/Heading'
 import CardsWithoutPrice from '@components/offer/CardsWithoutPrice'
 import DialogOffer from '@components/offer/DialogOffer'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const services = () => {
   const [dialogTitle, setDialogTitle] = useState(false);
@@ -24,6 +24,10 @@ const services = () => {
       dialogRef.current.close();
     }
   }
+
+  useEffect(() => {
+      window.scrollTo({top: 0, behavior: 'auto'})
+    },[])
 
   const cardsSwitcher = [
     {

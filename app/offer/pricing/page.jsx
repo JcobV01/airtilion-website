@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Heading from '@components/Heading'
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation'
@@ -146,6 +146,10 @@ const pricing = () => {
     }
     router.push('#form');
   };
+
+  useEffect(() => {
+      window.scrollTo({top: 0, behavior: 'auto'})
+    },[])
 
 
   return (

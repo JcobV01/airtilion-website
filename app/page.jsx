@@ -38,7 +38,7 @@ const home = () => {
       </Head>
 
       <Header title="Budujemy przyszłość Twojej marki w Internecie" subtitle="Nowoczesne strony i aplikacje internetowe dopasowane do Twoich potrzeb." img={HeaderBgDesktop} positionBottom={false} />
-      <main className='flex flex-col relative mt-[-250px] gap-[200px] md:gap-[100px]'>
+      <main className='flex flex-col relative mt-[-120px] gap-[200px] md:gap-[100px]'>
         <Encourage />
         <AboutUs />
         <Cooperation />

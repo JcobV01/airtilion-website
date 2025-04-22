@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Heading from '@components/Heading'
 import ButtonPrice from '@components/offer/ButtonPrice';
 import Cards from '@components/offer/Cards'
@@ -33,6 +33,10 @@ const shops = () => {
       dialogRef.current.close();
     }
   }
+
+  useEffect(() => {
+      window.scrollTo({top: 0, behavior: 'auto'})
+    },[])
 
   const cardsSwitcher = [
     {

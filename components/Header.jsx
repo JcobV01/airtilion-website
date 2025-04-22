@@ -14,7 +14,7 @@ const Header = ({ title, subtitle, img, positionBottom = true }) => {
   return (
     <header
       ref={ref}
-      className={`w-full h-dvh relative top-[-133px] flex justify-center items-center z-10 transition-opacity duration-1000 fold:top-[-180px]`}
+      className={`w-full h-dvh relative flex justify-center items-center z-10 transition-opacity duration-1000 fold:top-[-180px]`}
     >
       <Image
         src={img.src}

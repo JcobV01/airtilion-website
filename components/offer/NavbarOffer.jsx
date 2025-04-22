@@ -41,14 +41,21 @@ const NavbarOffer = () => {
     }
   ]
 
+  const handleMenuClick = (e) => {
+    const menuItems = document.querySelectorAll('.menu-button')
+    menuItems.forEach((item) => item.classList.remove('menu-active'))
+    menuItems[2].classList.add('menu-active')
+  }
+
+
   return (
     <nav className='flex justify-center gap-[30px] z-10 lg:flex-wrap'>
       {
         offerMenu.map((item, index) => {
           const isActive = pathname.startsWith(`/offer${item.link}`);
           return (
-            <Link href={`/offer${item.link}`} key={index}>
-              <div className={`h-[375px] w-[180px] bg-center flex justify-center items-center ${isActive ? '' : 'grayscale'}`} style={{ backgroundImage: `url(${item.img.src})` }}>
+            <Link href={`/offer${item.link}`} key={index} onClick={(e) => handleMenuClick(e)}>
+              <div className={`h-[375px] w-[180px] bg-center flex justify-center items-center duration-500 hover:grayscale-0 ${isActive ? '' : 'grayscale'}`} style={{ backgroundImage: `url(${item.img.src})` }}>
                 <p className='text-[25px] font-light tracking-[2.5px] text-center'>
                   {item.name}
                 </p>
