@@ -12,7 +12,7 @@ const page = () => {
   return (
     <>
       <section className='w-[1240px] flex flex-col gap-[100px] xxl:w-[1500px] xl:w-[90%]'>
-        <div className='relative z-10 flex flex-col gap-[50px]'>
+        <div className='relative z-10 flex flex-col gap-[50px] pt-[32px]'>
           <Heading title="Portfolio" subtitle="ZOBACZ NASZE REALIZACJE" />
           <p className='text-[15px] xxl:text-[22px]'>Poznaj nasze pełne portfolio, gdzie każdy projekt opowiada unikalną historię sukcesu. Przedstawiamy szeroką gamę realizacji, które odzwierciedlają nasze zaangażowanie w tworzenie innowacyjnych rozwiązań. Każdy projekt zawiera szczegółowy opis, ukazujący naszą metodykę pracy, wykorzystane technologie oraz efekty współpracy z klientami. Zanurz się w świat kreatywnych pomysłów i sprawdź, jak możemy wspólnie przekroczyć granice możliwości, budując przyszłość Twojej marki!</p>
         </div>
