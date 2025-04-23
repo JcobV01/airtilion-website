@@ -25,11 +25,11 @@ const slide = [
         desc: 'Z przyjemnością rekomendujemy firmę Airtilion. Za realizację usługi odpowiedzialni byli panowie Jakub Wadycki oraz Artur Plebańczyk, którzy wykazali sięwysokimi kompetencjami, zaangażowaniem oraz terminowością.',
         icon: amos
     },
-    {
-        author: 'Lorem ipsum',
-        page: 'page-one-site.pl',
-        desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum'
-    },
+    // {
+    //     author: 'Lorem ipsum',
+    //     page: 'page-one-site.pl',
+    //     desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum'
+    // },
     // {
     //     author: 'Józek Nowak',
     //     page: 'page-one-site.pl',
@@ -53,7 +53,7 @@ const Slider = () => {
             <Swiper
                 modules={[Pagination, Autoplay]}
                 spaceBetween={50}
-                slidesPerView={3}
+                slidesPerView={2}
                 navigation
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
@@ -70,7 +70,7 @@ const Slider = () => {
                         slidesPerView: 2, 
                     },
                     1536: {
-                        slidesPerView: 3,
+                        slidesPerView: 2,
                     }
                 }}
             >
