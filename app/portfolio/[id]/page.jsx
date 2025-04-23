@@ -140,7 +140,7 @@ const page = ({ params }) => {
     useEffect(() => window.scrollTo({ top: 0, behavior: 'auto' }), [])
 
     return (
-        <section className='z-10 flex flex-col items-center gap-[150px] sm:gap-[100px]'>
+        <section className='z-10 flex flex-col items-center gap-[150px] sm:gap-[100px] max-w-[1920px]'>
             {data.length > 0 ?
                 <>
                     <article id="description" className='w-[1240px] flex flex-col gap-[50px] xxl:w-[1500px] xl:w-[90%] observer'>
