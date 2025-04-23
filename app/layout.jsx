@@ -76,6 +76,16 @@ const poppins = Poppins({
 
 
 const rootLayout = ({ children }) => {
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Airtilion",
+    "alternateName": "Airtilion Strony Internetowe",
+    "url": "https://airtilion.com/"
+  };
+
+
   return (
     <html lang="pl-PL">
       <head>
@@ -94,6 +104,21 @@ const rootLayout = ({ children }) => {
           gtag('config', 'G-NGHDG87L2Y');
         `}
         </Script>
+        <Script id="meta-piksel" strategy="afterInteractive">
+          {`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '24010852071834024');
+          fbq('track', 'PageView');
+        `}
+        </Script>
+        <Script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         <meta name="robots" content="noodp,noydir"></meta>
       </head>
       <body className={`${poppins.className} w-dvw overflow-x-hidden bg-center`}>
@@ -104,6 +129,9 @@ const rootLayout = ({ children }) => {
         {children}
         <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
         <CookiesTemplate />
+        <noscript>
+          <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=24010852071834024&ev=PageView&noscript=1"/>
+        </noscript>
       </body>
     </html>
   )
