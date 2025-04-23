@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Heading from '@components/Heading'
 import PortfolioApps from '@components/portfolio/PortfolioApps'
 import PortfolioShops from '@components/portfolio/PortfolioShops'
@@ -8,6 +8,7 @@ import PortfolioSites from '@components/portfolio/PortfolioSites'
 
 const page = () => {
   const [active, setActive] = useState('sites')
+  useEffect(() => window.scrollTo({ top: 0, behavior: 'auto' }), [])
 
   return (
     <>

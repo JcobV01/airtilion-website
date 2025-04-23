@@ -1,6 +1,6 @@
 import Footer from '@components/Footer'
 import Header from '@components/Header'
-import HeaderBg from '@public/assets/images/headerOfferPortfolio.webp'
+import HeaderBg from '@public/assets/images/headers/portfolio.webp'
 import React from 'react'
 
 export const metadata = {

@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import HeaderBg from '@public/assets/images/headerOfferPortfolio.webp'
+import HeaderBg from '@public/assets/images/headers/faq.webp'
 
 export const metadata = {
     title: "Airtilion - FAQ - Znajdź odpiowiedź na swoje pytania",

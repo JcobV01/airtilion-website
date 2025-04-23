@@ -1,7 +1,7 @@
 import Footer from '@components/Footer'
 import Header from '@components/Header'
 import NavbarOffer from '@components/offer/NavbarOffer'
-import HeaderBg from '@public/assets/images/headerOfferPortfolio.webp'
+import HeaderBg from '@public/assets/images/headers/offer.webp'
 import React from 'react'
 
 export const metadata = {
@@ -15,8 +15,8 @@ export const metadata = {
 const layout = ({ children }) => {
   return (
     <>
-      <Header title="Odkryj nowe horyzonty z Naszą wyjątkową ofertą" subtitle="Przekraczaj granice możliwości - Twoja przygoda z Nami zaczyna się tutaj" img={HeaderBg} />
-      <main className='flex flex-col relative mt-[-120px] items-center background'>
+      <Header title="Odkryj nowe horyzonty z Naszą wyjątkową ofertą" subtitle="Przekraczaj granice możliwości - Twoja przygoda z Nami zaczyna się tutaj" img={HeaderBg} positionBottom={false} position='center'/>
+      <main className='flex flex-col relative mt-[-100px] items-center background'>
         <NavbarOffer />
         {children}
       <Footer />
