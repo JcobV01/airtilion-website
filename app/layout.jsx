@@ -120,6 +120,7 @@ const rootLayout = ({ children }) => {
         </Script>
         <Script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         <meta name="robots" content="noodp,noydir"></meta>
+        <meta name="facebook-domain-verification" content="5cj55zrwldt94i8ln6uexw6mt9ijgn" />
       </head>
       <body className={`${poppins.className} w-dvw overflow-x-hidden bg-center`}>
         <noscript>
