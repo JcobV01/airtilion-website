@@ -217,7 +217,7 @@ const pricing = () => {
               </li>
             </ul>
           </div>
-          {/* <form id="form" onSubmit={createPricing} className={`mt-[100px] flex flex-col text-[18px] font-extralight space-y-[50px] bg-[rgba(27,27,27,0.20)] rounded-[10px] backdrop-blur-[5px] py-[40px] px-[50px] xxl:text-[22px] sm:px-[10px] sm:mt-[50px]`}>
+          <form id="form" onSubmit={createPricing} className={`mt-[100px] flex flex-col text-[18px] font-extralight space-y-[50px] bg-[rgba(27,27,27,0.20)] rounded-[10px] backdrop-blur-[5px] py-[40px] px-[50px] xxl:text-[22px] sm:px-[10px] sm:mt-[50px]`}>
             {error && <span className='text-red-700 font-light tracking-[2px] mb-[5px]'>{error}</span>}
             <div>
               <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>1. Rodzaj strony internetowej</h5>
@@ -368,7 +368,7 @@ const pricing = () => {
               <hr className='w-[800px] bg-[rgba(226,179,80,0.50)] h-[1px] border-none lg:w-[90%]'></hr>
             </div>
 
-            <div style={{ backgroundImage: `url(${imageBackground.src})` }} className='h-[600px] rounded-[10px] xxl:h-[700px] xxl:bg-cover xxl:bg-no-repeat lg:w-[95%] lg:flex lg:mx-auto lg:flex-col lg:bg-center sm:h-[650px] sm:bg-cover sm:bg-no-repeat'>
+            {/* <div style={{ backgroundImage: `url(${imageBackground.src})` }} className='h-[600px] rounded-[10px] xxl:h-[700px] xxl:bg-cover xxl:bg-no-repeat lg:w-[95%] lg:flex lg:mx-auto lg:flex-col lg:bg-center sm:h-[650px] sm:bg-cover sm:bg-no-repeat'>
               <h5 className='text-[20px] font-normal text-center pt-[50px] xxl:text-[24px] sm:text-[18px]'>Podstawowe informacje o kliencie</h5>
               <div className='mt-[20px] pl-[25px] flex justify-center gap-[200px] lg:pl-[0px]'>
                 <div className='flex flex-col gap-[15px] w-[800px] xxl:text-[24px] lg:w-[90%] sm:text-[16px]'>
@@ -402,8 +402,8 @@ const pricing = () => {
                 </div>
 
               </div>
-            </div>
-          </form> */}
+            </div> */}
+          </form>
         </article>
       </section>
       <section>
