@@ -114,7 +114,7 @@ const rootLayout = ({ children }) => {
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '24010852071834024');
+          fbq('init', '23875045218747088');
           fbq('track', 'PageView');
         `}
         </Script>
@@ -131,7 +131,7 @@ const rootLayout = ({ children }) => {
         <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
         <CookiesTemplate />
         <noscript>
-          <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=24010852071834024&ev=PageView&noscript=1"/>
+          <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=23875045218747088&ev=PageView&noscript=1"/>
         </noscript>
       </body>
     </html>
