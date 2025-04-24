@@ -365,7 +365,7 @@ const pricing = () => {
               </div>
             </div>
             <div className='flex justify-center'>
-              <hr className='w-[800px] bg-[rgba(226,179,80,0.50)] h-[1px] border-none md:w-[90%]'></hr>
+              <hr className='w-[800px] bg-[rgba(226,179,80,0.50)] h-[1px] border-none lg:w-[90%]'></hr>
             </div>
 
             <div style={{ backgroundImage: `url(${imageBackground.src})` }} className='h-[600px] rounded-[10px] xxl:h-[700px] xxl:bg-cover xxl:bg-no-repeat lg:w-[95%] lg:flex lg:mx-auto lg:flex-col lg:bg-center sm:h-[650px] sm:bg-cover sm:bg-no-repeat'>
