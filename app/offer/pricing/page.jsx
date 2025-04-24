@@ -217,7 +217,7 @@ const pricing = () => {
               </li>
             </ul>
           </div>
-          <form id="form" onSubmit={createPricing} className={`mt-[100px] flex flex-col text-[18px] font-extralight space-y-[50px] bg-[rgba(27,27,27,0.20)] rounded-[10px] backdrop-blur-[5px] py-[40px] px-[50px] xxl:text-[22px] sm:px-[10px] sm:mt-[50px]`}>
+          {/* <form id="form" onSubmit={createPricing} className={`mt-[100px] flex flex-col text-[18px] font-extralight space-y-[50px] bg-[rgba(27,27,27,0.20)] rounded-[10px] backdrop-blur-[5px] py-[40px] px-[50px] xxl:text-[22px] sm:px-[10px] sm:mt-[50px]`}>
             {error && <span className='text-red-700 font-light tracking-[2px] mb-[5px]'>{error}</span>}
             <div>
               <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>1. Rodzaj strony internetowej</h5>
@@ -403,7 +403,7 @@ const pricing = () => {
 
               </div>
             </div>
-          </form>
+          </form> */}
         </article>
       </section>
       <section>
