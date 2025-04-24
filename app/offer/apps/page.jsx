@@ -395,7 +395,7 @@ const apps = () => {
               <div className='mt-[20px] px-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px] w-full'>
 
-                  <textarea rows="10" type="text" name="Additional_services" placeholder='Jeśli w formularzu nie znalazłeś/aś dodatkowych usług, które Cię interesują, wpisze je tutaj.' className='py-[10px] px-[15px] outline-none bg-[#0c0c0c80] border-[1px] border-[#a5a5a5] resize-none' onChange={handleInputChange} />
+                  <textarea type="text" name="Additional_services" placeholder='Jeśli w formularzu nie znalazłeś/aś dodatkowych usług, które Cię interesują, wpisze je tutaj.' className='min-h-[200px] w-full py-[10px] px-[15px] outline-none bg-[#0c0c0c80] border-[1px] border-[#a5a5a5] resize-none lg:text-[16px]' onChange={handleInputChange} />
 
                 </div>
 
