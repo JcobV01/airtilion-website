@@ -353,7 +353,7 @@ const pricing = () => {
 
               </div>
             </div>
-            <div>
+            {/* <div>
               <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>8. Dodatkowe usługi</h5>
               <div className='mt-[20px] px-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px] w-full'>
@@ -363,10 +363,10 @@ const pricing = () => {
                 </div>
 
               </div>
-            </div>
-            <div className='flex justify-center'>
+            </div> */}
+            {/* <div className='flex justify-center'>
               <hr className='w-[800px] bg-[rgba(226,179,80,0.50)] h-[1px] border-none lg:w-[90%]'></hr>
-            </div>
+            </div> */}
 
             {/* <div style={{ backgroundImage: `url(${imageBackground.src})` }} className='h-[600px] rounded-[10px] xxl:h-[700px] xxl:bg-cover xxl:bg-no-repeat lg:w-[95%] lg:flex lg:mx-auto lg:flex-col lg:bg-center sm:h-[650px] sm:bg-cover sm:bg-no-repeat'>
               <h5 className='text-[20px] font-normal text-center pt-[50px] xxl:text-[24px] sm:text-[18px]'>Podstawowe informacje o kliencie</h5>
