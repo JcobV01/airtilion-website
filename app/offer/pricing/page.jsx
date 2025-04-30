@@ -148,8 +148,9 @@ const pricing = () => {
   };
 
   useEffect(() => {
-      window.scrollTo({top: 0, behavior: 'auto'})
-    },[])
+    const topScroll = document.querySelector('form').getBoundingClientRect().top - 150;
+    window.scrollTo({ top: topScroll, behavior: 'auto' })
+  }, [])
 
 
   return (
