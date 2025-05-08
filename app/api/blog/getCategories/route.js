@@ -1,9 +1,9 @@
 export async function GET() {
     try {
       // Fetch all categories from WP REST API
-      const url = new URL('http://localhost:8886/wp-json/wp/v2/categories');
+      const url = new URL('http://localhost:8886/wp-json/wp/v2/categories?per_page=6');
       // Możesz dodać parametry per_page, order itp.
-      url.searchParams.set('per_page', 100);
+      // url.searchParams.set('per_page', 100);
   
       const resp = await fetch(url);
       if (!resp.ok) {

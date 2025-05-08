@@ -19,7 +19,7 @@ const socials = [
     {icon: 'mdi:youtube', link: 'https://www.youtube.com/@Airtilion'},
 ]
 
-const AsideSection = () => {
+const AsideSection = ({phrase, setPhrase}) => {
     const [popularPosts, setPopularPosts] = useState([])
     const [categories, setCategories] = useState([])
 
@@ -52,7 +52,7 @@ const AsideSection = () => {
 
     return (
         <aside className='flex-1 flex flex-col gap-[32px] sticky top-[150px]'>
-            <input type="text" placeholder='Wyszukaj' className='bg-transparent border-[0.5px] border-[#ABABAB40] rounded-[5px]  h-[60px] px-[24px] font-light focus:outline-[#e2b350] focus:outline-[1px]' />
+            <input type="text" onChange={(e) => setPhrase(e.target.value)} placeholder='Wyszukaj' className='bg-transparent border-[0.5px] border-[#ABABAB40] rounded-[5px]  h-[60px] px-[24px] font-light focus:outline-[#e2b350] focus:outline-[1px]' />
             <div className='border-[0.5px] border-[#ABABAB40] rounded-[5px] px-[32px] py-[24px] flex flex-col gap-[48px]'>
 
                 <div className='flex flex-col gap-[16px]'>

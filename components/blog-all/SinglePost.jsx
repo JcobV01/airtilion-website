@@ -7,8 +7,8 @@ const SinglePost = ({ category, title, intro, image }) => {
         <div className='h-[438px] w-[468px] flex flex-col p-[32px] relative justify-between rounded-[15px] overflow-hidden'>
             <Category name={category} />
             <div className='z-[4]'>
-                <h4 className='text-[25px] font-semibold line-clamp-3 mb-[8px]'>{title}</h4>
-                <p className='text-[16px] text-[#B4B4B4] line-clamp-3 '>{intro}</p>
+                <h4 className='text-[25px] font-semibold line-clamp-3 mb-[8px]' dangerouslySetInnerHTML={{__html: title}}></h4>
+                <p className='text-[16px] text-[#B4B4B4] line-clamp-3' dangerouslySetInnerHTML={{__html: intro}}></p>
             </div>
 
             <div className='absolute w-full h-full top-0 left-0 bg-[linear-gradient(270deg,#000000_0%,#00000000_100%)] z-[2] opacity-[0.95]'></div>
