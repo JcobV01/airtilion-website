@@ -7,10 +7,11 @@ import Link from 'next/link'
 import NavbarFooter from './NavbarFooter'
 import { Icon } from '@iconify/react'
 
-const Footer = () => {
+const Footer = ({bg = false}) => {
     const date = new Date()
     return (
         <footer className='relative z-10 w-full'>
+            {bg && <div className='absolute w-full h-full top-0 left-0 z-[-1] bg-[#04040487] backdrop-blur-[7px]'></div>}
             <article className='flex justify-center bg-cover lg:bg-center' style={{ backgroundImage: `url(${FooterSmoke.src})` }}>
                 <div className='flex flex-col mt-[100px] items-center'>
                     <Link href="/">
