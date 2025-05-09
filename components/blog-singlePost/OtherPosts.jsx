@@ -23,7 +23,7 @@ const OtherPosts = ({ category }) => {
             })
         });
         const postsJ = await data.json();
-        setPosts(postsJ)
+        setPosts(postsJ.posts)
     }
 
     useEffect(() => { getData(); }, [])

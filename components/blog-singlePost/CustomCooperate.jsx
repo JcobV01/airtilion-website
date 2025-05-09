@@ -15,10 +15,13 @@ const CustomCooperate = () => {
     useEffect(() => {
         document.body.style.overflow = isContactOpen ? 'hidden' : ''
         const nav = document.querySelector('nav')
+        const footer = document.querySelector('footer')
         if (isContactOpen) {
             nav.classList.add('hidden')
+            footer.classList.add('hidden')
         } else {
             nav.classList.remove('hidden')
+            footer.classList.remove('hidden')
         }
     }, [isContactOpen])
 
