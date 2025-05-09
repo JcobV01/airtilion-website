@@ -8,7 +8,6 @@ export async function POST(req) {
         { status: 400 }
       );
     }
-
     if (paginate && (page === undefined || page === null)) {
       return new Response(
         JSON.stringify({ error: 'Parametr page jest wymagany, gdy paginate ma wartość true' }),
@@ -16,11 +15,11 @@ export async function POST(req) {
       );
     }
 
+    // 1) Pobierz ID kategorii jeśli potrzeba
     let categoryId = null;
     if (categoryName !== '') {
       const catUrl = new URL('http://localhost:8886/wp-json/wp/v2/categories');
       catUrl.searchParams.set('search', categoryName);
-
       const catResp = await fetch(catUrl);
       if (!catResp.ok) throw new Error(`WP API (categories) zwróciło błąd ${catResp.status}`);
       const catData = await catResp.json();
@@ -32,6 +31,7 @@ export async function POST(req) {
       categoryId = matched.id;
     }
 
+    // 2) Przygotuj zapytanie do WP
     const perPage = limit ?? 100;
     const postsUrl = new URL('http://localhost:8886/wp-json/wp/v2/posts');
     postsUrl.searchParams.set('_embed', '');
@@ -44,17 +44,16 @@ export async function POST(req) {
     if (!resp.ok) throw new Error(`WP API (posts) zwróciło błąd ${resp.status}`);
     const posts = await resp.json();
 
-    const filtered = searchTerm
-      ? posts.filter(post => post.title.rendered.toLowerCase().includes(searchTerm.toLowerCase()))
-      : posts;
+    // 3) Pobierz z nagłówków WP całkowitą liczbę elementów
+    const totalItemsHeader = resp.headers.get('X-WP-Total');
+    const totalItems = totalItemsHeader ? parseInt(totalItemsHeader, 10) : posts.length;
+    const totalPages = paginate ? Math.ceil(totalItems / perPage) : 1;
 
-    const simplified = filtered.map(post => {
+    // 4) Mapowanie wyników z kategorią
+    const simplified = posts.map(post => {
       const embeddedCats = post._embedded?.['wp:term']?.[0] ?? [];
-      // znajdź pierwszą kategorię, która nie jest Popularne ani Polecane
       const firstValid = embeddedCats.find(c => c.name !== 'Popularne' && c.name !== 'Polecane');
-      // jeśli brak, ustaw "Bez kategorii"
       const firstCat = firstValid ? firstValid.name : 'Bez kategorii';
-
       return {
         title: post.title.rendered,
         category: categoryName !== '' ? categoryName : firstCat,
@@ -64,12 +63,11 @@ export async function POST(req) {
       };
     });
 
-    return new Response(JSON.stringify(simplified), { status: 200 });
+    // 5) Zwróć dane i liczbę stron
+    const result = { totalPages, posts: simplified };
+    return new Response(JSON.stringify(result), { status: 200 });
   } catch (error) {
     console.error('Błąd pobierania:', error);
-    return new Response(
-      JSON.stringify({ error: 'Błąd serwera' }),
-      { status: 500 }
-    );
+    return new Response(JSON.stringify({ error: 'Błąd serwera' }), { status: 500 });
   }
 }
