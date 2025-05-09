@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react'
 import Category from './Category'
 import Link from 'next/link'
 import RecomendationsLoader from './RecomendationsLoader'
+import useIntersectionObserver from '@hooks/useObserver'
 
 const styles = [
     'row-span-2 col-start-1',
@@ -40,12 +41,12 @@ const Recomendations = () => {
         setLoading(false)
     }
 
-
-
     useEffect(() => { getData() }, [])
 
+    const [ ref, isVisible ] = useIntersectionObserver();
+
     return (
-        <section className='w-[1400px] mx-auto flex flex-col gap-[32px]'>
+        <section ref={ref} className={`w-[1400px] mx-auto flex flex-col gap-[32px] transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
             <Heading title="Polecane treści" subtitle="artykuły wybrane z myślą o tobie" />
 
             <article className="grid [grid-template-columns:350px_298px_40px_298px_350px] [grid-template-rows:298px_298px] gap-[16px]">

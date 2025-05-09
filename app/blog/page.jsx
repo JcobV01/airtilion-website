@@ -7,15 +7,18 @@ import Recomendations from '@components/blog-all/Recomendations'
 import Latest from '@components/blog-all/Latest'
 import Cooperate from '@components/home/sections/AboutUs/sections/Cooperate'
 import Footer from '@components/Footer'
+import useIntersectionObserver from '@hooks/useObserver'
 
 const page = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' })
   }, [])
 
+  const [ ref, isVisible ] = useIntersectionObserver();
+
   return (
     <>
-      <header className='min-h-[600px] flex flex-col justify-end items-start px-[128px] pb-[128px]'>
+      <header ref={ref} className={`min-h-[600px] flex flex-col justify-end items-start px-[128px] pb-[128px] transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
         <h1 className='text-[50px] font-bold'>Blog pełen wiedzy i inspiracji</h1>
         <p className='text-[25px] w-[700px] font-light mt-[8px]'>Zagłęb się w artykuły, porady i historie, pobudzające Twoją kreatywność i poszerzające horyzonty.</p>
       </header>
