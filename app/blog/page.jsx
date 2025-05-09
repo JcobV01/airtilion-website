@@ -1,12 +1,17 @@
+'use client'
+
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import bg from '@public/assets/images/headers/blog-bg.webp'
 import Recomendations from '@components/blog-all/Recomendations'
 import Latest from '@components/blog-all/Latest'
 import Cooperate from '@components/home/sections/AboutUs/sections/Cooperate'
-import Footer from '@components/Footer'
 
 const page = () => {
+   useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'auto'})
+      },[])
+
   return (
     <>
         <header className='min-h-[600px] flex flex-col justify-end items-start px-[128px] pb-[128px]'>

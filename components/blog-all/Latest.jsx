@@ -32,15 +32,17 @@ const Latest = () => {
             })
         });
         const postsJ = await data.json();
-        console.log(postsJ)
         setPosts(postsJ.posts)
         setTotalPages(postsJ.totalPages)
     }
 
+    const clearFilters = () => {
+        setCategory('')
+        setPhrase('')
+    }
 
     useEffect(() => { 
-        // getData();
-        console.log("Kategoria", category)
+        getData();
     }, [phrase, page, category])
 
 
@@ -48,7 +50,15 @@ const Latest = () => {
         <section className='w-[1400px] mx-auto flex flex-col gap-[128px] '>
             <Heading title="Najnowsze" subtitle="bądź na bierząco z nowościami" />
 
-            <div className='flex justify-between gap-[32px]'>
+            <div className='flex justify-between gap-[32px] relative'>
+
+                {(category || phrase) && <div className='absolute left-0 top-[-64px] flex gap-[8px] items-center'>
+                    <p className='font-light text-[#ABABAB]'>Filtry:</p>
+                        {category && <p className='bg-[#EFD8A7] text-black px-[16px] py-[3px] rounded-[5px]'>{category}</p>}
+                        {phrase && <p className='bg-[#EFD8A7] text-black px-[16px] py-[3px] rounded-[5px]'>"{phrase}"</p>}
+                    <button className='text-[#ABABAB] ml-[32px]' onClick={clearFilters}>Wyczyść filtry</button>
+                </div>}
+
                 <article className='w-[952px] flex flex-wrap gap-[16px]'>
                     {posts?.map((post, index) => (
                         <SinglePost key={index} title={post?.title} category={post?.category} intro={post?.intro} slug={post?.slug} image={post?.image || 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}/>

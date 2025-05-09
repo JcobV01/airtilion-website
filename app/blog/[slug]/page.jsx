@@ -13,9 +13,10 @@ import CustomCooperate from '@components/blog-singlePost/CustomCooperate';
 
 
 export const revalidate = 60;
+const BLOG_URL = process.env.BLOG_URL;
 
 export async function generateStaticParams() {
-  const posts = await fetch('http://localhost:8882/wp-json/wp/v2/posts/').then((res) =>
+  const posts = await fetch(`${BLOG_URL}/wp-json/wp/v2/posts/`).then((res) =>
     res.json()
   )
   return posts.map((post) => ({
@@ -25,7 +26,7 @@ export async function generateStaticParams() {
 
 const page = async ({ params }) => {
   const { slug } = await params
-  const posts = await fetch(`http://localhost:8882/wp-json/wp/v2/posts?slug=${slug}&_embed`).then((res) =>
+  const posts = await fetch(`${BLOG_URL}/wp-json/wp/v2/posts?slug=${slug}&_embed`).then((res) =>
     res.json()
   )
 

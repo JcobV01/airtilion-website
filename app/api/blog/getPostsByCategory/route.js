@@ -1,7 +1,7 @@
 export async function POST(req) {
-    try {
+  try {
     const { categoryName, limit, paginate, page, searchTerm } = await req.json();
-  
+
     if (categoryName === undefined || categoryName === null) {
       return new Response(
         JSON.stringify({ error: 'Brak wymaganego parametru categoryName' }),
@@ -15,10 +15,12 @@ export async function POST(req) {
       );
     }
 
+    const BLOG_URL = process.env.BLOG_URL;
+
     // 1) Pobierz ID kategorii jeśli potrzeba
     let categoryId = null;
     if (categoryName !== '') {
-      const catUrl = new URL('http://localhost:8886/wp-json/wp/v2/categories');
+      const catUrl = new URL(`${BLOG_URL}/wp-json/wp/v2/categories`);
       catUrl.searchParams.set('search', categoryName);
       const catResp = await fetch(catUrl);
       if (!catResp.ok) throw new Error(`WP API (categories) zwróciło błąd ${catResp.status}`);
@@ -33,14 +35,14 @@ export async function POST(req) {
 
     // 2) Przygotuj zapytanie do WP
     const perPage = limit ?? 100;
-    const postsUrl = new URL('http://localhost:8886/wp-json/wp/v2/posts');
-      postsUrl.searchParams.set('_embed', '');
-      postsUrl.searchParams.set('per_page', perPage);
+    const postsUrl = new URL(`${BLOG_URL}/wp-json/wp/v2/posts`);
+    postsUrl.searchParams.set('_embed', '');
+    postsUrl.searchParams.set('per_page', perPage);
     if (paginate) postsUrl.searchParams.set('page', page);
     if (categoryId !== null) postsUrl.searchParams.set('categories', categoryId);
     if (searchTerm) postsUrl.searchParams.set('search', searchTerm);
-  
-      const resp = await fetch(postsUrl);
+
+    const resp = await fetch(postsUrl);
     if (!resp.ok) throw new Error(`WP API (posts) zwróciło błąd ${resp.status}`);
     const posts = await resp.json();
 
@@ -49,14 +51,16 @@ export async function POST(req) {
     const totalItems = totalItemsHeader ? parseInt(totalItemsHeader, 10) : posts.length;
     const totalPages = paginate ? Math.ceil(totalItems / perPage) : 1;
 
-    // 4) Mapowanie wyników z kategorią
+    // 4) Mapowanie wyników z kategorią, ale nie zwracaj 'Popularne' czy 'Polecane'
+    const SPECIAL_CATS = ['Popularne', 'Polecane'];
     const simplified = posts.map(post => {
       const embeddedCats = post._embedded?.['wp:term']?.[0] ?? [];
-      const firstValid = embeddedCats.find(c => c.name !== 'Popularne' && c.name !== 'Polecane');
-      const firstCat = firstValid ? firstValid.name : 'Bez kategorii';
+      const firstValid = embeddedCats.find(c => !SPECIAL_CATS.includes(c.name));
       return {
         title: post.title.rendered,
-        category: categoryName !== '' ? categoryName : firstCat,
+        category: SPECIAL_CATS.includes(categoryName)
+          ? (firstValid ? firstValid.name : 'Bez kategorii')
+          : categoryName || (firstValid ? firstValid.name : 'Bez kategorii'),
         intro: post.acf?.intro_text || null,
         image: post.acf?.image_link || null,
         slug: post.slug,
@@ -64,10 +68,15 @@ export async function POST(req) {
     });
 
     // 5) Zwróć dane i liczbę stron
-    const result = { totalPages, posts: simplified };
-    return new Response(JSON.stringify(result), { status: 200 });
+    return new Response(
+      JSON.stringify({ totalPages, posts: simplified }),
+      { status: 200 }
+    );
   } catch (error) {
     console.error('Błąd pobierania:', error);
-    return new Response(JSON.stringify({ error: 'Błąd serwera' }), { status: 500 });
+    return new Response(
+      JSON.stringify({ error: 'Błąd serwera' }),
+      { status: 500 }
+    );
   }
 }

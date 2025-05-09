@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Category from './Category'
 
 import logo from '@public/assets/icons/logo-website.webp'
@@ -23,6 +23,7 @@ const AsideSection = ({phrase, setPhrase}) => {
     const [popularPosts, setPopularPosts] = useState([])
     const [categories, setCategories] = useState([])
     const [newPhrase, setNewPhrase] = useState("")
+    const phraseInput = useRef(null)
 
     const getData = async () => {
         const data = await fetch('/api/blog/getPostsByCategory', {
@@ -38,7 +39,6 @@ const AsideSection = ({phrase, setPhrase}) => {
             })
         });
         const postsJ = await data.json();
-        console.log(postsJ)
         setPopularPosts(postsJ.posts)
     }
 
@@ -50,6 +50,7 @@ const AsideSection = ({phrase, setPhrase}) => {
 
     const searchByName = () => {
         setPhrase(newPhrase)
+        phraseInput.current.value = ''
     }
 
     useEffect(() => { getData(); getCategories(); }, [])
@@ -57,7 +58,7 @@ const AsideSection = ({phrase, setPhrase}) => {
     return (
         <aside className='flex-1 flex flex-col gap-[32px] sticky top-[150px]'>
             <div className='w-full relative'>
-                <input type="text" onChange={(e) => e.target.value === '' ? setPhrase(e.target.value) : setNewPhrase(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && searchByName()} placeholder='Wyszukaj' className='bg-[#04040466] border-[0.5px] border-[#ABABAB40] rounded-[5px] w-full h-[60px] px-[24px] pr-[48px] font-light focus:outline-[#e2b350] focus:outline-[1px]' />
+                <input ref={phraseInput} type="text" onChange={(e) => e.target.value === '' ? setPhrase(e.target.value) : setNewPhrase(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && searchByName()} placeholder='Wyszukaj' className='bg-[#04040466] border-[0.5px] border-[#ABABAB40] rounded-[5px] w-full h-[60px] px-[24px] pr-[48px] font-light focus:outline-[#e2b350] focus:outline-[1px]' />
                 <Icon icon="lucide:search" width={24} height={24} className='absolute top-[50%] translate-y-[-50%] right-[16px] cursor-pointer hover:!fill-[#e2b350] duration-500' onClick={() => searchByName()}/>
             </div>
             <div className='border-[0.5px] border-[#ABABAB40] rounded-[5px] px-[32px] py-[24px] flex flex-col gap-[48px] bg-[#04040466]'>
@@ -66,13 +67,15 @@ const AsideSection = ({phrase, setPhrase}) => {
                     <p className='text-[#e2b350] text-[16px] font-light'>Popularne posty</p>
                     {
                         popularPosts?.map((post, index) => (
-                            <>
-                                <div key={index} className={`flex gap-[12px] ${index === 0 && 'flex-col gap-[16px]'}`}>
-                                    <Image src={post.image || 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} width={600} height={400} alt={post?.title} className={`object-cover rounded-[5px] ${index !== 0 ? 'w-[80px] h-[80px]' : 'h-[150px]'}`} />
-                                    <p className={`text-[18px] line-clamp-3 ${index !== 0 && 'font-light'}`}>{post?.title}</p>
-                                </div>
+                            <React.Fragment key={index}>  
+                                <Link href={`/blog/${post.slug}`}>
+                                    <div className={`flex gap-[12px] group ${index === 0 && 'flex-col gap-[16px]'}`}>
+                                        <Image src={post.image || 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} width={600} height={400} alt={post?.title} className={`object-cover rounded-[5px] group-hover:brightness-50 duration-500 ${index !== 0 ? 'w-[80px] h-[80px]' : 'h-[150px]'}`} />
+                                        <p className={`text-[18px] line-clamp-3 group-hover:text-[#ABABAB] duration-500 ${index !== 0 && 'font-light'}`}>{post?.title}</p>
+                                    </div>
+                                </Link>
                                 {index !== 2 && <div className='w-full h-[0.5px] bg-[#ABABAB40]'></div>}
-                            </>
+                            </React.Fragment>
                         ))
                     }
                 </div>
