@@ -10,6 +10,7 @@ import Content from '@components/blog-singlePost/Content';
 import Author from '@components/blog-singlePost/Author';
 import OtherPosts from '@components/blog-singlePost/OtherPosts';
 import CustomCooperate from '@components/blog-singlePost/CustomCooperate';
+import Footer from '@components/Footer';
 
 
 export const revalidate = 60;
@@ -37,31 +38,34 @@ const page = async ({ params }) => {
   console.log(post)
 
   return (
-    <main className='mt-[150px] relative'>
+    <>
+      <main className='mt-[150px] relative'>
 
-      <BgBlog />
-      <Route title={post.title.rendered} />
+        <BgBlog />
+        <Route title={post.title.rendered} />
 
-      <article className='relative z-10'>
-        <div className=' mt-[52px] w-[1240px] mx-auto'>
-          <Category name={category} />
-        </div>
+        <article className='relative z-10'>
+          <div className=' mt-[52px] w-[1240px] mx-auto'>
+            <Category name={category} />
+          </div>
 
-        <Introduction title={post.title.rendered} date={post.date} time={post.acf.time} />
-        <ArticleIntro title={post.title.rendered} image_link={post.acf.image_link} intro_text={post.acf.intro_text} />
-        <TableContents content={post.content.rendered} />
-        <Content content={post.content.rendered} />
-        <Author authorName={post.acf.author} />
-        <OtherPosts category={category} />
+          <Introduction title={post.title.rendered} date={post.date} time={post.acf.time} />
+          <ArticleIntro title={post.title.rendered} image_link={post.acf.image_link} intro_text={post.acf.intro_text} />
+          <TableContents content={post.content.rendered} />
+          <Content content={post.content.rendered} />
+          <Author authorName={post.acf.author} />
+          <OtherPosts category={category} />
 
-        <div className='mt-[96px] w-[1240px] mx-auto'>
-          <CustomCooperate />
-        </div>
+          <div className='mt-[96px] mb-[64px] w-[1240px] mx-auto'>
+            <CustomCooperate />
+          </div>
 
-      </article>
+        </article>
 
 
-    </main>
+      </main>
+      <Footer bg={false} />
+    </>
   )
 }
 
