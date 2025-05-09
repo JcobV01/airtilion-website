@@ -1,21 +1,21 @@
 export async function POST(req) {
-  try {
+    try {
     const { categoryName, limit, paginate, page, searchTerm } = await req.json();
-
+  
     if (categoryName === undefined || categoryName === null) {
-      return new Response(
-        JSON.stringify({ error: 'Brak wymaganego parametru categoryName' }),
-        { status: 400 }
-      );
-    }
-
-    if (paginate && (page === undefined || page === null)) {
-      return new Response(
-        JSON.stringify({ error: 'Parametr page jest wymagany, gdy paginate ma wartość true' }),
-        { status: 400 }
-      );
-    }
-
+        return new Response(
+          JSON.stringify({ error: 'Brak wymaganego parametru categoryName' }),
+          { status: 400 }
+        );
+      }
+  
+      if (paginate && (page === undefined || page === null)) {
+        return new Response(
+          JSON.stringify({ error: 'Parametr page jest wymagany, gdy paginate ma wartość true' }),
+          { status: 400 }
+        );
+      }
+  
     let categoryId = null;
     if (categoryName !== '') {
       const catUrl = new URL('http://localhost:8886/wp-json/wp/v2/categories');
@@ -30,20 +30,20 @@ export async function POST(req) {
           { status: 404 }
         );
       categoryId = matched.id;
-    }
-
-    const perPage = limit ?? 100;
+      }
+  
+      const perPage = limit ?? 100;
     const postsUrl = new URL('http://localhost:8886/wp-json/wp/v2/posts');
-    postsUrl.searchParams.set('_embed', '');
-    postsUrl.searchParams.set('per_page', perPage);
+      postsUrl.searchParams.set('_embed', '');
+      postsUrl.searchParams.set('per_page', perPage);
     if (paginate) postsUrl.searchParams.set('page', page);
     if (categoryId !== null) postsUrl.searchParams.set('categories', categoryId);
     if (searchTerm) postsUrl.searchParams.set('search', searchTerm);
-
-    const resp = await fetch(postsUrl);
+  
+      const resp = await fetch(postsUrl);
     if (!resp.ok) throw new Error(`WP API (posts) zwróciło błąd ${resp.status}`);
-    const posts = await resp.json();
-
+      const posts = await resp.json();
+  
     const filtered = searchTerm
       ? posts.filter(post => post.title.rendered.toLowerCase().includes(searchTerm.toLowerCase()))
       : posts;
@@ -63,13 +63,13 @@ export async function POST(req) {
         slug: post.slug,
       };
     });
-
-    return new Response(JSON.stringify(simplified), { status: 200 });
-  } catch (error) {
-    console.error('Błąd pobierania:', error);
-    return new Response(
-      JSON.stringify({ error: 'Błąd serwera' }),
-      { status: 500 }
-    );
+  
+      return new Response(JSON.stringify(simplified), { status: 200 });
+    } catch (error) {
+      console.error('Błąd pobierania:', error);
+      return new Response(
+        JSON.stringify({ error: 'Błąd serwera' }),
+        { status: 500 }
+      );
+    }
   }
-}
