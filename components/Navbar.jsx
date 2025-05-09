@@ -89,7 +89,6 @@ const Navbar = () => {
             const offset = 128;
             const visibilityTax = element.classList.contains('about-hidden') || isFromOutside ? 100 : 0;
             const y = element.getBoundingClientRect().y + window.pageYOffset - offset - visibilityTax;
-            console.log(element.getBoundingClientRect().y)
             window.scrollTo({top: y, behavior: 'smooth'});
         }
     };

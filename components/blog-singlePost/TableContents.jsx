@@ -59,6 +59,15 @@ const TableContents = ({ content }) => {
         }
     }, [isOpen, headings]);
 
+    const scrollToSectionBlog = (id) => {
+        const el = document.getElementById(id);
+        if (el) {
+            const offset = 140;
+            const y = el.getBoundingClientRect().y + window.pageYOffset - offset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+        }
+    };
+
     return (
         <section className='mt-[96px] w-[800px] mx-auto rounded-[5px] border-[0.5px] border-[#ABABAB80] px-[28px] py-[12px]'>
             <div className='flex items-center justify-between cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
@@ -68,7 +77,7 @@ const TableContents = ({ content }) => {
             <ol ref={contentRef} className={`list-decimal pl-[35px] space-y-[4px] text-[16px] font-extralight overflow-hidden duration-700 ${isOpen ? 'mt-[12px]' : 'mt-0'}`} style={{ maxHeight: `${height}px` }}>
                 {headings.map((heading, index) => (
                     <li key={index}>
-                        <button onClick={() => { const el = document.getElementById(heading.id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }} className='duration-500 hover:text-[#E2B350]'>
+                        <button onClick={() => scrollToSectionBlog(heading.id)} className='duration-500 hover:text-[#E2B350]'>
                             {heading.title}
                         </button>
 
@@ -76,7 +85,7 @@ const TableContents = ({ content }) => {
                             <ul className='list-disc pl-[25px] mt-[4px] space-y-[4px] marker:text-[#E2B350]'>
                                 {heading.subheadings.map((element, index) => (
                                     <li key={index}>
-                                        <button onClick={() => { const el = document.getElementById(element.id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }} className="duration-500 hover:text-[#E2B350]">
+                                        <button onClick={() => scrollToSectionBlog(element.id)} className="duration-500 hover:text-[#E2B350]">
                                             {element.title}
                                         </button>
                                     </li>

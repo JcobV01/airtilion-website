@@ -9,25 +9,32 @@ import CustomContactForm from './CustomContactForm';
 import coopBg from '@public/assets/images/cooperate-bg.webp'
 
 const CustomCooperate = () => {
-    const [ref, isVisible] = useIntersectionObserver();
+    const [ref, isVisibleRef] = useIntersectionObserver();
     const [isContactOpen, setIsContactOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         document.body.style.overflow = isContactOpen ? 'hidden' : ''
         const nav = document.querySelector('nav')
         const footer = document.querySelector('footer')
         if (isContactOpen) {
-            nav.classList.add('hidden')
-            footer.classList.add('hidden')
+            nav.classList.add('nav-hidden')
+            footer.classList.add('footer-hidden')
+            setIsVisible(true);
         } else {
-            nav.classList.remove('hidden')
-            footer.classList.remove('hidden')
+            const timeout = setTimeout(() => {
+                setIsVisible(false);
+                nav.classList.remove('nav-hidden')
+                footer.classList.remove('footer-hidden')
+            }, 600)
+
+            return () => clearTimeout(timeout);
         }
     }, [isContactOpen])
 
     return (
         <>
-            <article ref={ref} className={`w-full h-[450px] lg:h-[350px] sm:h-auto sm:py-[50px] flex flex-col items-center relative px-[170px] overflow-hidden xl:px-[100px] lg:px-[50px] sm:px-[30px] gap-[40px] xl:gap-[30px] justify-center bg-center transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
+            <article ref={ref} className={`w-full h-[450px] lg:h-[350px] sm:h-auto sm:py-[50px] flex flex-col items-center relative px-[170px] overflow-hidden xl:px-[100px] lg:px-[50px] sm:px-[30px] gap-[40px] xl:gap-[30px] justify-center bg-center transition-all duration-1000 ease-in-out ${isVisibleRef ? 'about-visible' : 'about-hidden'}`}>
                 <Image src={coopBg} alt="Obrazek przedstawiający tło z lwem" width="1240" height="450" quality={100} className="aspect-[1366/768] absolute w-full lg:h-full object-cover xxl:bg-cover xxl:bg-no-repeat" />
                 <div className='z-10'>
                     <p className='z-10 text-[#B8B8B8] lg:text-[13px] font-light text-center'>WSPÓŁPRACUJ Z NAMI</p>
@@ -40,10 +47,10 @@ const CustomCooperate = () => {
                 <div className='absolute w-full h-full bg-[#00000099] top-0 left-0'></div>
             </article>
 
-            {isContactOpen && (
+            {isVisible && (
                 <>
                     <div className="fixed inset-0 bg-[#00000099] backdrop-blur-sm z-[49]" />
-                    <div className="contact-panel px-[128px] py-[64px] bg-[#0a0a0a]">
+                    <div className={`contact-panel px-[128px] py-[64px] bg-[#0a0a0a] ${isContactOpen ? 'slide-up' : 'slide-down'}`}>
                         <div className='w-full flex justify-end'>
                             <button onClick={() => setIsContactOpen(false)} className='flex gap-[8px] px-[12px] py-[6px] rounded-[5px] items-center duration-500 hover:bg-[#262626]'>
                                 <Icon icon="material-symbols:close-rounded" width="24" height="24" />
@@ -85,7 +92,7 @@ const CustomCooperate = () => {
                                 </div>
 
                             </div>
-                            <CustomContactForm />
+                            <CustomContactForm isContactOpen={isContactOpen} />
                         </div>
 
 
