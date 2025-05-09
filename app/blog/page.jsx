@@ -22,9 +22,7 @@ const page = () => {
               <Cooperate/>
             </section>
         </main>
-
-        <Footer bg={true}/>
-
+        
         <Image src={bg} alt='zdjęcie tła' width={1920} height={1080} quality={100} className='object-cover w-full h-dvh fixed z-[-1] top-0 left-0 brightness-75'/>
     </>
   )

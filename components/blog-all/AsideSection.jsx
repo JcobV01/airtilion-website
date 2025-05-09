@@ -22,6 +22,7 @@ const socials = [
 const AsideSection = ({phrase, setPhrase}) => {
     const [popularPosts, setPopularPosts] = useState([])
     const [categories, setCategories] = useState([])
+    const [newPhrase, setNewPhrase] = useState("")
 
     const getData = async () => {
         const data = await fetch('/api/blog/getPostsByCategory', {
@@ -38,22 +39,28 @@ const AsideSection = ({phrase, setPhrase}) => {
         });
         const postsJ = await data.json();
         console.log(postsJ)
-        setPopularPosts(postsJ)
+        setPopularPosts(postsJ.posts)
     }
 
     const getCategories = async () => {
         const categroies =  await fetch('/api/blog/getCategories', {method: 'GET'})
         const data = await categroies.json()
-        console.log(data)
         setCategories(data)
+    }
+
+    const searchByName = () => {
+        setPhrase(newPhrase)
     }
 
     useEffect(() => { getData(); getCategories(); }, [])
 
     return (
         <aside className='flex-1 flex flex-col gap-[32px] sticky top-[150px]'>
-            <input type="text" onChange={(e) => setPhrase(e.target.value)} placeholder='Wyszukaj' className='bg-transparent border-[0.5px] border-[#ABABAB40] rounded-[5px]  h-[60px] px-[24px] font-light focus:outline-[#e2b350] focus:outline-[1px]' />
-            <div className='border-[0.5px] border-[#ABABAB40] rounded-[5px] px-[32px] py-[24px] flex flex-col gap-[48px]'>
+            <div className='w-full relative'>
+                <input type="text" onChange={(e) => e.target.value === '' ? setPhrase(e.target.value) : setNewPhrase(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && searchByName()} placeholder='Wyszukaj' className='bg-[#04040466] border-[0.5px] border-[#ABABAB40] rounded-[5px] w-full h-[60px] px-[24px] pr-[48px] font-light focus:outline-[#e2b350] focus:outline-[1px]' />
+                <Icon icon="lucide:search" width={24} height={24} className='absolute top-[50%] translate-y-[-50%] right-[16px] cursor-pointer hover:!fill-[#e2b350] duration-500' onClick={() => searchByName()}/>
+            </div>
+            <div className='border-[0.5px] border-[#ABABAB40] rounded-[5px] px-[32px] py-[24px] flex flex-col gap-[48px] bg-[#04040466]'>
 
                 <div className='flex flex-col gap-[16px]'>
                     <p className='text-[#e2b350] text-[16px] font-light'>Popularne posty</p>
@@ -85,7 +92,7 @@ const AsideSection = ({phrase, setPhrase}) => {
                 <div>
                     <p className='text-[16px] font-light text-center mb-[16px]'>Znajdziesz nas tutaj</p>
                     <div className='flex gap-[16px] items-center justify-center'>
-                        <div className='flex gap-[16px] items-center'>
+                        <div className='flex gap-[8px] items-center'>
                             <Image src={logo} width={47} height={47} alt='logo mediów społecznościowych Airtilion' quality={100} className='w-[47px] h-[47px] rounded-full'/>
                             <p className='text-[16px] font-light'>Airtilion</p>
                         </div>
@@ -95,7 +102,7 @@ const AsideSection = ({phrase, setPhrase}) => {
                         <div className='flex flex-wrap gap-[8px] w-[150px]'>
                             {socials.map((icon, index) => (
                                 <Link key={index} href={icon.link} target='_blank'>
-                                    <Icon icon={icon.icon} height={30} className='!text-[#e2b350] !fill-[#e2b350]'/>
+                                    <Icon icon={icon.icon} height={30} className='!text-[#e2b350] !fill-[#e2b350] hover:scale-110 duration-500'/>
                                 </Link>
                             ))}
                         </div>
