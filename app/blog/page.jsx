@@ -5,9 +5,9 @@ import React, { useEffect } from 'react'
 import bg from '@public/assets/images/headers/blog-bg.webp'
 import Recomendations from '@components/blog-all/Recomendations'
 import Latest from '@components/blog-all/Latest'
-import Cooperate from '@components/home/sections/AboutUs/sections/Cooperate'
 import Footer from '@components/Footer'
 import useIntersectionObserver from '@hooks/useObserver'
+import CustomCooperate from '@components/blog-singlePost/CustomCooperate'
 
 const page = () => {
   useEffect(() => {
@@ -23,12 +23,12 @@ const page = () => {
         <p className='text-[25px] w-[700px] font-light mt-[8px] 2xl:text-[20px] xl:text-[18px] lg:text-[16px] lg:w-full lg:text-center'>Zagłęb się w artykuły, porady i historie, pobudzające Twoją kreatywność i poszerzające horyzonty.</p>
       </header>
 
-      <main className='w-full bg-[#04040487] backdrop-blur-[7px] rounded-tl-[40px] rounded-tr-[40px] pt-[64px] flex flex-col gap-[128px]'>
+      <main className='w-full bg-[#04040487] rounded-tl-[40px] rounded-tr-[40px] pt-[64px] flex flex-col gap-[128px]'>
         <Recomendations />
         <Latest />
 
         <section className='w-[1200px] mx-auto xl:w-[960px] lg:w-full lg:px-[48px]'>
-          <Cooperate />
+          <CustomCooperate />
         </section>
       </main>
 

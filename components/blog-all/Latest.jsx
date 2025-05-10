@@ -84,7 +84,7 @@ const Latest = () => {
                             :
                             <p className='font-light text-[#ABABAB]'>Brak wyników</p>
                         :
-                        raw.map(element => <SinglePostLoader />)
+                        raw.map((element, index) => <SinglePostLoader key={index} />)
                     }
                 </article>
                 <AsideSection phrase={phrase} setPhrase={setPhrase} />

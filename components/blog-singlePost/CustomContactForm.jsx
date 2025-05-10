@@ -88,10 +88,10 @@ const CustomContactForm = ({ isContactOpen }) => {
         <div className={`w-[600px] mx-auto flex flex-col ${isContactOpen ? 'form-enter' : ''} sm:w-[100%]`}>
             {error && <span className='text-red-500 font-light'>{error}</span>}
             <form onSubmit={handleSubmit} className='mt-[16px] flex flex-col gap-[20px] lg:gap-[15px] contactForm'>
-                <input name="Name" value={name} onChange={(e) => setName(e.target.value)} type="text" className='animate-field xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] sm:text-[15px]' placeholder='Imię i Nazwisko' />
-                <input name="Email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" className='animate-field xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] sm:text-[15px]' placeholder='Adres e-mail' />
-                <input name="Number" value={number} onChange={(e) => setNumber(e.target.value)} type="text" className='animate-field xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] sm:text-[15px]' placeholder='Numer telefonu' />
-                <textarea name="Text" value={text} onChange={(e) => setText(e.target.value)} className='animate-field xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] resize-none h-[150px] sm:text-[15px]' placeholder='Wiadomość' />
+                <input name="Name" value={name} onChange={(e) => setName(e.target.value)} type="text" className='animate-field xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] duration-500 focus:border-b-[#E2B350] sm:text-[15px]' placeholder='Imię i Nazwisko' />
+                <input name="Email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" className='animate-field xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] duration-500 focus:border-b-[#E2B350] sm:text-[15px]' placeholder='Adres e-mail' />
+                <input name="Number" value={number} onChange={(e) => setNumber(e.target.value)} type="text" className='animate-field xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] duration-500 focus:border-b-[#E2B350] sm:text-[15px]' placeholder='Numer telefonu' />
+                <textarea name="Text" value={text} onChange={(e) => setText(e.target.value)} className='animate-field xxl:text-[20px] bg-transparent outline-none border-b-[1px] border-b-[#FFF] py-[10px] resize-none h-[150px] duration-500 focus:border-b-[#E2B350] sm:text-[15px]' placeholder='Wiadomość' />
 
                 <div className='animate-field w-full flex gap-[5px] mt-[15px] sm:items-center sm:flex-col sm:text-[15px]'>
                     <input type="checkbox" id="privacy_policy" checked={checkboxValue.privacy_policy} onChange={handleCheckboxChange} className='hidden peer' />
