@@ -25,6 +25,21 @@ export async function generateStaticParams() {
   }))
 }
 
+export async function generateMetadata({ params }) {
+  const res = await fetch(`${BLOG_URL}/wp-json/wp/v2/posts?slug=${params.slug}`)
+  const posts = await res.json()
+
+  const post = posts[0]
+
+  return {
+    title: post.acf.meta_title,
+    description: post.acf.meta_desc,
+    alternates: {
+      canonical: `https://airtilion.com/blog/${post.slug}`
+    }
+  }
+}
+
 const page = async ({ params }) => {
   const { slug } = await params
   const posts = await fetch(`${BLOG_URL}/wp-json/wp/v2/posts?slug=${slug}&_embed`).then((res) =>
