@@ -620,6 +620,19 @@ dialog::backdrop {
 
 .blog-content .wp-block-column{width: 50%;}
 
+@media only screen and (max-width: 1023px){
+  .blog-content h2{font-size: 25px;}
+}
+
+@media only screen and (max-width: 767px){
+  .blog-content .wp-block-columns{flex-direction: column; gap: 32px;}
+  .blog-content .wp-block-column{width: 100%}
+  .blog-content .wp-block-column figure{display: flex; justify-content: center;}
+}
+
+@media only screen and (max-width: 350px){
+  .blog-content h2{font-size: 22px;}
+}
 
 /* ------------ BLOG - ANIMACJA KONTAKTU ----------- */
 /* Panel kontaktowy (startuje poza ekranem) */

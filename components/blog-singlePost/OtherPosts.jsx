@@ -33,15 +33,15 @@ const OtherPosts = ({ category }) => {
     useEffect(() => { getData(); }, [])
 
     return (
-        <section className='mt-[96px] w-[1240px] mx-auto'>
-            <h2 className='font-extralight text-[30px] text-[#E2B350]'>To również może Cię zainteresować!</h2>
+        <section className='mt-[96px] w-[1240px] mx-auto xl:w-[1000px] lg:w-[90%] lg:mt-[64px]'>
+            <h2 className='font-extralight text-[30px] text-[#E2B350] lg:text-[25px] lg:text-center fold:text-[22px]'>To również może Cię zainteresować!</h2>
 
-            <div className='mt-[32px] flex gap-[16px]'>
+            <div className='mt-[32px] flex gap-[16px] lg:flex-wrap lg:justify-center'>
                 {
                     !loading ?
                         posts.map((post, index) => (
                             <Link href={`/blog/${post.slug}`} key={index} aria-label={`Kliknij aby przejść do postu na temat ${post.title}`}>
-                                <div className='group cursor-pointer w-[298px] h-[298px] overflow-hidden relative rounded-[5px] duration-700 hover:brightness-75'>
+                                <div className='group cursor-pointer w-[298px] h-[298px] overflow-hidden relative rounded-[5px] duration-700 hover:brightness-75 xl:w-[238px] xl:h-[238px] lg:w-[298px] lg:h-[298px] fold:w-[238px] fold:h-[238px]'>
                                     <Image src={post.image} alt={`Grafika promująca post na temat ${post.title}`} width="298" height="298" className='object-cover absolute top-0 left-0 duration-700 group-hover:scale-125' />
                                     <div className='absolute top-0 left-0 w-full h-full bg-[#000000B3]' />
                                     <div className='absolute top-0 left-0 w-full h-full bg-[linear-gradient(202deg,#E2B35000_60%,#E2B350ff_140%)] brightness-90' />
@@ -51,7 +51,7 @@ const OtherPosts = ({ category }) => {
                                             <Category name={category} />
                                         </div>
 
-                                        <h3 className='relative z-10 line-clamp-3 text-[20px] font-medium' dangerouslySetInnerHTML={{ __html: post.title }} />
+                                        <h3 className='relative z-10 line-clamp-3 text-[20px] font-medium lg:text-[18px]' dangerouslySetInnerHTML={{ __html: post.title }} />
                                     </div>
                                 </div>
                             </Link>

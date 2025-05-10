@@ -35,17 +35,15 @@ const page = async ({ params }) => {
 
   const category = post._embedded?.['wp:term']?.[0]?.[0]?.name
 
-  console.log(post)
-
   return (
     <>
-      <main className='mt-[150px] relative'>
+      <main className='mt-[150px] relative fold:mt-[170px]'>
 
         <BgBlog />
         <Route title={post.title.rendered} />
 
         <article className='relative z-10'>
-          <div className=' mt-[52px] w-[1240px] mx-auto'>
+          <div className=' mt-[52px] w-[1240px] mx-auto xl:w-[1000px] lg:w-[90%]'>
             <Category name={category} />
           </div>
 
@@ -56,7 +54,7 @@ const page = async ({ params }) => {
           <Author authorName={post.acf.author} />
           <OtherPosts category={category} />
 
-          <div className='mt-[96px] mb-[64px] w-[1240px] mx-auto'>
+          <div className='mt-[96px] mb-[64px] w-[1240px] mx-auto xl:w-[1000px] lg:w-[90%] lg:mt-[64px]'>
             <CustomCooperate />
           </div>
 

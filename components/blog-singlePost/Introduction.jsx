@@ -18,12 +18,12 @@ const Introduction = ({ title, date, time }) => {
   };
 
   return (
-    <section className='mt-[16px] w-[1240px] mx-auto'>
-      <h1 className='text-[50px] font-bold' dangerouslySetInnerHTML={{ __html: title }} />
+    <section className='mt-[16px] w-[1240px] mx-auto xl:w-[1000px] lg:w-[90%]'>
+      <h1 className='text-[50px] font-bold lg:text-[40px] md:text-[35px] sm:text-[32px] fold:text-[28px]' dangerouslySetInnerHTML={{ __html: title }} />
 
-      <div className='mt-[4px] flex items-center gap-[32px] font-extralight text-[16px]'>
+      <div className='mt-[4px] flex items-center gap-[32px] font-extralight text-[16px] sm:text-[14px] fold:flex-col fold:items-start fold:gap-[8px]'>
         <span>{formatDate(date)}</span>
-        <div className='w-[30px] h-[1px] bg-[#D9D9D9]' />
+        <div className='w-[30px] h-[1px] bg-[#D9D9D9] sm:w-[25px] fold:hidden' />
         <span>Czas czytania:&nbsp;{time}&nbsp;min</span>
       </div>
     </section>

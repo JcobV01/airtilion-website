@@ -25,7 +25,7 @@ const OtherPostsLoader = () => {
     return (
         <>
             {elements.map((element, index) => (
-                <div key={index} className='group cursor-pointer w-[298px] h-[298px] overflow-hidden relative rounded-[5px] duration-700 hover:brightness-75'>
+                <div key={index} className='group cursor-pointer w-[298px] h-[298px] overflow-hidden relative rounded-[5px] duration-700 hover:brightness-75 xl:w-[238px] xl:h-[238px] lg:w-[298px] lg:h-[298px] fold:w-[238px] fold:h-[238px]'>
                     <Image src={placeholder} alt='Loader' width="298" height="298" className='animate-pulse blur-[20px] object-cover absolute top-0 left-0 duration-700 group-hover:scale-125' />
                     <div className='absolute top-0 left-0 w-full h-full bg-[#000000B3]' />
                     <div className='absolute top-0 left-0 w-full h-full bg-[linear-gradient(202deg,#E2B35000_60%,#E2B350ff_140%)] brightness-90' />
@@ -37,7 +37,7 @@ const OtherPostsLoader = () => {
                             </div>
                         </div>
 
-                        <h3 className='relative z-10 line-clamp-3 text-[20px] font-medium blur-[5px] animate-pulse'>{element.title}</h3>
+                        <h3 className='relative z-10 line-clamp-3 text-[20px] font-medium blur-[5px] animate-pulse lg:text-[18px]'>{element.title}</h3>
                     </div>
                 </div>
             ))}
