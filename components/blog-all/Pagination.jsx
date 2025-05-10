@@ -48,7 +48,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   }
 
   return (
-    <div className="flex gap-2 items-center border-[0.5px] border-[#ABABAB40] rounded-[5px] w-fit px-[48px] py-[16px] mx-auto">
+    <div className="flex gap-2 items-center border-[0.5px] border-[#ABABAB40] rounded-[5px] w-fit px-[48px] py-[16px] mx-auto sm:flex-col">
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage <= 1}
@@ -56,7 +56,9 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       >
         Poprzednia
       </button>
-      {renderPageNumbers()}
+      <div>
+        {renderPageNumbers()}
+      </div>
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage >= totalPages}

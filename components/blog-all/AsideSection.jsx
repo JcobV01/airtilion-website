@@ -62,7 +62,7 @@ const AsideSection = ({ phrase, setPhrase }) => {
     useEffect(() => { getData(); getCategories(); }, [])
 
     return (
-        <aside className='flex-1 flex flex-col gap-[32px] sticky top-[150px]'>
+        <aside className='flex-1 flex flex-col gap-[32px] sticky top-[150px] lg:max-w-[600px] lg:mx-auto'>
             <div className='w-full relative'>
                 <input ref={phraseInput} type="text" onChange={(e) => e.target.value === '' ? setPhrase(e.target.value) : setNewPhrase(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && searchByName()} placeholder='Wyszukaj' className='bg-[#04040466] border-[0.5px] border-[#ABABAB40] rounded-[5px] w-full h-[60px] px-[24px] pr-[48px] font-light focus:outline-[#e2b350] focus:outline-[1px]' />
                 <Icon icon="lucide:search" width={24} height={24} className='absolute top-[50%] translate-y-[-50%] right-[16px] cursor-pointer hover:!fill-[#e2b350] duration-500' onClick={() => searchByName()} />
@@ -78,7 +78,7 @@ const AsideSection = ({ phrase, setPhrase }) => {
                                     <Link href={`/blog/${post.slug}`}>
                                         <div className={`flex gap-[12px] group ${index === 0 && 'flex-col gap-[16px]'}`}>
                                             <Image src={post.image || 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} width={600} height={400} alt={post?.title} className={`object-cover rounded-[5px] group-hover:brightness-50 duration-500 ${index !== 0 ? 'w-[80px] h-[80px]' : 'h-[150px]'}`} />
-                                            <p className={`text-[18px] line-clamp-3 group-hover:text-[#ABABAB] duration-500 ${index !== 0 && 'font-light'}`}>{post?.title}</p>
+                                            <p className={`text-[18px] line-clamp-3 group-hover:text-[#ABABAB] duration-500 ${index !== 0 && 'font-light'} xl:text-[16px]`}>{post?.title}</p>
                                         </div>
                                     </Link>
                                     {index !== 2 && <div className='w-full h-[0.5px] bg-[#ABABAB40]'></div>}
@@ -104,13 +104,13 @@ const AsideSection = ({ phrase, setPhrase }) => {
 
                 <div>
                     <p className='text-[16px] font-light text-center mb-[16px]'>Znajdziesz nas tutaj</p>
-                    <div className='flex gap-[16px] items-center justify-center'>
+                    <div className='flex gap-[16px] items-center justify-center sm:flex-col'>
                         <div className='flex gap-[8px] items-center'>
                             <Image src={logo} width={47} height={47} alt='logo mediów społecznościowych Airtilion' quality={100} className='w-[47px] h-[47px] rounded-full' />
                             <p className='text-[16px] font-light'>Airtilion</p>
                         </div>
 
-                        <div className='h-[40px] w-[0.5px] bg-[#ABABAB40]'></div>
+                        <div className='h-[40px] w-[0.5px] bg-[#ABABAB40] sm:w-[40px] sm:h-[0.5px]'></div>
 
                         <div className='flex flex-wrap gap-[8px] w-[150px]'>
                             {socials.map((icon, index) => (
