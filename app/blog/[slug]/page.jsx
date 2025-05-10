@@ -32,7 +32,7 @@ export async function generateMetadata({ params }) {
   const post = posts[0]
 
   return {
-    title: post.acf.meta_title,
+     title: `${post.acf.meta_title} - Airtilion`,
     description: post.acf.meta_desc,
     alternates: {
       canonical: `https://airtilion.com/blog/${post.slug}`
