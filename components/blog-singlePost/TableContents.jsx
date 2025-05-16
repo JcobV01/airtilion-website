@@ -76,17 +76,13 @@ const TableContents = ({ content }) => {
             <ol ref={contentRef} className={`list-decimal pl-[35px] space-y-[4px] text-[16px] font-extralight overflow-hidden duration-700 sm:pl-[24px] ${isOpen ? 'mt-[12px]' : 'mt-0'}`} style={{ maxHeight: `${height}px` }}>
                 {headings.map((heading, index) => (
                     <li key={index}>
-                        <button onClick={() => scrollToSectionBlog(heading.id)} className='text-start align-top duration-500 hover:text-[#E2B350]'>
-                            {heading.title}
-                        </button>
+                        <button onClick={() => scrollToSectionBlog(heading.id)} className='text-start align-top duration-500 hover:text-[#E2B350]' dangerouslySetInnerHTML={{__html: heading.title}} />
 
                         {heading.subheadings &&
                             <ul className='list-disc pl-[25px] mt-[4px] space-y-[4px] marker:text-[#E2B350]'>
                                 {heading.subheadings.map((element, index) => (
                                     <li key={index}>
-                                        <button onClick={() => scrollToSectionBlog(element.id)} className="text-start align-top duration-500 hover:text-[#E2B350]">
-                                            {element.title}
-                                        </button>
+                                        <button onClick={() => scrollToSectionBlog(element.id)} className="text-start align-top duration-500 hover:text-[#E2B350]" dangerouslySetInnerHTML={{__html: element.title}} />
                                     </li>
                                 ))}
                             </ul>
