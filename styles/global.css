@@ -614,6 +614,7 @@ dialog::backdrop {
 .blog-content p{
   font-size: 16px;
   font-weight: 200;
+  margin-top: 8px;
 }
 
 .blog-content ul{
@@ -621,10 +622,8 @@ dialog::backdrop {
   list-style: disc;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
-
-.blog-content div p:nth-child(1){margin-top: 16px;}
 
 .blog-content .wp-block-columns{display: flex; gap: 32px;}
 
