@@ -624,6 +624,8 @@ dialog::backdrop {
   gap: 4px;
 }
 
+.blog-content div p:nth-child(1){margin-top: 16px;}
+
 .blog-content .wp-block-columns{display: flex; gap: 32px;}
 
 .blog-content .wp-block-column{width: 50%;}

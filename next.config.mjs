@@ -9,7 +9,7 @@ const nextConfig = {
                 hostname: 'api.airtilion.com',
             }
         ],
-            domains: ['images.unsplash.com', ''],
+            domains: ['images.unsplash.com', 'lh3.googleusercontent.com'],
     },
 };
 export default nextConfig;
