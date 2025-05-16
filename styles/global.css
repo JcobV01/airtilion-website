@@ -624,6 +624,7 @@ dialog::backdrop {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  font-weight: 200;
 }
 
 .blog-content .wp-block-columns{display: flex; gap: 32px;}
