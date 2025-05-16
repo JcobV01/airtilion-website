@@ -12,7 +12,7 @@ const TableContents = ({ content }) => {
     useEffect(() => {
         if (!content) return
         const temp = []
-        const regex = /<(h[23])>(.*?)<\/h[23]>/gi
+        const regex = /<(h[23])\b[^>]*>([\s\S]*?)<\/\1>/gi
         let match
         let currentH2 = null
         let h2Count = 0
