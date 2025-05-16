@@ -37,20 +37,26 @@ const TableContents = ({ content }) => {
     }, [content])
 
     useEffect(() => {
-        if (typeof window === 'undefined') return
-        const container = document.querySelector('.blog-content')
-        if (!container) return
-        Array.from(container.querySelectorAll('h2')).forEach(el2 => {
-            const match = headings.find(h => h.title === el2.textContent)
-            if (match) el2.id = match.id
-        })
-        Array.from(container.querySelectorAll('h3')).forEach(el3 => {
-            headings.forEach(h2 => {
-                const sub = h2.subheadings.find(s => s.title === el3.textContent)
-                if (sub) el3.id = sub.id
-            })
-        })
-    }, [headings])
+        if (typeof window === 'undefined') return;
+        const container = document.querySelector('.blog-content');
+        if (!container) return;
+
+        const h2Els = Array.from(container.querySelectorAll('h2'));
+        h2Els.forEach((el, idx) => {
+            if (headings[idx]) {
+                el.id = headings[idx].id;
+            }
+        });
+
+        const flatH3 = headings.flatMap(h2 => h2.subheadings);
+        const h3Els = Array.from(container.querySelectorAll('h3'));
+        h3Els.forEach((el, idx) => {
+            if (flatH3[idx]) {
+                el.id = flatH3[idx].id;
+            }
+        });
+    }, [headings]);
+
 
     useEffect(() => {
         if (contentRef.current) {
@@ -63,7 +69,7 @@ const TableContents = ({ content }) => {
         if (el) {
             const offset = 140;
             const y = el.getBoundingClientRect().y + window.pageYOffset - offset;
-            window.scrollTo({top: y, behavior: 'smooth'});
+            window.scrollTo({ top: y, behavior: 'smooth' });
         }
     };
 
@@ -76,13 +82,13 @@ const TableContents = ({ content }) => {
             <ol ref={contentRef} className={`list-decimal pl-[35px] space-y-[4px] text-[16px] font-extralight overflow-hidden duration-700 sm:pl-[24px] ${isOpen ? 'mt-[12px]' : 'mt-0'}`} style={{ maxHeight: `${height}px` }}>
                 {headings.map((heading, index) => (
                     <li key={index}>
-                        <button onClick={() => scrollToSectionBlog(heading.id)} className='text-start align-top duration-500 hover:text-[#E2B350]' dangerouslySetInnerHTML={{__html: heading.title}} />
+                        <button onClick={() => scrollToSectionBlog(heading.id)} className='text-start align-top duration-500 hover:text-[#E2B350]' dangerouslySetInnerHTML={{ __html: heading.title }} />
 
                         {heading.subheadings &&
                             <ul className='list-disc pl-[25px] mt-[4px] space-y-[4px] marker:text-[#E2B350]'>
                                 {heading.subheadings.map((element, index) => (
                                     <li key={index}>
-                                        <button onClick={() => scrollToSectionBlog(element.id)} className="text-start align-top duration-500 hover:text-[#E2B350]" dangerouslySetInnerHTML={{__html: element.title}} />
+                                        <button onClick={() => scrollToSectionBlog(element.id)} className="text-start align-top duration-500 hover:text-[#E2B350]" dangerouslySetInnerHTML={{ __html: element.title }} />
                                     </li>
                                 ))}
                             </ul>
