@@ -36,6 +36,10 @@ export async function generateMetadata({ params }) {
 
   const post = posts[0]
 
+  if (!post._embedded) {
+    notFound();
+  }
+
   return {
     title: `${post.acf.meta_title} - Airtilion`,
     description: post.acf.meta_desc,
