@@ -58,7 +58,7 @@ const Recomendations = () => {
                                     <Category name={post?.category} />
                                     <p className='text-[20px] font-semibold relative z-10 2xl:text-[18px] xl:text-[16px]' dangerouslySetInnerHTML={{__html: post?.title}}></p>
                                     <div className='absolute w-full h-full top-0 left-0 z-[1] bg-[linear-gradient(#E2B35000_0%,#E2B350ff_100%)] opacity-50 brightness-[0.4]'></div>
-                                    <Image src={post?.image || 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} width={612} height={612} quality={100} alt='zdjęcie artykułu' className='object-cover h-full w-full absolute top-0 left-0 z-0 brightness-50 group-hover:scale-110 duration-500' />
+                                    <Image src={post?.image || 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} width={612} height={612} alt='zdjęcie artykułu' className='object-cover h-full w-full absolute top-0 left-0 z-0 brightness-50 group-hover:scale-110 duration-500' />
                                 </div>
                             </Link>
                         ))
