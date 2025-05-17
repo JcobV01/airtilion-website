@@ -14,7 +14,7 @@ const Header = ({ title, subtitle, img, positionBottom = true, position = 'botto
   return (
     <header
       ref={ref}
-      className={`w-full h-dvh relative flex justify-center items-center z-10 transition-opacity duration-1000 fold:top-[-180px]`}
+      className={`w-full h-dvh relative flex justify-center items-center z-10 transition-opacity duration-1000`}
     >
       <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-t from-[#040404] to-[#ffffff00] z-10'></div>
       <Image
@@ -26,7 +26,7 @@ const Header = ({ title, subtitle, img, positionBottom = true, position = 'botto
         priority
         quality={100}
         style={{
-          objectPosition: positionBottom ? 'center bottom' : position == 'center' ? 'center center' : 'center calc(100% + 10px)',
+          objectPosition: positionBottom ? 'center bottom' : position == 'center' ? 'center center' : 'center calc(100%)',
           filter: "blur(0.3px) brightness(0.7)"
         }}
       />
