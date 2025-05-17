@@ -10,7 +10,7 @@ const ArticleIntro = ({ title, image_link, intro_text }) => {
                 <div className='rounded-[5px] bg-[linear-gradient(202deg,#E2B35000_60%,#E2B350ff_140%)] brightness-50 absolute top-0 left-0 w-[600px] h-[400px] xl:w-[484px] lg:w-full' />
             </div>
 
-            <div className='flex-1 flex gap-[16px] text-[16px] font-light' dangerouslySetInnerHTML={{ __html: intro_text }} />
+            <div className='flex-1 flex flex-col gap-[16px] text-[16px] font-light' dangerouslySetInnerHTML={{ __html: intro_text }} />
 
         </section>
     )
