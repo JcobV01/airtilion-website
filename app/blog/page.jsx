@@ -20,7 +20,7 @@ const page = () => {
     <>
       <header ref={ref} className={`min-h-[600px] flex flex-col justify-end items-start px-[128px] pb-[128px] transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'} lg:px-[64px]`}>
         <h1 className='text-[50px] font-bold 2xl:text-[45px] xl:text-[40px] lg:text-[35px] lg:text-center lg:mx-auto'>Blog pełen wiedzy i&nbsp;inspiracji</h1>
-        <p className='text-[25px] w-[700px] font-light mt-[8px] 2xl:text-[20px] xl:text-[18px] lg:text-[16px] lg:w-full lg:text-center'>Zagłęb się w artykuły, porady i historie, pobudzające Twoją kreatywność i poszerzające horyzonty.</p>
+        <h2 className='text-[25px] w-[700px] font-light mt-[8px] 2xl:text-[20px] xl:text-[18px] lg:text-[16px] lg:w-full lg:text-center'>Zagłęb się w artykuły, porady i historie, pobudzające Twoją kreatywność i poszerzające horyzonty.</h2>
       </header>
 
       <main className='w-full bg-[#04040487] rounded-tl-[40px] rounded-tr-[40px] pt-[64px] flex flex-col gap-[128px]'>
