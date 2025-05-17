@@ -1,4 +1,5 @@
 import React from 'react'
+import { notFound } from 'next/navigation';
 
 import Route from '@components/blog-singlePost/Route';
 import BgBlog from '@components/blog-singlePost/BgBlog';
@@ -28,6 +29,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const res = await fetch(`${BLOG_URL}/wp-json/wp/v2/posts?slug=${params.slug}`)
   const posts = await res.json()
+
+  if (!res.ok || posts.length === 0) {
+    notFound();
+  }
 
   const post = posts[0]
 
