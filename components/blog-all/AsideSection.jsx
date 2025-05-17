@@ -94,7 +94,7 @@ const AsideSection = ({ phrase, setPhrase }) => {
                     <p className='text-[#e2b350] text-[16px] font-light'>Najczęściej odwiedzane kategorie</p>
 
                     <div className='flex flex-wrap gap-[8px]'>
-                        {categories.filter(cat => cat.name !== 'Polecane' && cat.name !== 'Popularne').map((cat, index) => (
+                        {categories.filter(cat => cat.name !== 'Polecane' && cat.name !== 'Popularne' && cat.name !== 'Bez kategorii').map((cat, index) => (
                             <Category key={index} name={cat.name} />
                         ))}
                     </div>
