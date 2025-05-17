@@ -28,17 +28,14 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const res = await fetch(`${BLOG_URL}/wp-json/wp/v2/posts?slug=${params.slug}`)
+
+  if (!res.ok) notFound();
+
   const posts = await res.json()
 
-  if (!res.ok || posts.length === 0) {
-    notFound();
-  }
+  if (!posts || posts.length === 0) notFound();
 
   const post = posts[0]
-
-  if (!post._embedded) {
-    notFound();
-  }
 
   return {
     title: `${post.acf.meta_title} - Airtilion`,
@@ -50,10 +47,15 @@ export async function generateMetadata({ params }) {
 }
 
 const page = async ({ params }) => {
-  const { slug } = await params
-  const posts = await fetch(`${BLOG_URL}/wp-json/wp/v2/posts?slug=${slug}&_embed`).then((res) =>
-    res.json()
-  )
+  const { slug } = params
+
+  const res = await fetch(`${BLOG_URL}/wp-json/wp/v2/posts?slug=${slug}&_embed`);
+
+  if (!res.ok) notFound();
+
+  const posts = await res.json();
+
+  if (!posts || posts.length === 0) notFound();
 
   const post = posts[0]
 
