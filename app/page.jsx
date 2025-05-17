@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import dynamic from 'next/dynamic'
 import HeaderBgDesktop from '@public/assets/images/3.webp'
 import useWindowWidth from '@hooks/useWindowWidth';
