@@ -46,7 +46,7 @@ const Recomendations = () => {
     const [ ref, isVisible ] = useIntersectionObserver();
 
     return (
-        <section ref={ref} className={`w-[1400px] mx-auto flex flex-col gap-[32px] transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'} 2xl:w-[1200px] xl:w-[960px] lg:w-full lg:px-[64px] sm:px-[16px]`}>
+        <section ref={ref} className={`w-[1400px] mx-auto flex flex-col gap-[32px] z-[1] transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'} 2xl:w-[1200px] xl:w-[960px] lg:w-full lg:px-[64px] sm:px-[16px]`}>
             <Heading title="Polecane treści" subtitle="artykuły wybrane z myślą o tobie" />
 
             <article className="grid [grid-template-columns:350px_298px_40px_298px_350px] [grid-template-rows:298px_298px] gap-[16px] 2xl:[grid-template-columns:300px_253px_30px_253px_300px] 2xl:[grid-template-rows:253px_253px] xl:[grid-template-columns:300px_328px_300px] xl:[grid-template-rows:228px_228px] lg:flex lg:flex-wrap lg:justify-center">

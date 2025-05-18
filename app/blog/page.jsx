@@ -23,13 +23,15 @@ const page = () => {
         <h2 className='text-[25px] w-[700px] font-light mt-[8px] 2xl:text-[20px] xl:text-[18px] lg:text-[16px] lg:w-full lg:text-center'>Zagłęb się w artykuły, porady i historie, pobudzające Twoją kreatywność i poszerzające horyzonty.</h2>
       </header>
 
-      <main className='w-full bg-[#04040487] rounded-tl-[40px] rounded-tr-[40px] pt-[64px] flex flex-col gap-[128px]'>
+      <main className='w-full pt-[64px] flex flex-col gap-[128px] relative'>
         <Recomendations />
         <Latest />
 
-        <section className='w-[1200px] mx-auto xl:w-[960px] lg:w-full lg:px-[48px]'>
+        <section className='w-[1200px] mx-auto xl:w-[960px] lg:w-full lg:px-[48px] z-[1]'>
           <CustomCooperate />
         </section>
+
+        <div className='bg-[#04040487] absolute top-0 left-0 w-full h-full backdrop-blur-[7px] z-[0] rounded-tl-[40px] rounded-tr-[40px]'/>
       </main>
 
       <Image src={bg} alt='zdjęcie tła' width={1920} height={1080} quality={100} className='object-cover w-full h-dvh fixed z-[-1] top-0 left-0 brightness-75' />

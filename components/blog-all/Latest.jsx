@@ -63,7 +63,7 @@ const Latest = () => {
     const [ ref, isVisible ] = useIntersectionObserver();
 
     return (
-        <section ref={ref} className={`w-[1400px] mx-auto flex flex-col gap-[128px] transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'} 2xl:w-[1200px] xl:w-[960px] lg:w-full lg:px-[48px] sm:px-[16px]`}>
+        <section ref={ref} className={`w-[1400px] mx-auto flex flex-col gap-[128px] z-[1] transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'} 2xl:w-[1200px] xl:w-[960px] lg:w-full lg:px-[48px] sm:px-[16px]`}>
             <Heading title="Najnowsze" subtitle="bądź na bierząco z nowościami" />
 
             <div className='flex justify-between gap-[32px] relative lg:flex-col lg:gap-[64px]'>

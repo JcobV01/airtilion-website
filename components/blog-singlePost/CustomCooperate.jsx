@@ -12,7 +12,7 @@ const CustomCooperate = () => {
     const [ref, isVisibleRef] = useIntersectionObserver();
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-
+    
     useEffect(() => {
         document.body.style.overflow = isContactOpen ? 'hidden' : ''
         const nav = document.querySelector('nav')
