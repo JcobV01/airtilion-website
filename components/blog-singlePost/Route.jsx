@@ -14,14 +14,14 @@ const Route = ({ title }) => {
       </div>
 
       <Link href='/blog' aria-label="Kliknij aby przejść na stronę z blogiem">
-        <span className='duration-700 hover:text-[#E2B350]'>Blog</span>
+        <span className='duration-700 hover:text-[#E2B350] sm:text-[14px]'>Blog</span>
       </Link>
 
       <div className='w-[16px]'>
         <Icon icon="mingcute:right-line" width="16" height="16" className='text-white' />
       </div>
 
-      <span className='text-[#E2B350] line-clamp-1' dangerouslySetInnerHTML={{ __html: title }} />
+      <span className='text-[#E2B350] line-clamp-1 sm:text-[14px]' dangerouslySetInnerHTML={{ __html: title }} />
     </div>
   )
 }
