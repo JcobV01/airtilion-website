@@ -11,7 +11,7 @@ export const authors = [
     {
         name: 'Jakub Wadycki',
         profession: 'Współwłaściciel Airtilion Sp. z o.o.',
-        bio: 'Ekspert od wycen dedykowanych rozwiązań i zarządzania projektami. Posiada ogromne doświadczenie w tworzeniu ofert idealnie dopasowanych do potrzeb i oczekiwań klientów, specjalista łączący pasję do nowych wyzwań z analitycznym podejściem do każdego szczegółu projektu.',
+        bio: 'Programista i współzałożyciel spółki specjalizującej się w tworzeniu nowoczesnych stron internetowych. Na co dzień zajmuje się projektowaniem, wdrażaniem oraz optymalizacją rozwiązań dopasowanych do potrzeb klientów. Rozpowszechnia nowoczesnye technologie wśród klientów spółki, aktywnie działa na rzecz polepszenia jakości internetu.',
         image: authorImg1
     }
 ]
