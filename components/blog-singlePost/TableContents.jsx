@@ -28,8 +28,11 @@ const TableContents = ({ content }) => {
                 currentH2 = { title: text, id, subheadings: [] }
                 temp.push(currentH2)
             } else if (tag === 'h3' && currentH2) {
-                id = `blog-anchor-h3-${h3Count++}`
-                currentH2.subheadings.push({ title: text, id })
+                const startsWithNumberDot = /^\d+\.\s*/.test(text);
+                if (!startsWithNumberDot) {
+                    id = `blog-anchor-h3-${h3Count++}`
+                    currentH2.subheadings.push({ title: text, id })
+                }
             }
         }
 
