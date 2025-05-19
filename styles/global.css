@@ -628,7 +628,7 @@ dialog::backdrop {
 }
 
 blockquote{
-  border: 3px solid #8a8a8a;
+  border-left: 3px solid #8a8a8a;
   padding-left: 16px;
 }
 
