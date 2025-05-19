@@ -627,6 +627,16 @@ dialog::backdrop {
   font-weight: 200;
 }
 
+.blog-content ol{
+  margin-top: 16px;
+  padding-left: 25px;
+  list-style: decimal;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 200;
+}
+
 blockquote{
   border-left: 3px solid #8a8a8a;
   padding-left: 16px;
