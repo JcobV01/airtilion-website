@@ -32,7 +32,7 @@ export default async function sitemap() {
     { url: 'https://airtilion.com/offer/pricing', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
     { url: 'https://airtilion.com/offer/services', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
     { url: 'https://airtilion.com/portfolio', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6, },
-    { url: 'https://airtilion.com/blog', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6}
+    { url: 'https://airtilion.com/blog', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6}
   ];
 
   const res = await fetch(`${BLOG_URL}/wp-json/wp/v2/posts?per_page=100`);
@@ -46,7 +46,7 @@ export default async function sitemap() {
   const blogPages = posts.map(post => ({
     url: `https://airtilion.com/blog/${post.slug}`,
     lastModified: new Date(post.date),
-    changeFrequency: 'monthly',
+    changeFrequency: 'daily',
     priority: 0.8,
   }));
 
