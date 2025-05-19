@@ -637,15 +637,35 @@ dialog::backdrop {
   font-weight: 200;
 }
 
+.blog-content a{
+  color:#E2B350;
+  transition-duration: 500ms;
+}
+
+.blog-content a:hover{
+  color:#7d642e;
+}
+
 blockquote{
   border-left: 3px solid #8a8a8a;
   padding-left: 16px;
+  font-style: italic;
 }
 
 .aligncenter{
   display: flex;
   justify-content: center;
 }
+
+.blog-content pre{
+    padding: 16px;
+    background: #222222;
+    border-radius: 5px;
+}
+
+.blog-content img{border-radius: 5px;}
+
+.blog-content .single-description{color: #8a8a8a; font-size: 12px;}
 
 .blog-content .wp-block-columns{display: flex; gap: 32px;}
 
