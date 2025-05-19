@@ -632,6 +632,11 @@ blockquote{
   padding-left: 16px;
 }
 
+.aligncenter{
+  display: flex;
+  justify-content: center;
+}
+
 .blog-content .wp-block-columns{display: flex; gap: 32px;}
 
 .blog-content .wp-block-column{width: 50%;}
