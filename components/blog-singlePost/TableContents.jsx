@@ -87,10 +87,10 @@ const TableContents = ({ content }) => {
                         {heading.subheadings &&
                             <ul className='list-disc pl-[25px] mt-[4px] space-y-[4px] marker:text-[#E2B350]'>
                                 {heading.subheadings.map((element, index) => {
-                                    const plain = element.title.replace(/^\d+\.\s*/, '')
+                                    const plain = element.title.replace(/^\d+\.\s*/, '');
                                     return (
                                         <li key={index}>
-                                            <button onClick={() => scrollToSectionBlog(element.id)} className="text-start align-top duration-500 hover:text-[#E2B350]" dangerouslySetInnerHTML={{ __html: {plain} }} />
+                                            <button onClick={() => scrollToSectionBlog(element.id)} className="text-start align-top duration-500 hover:text-[#E2B350]" dangerouslySetInnerHTML={{ __html: plain }} />
                                         </li>
                                     )
                                 })}
