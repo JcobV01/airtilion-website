@@ -28,11 +28,8 @@ const TableContents = ({ content }) => {
                 currentH2 = { title: text, id, subheadings: [] }
                 temp.push(currentH2)
             } else if (tag === 'h3' && currentH2) {
-                const startsWithNumberDot = /^\d+\.\s*/.test(text);
-                if (!startsWithNumberDot) {
-                    id = `blog-anchor-h3-${h3Count++}`
-                    currentH2.subheadings.push({ title: text, id })
-                }
+                id = `blog-anchor-h3-${h3Count++}`
+                currentH2.subheadings.push({ title: text, id })
             }
         }
 
@@ -89,11 +86,14 @@ const TableContents = ({ content }) => {
 
                         {heading.subheadings &&
                             <ul className='list-disc pl-[25px] mt-[4px] space-y-[4px] marker:text-[#E2B350]'>
-                                {heading.subheadings.map((element, index) => (
-                                    <li key={index}>
-                                        <button onClick={() => scrollToSectionBlog(element.id)} className="text-start align-top duration-500 hover:text-[#E2B350]" dangerouslySetInnerHTML={{ __html: element.title }} />
-                                    </li>
-                                ))}
+                                {heading.subheadings.map((element, index) => {
+                                    const plain = element.title.replace(/^\d+\.\s*/, '')
+                                    return (
+                                        <li key={index}>
+                                            <button onClick={() => scrollToSectionBlog(element.id)} className="text-start align-top duration-500 hover:text-[#E2B350]" dangerouslySetInnerHTML={{ __html: {plain} }} />
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         }
 
