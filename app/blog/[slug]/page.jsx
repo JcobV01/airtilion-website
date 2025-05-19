@@ -86,7 +86,7 @@ const page = async ({ params }) => {
 
         </article>
 
-        <div className='absolute top-0 left-0 w-full h-full backdrop-blur-[3px] z-[0] mt-[-150px]' />
+        <div className='absolute top-0 left-0 w-full h-full backdrop-blur-[7px] z-[0] mt-[-150px]' />
       </main>
       <Footer bg={false} />
     </>
