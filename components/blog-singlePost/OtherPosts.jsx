@@ -46,7 +46,7 @@ const OtherPosts = ({ category }) => {
                             posts.map((post, index) => (
                                 <Link href={`/blog/${post.slug}`} key={index} aria-label={`Kliknij aby przejść do postu na temat ${post.title}`}>
                                     <div className='group cursor-pointer w-[298px] h-[298px] overflow-hidden relative rounded-[5px] duration-700 hover:brightness-75 xl:w-[238px] xl:h-[238px] lg:w-[298px] lg:h-[298px] fold:w-[238px] fold:h-[238px]'>
-                                        <Image src={post.image} alt={`Grafika promująca post na temat ${post.title}`} width="298" height="298" className='object-cover absolute top-0 left-0 duration-700 group-hover:scale-125' />
+                                        <Image src={post.image} alt={`Grafika promująca post na temat ${post.title}`} width="298" height="298" className='object-cover w-full h-full absolute top-0 left-0 duration-700 group-hover:scale-125' />
                                         <div className='absolute top-0 left-0 w-full h-full bg-[#000000B3]' />
                                         <div className='absolute top-0 left-0 w-full h-full bg-[linear-gradient(202deg,#E2B35000_60%,#E2B350ff_140%)] brightness-90' />
 
