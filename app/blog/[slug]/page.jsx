@@ -59,9 +59,11 @@ const page = async ({ params }) => {
 
   const post = posts[0]
 
-  const category = post._embedded?.['wp:term']?.[0]?.[0]?.name
+  const allCategories = post._embedded?.['wp:term']?.[0] ?? [];
 
-  const filtredCategory = category.filter(el => el.name !== 'Popularne' && el.name !== 'Polecane' && el.name !== 'Bez kategorii');
+  const filtredCategory = allCategories.filter(el => el.name !== 'Popularne' && el.name !== 'Polecane' && el.name !== 'Bez kategorii');
+
+  const category = filtredCategory[0];
 
   return (
     <>
@@ -72,7 +74,7 @@ const page = async ({ params }) => {
 
         <article className='relative z-10'>
           <div className=' mt-[52px] w-[1240px] mx-auto xl:w-[1000px] lg:w-[90%]'>
-            <Category name={category} />
+            <Category name={category.name} />
           </div>
 
           <Introduction title={post.title.rendered} date={post.date} time={post.acf.time} />
@@ -80,7 +82,7 @@ const page = async ({ params }) => {
           <TableContents content={post.content.rendered} />
           <Content content={post.content.rendered} />
           <Author authorName={post.acf.author} />
-          <OtherPosts category={filtredCategory} />
+          <OtherPosts category={category.name} />
 
           <div className='mt-[96px] mb-[64px] w-[1240px] mx-auto xl:w-[1000px] lg:w-[90%] lg:mt-[64px]'>
             <CustomCooperate />
