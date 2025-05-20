@@ -61,6 +61,8 @@ const page = async ({ params }) => {
 
   const category = post._embedded?.['wp:term']?.[0]?.[0]?.name
 
+  const filtredCategory = category.filter(el => el.name !== 'Popularne' && el.name !== 'Polecane' && el.name !== 'Bez kategorii');
+
   return (
     <>
       <main className='mt-[150px] relative fold:mt-[170px]'>
@@ -78,7 +80,7 @@ const page = async ({ params }) => {
           <TableContents content={post.content.rendered} />
           <Content content={post.content.rendered} />
           <Author authorName={post.acf.author} />
-          <OtherPosts category={category} />
+          <OtherPosts category={filtredCategory} />
 
           <div className='mt-[96px] mb-[64px] w-[1240px] mx-auto xl:w-[1000px] lg:w-[90%] lg:mt-[64px]'>
             <CustomCooperate />
