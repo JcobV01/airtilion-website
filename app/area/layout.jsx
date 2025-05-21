@@ -1,6 +1,6 @@
 import Footer from '@components/Footer'
 import React from 'react'
-import errorImage from '@public/assets/images/area/area-bg.avif'
+import errorImage from '@public/assets/images/area/area-bg.webp'
 import Image from '@node_modules/next/image'
 
 export const metadata = {
