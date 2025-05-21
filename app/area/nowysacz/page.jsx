@@ -51,7 +51,8 @@ const cityData = {
           desc: "Skuteczna strona internetowa to więcej zapytań i większa sprzedaż"
         }
       ]
-    }
+    },
+    city: "Nowym Sączu"
   },
   technologies: {
     title: "TECHNOLOGIE",

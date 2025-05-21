@@ -52,7 +52,8 @@ const cityData = {
           desc: "Skuteczna strona internetowa to więcej zapytań i większa sprzedaż"
         }
       ]
-    }
+    },
+    city: "Sczecinie"
   },
   technologies: {
     title: "TECHNOLOGIE",

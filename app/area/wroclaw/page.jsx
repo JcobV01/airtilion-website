@@ -52,7 +52,8 @@ const cityData = {
           desc: "Skuteczna strona internetowa to więcej zapytań i większa sprzedaż"
         }
       ]
-    }
+    },
+    city: "Wrocławiu"
   },
   technologies: {
     title: "TECHNOLOGIE",
