@@ -1,13 +1,13 @@
 import React from 'react'
 
 import CityComponent from '@components/area/CityComponent'
-import Cooperate from '@components/home/sections/AboutUs/sections/Cooperate'
 import CityFaq from '@components/area/faq/CityFaq'
 import CityPortfolio from '@components/area/CityPortfolio'
 import OfferCity from '@components/area/OfferCity'
 import ProcessCity from '@components/area/ProcessCity'
 import SliderSection from '@components/area/Slider'
 import WhyCity from '@components/area/WhyCity'
+import CustomCooperate from '@components/blog-singlePost/CustomCooperate'
 
 import bydgoszcz from '@public/assets/images/area/cities/bydgoszcz.webp'
 import firstCard from '@public/assets/images/area/offer/card-1.webp'
@@ -183,8 +183,7 @@ const page = () => {
       <CityPortfolio city="w Bydgoszczy" />
       <CityFaq data={cityData.accordion} />
       <section className='w-[1240px] 2xl:w-[960px] lg:w-[90%] mx-auto'>
-        <Cooperate />
-
+        <CustomCooperate />
       </section>
     </>
   )

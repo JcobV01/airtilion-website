@@ -18,6 +18,7 @@ import fifthCard from '@public/assets/images/area/offer/card-5.webp'
 import firstIllustration from '@public/assets/images/area/offer/illustration-1.svg'
 import secondllustration from '@public/assets/images/area/offer/illustration-2.svg'
 import thirdllustration from '@public/assets/images/area/offer/illustration-3.svg'
+import CustomCooperate from '@components/blog-singlePost/CustomCooperate'
 
 const cityData = {
   firstSection: {
@@ -183,8 +184,7 @@ const page = () => {
       <CityPortfolio city="w Olsztynie" />
       <CityFaq data={cityData.accordion} />
       <section className='w-[1240px] 2xl:w-[960px] lg:w-[90%] mx-auto'>
-        <Cooperate />
-
+        <CustomCooperate />
       </section>
     </>
   )

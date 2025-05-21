@@ -7,7 +7,7 @@ import ProcessCity from '@components/area/ProcessCity'
 import OfferCity from '@components/area/OfferCity'
 import CityPortfolio from '@components/area/CityPortfolio'
 import CityFaq from '@components/area/faq/CityFaq'
-import Cooperate from '@components/home/sections/AboutUs/sections/Cooperate'
+import CustomCooperate from '@components/blog-singlePost/CustomCooperate'
 
 import katowice from '@public/assets/images/area/cities/katowice.webp'
 import firstCard from '@public/assets/images/area/offer/card-1.webp'
@@ -183,8 +183,7 @@ const page = () => {
       <CityPortfolio city="w Katowicach" />
       <CityFaq data={cityData.accordion} />
       <section className='w-[1240px] 2xl:w-[960px] lg:w-[90%] mx-auto'>
-        <Cooperate />
-
+        <CustomCooperate />
       </section>
     </>
   )
