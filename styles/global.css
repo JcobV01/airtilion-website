@@ -661,6 +661,7 @@ blockquote{
     padding: 16px;
     background: #222222;
     border-radius: 5px;
+    text-wrap: auto;
 }
 
 .blog-content img{border-radius: 5px;}
