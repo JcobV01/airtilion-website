@@ -25,7 +25,7 @@ const PortfolioItem = ({ title, desc, bg, image, id, client }) => {
                     <span className='h-[2px] w-[50%] xl:w-[30%] bg-[#E2B35080] z-10 block absolute top-[30px] left-[50%] xl:left-[20%] translate-x-[-50%] lg:hidden'></span>
 
                     <div className='w-[400px] h-full lg:w-full lg:h-auto flex flex-col gap-[30px] justify-center bg-[#00000082] relative z-20 px-[50px] lg:py-[20px] sm:px-[20px]'>
-                        <h5 className={`${kaushan.className} text-[25px] xl:text-[20px] relative z-10 sm:text-center`}>{title}</h5>
+                        <h4 className={`${kaushan.className} text-[25px] xl:text-[20px] relative z-10 sm:text-center`}>{title}</h4>
                         <p className='text-[15px] xxl:text-[18px] xl:text-[13px] lg:[11px] text-[#AFAFAF] relative z-10 md:line-clamp-3 sm:text-center'>{desc}</p>
                     </div>
 

@@ -12,7 +12,7 @@ const People = () => {
 
     return (
         <article ref={ref} className={`relative transition-all duration-1000 overflow-x-hidden ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
-            <h5 className='text-[20px] xxl:text-[24px] xl:text-[18px] lg:text-[15px] tracking-[3px] text-[#E2B350] mb-[20px] text-center'>KIM JESTEŚMY?</h5>
+            <h4 className='text-[20px] xxl:text-[24px] xl:text-[18px] lg:text-[15px] tracking-[3px] text-[#E2B350] mb-[20px] text-center'>KIM JESTEŚMY?</h4>
             <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] font-light mb-[40px] text-center'>Poznając zespół Airtilion, zyskujesz bezpośredni kontakt z naszymi specjalistami, co przekłada się na sprawniejszą i bardziej efektywną współpracę. Dzięki bardziej bezpośredniej komunikacji możemy lepiej zrozumieć Twoje potrzeby i szybciej odpowiadać na wszelkie wyzwania. Poniżej znajdziesz dane kontaktowe do każdego oraz kilka informacji o nas. Zapraszamy do kontaktu i wspólnego działania!</p>
 
             <section className={`flex flex-col items-center mt-[100px] gap-[70px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>

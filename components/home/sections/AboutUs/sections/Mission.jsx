@@ -48,7 +48,7 @@ const Mission = () => {
     const [ ref, isVisible ] = useIntersectionObserver();
     return (
         <article ref={ref} className={`relative transition-all duration-1000 ease-in-out ${isVisible ? 'about-visible' : 'about-hidden'}`}>
-            <h5 className='text-[20px] xxl:text-[24px] xl:text-[18px] lg:text-[15px] tracking-[3px] text-[#E2B350] mb-[20px]'>NASZA MISJA</h5>
+            <h4 className='text-[20px] xxl:text-[24px] xl:text-[18px] lg:text-[15px] tracking-[3px] text-[#E2B350] mb-[20px]'>NASZA MISJA</h4>
             <p className='text-[16px] xxl:text-[20px] xl:text-[15px] lg:text-[13px] font-light'>Naszą misją jest przede wszystkim indywidualizm. Chcemy, aby każdy klient poczuł się wyjątkowo, dzięki możliwości dostosowania dosłownie wszystkiego. Tworzymy strony nie tylko piękne, ale i funkcjonalne, które pomagają naszym klientom rozwijać ich biznesy. Wierzymy w ciężką pracę, transparentność i dbałość o każdy detal.</p>
 
             <div className='flex flex-wrap justify-center gap-[15px] mt-[80px]'>
@@ -66,9 +66,9 @@ const Mission = () => {
                                 alt='Część obrazka z lewm'
                             />
                             <div className='relative z-20 bg-[#161616CC] w-[280px] h-[280px] xxl:w-[310px] xxl:h-[310px] lg:w-[210px] lg:h-[210px] rounded-[5px] p-[15px] lg:p-[7px] flex flex-col justify-center items-start rect-cut'>
-                                <h6 className='text-[20px] xxl:text-[22px] xl:text-[18px] lg:text-[15px] font-medium text-center absolute top-[30px] lg:top-[15px] left-[50%] translate-x-[-50%]'>
+                                <h5 className='text-[20px] xxl:text-[22px] xl:text-[18px] lg:text-[15px] font-medium text-center absolute top-[30px] lg:top-[15px] left-[50%] translate-x-[-50%]'>
                                     {item.title}
-                                </h6>
+                                </h5>
                                 <p className='text-[13px] xxl:text-[16px] xxl:mt-[20px] lg:text-[11px] font-light text-center lg:mt-[15px]'>{item.desc}</p>
                             </div>
 

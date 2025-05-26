@@ -15,7 +15,7 @@ const SliderCard = ({ author, page, desc, key, icon }) => {
                 }
                 
                 <div className='flex flex-col'>
-                    <h5 className='text-[20px] xxl:text-[24px] font-extralight tracking-[1px] lg:text-[16px]'>{author}</h5>
+                    <h4 className='text-[20px] xxl:text-[24px] font-extralight tracking-[1px] lg:text-[16px]'>{author}</h4>
                     <span className='pl-[15px] text-[#AEAEAE] text-[16px] xxl:text-[20px] font-extralight lg:text-[13px]'>{page}</span>
                 </div>
             </div>

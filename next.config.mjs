@@ -43,6 +43,11 @@ const nextConfig = {
                 destination: '/oferta/strony-internetowe',
                 permanent: true,
             },
+            {
+                source: '/area',
+                destination: '/',
+                permanent: true,
+            },
         ]
     }
 };

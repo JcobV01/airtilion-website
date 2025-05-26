@@ -44,7 +44,7 @@ const Portfolio = () => {
             ))}
 
             <div className='flex flex-col gap-[30px] items-center mt-[50px] z-10'>
-                <h5 className='text-[20px] xxl:text-[24px] xl:text-[18px] lg:text-[15px] sm:text-[13px] tracking-[3px] text-[#E2B350] text-center'>To tylko początek! Zobacz nasze pełne portfolio!</h5>
+                <h4 className='text-[20px] xxl:text-[24px] xl:text-[18px] lg:text-[15px] sm:text-[13px] tracking-[3px] text-[#E2B350] text-center'>To tylko początek! Zobacz nasze pełne portfolio!</h4>
                 <p className='text-[15px] xxl:text-[20px] lg:text-[13px] sm:text-[11px] tracking-[1.5px] text-center'>Prezentujemy tu jedynie nasze najnowsze projekty, aby dać Ci przedsmak naszych umiejętności i kreatywności. Każdy projekt to unikalna historia, dopasowana do indywidualnych potrzeb klientów. Chcesz zobaczyć więcej? </p>
 
                 <Link href="/portfolio">
