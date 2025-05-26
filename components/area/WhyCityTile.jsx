@@ -9,7 +9,7 @@ const WhyCityTile = ({tile}) => {
             <p className='text-[#E2B350] font-extralight text-[13px] xl:text-[11px]'>{tile.iconText}</p>
         </div>
 
-        <p className='text-[18px] font-medium text-white mt-[8px] xl:text-[16px]'>{tile.title}</p>
+        <h3 className='text-[18px] font-medium text-white mt-[8px] xl:text-[16px]'>{tile.title}</h3>
         <p className='text-[15px] text-[#ABABAB] mt-[32px] xl:text-[14px] xl:mt-[8px]'>{tile.desc}</p>
     </div>
   )

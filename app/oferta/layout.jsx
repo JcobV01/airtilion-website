@@ -8,7 +8,7 @@ export const metadata = {
   title: "Airtilion - Oferta - Odkryj nowe horyzonty",
   description: "Sprawdź naszą ofertę usług webowych, w tym projektowanie stron internetowych, sklepów online i aplikacji mobilnych. Tworzymy rozwiązania dopasowane do Twoich potrzeb.",
   alternates: {
-    canonical: 'https://airtilion.com/offer',
+    canonical: 'https://airtilion.com/oferta',
   },
 }
 

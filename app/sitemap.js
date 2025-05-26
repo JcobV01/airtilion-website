@@ -26,11 +26,11 @@ export default async function sitemap() {
     { url: 'https://airtilion.com/area/warszawa', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
     { url: 'https://airtilion.com/area/wroclaw', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
     { url: 'https://airtilion.com/faq', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8, },
-    { url: 'https://airtilion.com/offer/websites', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
-    { url: 'https://airtilion.com/offer/shops', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
-    { url: 'https://airtilion.com/offer/apps', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
-    { url: 'https://airtilion.com/offer/pricing', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
-    { url: 'https://airtilion.com/offer/services', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
+    { url: 'https://airtilion.com/oferta/strony-internetowe', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
+    { url: 'https://airtilion.com/oferta/sklepy-internetowe', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
+    { url: 'https://airtilion.com/oferta/aplikacje-mobilne', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
+    { url: 'https://airtilion.com/oferta/darmowa-wycena', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
+    { url: 'https://airtilion.com/oferta/uslugi', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
     { url: 'https://airtilion.com/portfolio', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6, },
     { url: 'https://airtilion.com/blog', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6}
   ];

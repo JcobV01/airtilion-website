@@ -12,15 +12,15 @@ const NavbarFooter = () => {
     const menuFooter = [
         {
             name: "O nas",
-            link: "/#about-us"
+            link: "/#o-nas"
         },
         {
             name: "Współpraca",
-            link: "/#cooperation"
+            link: "/#wspolpraca"
         },
         {
             name: "Oferta",
-            link: "/#offer"
+            link: "/oferta"
         },
         {
             name: "Portfolio",
@@ -32,7 +32,7 @@ const NavbarFooter = () => {
         },
         {
             name: "Kontakt",
-            link: "/#contact"
+            link: "/#kontakt"
         },
         {
             name: "Obszar działania",

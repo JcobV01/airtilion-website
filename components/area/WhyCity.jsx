@@ -21,7 +21,7 @@ const WhyCity = ({data}) => {
           <div className='grid gap-[16px] w-[1220px] mx-auto grid-cols-4 grid-rows-2 xl:w-[960px] lg:grid-cols-2 lg:grid-rows-4 lg:w-[500px] sm:flex sm:flex-col sm:w-[90%]'>
             <div className='w-[600px] h-[600px] z-20 relative p-[64px] flex items-end col-span-2 row-span-2 xl:w-[472px] xl:h-[472px] lg:w-[500px] lg:h-[500px] sm:h-auto sm:w-[100%] aspect-square sm:p-[32px]'>
               <Image src={data.tiles.image} width={600} height={600} quality={100} className='absolute top-0 left-0 w-full h-full brightness-[1.5]' alt={`Tworzenie stron internetowych w ${data.city}`}/>
-              <p className='relative z-20 text-[25px] font-extralight lg:text-[20px]'>{data.tiles.title}</p>
+              <h2 className='relative z-20 text-[25px] font-extralight lg:text-[20px]'>{data.tiles.title}</h2>
             </div>
 
             {data?.tiles?.elements.map((tile, index) => (

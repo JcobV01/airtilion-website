@@ -20,7 +20,7 @@ const offer = [
                 list: ["Indywidualny projekt graficzny", "SEO", "Bezpłatne wsparcie strony przez rok", "I wiele więcej..."]
             }
         },
-        link: "/offer/websites"
+        link: "/oferta/strony-internetowe"
     },
 
     {
@@ -35,7 +35,7 @@ const offer = [
                 list: ["Wprowadzenie produktów", "SEO", "Integracja płatności i wysyłek", "I wiele więcej..."]
             }
         },
-        link: "/offer/shops"
+        link: "/oferta/sklepy-internetowe"
     },
 
     {
@@ -50,7 +50,7 @@ const offer = [
                 list: ["Stworzenie strony oraz aplikacjie", "Indywidualny projekt graficzny", "Kompatybilność z Androidem i IOS", "I wiele więcej..."]
             }
         },
-        link: "/offer/apps"
+        link: "/oferta/aplikacje-mobilne"
     },
 
     {
@@ -65,7 +65,7 @@ const offer = [
                 list: []
             }
         },
-        link: "/offer/pricing"
+        link: "/oferta/darmowa-wycena"
     },
 
     {
@@ -80,7 +80,7 @@ const offer = [
                 list: []
             }
         },
-        link: "/offer/services"
+        link: "/oferta/uslugi"
     }
 ]
 

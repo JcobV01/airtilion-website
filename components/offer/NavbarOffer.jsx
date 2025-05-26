@@ -16,27 +16,27 @@ const NavbarOffer = () => {
   const offerMenu = [
     {
       name: "Strony",
-      link: "/websites",
+      link: "/strony-internetowe",
       img: websitesCard,
     },
     {
       name: "Sklepy",
-      link: "/shops",
+      link: "/sklepy-internetowe",
       img: shopsCard,
     },
     {
       name: "Aplikacje mobilne",
-      link: "/apps",
+      link: "/aplikacje-mobilne",
       img: appsCard,
     },
     {
       name: "Darmowa wycena",
-      link: "/pricing",
+      link: "/darmowa-wycena",
       img: pricingCard,
     },
     {
       name: "Pozostałe usługi",
-      link: "/services",
+      link: "/uslugi",
       img: servicesCard,
     }
   ]
@@ -52,9 +52,9 @@ const NavbarOffer = () => {
     <nav className='flex justify-center gap-[30px] lg:gap-[16px] z-10 lg:flex-wrap'>
       {
         offerMenu.map((item, index) => {
-          const isActive = pathname.startsWith(`/offer${item.link}`);
+          const isActive = pathname.startsWith(`/oferta${item.link}`);
           return (
-            <Link href={`/offer${item.link}`} key={index} onClick={(e) => handleMenuClick(e)}>
+            <Link href={`/oferta${item.link}`} key={index} onClick={(e) => handleMenuClick(e)}>
               <div className={`h-[375px] w-[180px] bg-center flex justify-center items-center duration-500 hover:grayscale-0 ${isActive ? '' : 'grayscale'}`} style={{ backgroundImage: `url(${item.img.src})` }}>
                 <p className='text-[25px] font-light tracking-[2.5px] text-center'>
                   {item.name}

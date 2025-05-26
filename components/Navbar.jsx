@@ -12,18 +12,18 @@ import { usePathname, useRouter } from 'next/navigation'
 const menu = [
     {
         name: "O nas",
-        link: "/#about-us",
-        id: "#about-us"
+        link: "/#o-nas",
+        id: "#o-nas"
     },
     {
         name: "Współpraca",
-        link: "/#cooperation",
-        id: "#cooperation"
+        link: "/#wspolpraca",
+        id: "#wspolpraca"
     },
     {
         name: "Oferta",
-        link: "/#offer",
-        id: "#offer"
+        link: "/oferta",
+        id: ""
     },
     {
         name: "Portfolio",
@@ -42,8 +42,8 @@ const menu = [
     },
     {
         name: "Kontakt",
-        link: "/#contact",
-        id: "#contact"
+        link: "/#kontakt",
+        id: "#kontakt"
     },
 ]
 
@@ -146,7 +146,7 @@ const Navbar = () => {
                         ))
                     }
 
-                    <Link href="/offer/pricing">
+                    <Link href="/oferta/darmowa-wycena">
                         <button onClick={clearMenu} className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-500 flex gap-[10px] items-center hover:text-[#d9d9d9] hover:bg-gradient-to-r hover:text-[15px] hover:py-[12px] hover:tracking-[1.5px] nav-button xxl:text-[20px] xl:text-[15px]'>
                             <Icon icon="solar:letter-bold" width="25" height="25" />
                             <Icon icon="solar:letter-opened-bold" width="25" height="25" className='hidden' />
@@ -172,7 +172,7 @@ const Navbar = () => {
                         ))
                     }
 
-                    <Link href="/offer/pricing">
+                    <Link href="/oferta/darmowa-wycena">
                         <button onClick={changeVisibility} className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-500 flex gap-[10px] items-center w-max hover:text-[#d9d9d9] hover:bg-gradient-to-r hover:text-[15px] hover:py-[12px] hover:tracking-[1.5px] nav-button xl:text-[15px]'>
                             <Icon icon="solar:letter-bold" width="25" height="25" />
                             <Icon icon="solar:letter-opened-bold" width="25" height="25" className='hidden' />

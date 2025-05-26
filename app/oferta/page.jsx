@@ -7,7 +7,7 @@ export default function offer() {
     const router = useRouter();
 
     useEffect(() => {
-        router.push('/offer/websites');
+        router.push('/oferta/strony-internetowe');
     }, [router]);
 
     return null;

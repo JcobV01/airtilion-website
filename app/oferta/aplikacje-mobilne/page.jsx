@@ -1,17 +1,18 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import Heading from '@components/Heading'
-import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation'
+import { toast } from 'react-toastify';
 import { Icon } from '@iconify/react';
-
-import imageBackground from '@public/assets/images/offer/formPricing.webp'
-import Form from '@components/offer/Form'
-import FormButton from '@components/FormButton'
 import Link from 'next/link';
 
-const pricing = () => {
+import imageBackground from '@public/assets/images/offer/formPricing.webp'
+
+import Heading from '@components/Heading'
+import FormButton from '@components/FormButton'
+import Form from '@components/offer/Form'
+
+const apps = () => {
   const [submitting, setSubmitting] = useState(false);
   const [post, setPost] = useState({});
   const [isOtherChecked, setIsOtherChecked] = useState(true);
@@ -59,7 +60,7 @@ const pricing = () => {
       setIsOtherChecked(value !== 'Inne:');
     }
 
-    if (type === 'text' && ['Type', 'Number_of_subpages', 'Functionality', 'CMS', 'Optimization_and_additional_services', 'Integrations'].includes(name) && name !== 'Name' && name !== 'Email' && name !== 'Number' && name !== 'Company' && name !== 'Industry') {
+    if (type === 'text' && ['Website_type', 'App_type', 'Number_of_subpages', 'Website_functionality', 'App_functionality', 'CMS', 'Optimization_and_additional_services', 'Integrations'].includes(name) && name !== 'Name' && name !== 'Email' && name !== 'Number' && name !== 'Company' && name !== 'Industry') {
       if (!isOtherChecked) {
         setPost(prevPost => {
           const newValue = `Inne: ${value}`;
@@ -93,7 +94,7 @@ const pricing = () => {
         Date: date
       };
 
-      const response = await fetch('/api/offer/new', {
+      const response = await fetch('/api/offer/apps', {
         method: 'POST',
         body: JSON.stringify({
           post: postData
@@ -105,7 +106,7 @@ const pricing = () => {
 
       if (response.ok) {
         toast.success('Przesłano formularz!');
-        router.push('/offer');
+        router.push('/oferta/aplikacje-mobilne');
       } else {
         handleErrorResponse();
       }
@@ -123,9 +124,13 @@ const pricing = () => {
       setError("Rodzaj strony jest wymagany!");
     } else if (!post.Number_of_subpages) {
       setError("Liczba podstron jest wymagana!");
-    } else if (!post.Functionality || post.Functionality.length === 0) {
+    } else if (!post.Website_functionality || post.Website_functionality.length === 0) {
       setError("Funkcjonalności są wymagane!");
-    } else if (post.Functionality.some(func => func.length < 9)) {
+    } else if (post.Website_functionality.some(func => func.length < 9)) {
+      setError("Minimalna ilość znaków w funkcjonalnościach to 4!");
+    } else if (!post.App_functionality || post.Website_functionality.length === 0) {
+      setError("Funkcjonalności są wymagane!");
+    } else if (post.App_functionality.some(func => func.length < 9)) {
       setError("Minimalna ilość znaków w funkcjonalnościach to 4!");
     } else if (!post.Budget) {
       setError("Budżet jest wymagany!");
@@ -148,20 +153,18 @@ const pricing = () => {
   };
 
   useEffect(() => {
-    const topScroll = document.querySelector('form').getBoundingClientRect().top - 150;
-    window.scrollTo({ top: topScroll, behavior: 'auto' })
-  }, [])
-
+      window.scrollTo({top: 0, behavior: 'auto'})
+    },[])
 
   return (
     <>
       <section className='relative m-auto flex flex-col items-center gap-[150px] mb-[20px] offerForm xl:gap-[100px] fold:w-[100%] z-10'>
         <article className='flex flex-col w-[1240px] mt-[100px] xxl:w-[1500px] xl:w-[90%]'>
-          <Heading title="Darmowa wycena" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
-          <p className='mt-[50px] text-[18px] font-light xxl:text-[25px] sm:text-[14px]'>Masz pomysł na stronę internetową, ale nie wiesz, ile będzie kosztować? Skorzystaj z naszego intuicyjnego formularza wyceny! Wybierz funkcje, które Cię interesują, a my przygotujemy spersonalizowaną ofertę dopasowaną do Twoich potrzeb.</p>
+          <Heading title="Aplikacje mobilne" subtitle="NOWOCZESNOŚĆ I JAKOŚĆ W JEDNYM" />
+          <p className='mt-[50px] text-[18px] font-light xxl:text-[25px] sm:text-[14px]'>Zainteresowany stworzeniem aplikacji mobilnej i strony internetowej? Skorzystaj z naszego intuicyjnego formularza, aby uzyskać darmową wycenę! Wybierz opcje, które najlepiej odpowiadają Twoim potrzebom, a my przygotujemy spersonalizowaną ofertę. Wypełnij formularz, aby pomóc nam lepiej zrozumieć Twoje wymagania:</p>
           <div className='mt-[50px] flex flex-col'>
             <h5 className='text-[22px] xxl:text-[30px] sm:text-[18px]'>Informacje ogólne</h5>
-            <p className='mt-[15px] text-[18px] font-extralight xxl:text-[24px] sm:text-[16px]'>Każda strona internetowa lub sklep internetowy obejmuje:</p>
+            <p className='mt-[15px] text-[18px] font-extralight xxl:text-[24px] sm:text-[16px]'>W pakiecie każda strona internetowa obejmuje:</p>
             <ul className='flex flex-col pl-[10px] text-[16px] font-extralight mt-[10px] space-y-[10px] tracking-[1.1px] xxl:text-[20px] sm:text-[14px]'>
               <li className='flex items-center gap-[10px]'>
                 <div className='w-[12px] h-[12px]'>
@@ -185,10 +188,9 @@ const pricing = () => {
                 <div className='w-[12px] h-[12px]'>
                   <Icon icon="material-symbols:circle" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
                 </div>
-                <p className='font-normal'>Wsparcie techniczne przez 1 rok w tym:</p>
+                <p className='font-normal'>Wsparcie techniczne strony oraz aplikacji przez 1 rok w tym:</p>
               </li>
               <li>
-
                 <ul className='pl-[20px]  space-y-[5px]'>
                   <li className='flex items-center gap-[5px]'>
                     <div className='w-[12px] h-[12px]'>
@@ -206,7 +208,7 @@ const pricing = () => {
                     <div className='w-[12px] h-[12px]'>
                       <Icon icon="material-symbols:circle-outline" width='12' height='12' alt="Ikona kropki" className='text-[#E2B350]' />
                     </div>
-                    <p>Naprawa ewentualnych błędów (wywołanych np. przez aktualizację zewnętrznego oprogramowania połączonego ze stroną).</p>
+                    <p>Naprawa ewentualnych błędów.</p>
                   </li>
                   <li className='flex items-center gap-[5px]'>
                     <div className='w-[12px] h-[12px]'>
@@ -218,31 +220,45 @@ const pricing = () => {
               </li>
             </ul>
           </div>
-          <form id="form" onSubmit={createPricing} className={`mt-[100px] flex flex-col text-[18px] font-extralight space-y-[50px] bg-[rgba(27,27,27,0.20)] rounded-[10px] backdrop-blur-[5px] py-[40px] px-[50px] xxl:text-[22px] sm:px-[10px] sm:mt-[50px]`}>
+          <form id="form" onSubmit={createPricing} className='mt-[100px] flex flex-col text-[18px] font-extralight space-y-[50px] bg-[rgba(27,27,27,0.20)] rounded-[10px] backdrop-blur-[5px] py-[40px] px-[50px] xxl:text-[22px] sm:px-[10px] sm:mt-[50px]'>
             {error && <span className='text-red-700 font-light tracking-[2px] mb-[5px]'>{error}</span>}
             <div>
               <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>1. Rodzaj strony internetowej</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px] lg:flex-col-reverse lg:gap-[15px]'>
                 <div className='flex flex-col gap-[15px]'>
 
-                  <Form nameForm="Type" text="Wizytówka" idHandle="R1" inputType="radio" handleInputChange={handleInputChange} />
-                  <Form nameForm="Type" text="Blog" idHandle="R2" inputType="radio" handleInputChange={handleInputChange} />
-                  <Form nameForm="Type" text="Sklep internetowy" inputType="radio" idHandle="R3" handleInputChange={handleInputChange} />
-                  <Form nameForm="Type" text="Portfolio" idHandle="R4" inputType="radio" handleInputChange={handleInputChange} />
-                  <Form nameForm="Type" text="Inne:" idHandle="R5" inputType="radio" showTextInput={true} handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
+                  <Form nameForm="Website_type" text="Wizytówka" idHandle="R1" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_type" text="Blog" idHandle="R2" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_type" text="Sklep internetowy" inputType="radio" idHandle="R3" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_type" text="Portfolio" idHandle="R4" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_type" text="Inne:" idHandle="R5" inputType="radio" showTextInput={true} handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
 
                 </div>
                 <div className='flex flex-col gap-[15px]'>
 
-                  <Form nameForm="Type" text="Portal informacyjny" idHandle="R6" inputType="radio" handleInputChange={handleInputChange} />
-                  <Form nameForm="Type" text="Strona firmowa" idHandle="R7" inputType="radio" handleInputChange={handleInputChange} />
-                  <Form nameForm="Type" text="Strona wydarzenia" idHandle="R8" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_type" text="Portal informacyjny" idHandle="R6" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_type" text="Strona firmowa" idHandle="R7" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_type" text="Strona wydarzenia" idHandle="R8" inputType="radio" handleInputChange={handleInputChange} />
 
                 </div>
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>2. Liczba podstron</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>2. Rodzaj aplikacji mobilnej</h5>
+              <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
+                <div className='flex flex-col gap-[15px]'>
+
+                  <Form nameForm="App_type" text="Aplikacja informacyjna" idHandle="RA1" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="App_type" text="Aplikacja społecznościowa" idHandle="RA2" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="App_type" text="Aplikacja do zarządzania zadaniami" inputType="radio" idHandle="RA3" handleInputChange={handleInputChange} />
+                  <Form nameForm="App_type" text="Aplikacja rozrywkowa" idHandle="RA4" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="App_type" text="Inne:" idHandle="RA5" inputType="radio" showTextInput={true} handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
+
+                </div>
+              </div>
+            </div>
+            <div>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>3. Liczba podstron strony internetowej</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -255,34 +271,34 @@ const pricing = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>3. Funkcjonalności</h5>
-              <div className='mt-[20px] pl-[25px] flex gap-[200px] lg:flex-col-reverse lg:gap-[15px]'>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>4. Funkcjonalności strony internetowej</h5>
+              <div className='mt-[20px] pl-[25px] flex gap-[200px] xl:flex-col-reverse xl:gap-[15px]'>
                 <div className='flex flex-col gap-[15px]'>
 
-                  <Form nameForm="Functionality" text="System zarządzania treścią (CMS)" style="quadBefore" idHandle="F1" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Formularz kontaktowy" idHandle="F2" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Blog / artykuły" idHandle="F3" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Galeria zdjęć" idHandle="F4" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Sklep internetowy" idHandle="F5" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Płatności online (PayPal, Przelewy24)" style="quadBefore" idHandle="F6" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Integracja z social mediami" idHandle="F7" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Inne:" idHandle="F8" style="quadBefore" showTextInput={true} inputType="checkbox" handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
+                  <Form nameForm="Website_functionality" text="System zarządzania treścią (CMS)" style="quadBefore" idHandle="F1" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Formularz kontaktowy" idHandle="F2" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Blog / artykuły" idHandle="F3" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Galeria zdjęć" idHandle="F4" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Sklep internetowy" idHandle="F5" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Płatności online (PayPal, Przelewy24)" style="quadBefore" idHandle="F6" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Integracja z social mediami" idHandle="F7" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Inne:" idHandle="F8" style="quadBefore" showTextInput={true} inputType="checkbox" handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
 
                 </div>
                 <div className='flex flex-col gap-[15px]'>
 
-                  <Form nameForm="Functionality" text="Integracja z mapami Google" idHandle="F9" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Autentyfikacja" idHandle="F10" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Komentarze / recenzje użytkowników" style="quadBefore" idHandle="F11" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Newsletter / subskrybcje" idHandle="F12" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Wielojęzyczność" idHandle="F13" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
-                  <Form nameForm="Functionality" text="Forum dyskusyjne" idHandle="F14" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Integracja z mapami Google" idHandle="F9" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Autentyfikacja" idHandle="F10" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Komentarze / recenzje użytkowników" style="quadBefore" idHandle="F11" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Newsletter / subskrybcje" idHandle="F12" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Wielojęzyczność" idHandle="F13" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="Website_functionality" text="Forum dyskusyjne" idHandle="F14" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
 
                 </div>
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>3a. Jeśli w poprzednim punkcie wybrałeś/aś system zarządzania treścią, zaznacz interesującą Cię opcje.</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>4a. Jeśli w poprzednim punkcie wybrałeś/aś system zarządzania treścią, zaznacz interesującą Cię opcje.</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -294,8 +310,28 @@ const pricing = () => {
 
               </div>
             </div>
+
             <div>
-              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>4. Optymalizacja i dodatkowe usługi</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>5. Funkcjonalności aplikacji mobilnej</h5>
+              <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
+                <div className='flex flex-col gap-[15px]'>
+
+                  <Form nameForm="App_functionality" text="Autentyfikacja" idHandle="FA1" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="App_functionality" text="Powiadomienia push" style="quadBefore" idHandle="FA2" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="App_functionality" text="Integracja z systemami płatności" idHandle="FA3" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="App_functionality" text="Integracja z mediami społecznościowymi" idHandle="FA4" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="App_functionality" text="Sklep internetowy" style="quadBefore" idHandle="FA5" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="App_functionality" text="Możliwość pracy offline" idHandle="FA6" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="App_functionality" text="Synchronizacja z chmurą" idHandle="FA7" style="quadBefore" inputType="checkbox" handleInputChange={handleInputChange} />
+                  <Form nameForm="App_functionality" text="Inne:" idHandle="FA8" style="quadBefore" showTextInput={true} inputType="checkbox" handleInputChange={handleInputChange} isOtherChecked={isOtherChecked} />
+
+                </div>
+
+              </div>
+            </div>
+
+            <div>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>6. Optymalizacja i dodatkowe usługi</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -310,7 +346,7 @@ const pricing = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>5. Integracje</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>7. Integracje</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
@@ -325,14 +361,14 @@ const pricing = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>6. Budżet</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>8. Budżet</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
-                  <Form nameForm="Budget" text="<2000 zł" idHandle="B1" inputType="radio" handleInputChange={handleInputChange} />
-                  <Form nameForm="Budget" text="2000-5000 zł" idHandle="B2" inputType="radio" handleInputChange={handleInputChange} />
-                  <Form nameForm="Budget" text="5000-10 000 zł" idHandle="B3" inputType="radio" handleInputChange={handleInputChange} />
-                  <Form nameForm="Budget" text=">10 000zł" idHandle="B4" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Budget" text="<6000 zł" idHandle="B1" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Budget" text="6000-10 000 zł" idHandle="B2" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Budget" text="10 000-20 000 zł" idHandle="B3" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Budget" text=">20 000zł" idHandle="B4" inputType="radio" handleInputChange={handleInputChange} />
                   <Form nameForm="Budget" text="Nie wiem, potrzebuję porady" idHandle="B5" inputType="radio" handleInputChange={handleInputChange} />
 
                 </div>
@@ -340,14 +376,14 @@ const pricing = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>7. Termin realizacji</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>9. Termin realizacji</h5>
               <div className='mt-[20px] pl-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px]'>
 
-                  <Form nameForm="Deadline" text="Do 2 tygodni" idHandle="T1" inputType="radio" handleInputChange={handleInputChange} />
-                  <Form nameForm="Deadline" text="2-4 tygodni" idHandle="T2" inputType="radio" handleInputChange={handleInputChange} />
-                  <Form nameForm="Deadline" text="1-2 miesięcy" idHandle="T3" inputType="radio" handleInputChange={handleInputChange} />
-                  <Form nameForm="Deadline" text="Powyżej 2 miesięcy" idHandle="T4" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Deadline" text="Do 1 miesiąca" idHandle="T1" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Deadline" text="1-2 miesięcy" idHandle="T2" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Deadline" text="2-4 miesięcy" idHandle="T3" inputType="radio" handleInputChange={handleInputChange} />
+                  <Form nameForm="Deadline" text="Powyżej 4 miesięcy" idHandle="T4" inputType="radio" handleInputChange={handleInputChange} />
                   <Form nameForm="Deadline" text="Nie mam konkretnego terminu" idHandle="T5" inputType="radio" handleInputChange={handleInputChange} />
 
                 </div>
@@ -355,7 +391,7 @@ const pricing = () => {
               </div>
             </div>
             <div>
-              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>8. Dodatkowe usługi</h5>
+              <h5 className='text-[20px] font-normal xxl:text-[24px] sm:text-[18px]'>10. Dodatkowe usługi</h5>
               <div className='mt-[20px] px-[25px] flex gap-[200px]'>
                 <div className='flex flex-col gap-[15px] w-full'>
 
@@ -370,7 +406,7 @@ const pricing = () => {
             </div>
 
             <div style={{ backgroundImage: `url(${imageBackground.src})` }} className='h-[600px] rounded-[10px] xxl:h-[700px] xxl:bg-cover xxl:bg-no-repeat lg:w-[95%] lg:flex lg:mx-auto lg:flex-col lg:bg-center sm:h-[650px] sm:bg-cover sm:bg-no-repeat'>
-              <h5 className='text-[20px] font-normal text-center pt-[50px] xxl:text-[24px] sm:text-[16px]'>Podstawowe informacje o kliencie</h5>
+              <h5 className='text-[20px] font-normal text-center pt-[50px] xxl:text-[24px] sm:text-[18px]'>Podstawowe informacje o kliencie</h5>
               <div className='mt-[20px] pl-[25px] flex justify-center gap-[200px] lg:pl-[0px]'>
                 <div className='flex flex-col gap-[15px] w-[800px] xxl:text-[24px] lg:w-[90%] sm:text-[16px]'>
 
@@ -407,10 +443,11 @@ const pricing = () => {
           </form>
         </article>
       </section>
-      <section>
-        {/* Oferta pricing - 1 linia */}
 
-        <div className='absolute top-[1050px] xxl:hidden xl:top-[800px] lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
+      <section>
+        {/* Oferta apps - 1 linia */}
+
+        <div className='absolute top-[1250px] xxl:hidden xl:top-[1300px] lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1849" viewBox="0 0 1864 1849" fill="none" className='w-full'>
             <path d="M-47.8027 147.746C141.849 34.4395 438.55 -32.2625 666.596 20.7691C844.743 62.1967 1038.67 143.96 1294.34 126.192C1493.07 112.381 1779.01 218.181 1906.63 464.961C2070.54 781.897 2153.18 472.074 2298.11 467.446" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M-47.8027 227.746C141.849 114.4395 438.55 47.7375 666.596 100.769C844.743 142.197 1038.67 223.96 1294.34 206.192C1493.07 192.381 1779.01 298.181 1906.63 544.961C2070.54 861.897 2153.18 552.074 2298.11 547.446" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
@@ -419,7 +456,7 @@ const pricing = () => {
           </svg>
         </div>
 
-        {/* Oferta pricing - 2 linia */}
+        {/* Oferta apps - 2 linia */}
 
         <div className='absolute top-[2250px] xxl:hidden lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1924" height="868" viewBox="0 0 1864 568" fill="none" className='w-full'>
@@ -430,9 +467,9 @@ const pricing = () => {
           </svg>
         </div>
 
-        {/* Oferta pricing - 3 linia */}
+        {/* Oferta apps - 3 linia */}
 
-        <div className='absolute top-[3250px] xxl:hidden lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
+        <div className='absolute top-[3450px] xxl:hidden lg:hidden left-[50%] translate-x-[-50%] z-[1] w-full opacity-50'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1533" viewBox="0 0 1864 1133" fill="none" className='w-full'>
             <path d="M2647.39 1089.59C2406.7 1157.58 2042.76 1145.41 1774.92 1024.24C1565.68 929.589 1342.08 787.24 1032.99 734.185C792.739 692.946 461.368 498.878 336.2 198.315C175.45 -187.693 40.9091 121.159 -133.685 85.247" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
             <path d="M2647.39 1169.59C2406.7 1237.58 2042.76 1225.41 1774.92 1104.24C1565.68 1009.59 1342.08 867.24 1032.99 814.185C792.739 772.946 461.368 578.878 336.2 278.315C175.45 -107.693 40.9091 201.159 -133.685 165.247" stroke="#E2B350" strokeOpacity="0.1" strokeWidth="3" />
@@ -484,4 +521,4 @@ const pricing = () => {
   )
 }
 
-export default pricing
+export default apps

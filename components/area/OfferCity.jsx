@@ -57,7 +57,7 @@ const OfferCity = ({ data }) => {
 
                             {index === 4 && (
                                 <div className='z-10 relative pr-[32px] lg:mt-[16px] sm:w-[95%] sm:pr-0'>
-                                    <ButtonArea text="Przejdź do darmowej wyceny" link="/offer/pricing" margin={0} width={300} />
+                                    <ButtonArea text="Przejdź do darmowej wyceny" link="/oferta/darmowa-wycena" margin={0} width={300} />
                                 </div>
                             )}
                             {index === 0 ?

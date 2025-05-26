@@ -8,7 +8,7 @@ const SingleSlide = ({ slug, icon, name, className = '' }) => {
             <div className='w-[120px] h-[120px] rounded-full bg-[#0404041a] shadow-inner-[0px_4px_10px_#00000080] flex justify-center items-center duration-500'>
                 <Icon icon={icon} width="80" height="80" className='text-white duration-500' />
             </div>
-            <p className='text-[20px] font-light'>{name}</p>
+            <h3 className='text-[20px] font-light'>{name}</h3>
         </div>
     );
 };
