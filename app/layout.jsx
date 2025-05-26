@@ -82,7 +82,10 @@ const rootLayout = ({ children }) => {
     "@type": "WebSite",
     "name": "Airtilion",
     "alternateName": "Airtilion Strony Internetowe",
-    "url": "https://airtilion.com/"
+    "url": "https://airtilion.com/",
+    "inLanguage": "pl",
+    "contentLanguage": "pl-PL",
+    "description": "Nowoczesne strony internetowe, sklepy online, projekty graficzne i aplikacje mobilne. Skontaktuj się z nami, aby poznać naszą ofertę i rozwiązania dla Ciebie!"
   };
 
 
@@ -131,7 +134,7 @@ const rootLayout = ({ children }) => {
         <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark" />
         <CookiesTemplate />
         <noscript>
-          <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=23875045218747088&ev=PageView&noscript=1"/>
+          <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=23875045218747088&ev=PageView&noscript=1" />
         </noscript>
       </body>
     </html>
