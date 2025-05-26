@@ -15,7 +15,7 @@ const CityPortfolio = ({city}) => {
     <section ref={ref} className='relative z-10 w-full py-[64px]'>
         <article className={`w-[1240px] mx-auto xl:w-[1000px] lg:w-[90%] flex flex-col items-center relative z-20 transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-bottom' : 'element-hidden-bottom'}`}>
             <Subtitle subtitle="PORTFOLIO" />
-            <h3 className='mt-[16px] text-[30px] font-semibold lg:text-[25px] text-center'>Chcesz poznać nasze realizacje?</h3>
+            <h2 className='mt-[16px] text-[30px] font-semibold lg:text-[25px] text-center'>Chcesz poznać nasze realizacje?</h2>
             <p className='mt-[8px] font-light text-[16px] sm:text-[14px] text-center'>Zobacz wybrane realizacje i przekonaj się, jak możemy pomóc rozwinąć Twoją działalność online.</p>
             <p className='font-light text-[16px] lg:mt-[8px] sm:text-[14px] text-center'><span className='font-bold'>Masz pomysł na stronę internetową {city}?</span> Skontaktuj się z nami i stwórzmy razem coś wyjątkowego!</p>
             

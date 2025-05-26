@@ -52,12 +52,12 @@ const Footer = ({bg = false}) => {
                             <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer">
                                 <span className='text-[#EEE] hover:text-[#E2B350] duration-500'>Polityka prywatności</span>
                             </Link>
-                            <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki Ochrony Danych Osobowych" target="_blank" rel="noopener noreferrer">
+                            {/* <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki Ochrony Danych Osobowych" target="_blank" rel="noopener noreferrer">
                                 <span className='text-[#EEE] hover:text-[#E2B350] duration-500'>Polityka Ochrony Danych Osobowych</span>
                             </Link>
                             <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Regulaminu świadczenia usług drogą elektroniczną" target="_blank" rel="noopener noreferrer">
                                 <span className='text-[#EEE] hover:text-[#E2B350] duration-500'>Regulamin świadczenia usług drogą elektroniczną</span>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                     <p className='mt-[35px] mb-[15px] px-[50px] text-[10px] text-[#969696] sm:text-center'>Airtilion Sp. z o.o. ul. Słoneczna 32/9, 33-100 Tarnów, wpisana do rejestru przedsiębiorców Krajowego rejestru Sądowego przez Sąd Rejonowy dla Krakowa-Śródmieścia w Krakowie, XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod nr KRS 0001143482, kapitał zakładowy w kwocie 5 000,00 zł w całości opłacony, NIP: 8733299720</p>

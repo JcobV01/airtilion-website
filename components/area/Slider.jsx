@@ -32,7 +32,7 @@ const SliderSection = ({ data }) => {
     return (
         <section ref={ref} className='w-[1240px] mx-auto flex justify-between my-[64px] 2xl:w-[960px] 2xl:flex-col 2xl:items-center 2xl:gap-[64px] lg:w-[90%] sm:mt-0'>
             <article className={`w-[480px] 2xl:w-full transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>
-                <h3 className='text-[25px] text-[#E2B350] font-medium tracking-[2.5px] sm:text-[20px] sm:text-center'>{data.title}</h3>
+                <h2 className='text-[25px] text-[#E2B350] font-medium tracking-[2.5px] sm:text-[20px] sm:text-center'>{data.title}</h2>
                 <p className='mt-[16px] font-extralight text-[18px] sm:text-[16px] sm:text-center'>{data.desc}</p>
             </article>
             <article className={`w-[600px] relative lg:w-[460px] sm:w-[290px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>

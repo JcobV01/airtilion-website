@@ -38,7 +38,7 @@ const CustomCooperate = () => {
                 <Image src={coopBg} alt="Obrazek przedstawiający tło z lwem" width="1240" height="450" quality={100} className="aspect-[1366/768] absolute w-full lg:h-full object-cover xxl:bg-cover xxl:bg-no-repeat" />
                 <div className='z-10'>
                     <p className='z-10 text-[#B8B8B8] lg:text-[13px] font-light text-center'>WSPÓŁPRACUJ Z NAMI</p>
-                    <h5 className='text-[40px] 2xl:text-[35px] xl:text-[30px] lg:text-[25px] font-semibold z-10 text-center'>Zawsze jesteśmy gotowi stworzyć <br /> dla Ciebie najlepszy produkt</h5>
+                    <h2 className='text-[40px] 2xl:text-[35px] xl:text-[30px] lg:text-[25px] font-semibold z-10 text-center'>Zawsze jesteśmy gotowi stworzyć <br /> dla Ciebie najlepszy produkt</h2>
                 </div>
                 <p className='z-10 text-[15px] xxl:text-[20px] lg:text-[13px] font-extralight text-center'>Jeśli szukasz partnera, który pomoże Ci w stworzeniu wyjątkowej strony, aplikacji internetowej, aplikacji mobilnej lub innego projektu, skontaktuj się z nami. Jesteśmy gotowi, aby wspólnie z Tobą zrealizować nawet najbardziej ambitne pomysły.</p>
 

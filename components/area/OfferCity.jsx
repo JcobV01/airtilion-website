@@ -13,7 +13,7 @@ const OfferCity = ({ data }) => {
     return (
         <section ref={ref} className="z-10 relative">
             <article className={`mx-auto w-[1240px] xl:w-[1000px] lg:w-[95%] sm:w-[90%]`}>
-                <h3 className={`text-[25px] text-[#E2B350] tracking-[2.5px] font-medium transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>NASZA OFERTA</h3>
+                <h2 className={`text-[25px] text-[#E2B350] tracking-[2.5px] font-medium transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>NASZA OFERTA</h2>
                 <p className={`mt-[16px] text-[18px] font-light lg:text-[16px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>{data.desc}</p>
 
                 <div className='mt-[64px] flex gap-[30px] flex-wrap lg:justify-center'>
@@ -40,10 +40,10 @@ const OfferCity = ({ data }) => {
                                     </div>
                                 )}
 
-                                <h4 className={`font-semibold sm:text-center
+                                <h3 className={`font-semibold sm:text-center
                                     ${index === 1 || index === 3 ? 'text-[30px] sm:text-[20px]' : 'text-[20px]'}`}>
                                     {element.title}
-                                </h4>
+                                </h3>
 
                                 <p className={`text-[16px] font-extralight sm:text-[14px] sm:text-center
                                     ${index === 1 ? 'w-[375px] xl:w-[250px] sm:w-full' : ''}
