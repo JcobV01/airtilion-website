@@ -19,28 +19,28 @@ const nextConfig = {
                 permanent: true,
             },
             {
-                source: '/apps',
-                destination: '/aplikacje-mobilne',
+                source: '/offer/apps',
+                destination: '/oferta/aplikacje-mobilne',
                 permanent: true,
             },
             {
-                source: '/pricing',
-                destination: '/darmowa-wycena',
+                source: '/offer/pricing',
+                destination: '/oferta/darmowa-wycena',
                 permanent: true,
             },
             {
-                source: '/services',
-                destination: '/uslugi',
+                source: '/offer/services',
+                destination: '/oferta/uslugi',
                 permanent: true,
             },
             {
-                source: '/shops',
-                destination: '/sklepy-internetowe',
+                source: '/offer/shops',
+                destination: '/oferta/sklepy-internetowe',
                 permanent: true,
             },
             {
-                source: '/websites',
-                destination: '/strony-internetowe',
+                source: '/offer/websites',
+                destination: '/oferta/strony-internetowe',
                 permanent: true,
             },
         ]
