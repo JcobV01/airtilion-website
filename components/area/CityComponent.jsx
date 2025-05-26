@@ -19,7 +19,7 @@ const CityComponent = ({ city }) => {
                             <Icon icon="hugeicons:arrow-right-double" width="16" height="16" />
                         </button>
                     </Link>
-                    <Link href="/offer">
+                    <Link href="/oferta">
                         <button className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-700 flex gap-[10px] items-center w-max hover:scale-90 nav-button xl:text-[15px]'>
                             Sprawdź naszą ofertę
                             <Icon icon="hugeicons:arrow-right-double" width="16" height="16" />

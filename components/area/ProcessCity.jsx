@@ -17,7 +17,7 @@ const ProcessCity = ({ data }) => {
                     <p className='mt-[48px] text-[16px] font-extralight sm:text-[14px]'>{data.question}</p>
                     
                     <div className='mt-[16px] w-[240px]'>
-                        <ButtonArea text="Skontaktuj się z nami" link="/#contact" width={240} margin={0} />
+                        <ButtonArea text="Skontaktuj się z nami" link="/#kontakt" width={240} margin={0} />
                     </div>
                     
                 </div>
