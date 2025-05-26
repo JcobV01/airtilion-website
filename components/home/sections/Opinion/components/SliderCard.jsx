@@ -9,7 +9,7 @@ const SliderCard = ({ author, page, desc, key, icon }) => {
             <div className='flex gap-[50px] z-10 relative'>
                 {
                     icon ? 
-                        <Image src={icon} width={40} height={40} className='text-[#E2B350] w-[40px] h-[40px] bg-[rgba(22,22,22,0.60)] rounded-[5px] backdrop-blur-[2px] flex justify-center items-center'/>
+                        <Image alt={`Logo ${page}`} src={icon} width={40} height={40} className='text-[#E2B350] w-[40px] h-[40px] bg-[rgba(22,22,22,0.60)] rounded-[5px] backdrop-blur-[2px] flex justify-center items-center'/>
                     :
                     <Icon icon="material-symbols:person" width={25} height={25} alt="Ikona człowieka" className='text-[#E2B350] w-[40px] h-[40px] bg-[rgba(22,22,22,0.60)] rounded-[5px] backdrop-blur-[2px] flex justify-center items-center' />
                 }

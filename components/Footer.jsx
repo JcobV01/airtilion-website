@@ -6,8 +6,9 @@ import AirtilionLogo from '@public/assets/images/logo-500x.webp'
 import Link from 'next/link'
 import NavbarFooter from './NavbarFooter'
 import { Icon } from '@iconify/react'
+import { area } from '@data/area'
 
-const Footer = ({bg = false}) => {
+const Footer = ({ bg = false }) => {
     const date = new Date()
     return (
         <footer className='relative z-10 w-full'>
@@ -45,6 +46,14 @@ const Footer = ({bg = false}) => {
                     </div>
                     <div className='mt-[35px]'>
                         <NavbarFooter />
+                    </div>
+                    <div className='mt-[16px]'>
+                        <div className='text-[13px] flex flex-wrap gap-[2px] px-[50px] sm:justify-center'>
+                            <p className='mr-1'>Obszar działania:</p>
+                            {area.map((element, index) => (
+                                <Link key={index} href={element.link} className='text-[#777777] duration-500 hover:text-[#E2B350]'>{element.city}{index < area.length - 1 ? ', ' : '.'}</Link>
+                            ))}
+                        </div>
                     </div>
                     <div className='mt-[35px] w-full px-[50px] flex justify-between xl:flex-col-reverse xl:justify-center'>
                         <p className='text-center text-[15px] text-[#EEE] font-light tracking-[1.5px] xl:mt-[20px]'>© {date.getFullYear()} Airtilion sp. z o.o.</p>
