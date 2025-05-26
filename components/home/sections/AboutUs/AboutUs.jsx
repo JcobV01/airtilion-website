@@ -28,7 +28,7 @@ const AboutUs = () => {
         <div className='flex flex-col gap-[50px]'>
           <Heading title="O nas" subtitle="poznaj naszą firmę" id="about-title" />
           <p className='text-[16px] font-light xxl:text-[20px] xl:text-[15px] lg:text-[13px]'>Jesteśmy zespołem pasjonatów technologii, tworzącym strony i aplikacje internetowe od A do Z, które są dostosowane do Twoich potrzeb. Od lat z pasją działamy w branży IT, obserwując, jak rozwija się rynek usług technologicznych. Zauważyliśmy, że w dzisiejszych czasach szczególną wartość zyskuje podejście, które łączy wysoką jakość z dbałością o klienta. Właśnie dlatego powstał Airtilion – firma, która ma na celu dostarczanie solidnych rozwiązań technologicznych. Choć wywodzimy się z Tarnowa, nasze usługi świadczymy na terenie całej Polski, oferując indywidualne podejście i pełne zaangażowanie w każdy projekt. </p>
-          <LightButton text="Napisz do nas" paddingBlock="11px" paddingInline="30px" rounded="5px" isInCardsOffer={false} link="/#contact" id="#contact" />
+          <LightButton text="Napisz do nas" paddingBlock="11px" paddingInline="30px" rounded="5px" isInCardsOffer={false} link="/#kontakt" id="#kontakt" />
         </div>
       </article>
 
