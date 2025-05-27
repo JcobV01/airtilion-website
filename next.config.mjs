@@ -54,6 +54,14 @@ const nextConfig = {
                 permanent: true,
             },
         ]
+    },
+    async rewrites() {
+        return [
+            {
+                source: "/polityka-prywatnosci",
+                destination: "/assets/files/polityka_prywatnosci_Airtilion.pdf"
+            }
+        ]
     }
 };
 export default nextConfig;

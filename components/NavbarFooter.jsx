@@ -20,7 +20,7 @@ const NavbarFooter = () => {
         },
         {
             name: "Oferta",
-            link: "/oferta"
+            link: "/oferta/strony-internetowe"
         },
         {
             name: "Portfolio",

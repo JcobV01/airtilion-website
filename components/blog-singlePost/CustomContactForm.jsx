@@ -98,7 +98,7 @@ const CustomContactForm = ({ isContactOpen }) => {
                     <label htmlFor="privacy_policy" className='flex items-center cursor-pointer'>
                         <span className='quadBefore flex items-center font-light'>Akceptuję</span>
                     </label>
-                    <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] text-center">politykę prywatności</Link>
+                    <Link href="/polityka-prywatnosci" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] text-center">politykę prywatności</Link>
                 </div>
 
                 <div className='animate-field w-full flex gap-[5px] sm:items-center sm:flex-col sm:text-[15px]'>
@@ -106,7 +106,7 @@ const CustomContactForm = ({ isContactOpen }) => {
                     <label htmlFor="personal_data_processing" className='flex items-center cursor-pointer'>
                         <span className='quadBefore flex items-center font-light'>Wyrażam zgodę na</span>
                     </label>
-                    <Link href="/" aria-label="Przejdź do ochrony danych osobowych" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] sm:text-center">przetwarzanie danych osobowych</Link>
+                    <Link href="/polityka-prywatnosci" aria-label="Przejdź do ochrony danych osobowych" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] sm:text-center">przetwarzanie danych osobowych</Link>
                 </div>
 
                 <div className='mt-[12px] animate-field flex justify-end sm:justify-center'>

@@ -168,7 +168,7 @@ const Contact = () => {
                             <label htmlFor="privacy_policy" className='flex items-center cursor-pointer'>
                                 <span className='quadBefore flex items-center tracking-[1px] xl:text-[15px]'>Akceptuję</span>
                             </label>
-                            <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] text-center">politykę prywatności</Link>
+                            <Link href="/polityka-prywatnosci" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] text-center">politykę prywatności</Link>
                         </div>
 
                         <div className='w-full flex flex-col gap-[0px] sm:items-center'>
@@ -176,7 +176,7 @@ const Contact = () => {
                             <label htmlFor="personal_data_processing" className='flex items-center cursor-pointer'>
                                 <span className='quadBefore flex items-center tracking-[1px] xl:text-[15px]'>Wyrażam zgodę na</span>
                             </label>
-                            <Link href="/" aria-label="Przejdź do ochrony danych osobowych" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] pl-[30px] sm:text-center">przetwarzanie danych osobowych</Link>
+                            <Link href="/polityka-prywatnosci" aria-label="Przejdź do ochrony danych osobowych" target="_blank" rel="noopener noreferrer" className="text-[#E2B350] pl-[30px] sm:text-center">przetwarzanie danych osobowych</Link>
                         </div>
 
                         <div className='flex duration-700 hover:translate-y-[5px] justify-end xl:mt-[10px] lg:mt-[0px] sm:justify-center'>

@@ -22,7 +22,7 @@ const menu = [
     },
     {
         name: "Oferta",
-        link: "/oferta",
+        link: "/oferta/strony-internetowe",
         id: ""
     },
     {

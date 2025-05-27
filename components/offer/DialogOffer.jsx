@@ -90,7 +90,7 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
 
             if (response.ok) {
                 toast.success('Przesłano formularz!');
-                router.push('/offer');
+                router.push('/oferta/strony-internetowe');
             }
         } catch (error) {
             setError('Wystąpił nieoczekiwany błąd.');
@@ -120,14 +120,14 @@ const DialogOffer = ({ dialogRef, handleCloseDialog, title, isOpen }) => {
                         <label htmlFor="privacy_policy" className='flex items-center cursor-pointer'>
                             <span className='quadBefore flex items-center tracking-[1px]'>Akceptuję</span>
                         </label>
-                        <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className='text-[#E2B350]'>politykę prywatności</Link>
+                        <Link href="/polityka-prywatnosci" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className='text-[#E2B350]'>politykę prywatności</Link>
                     </div>
                     <div className='w-full flex items-center gap-[5px] mt-[5px] xl:flex-col'>
                         <input type="checkbox" id="personal_data_processing" checked={checkboxValue.personal_data_processing} onChange={handleCheckboxChange} className='hidden peer' />
                         <label htmlFor="personal_data_processing" className='flex items-center cursor-pointer'>
                             <span className='quadBefore flex items-center tracking-[1px]'>Wyrażam zgodę na</span>
                         </label>
-                        <Link href="/" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className='text-[#E2B350]'>przetwarzanie danych osobowych</Link>
+                        <Link href="/polityka-prywatnosci" aria-label="Przejdź do Polityki prywatności" target="_blank" rel="noopener noreferrer" className='text-[#E2B350]'>przetwarzanie danych osobowych</Link>
                     </div>
 
                     <div className='w-full flex justify-between my-[40px] md:flex-col-reverse md:gap-[20px]'>
