@@ -62,7 +62,7 @@ const CookiesTemplate = () => {
             <div className='fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[700px] h-auto bg-[#131313b3] backdrop-blur-[5px] rounded-[5px] z-[1000] py-[32px] px-[48px] cookies md:w-[90%] sm:px-[16px]'>
                 <p className='text-[25px] text-[#E2B350] font-medium tracking-[2.5px] text-center'>Twoja prywatność jest dla nas ważna</p>
                 <p className='text-[16px] tracking-[1px] mt-[16px] sm:text-[15px]'>Na naszej stronie wykorzystujemy pliki cookies oraz podobne technologie, które mogą być używane do personalizacji reklam. Szczegóły znajdziesz w naszej
-                    <Link href="/assets/files/polityka_prywatnosci_Airtilion.pdf" aria-label="Przejdź do polityki prywatności" target="_blank" rel="noopener noreferrer" className='text-[#E2B350]'> polityce prywatności</Link>
+                    <Link href="/polityka-prywatnosci" aria-label="Przejdź do polityki prywatności" target="_blank" rel="noopener noreferrer" className='text-[#E2B350]'> polityce prywatności</Link>
                     . Dodatkowe informacje dostępne są
                     <Link href="https://policies.google.com/technologies/partner-sites" aria-label="Przejdź do polityki prywatności Google" target="_blank" rel="noopener noreferrer" className='text-[#E2B350]'> tutaj</Link>
                     .</p>
