@@ -1,30 +1,11 @@
+import { citiesList } from "@data/cities";
+
 const BLOG_URL = process.env.BLOG_URL;
 export const revalidate = 60;
 
 export default async function sitemap() {
   const staticPages = [
     { url: 'https://airtilion.com', lastModified: new Date(), changeFrequency: 'yearly', priority: 1, },
-    { url: 'https://airtilion.com/area', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/bialystok', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/bydgoszcz', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/czestochowa', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/gdansk', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/gorzowwielkopolski', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/katowice', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/kielce', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/krakow', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/lodz', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/lublin', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/nowysacz', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/olsztyn', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/poznan', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/rzeszow', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/slupsk', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/szczecin', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/tarnow', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/torun', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/warszawa', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
-    { url: 'https://airtilion.com/area/wroclaw', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7, },
     { url: 'https://airtilion.com/faq', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8, },
     { url: 'https://airtilion.com/oferta/strony-internetowe', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
     { url: 'https://airtilion.com/oferta/sklepy-internetowe', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9, },
@@ -34,6 +15,13 @@ export default async function sitemap() {
     { url: 'https://airtilion.com/portfolio', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6, },
     { url: 'https://airtilion.com/blog', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6}
   ];
+
+  const areaPages = citiesList.map(citySlug => ({
+    url: `https://airtilion.com/strony-internetowe-${citySlug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7
+  }))
 
   const res = await fetch(`${BLOG_URL}/wp-json/wp/v2/posts?per_page=100`);
   if (!res.ok) {
@@ -50,5 +38,5 @@ export default async function sitemap() {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...blogPages]
+  return [...staticPages, areaPages, ...blogPages]
 }
