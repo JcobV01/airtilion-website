@@ -1,23 +1,63 @@
 "use client"
 
-import Image from '@node_modules/next/image'
+import Image from 'next/image'
 import React from 'react'
 import ButtonArea from './ButtonArea'
 import useIntersectionObserver from '@hooks/useObserver';
 
+import firstCard from '@public/assets/images/area/offer/card-1.webp'
+import secondCard from '@public/assets/images/area/offer/card-2.webp'
+import thirdCard from '@public/assets/images/area/offer/card-3.webp'
+import fourthCard from '@public/assets/images/area/offer/card-4.webp'
+import fifthCard from '@public/assets/images/area/offer/card-5.webp'
+import firstIllustration from '@public/assets/images/area/offer/illustration-1.svg'
+import secondllustration from '@public/assets/images/area/offer/illustration-2.svg'
+import thirdllustration from '@public/assets/images/area/offer/illustration-3.svg'
+
 import mobilePhoto from '@public/assets/images/area/offer/card-4.webp'
 
-const OfferCity = ({ data }) => {
+const OfferCity = ({ fromCity, inCity }) => {
     const [ref, isVisible] = useIntersectionObserver();
+
+    const elements = [
+        {
+            title: "Strony wizytówki",
+            desc: `Idealne dla małych firm i freelancerów ${fromCity}, które chcą zaprezentować się online.`,
+            bg: firstCard,
+            illustration: firstIllustration
+        },
+        {
+            title: "Strony firmowe",
+            desc: "Kompleksowe rozwiązania dla przedsiębiorstw, wspierające wizerunek i sprzedaż w regionie.",
+            bg: secondCard,
+            illustration: secondllustration
+        },
+        {
+            title: "Sklepy internetowe",
+            desc: "Bezpieczne i funkcjonalne sklepy dostosowane do potrzeb lokalnego rynku.",
+            bg: thirdCard,
+            illustration: thirdllustration
+        },
+        {
+            title: "Landing page",
+            desc: "Skuteczne strony docelowe, które zwiększą konwersję Twoich kampanii reklamowych.",
+            bg: fourthCard
+        },
+        {
+            title: "Darmowa wycena w 48h!",
+            desc: `Masz pytania? Chcesz poznać koszt strony dostosowanej do Twoich potrzeb? Wypełnij formularz, a przygotujemy dla Ciebie spersonalizowaną ofertę dla strony internetowej ${inCity}!`,
+            bg: fifthCard
+        },
+    ]
 
     return (
         <section ref={ref} className="z-10 relative">
             <article className={`mx-auto w-[1240px] xl:w-[1000px] lg:w-[95%] sm:w-[90%]`}>
                 <h2 className={`text-[25px] text-[#E2B350] tracking-[2.5px] font-medium transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>NASZA OFERTA</h2>
-                <p className={`mt-[16px] text-[18px] font-light lg:text-[16px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>{data.desc}</p>
+                <p className={`mt-[16px] text-[18px] font-light lg:text-[16px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>Tworzymy nowoczesne, szybkie i przyjazne SEO strony internetowe, które przyciągną klientów {fromCity} i okolic. Specjalizujemy się w:</p>
 
                 <div className='mt-[64px] flex gap-[30px] flex-wrap lg:justify-center'>
-                    {data?.elements.map((element, index) => (
+                    {elements.map((element, index) => (
                         <div key={index} className={`flex rounded-[15px] relative backdrop-blur-35 shadow-[0_4px_15px_0_rgba(0,_0,_0,_0.25)] lg:flex-col sm:py-[16px]
                         ${index === 0 ? 'w-[300px] h-[300px] lg:w-[605px] sm:w-full' : ''}
                         ${index === 1 ? 'w-[910px] h-[300px] xl:w-[670px] lg:w-[605px] sm:w-full' : ''}
@@ -62,11 +102,11 @@ const OfferCity = ({ data }) => {
                             )}
                             {index === 0 ?
                                 <>
-                                    <Image src={element.bg} alt="Tło kafelka z widokiem strony internetowej w Tarnowie" className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0 lg:hidden'/>
-                                    <Image src={mobilePhoto} alt="Tło kafelka z widokiem strony internetowej w Tarnowie" className='hidden object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0 rotate-[180deg] lg:block'/>
+                                    <Image src={element.bg} alt={`Tło kafelka z widokiem strony internetowej ${inCity}`} className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0 lg:hidden' />
+                                    <Image src={mobilePhoto} alt={`Tło kafelka z widokiem strony internetowej ${inCity}`} className='hidden object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0 rotate-[180deg] lg:block' />
                                 </>
                                 :
-                                <Image src={element.bg} alt="Tło kafelka z widokiem strony internetowej w Tarnowie" className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0' />
+                                <Image src={element.bg} alt={`Tło kafelka z widokiem strony internetowej ${inCity}`} className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0' />
                             }
                         </div>
                     ))}

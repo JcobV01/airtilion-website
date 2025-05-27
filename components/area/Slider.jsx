@@ -4,8 +4,34 @@ import React, { useEffect, useState } from 'react'
 import SingleSlide from './techSlider/SingleSlide'
 import useIntersectionObserver from '@hooks/useObserver';
 
-const SliderSection = ({ data }) => {
-    const [techs, setTechs] = useState(data.techs);
+const SliderSection = ({ inCity }) => {
+    const [techs, setTechs] = useState([
+        {
+            name: "TypeScript",
+            slug: ["BEZPIECZEŃSTWO", "PRZEJRZYSTOŚĆ"],
+            icon: "akar-icons:typescript-fill"
+        },
+        {
+            name: "NextJS",
+            slug: ["ELASTYCZNOŚĆ", "SKALOWALNOŚĆ"],
+            icon: "akar-icons:nextjs-fill"
+        },
+        {
+            name: "ReactJS",
+            slug: ["SZYBKOŚĆ", "WYDAJNOŚĆ"],
+            icon: "mdi:react"
+        },
+        {
+            name: "Wordpress",
+            slug: ["POPULARNOŚĆ", "PROSTOTA"],
+            icon: "ic:baseline-wordpress"
+        },
+        {
+            name: "Tailwind",
+            slug: ["MINIMALIZM", "SWOBODA"],
+            icon: "mdi:tailwind"
+        }
+    ]);
     const [isAnimating, setIsAnimating] = useState(false);
     const [ref, isVisible] = useIntersectionObserver();
 
@@ -32,8 +58,8 @@ const SliderSection = ({ data }) => {
     return (
         <section ref={ref} className='w-[1240px] mx-auto flex justify-between my-[64px] 2xl:w-[960px] 2xl:flex-col 2xl:items-center 2xl:gap-[64px] lg:w-[90%] sm:mt-0'>
             <article className={`w-[480px] 2xl:w-full transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>
-                <h2 className='text-[25px] text-[#E2B350] font-medium tracking-[2.5px] sm:text-[20px] sm:text-center'>{data.title}</h2>
-                <p className='mt-[16px] font-extralight text-[18px] sm:text-[16px] sm:text-center'>{data.desc}</p>
+                <h2 className='text-[25px] text-[#E2B350] font-medium tracking-[2.5px] sm:text-[20px] sm:text-center'>TECHNOLOGIE</h2>
+                <p className='mt-[16px] font-extralight text-[18px] sm:text-[16px] sm:text-center'>Tworzymy funkcjonalne, estetyczne i responsywne strony internetowe {inCity} oparte o nowoczesne technologie, które zapewniają niezawodność, szybkość i łatwość użytkowania. Nasze projekty są zaprojektowane z myślą o użytkownikach, dzięki czemu Twoja strona będzie nie tylko piękna, ale również intuicyjna i łatwa w nawigacji. Wykorzystujemy najnowsze technologie, które pozwalają na szybkie ładowanie stron, lepszą optymalizację pod kątem SEO oraz pełną responsywność.</p>
             </article>
             <article className={`w-[600px] relative lg:w-[460px] sm:w-[290px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
                 <div className={`perspective-container flex gap-[8px] items-center w-full h-full relative ${isAnimating ? 'animating' : ''}`}>

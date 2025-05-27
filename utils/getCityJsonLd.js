@@ -3,7 +3,7 @@ const getCityJsonLd = (cityName, slug) => {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Airtilion",
-        "url": `https://airtilion.com/area/${slug}`,
+        "url": `https://airtilion.com/${slug}`,
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Tarnów",

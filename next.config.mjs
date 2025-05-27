@@ -9,7 +9,7 @@ const nextConfig = {
                 hostname: 'api.airtilion.com',
             }
         ],
-            domains: ['images.unsplash.com', 'lh3.googleusercontent.com'],
+        domains: ['images.unsplash.com', 'lh3.googleusercontent.com'],
     },
     async redirects() {
         return [
@@ -46,6 +46,11 @@ const nextConfig = {
             {
                 source: '/area',
                 destination: '/',
+                permanent: true,
+            },
+            {
+                source: '/area/:city',
+                destination: '/strony-internetowe-:city',
                 permanent: true,
             },
         ]
