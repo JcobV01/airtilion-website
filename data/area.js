@@ -1,86 +1,86 @@
 export const area = [
     {
         city: "Białystok",
-        link: "/area/bialystok"
+        link: "/strony-internetowe-bialystok"
     },
     {
         city: "Bydgoszcz",
-        link: "/area/bydgoszcz"
+        link: "/strony-internetowe-bydgoszcz"
     },
     {
         city: "Częstochowa",
-        link: "/area/czestochowa"
+        link: "/strony-internetowe-czestochowa"
     },
     {
         city: "Gdańsk",
-        link: "/area/gdansk"
+        link: "/strony-internetowe-gdansk"
     },
     {
         city: "Gorzów Wielkopolski",
-        link: "/area/gorzowwielkopolski"
+        link: "/strony-internetowe-gorzowwielkopolski"
     },
     {
         city: "Katowice",
-        link: "/area/katowice"
+        link: "/strony-internetowe-katowice"
     },
     {
         city: "Kielce",
-        link: "/area/kielce"
+        link: "/strony-internetowe-kielce"
     },
     {
         city: "Kraków",
-        link: "/area/krakow"
+        link: "/strony-internetowe-krakow"
     },
     {
         city: "Łódź",
-        link: "/area/lodz"
+        link: "/strony-internetowe-lodz"
     },
     {
         city: "Lublin",
-        link: "/area/lublin"
+        link: "/strony-internetowe-lublin"
     },
     {
         city: "Nowy Sącz",
-        link: "/area/nowysacz"
+        link: "/strony-internetowe-nowysacz"
     },
     {
         city: "Olsztyn",
-        link: "/area/olsztyn"
+        link: "/strony-internetowe-olsztyn"
     },
     {
         city: "Opole",
-        link: "/area/opole"
+        link: "/strony-internetowe-opole"
     },
     {
         city: "Poznań",
-        link: "/area/poznan"
+        link: "/strony-internetowe-poznan"
     },
     {
         city: "Rzeszów",
-        link: "/area/rzeszow"
+        link: "/strony-internetowe-rzeszow"
     },
     {
         city: "Słupsk",
-        link: "/area/slupsk"
+        link: "/strony-internetowe-slupsk"
     },
     {
         city: "Szczecin",
-        link: "/area/szczecin"
+        link: "/strony-internetowe-szczecin"
     },
     {
         city: "Tarnów",
-        link: "/area/tarnow"
+        link: "/strony-internetowe-tarnow"
     },
     {
         city: "Toruń",
-        link: "/area/torun"
+        link: "/strony-internetowe-torun"
     },
     {
         city: "Warszawa",
-        link: "/area/warszawa"
+        link: "/strony-internetowe-warszawa"
     },
     {
         city: "Wrocław",
-        link: "/area/wroclaw"
+        link: "/strony-internetowe-wroclaw"
     },
 ]
