@@ -637,12 +637,12 @@ dialog::backdrop {
   font-weight: 200;
 }
 
-.blog-content a{
+.blog-content a, .blog-content a > strong, .blog-intro a, .blog-intro a > strong{
   color:#E2B350;
   transition-duration: 500ms;
 }
 
-.blog-content a:hover{
+.blog-content a:hover, .blog-content a:hover > strong, .blog-intro a:hover, .blog-intro a:hover > strong{
   color:#7d642e;
 }
 
@@ -672,8 +672,19 @@ blockquote{
 
 .blog-content .wp-block-column{width: 50%;}
 
+.blog-content .wp-block-table{overflow-x: auto;}
+.blog-content table{width: 100%; table-layout: fixed;  border-collapse: collapse;}
+.blog-content .wp-block-table table td,
+.blog-content .wp-block-table table th {
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  font-size: 14px; 
+}
+
 @media only screen and (max-width: 1023px){
   .blog-content h2{font-size: 25px;}
+  .blog-content table{width: 800px;}
 }
 
 @media only screen and (max-width: 767px){
