@@ -7,7 +7,7 @@ import Link from '@node_modules/next/link'
 import { Icon } from '@node_modules/@iconify/react/dist/iconify'
 import useIntersectionObserver from '@hooks/useObserver'
 
-const CityFaq = ({ data }) => {
+const CityFaq = ({ data, city }) => {
     const [ref, isVisible] = useIntersectionObserver();
 
     return (
@@ -16,7 +16,7 @@ const CityFaq = ({ data }) => {
 
                 <div className={`flex flex-col w-[451px] lg:w-full transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>
                     <Subtitle subtitle="CZĘSTO ZADAWANE PYTANIA" />
-                    <h2 className='mt-[64px] text-[30px] font-semibold lg:text-[25px] lg:mt-[16px]'>Masz jakieś pytania odnośnie strony internetowej?</h2>
+                    <h2 className='mt-[32px] text-[30px] font-semibold lg:text-[25px] lg:mt-[16px]'>Tworzenie stron internetowych {city} - odpowiemy na wszystkie Twoje pytania</h2>
                     <p className='mt-[16px] text-[18px] lg:text-[18px]'>Obok znajdziesz odpowiedzi, a jeśli nawet tam ich nie ma to skontaktuj się z nami!</p>
 
                     <Link href="/faq" aria-label='Przejdź do pełnego FAQ' className='mt-[48px] inline-flex items-center gap-[12px] max-w-max duration-700 hover:scale-90'>

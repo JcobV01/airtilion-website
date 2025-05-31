@@ -22,7 +22,7 @@ const OfferCity = ({ fromCity, inCity }) => {
     const elements = [
         {
             title: "Strony wizytówki",
-            desc: `Idealne dla małych firm i freelancerów ${fromCity}, które chcą zaprezentować się online.`,
+            desc: `Idealne dla małych przedsiębiorstw i freelancerów, którzy chcą zaprezentować się online.`,
             bg: firstCard,
             illustration: firstIllustration
         },
@@ -45,15 +45,15 @@ const OfferCity = ({ fromCity, inCity }) => {
         },
         {
             title: "Darmowa wycena w 48h!",
-            desc: `Masz pytania? Chcesz poznać koszt strony dostosowanej do Twoich potrzeb? Wypełnij formularz, a przygotujemy dla Ciebie spersonalizowaną ofertę dla strony internetowej ${inCity}!`,
+            desc: `Masz pytania? Chcesz poznać koszt strony dostosowanej do Twoich potrzeb? Wypełnij formularz, a przygotujemy dla Ciebie spersonalizowaną ofertę w ciągu 48 godzin!`,
             bg: fifthCard
         },
     ]
 
     return (
-        <section ref={ref} className="z-10 relative">
+        <section ref={ref} className="z-10 relative offerCity">
             <article className={`mx-auto w-[1240px] xl:w-[1000px] lg:w-[95%] sm:w-[90%]`}>
-                <h2 className={`text-[25px] text-[#E2B350] tracking-[2.5px] font-medium transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>NASZA OFERTA</h2>
+                <h2 className={`text-[25px] text-[#E2B350] tracking-[2.5px] font-medium transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>Nasza oferta strony www dla firm {fromCity}</h2>
                 <p className={`mt-[16px] text-[18px] font-light lg:text-[16px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>Tworzymy nowoczesne, szybkie i przyjazne SEO strony internetowe, które przyciągną klientów {fromCity} i okolic. Specjalizujemy się w:</p>
 
                 <div className='mt-[64px] flex gap-[30px] flex-wrap lg:justify-center'>

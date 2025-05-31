@@ -730,7 +730,7 @@ blockquote{
   }
 }
 
-.footer-hidden, .nav-hidden{
+.footer-hidden, .nav-hidden, .section-hidden{
   opacity: 0;
   pointer-events: none;
 }

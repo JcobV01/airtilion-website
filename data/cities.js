@@ -593,19 +593,19 @@ export const citiesData = {
         city: "Tarnów",
         inCity: "w Tarnowie",
         fromCity: "z Tarnowa",
-        metaTitle: "Projektowanie i tworzenie stron internetowych Tarnów",
-        metaDescription: "Nowoczesne strony internetowe w Tarnowie – projektujemy strony, sklepy online, grafiki oraz aplikacje mobilne. Działamy w Tarnowie i okolicach – sprawdź ofertę!",
+        metaTitle: "Strony www Tarnów – projektowanie, tworzenie, sklepy internetowe, optymalizacja",
+        metaDescription: "Projektujemy i tworzymy profesjonalne strony www Tarnów oraz sklepy internetowe z CMS i kompleksową optymalizacją SEO. Sprawdź ofertę!",
         cityImg: tarnow,
         accordion: {
             elements: [
                 {
                     id: 1,
-                    question: "Jak długo trwa stworzenie strony internetowej w Tarnowie?",
+                    question: "Jak długo trwa stworzenie witryny?",
                     answer: "Czas realizacji zależy od skomplikowania projektu oraz Twoich indywidualnych wymagań. Standardowo proces ten trwa od kilku tygodni do kilku miesięcy. Po wstępnej analizie potrzeb możemy przedstawić dokładniejszy harmonogram."
                 },
                 {
                     id: 2,
-                    question: "Ile kosztuje strona internetowa w Tarnowie?",
+                    question: "Ile kosztuje strona w Tarnowie?",
                     answer: "Koszt zależy od wielu czynników, takich jak zakres funkcjonalności, stopień skomplikowania projektu oraz dodatkowe usługi. Po zapoznaniu się z Twoimi wymaganiami przygotujemy indywidualną wycenę."
                 },
                 {
@@ -617,6 +617,11 @@ export const citiesData = {
                     id: 4,
                     question: "Jakie informacje są potrzebne do rozpoczęcia współpracy?",
                     answer: "Na początek potrzebujemy poznać Twoje oczekiwania i cele związane ze stroną, informacje o Twojej firmie, preferencje dotyczące designu oraz funkcjonalności, a także ewentualne materiały, takie jak logo czy treści."
+                },
+                {
+                    id: 5,
+                    question: "Co mogę zyskać z dobrze wykonanej strony?",
+                    answer: "Dobrze wykonana strona internetowa Twojej firmy pozwala wyróżnić się na tle konkurencji. Dzięki stronie internetowej zyskasz unikalny design, a odpowiednie SEO strony www zapewni lepszą widoczność w wyszukiwarce i przyciągnie więcej potencjalnych klientów."
                 },
             ]
         }

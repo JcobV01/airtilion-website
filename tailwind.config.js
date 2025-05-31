@@ -13,6 +13,9 @@ module.exports = {
       },
       backdropBlur: {
         '35': '35px',
+      },
+      gridTemplateRows: {
+        'custom': 'auto 250px'
       }
     },
     screens: {

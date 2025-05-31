@@ -62,15 +62,15 @@ const page = ({ params }) => {
     return (
         <>
             <Script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-            <main className='xl:h-auto w-full flex flex-col lg:overflow-x-hidden justify-end items-center gap-[128px] sm:gap-[64px] xl:overflow-y-scroll xl:pt-[150px] sm:pt-[200px]' >
+            <main className='xl:h-auto w-full flex flex-col justify-end items-center gap-[128px] sm:gap-[64px] xl:pt-[150px] sm:pt-[200px]' >
                 <Image src={areaImage} width={1920} height={1080} quality={75} alt="Obrazek tła" className='h-dvh w-full fixed top-0 left-0 object-cover object-left-top brightness-[0.5] blur-[5px]' loading='eager' />
-                <CityComponent city={data.inCity} />
+                <CityComponent city={data.city} />
                 <WhyCity cityName={data.city} inCity={data.inCity} fromCity={data.fromCity} cityImg={data.cityImg} />
                 <SliderSection inCity={data.inCity} />
                 <ProcessCity inCity={data.inCity} />
                 <OfferCity fromCity={data.fromCity} inCity={data.inCity} />
                 <CityPortfolio city={data.inCity} />
-                <CityFaq data={data.accordion} />
+                <CityFaq data={data.accordion} city={data.city} />
                 <section className='w-[1240px] 2xl:w-[960px] lg:w-[90%] mx-auto'>
                     <CustomCooperate />
                 </section>
