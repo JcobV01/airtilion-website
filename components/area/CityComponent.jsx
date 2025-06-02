@@ -14,18 +14,29 @@ const CityComponent = ({ city }) => {
                 <p className='text-[#E2B350] text-[17px] lg:text-[15px] font-light'>Tworzymy nowoczesne i eleganckie strony internetowe dopasowane do potrzeb klientów z regionu, łącząc funkcjonalność z estetyką. Oferujemy projektowanie i tworzenie stron internetowych od zera, korzystając z intuicyjnego systemu CMS. </p>
                 <p className='text-[#E2B350] text-[17px] lg:text-[15px] font-light'>Każda strona www {city} jest w pełni responsywna, szybka i bezpieczna. Obsługujemy klientów z regionu oraz z całej Polski – nie mamy ograniczeń geograficznych. Skontaktuj się z nami, a omówimy szczegóły współpracy, opowiemy o procesie tworzenia strony i przedstawimy darmową wycenę!</p>
                 <div className='flex gap-[64px] sm:flex-col sm:gap-[16px] sm:items-center'>
+                    
                     <Link href="/">
-                        <button className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-700 flex gap-[10px] items-center w-max hover:scale-90 nav-button xl:text-[15px]'>
-                            Poznaj szczegóły
-                            <Icon icon="hugeicons:arrow-right-double" width="16" height="16" />
+                        <button className='relative overflow-hidden py-[12px] px-[30px] rounded-[7px] duration-700 w-max group xl:text-[15px] sm:w-[250px]'>
+                            <span className='z-0 absolute left-0 top-0 h-full w-full bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] transition-all duration-700 group-hover:w-0' />
+                            <span className='z-10 relative flex items-center gap-[10px] group-hover:scale-90 transition-transform duration-700 sm:justify-between'>
+                                Poznaj szczegóły
+                                <Icon icon="hugeicons:arrow-right-double" width="16" height="16" />
+                            </span>
+                            <span className='z-20 absolute left-0 top-0 h-full w-0 box-border border-2 border-[#CEA75B80] transition-all duration-700 group-hover:w-full rounded-[7px]' />
                         </button>
                     </Link>
+
                     <Link href="/oferta/strony-internetowe">
-                        <button className='bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] py-[10px] px-[30px] rounded-[7px] duration-700 flex gap-[10px] items-center w-max hover:scale-90 nav-button xl:text-[15px]'>
-                            Sprawdź naszą ofertę
-                            <Icon icon="hugeicons:arrow-right-double" width="16" height="16" />
+                        <button className='relative overflow-hidden py-[12px] px-[30px] rounded-[7px] duration-700 w-max group xl:text-[15px] sm:w-[250px]'>
+                            <span className='z-0 absolute left-0 top-0 h-full w-full box-border border-2 border-[#CEA75B80] transition-all duration-700 group-hover:w-0 group-hover:border-0 rounded-[7px]' />
+                            <span className='z-20 relative flex items-center gap-[10px] group-hover:scale-90 transition-transform duration-700 sm:justify-between'>
+                                Sprawdź naszą ofertę
+                                <Icon icon="hugeicons:arrow-right-double" width="16" height="16" />
+                            </span>
+                            <span className='z-10 absolute left-0 top-0 h-full w-0 bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] transition-all duration-700 group-hover:w-full rounded-[7px]' />
                         </button>
                     </Link>
+
                 </div>
             </article>
 

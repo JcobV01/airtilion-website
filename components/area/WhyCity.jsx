@@ -50,8 +50,8 @@ const WhyCity = ({ cityName, inCity, fromCity, cityImg }) => {
         </div>
 
         <div className='flex flex-col gap-[12px]'>
-          <h3 className='text-[20px] font-medium xl:text-[18px]'><span className='text-[#E2B350]'>Profesjonalne projektowanie stron internetowych {cityName}</span> - nowoczesność i jakość w jednym miejscu</h3>
-          <p>Twoja firma potrzebuje profesjonalnej strony www, która przyciąga potencjalnych klientów i osiąga wyższe pozycje w wyszukiwarce. Projektujemy nowoczesne strony zgodnie z obecnymi trendami – szybkie, responsywne i zoptymalizowane pod SEO. Postaw na jakość i technologię przyszłości!</p>
+          <h3 className='text-[20px] font-medium xl:text-[18px]'>Projektowanie stron internetowych {cityName} - nowoczesność i jakość w jednym miejscu</h3>
+          <p className='font-light'>Twoja firma potrzebuje profesjonalnej strony www, która przyciąga potencjalnych klientów i osiąga wyższe pozycje w wyszukiwarce. Projektujemy nowoczesne strony zgodnie z obecnymi trendami – szybkie, responsywne i zoptymalizowane pod SEO. Postaw na jakość i technologię przyszłości!</p>
         </div>
       </article>
 
