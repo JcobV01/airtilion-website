@@ -1,4 +1,4 @@
-import { citiesList } from "@data/cities";
+import { citiesList } from "@data/citiesList";
 
 const BLOG_URL = process.env.BLOG_URL;
 export const revalidate = 60;

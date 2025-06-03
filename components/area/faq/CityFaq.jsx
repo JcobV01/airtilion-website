@@ -8,46 +8,17 @@ import { Icon } from '@node_modules/@iconify/react/dist/iconify'
 import useIntersectionObserver from '@hooks/useObserver'
 
 
-const CityFaq = ({ city }) => {
+const CityFaq = ({ faq }) => {
     const [ref, isVisible] = useIntersectionObserver();
-    const data = {
-        elements: [
-            {
-                id: 1,
-                question: "Jak długo trwa stworzenie witryny?",
-                answer: "Czas realizacji zależy od skomplikowania projektu oraz Twoich indywidualnych wymagań. Standardowo proces ten trwa od kilku tygodni do kilku miesięcy. Po wstępnej analizie potrzeb możemy przedstawić dokładniejszy harmonogram."
-            },
-            {
-                id: 2,
-                question: `Ile kosztuje strona ${city}?`,
-                answer: "Koszt zależy od wielu czynników, takich jak zakres funkcjonalności, stopień skomplikowania projektu oraz dodatkowe usługi. Po zapoznaniu się z Twoimi wymaganiami przygotujemy indywidualną wycenę."
-            },
-            {
-                id: 3,
-                question: "Czy będę mógł samodzielnie zarządzać treścią na mojej stronie?",
-                answer: "Tak, nasze strony są wyposażone w intuicyjne systemy zarządzania treścią (CMS), które pozwalają na łatwe dodawanie i edytowanie treści bez potrzeby posiadania wiedzy programistycznej."
-            },
-            {
-                id: 4,
-                question: "Jakie informacje są potrzebne do rozpoczęcia współpracy?",
-                answer: "Na początek potrzebujemy poznać Twoje oczekiwania i cele związane ze stroną, informacje o Twojej firmie, preferencje dotyczące designu oraz funkcjonalności, a także ewentualne materiały, takie jak logo czy treści."
-            },
-            {
-                id: 5,
-                question: "Co mogę zyskać z dobrze wykonanej strony?",
-                answer: "Dobrze wykonana strona internetowa Twojej firmy pozwala wyróżnić się na tle konkurencji. Dzięki stronie internetowej zyskasz unikalny design, a odpowiednie SEO strony www zapewni lepszą widoczność w wyszukiwarce i przyciągnie więcej potencjalnych klientów."
-            },
-        ]
-    }
-    
+
     return (
         <section ref={ref} className="relative z-10 bg-[#00000033] w-full py-[128px] backdrop-blur-[10px] mt-[-128px] sm:mt-[-64px]">
             <article className={`w-[1240px] mx-auto flex gap-[64px] xl:w-[1000px] lg:w-[90%] lg:flex-col items-center lg:justify-center`}>
 
                 <div className={`flex flex-col w-[451px] lg:w-full transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>
                     <Subtitle subtitle="CZĘSTO ZADAWANE PYTANIA" />
-                    <h2 className='mt-[32px] text-[30px] font-semibold lg:text-[25px] lg:mt-[16px]'>Tworzenie stron internetowych {city} - odpowiemy na wszystkie Twoje pytania</h2>
-                    <p className='mt-[16px] text-[18px] lg:text-[18px]'>Obok znajdziesz odpowiedzi, a jeśli nawet tam ich nie ma to skontaktuj się z nami!</p>
+                    <h2 className='mt-[32px] text-[30px] font-semibold lg:text-[25px] lg:mt-[16px]'>{faq.title}</h2>
+                    <p className='mt-[16px] text-[18px] lg:text-[18px]'>{faq.paragraph}</p>
 
                     <Link href="/faq" aria-label='Przejdź do pełnego FAQ' className='mt-[48px] inline-flex items-center gap-[12px] max-w-max duration-700 hover:scale-90'>
                         <span className='text-[#E2B350] text-[16px] tracking-[2.5px] sm:text-[14px]'>Przejdź do pełnego FAQ</span>
@@ -56,7 +27,7 @@ const CityFaq = ({ city }) => {
                 </div>
 
                 <div className={`w-[725px] lg:w-full transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
-                    <CityAccordion data={data} />
+                    <CityAccordion data={faq.elements} />
                 </div>
 
             </article>

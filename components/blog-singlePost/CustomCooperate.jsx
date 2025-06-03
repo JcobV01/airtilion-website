@@ -42,7 +42,7 @@ const CustomCooperate = () => {
                 </div>
                 <p className='z-10 text-[15px] xxl:text-[20px] lg:text-[13px] font-extralight text-center'>Jeśli szukasz partnera, który pomoże Ci w stworzeniu wyjątkowej strony, aplikacji internetowej, aplikacji mobilnej lub innego projektu, skontaktuj się z nami. Jesteśmy gotowi, aby wspólnie z Tobą zrealizować nawet najbardziej ambitne pomysły.</p>
 
-                <button onClick={() => setIsContactOpen(true)} className='text-[15px] xxl:text-[20px] lg:text-[13px] sm:text-[11px] z-10 tracking-[1.5px] bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] px-[30px] py-[15px] rounded-[5px]'>Napisz do nas</button>
+                <button onClick={() => setIsContactOpen(true)} className='text-[15px] xxl:text-[20px] lg:text-[13px] sm:text-[11px] z-10 tracking-[1.5px] bg-gradient-to-r from-[#CEA75B80] to-[#7A6B4E80] px-[30px] py-[15px] rounded-[5px] duration-700 hover:scale-90'>Napisz do nas</button>
 
                 <div className='absolute w-full h-full bg-[#00000099] top-0 left-0'></div>
             </article>

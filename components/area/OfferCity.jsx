@@ -16,7 +16,7 @@ import thirdllustration from '@public/assets/images/area/offer/illustration-3.sv
 
 import mobilePhoto from '@public/assets/images/area/offer/card-4.webp'
 
-const OfferCity = ({ fromCity, inCity }) => {
+const OfferCity = ({ offerCity, city }) => {
     const [ref, isVisible] = useIntersectionObserver();
 
     const elements = [
@@ -53,8 +53,8 @@ const OfferCity = ({ fromCity, inCity }) => {
     return (
         <section ref={ref} className="z-10 relative offerCity">
             <article className={`mx-auto w-[1240px] xl:w-[1000px] lg:w-[95%] sm:w-[90%]`}>
-                <h2 className={`text-[25px] text-[#E2B350] tracking-[2.5px] font-medium transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>Nasza oferta strony www dla firm {fromCity}</h2>
-                <p className={`mt-[16px] text-[18px] font-light lg:text-[16px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>Tworzymy nowoczesne, szybkie i przyjazne SEO strony internetowe, które przyciągną klientów {fromCity} i okolic. Specjalizujemy się w:</p>
+                <h2 className={`text-[25px] text-[#E2B350] tracking-[2.5px] font-medium transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>{offerCity.title}</h2>
+                <p className={`mt-[16px] text-[18px] font-light lg:text-[16px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>{offerCity.paragraph1}</p>
 
                 <div className='mt-[64px] flex gap-[30px] flex-wrap lg:justify-center'>
                     {elements.map((element, index) => (
@@ -102,11 +102,11 @@ const OfferCity = ({ fromCity, inCity }) => {
                             )}
                             {index === 0 ?
                                 <>
-                                    <Image src={element.bg} alt={`Tło kafelka z widokiem strony internetowej ${inCity}`} className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0 lg:hidden' />
-                                    <Image src={mobilePhoto} alt={`Tło kafelka z widokiem strony internetowej ${inCity}`} className='hidden object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0 rotate-[180deg] lg:block' />
+                                    <Image src={element.bg} alt={`Tło kafelka z widokiem strony internetowej ${city}`} className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0 lg:hidden' />
+                                    <Image src={mobilePhoto} alt={`Tło kafelka z widokiem strony internetowej ${city}`} className='hidden object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0 rotate-[180deg] lg:block' />
                                 </>
                                 :
-                                <Image src={element.bg} alt={`Tło kafelka z widokiem strony internetowej ${inCity}`} className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0' />
+                                <Image src={element.bg} alt={`Tło kafelka z widokiem strony internetowej ${city}`} className='object-cover w-full h-full rounded-[15px] absolute top-0 left-0 z-0' />
                             }
                         </div>
                     ))}
