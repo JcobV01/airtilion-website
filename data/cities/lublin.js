@@ -1,6 +1,6 @@
 import lublinImg from '@public/assets/images/area/cities/lublin.webp'
 
-export const tarnow = {
+export const lublin = {
     city: "Lublin",
     img: lublinImg,
     metaTitle: "Strony www Lublin - projektowanie, tworzenie, sklepy internetowe, optymalizacja",
