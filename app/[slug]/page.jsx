@@ -74,7 +74,7 @@ const page = async ({ params }) => {
     return (
         <>
             <Script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-            <main className='overflow-x-hidden xl:h-auto w-full flex flex-col justify-end items-center gap-[128px] sm:gap-[64px] xl:pt-[150px] sm:pt-[200px]' >
+            <main className='xl:h-auto w-full flex flex-col justify-end items-center gap-[128px] sm:gap-[64px] xl:pt-[150px] sm:pt-[200px]' >
                 <Image src={areaImage} width={1920} height={1080} quality={75} alt="Obrazek tła" className='h-dvh w-full fixed top-0 left-0 object-cover object-left-top brightness-[0.5] blur-[5px]' loading='eager' />
                 <CityComponent header={data.header} city={data.city} />
                 <WhyCity whyCity={data.whyCity} cityImg={data.img} city={data.city} />
