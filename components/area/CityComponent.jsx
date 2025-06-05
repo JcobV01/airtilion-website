@@ -21,7 +21,7 @@ const CityComponent = ({ header, city }) => {
                                 Poznaj szczegóły
                                 <Icon icon="hugeicons:arrow-right-double" width="16" height="16" />
                             </span>
-                            <span className='z-20 absolute left-0 top-0 h-full w-0 box-border border-2 border-[#CEA75B80] transition-all duration-700 group-hover:w-full rounded-[7px]' />
+                            <span className='z-20 absolute left-0 top-0 h-full w-0 box-border border-0 border-[#CEA75B80] transition-all duration-700 group-hover:border-2 group-hover:w-full rounded-[7px]' />
                         </button>
                     </Link>
 

@@ -79,7 +79,7 @@ const page = async ({ params }) => {
                 <CityComponent header={data.header} city={data.city} />
                 <WhyCity whyCity={data.whyCity} cityImg={data.img} city={data.city} />
                 <SliderSection technology={data.technology} />
-                <ProcessCity processCity={data.processCity} />
+                <ProcessCity processCity={data.processCity} city={data.city} />
                 <OfferCity offerCity={data.offerCity} city={data.city} />
                 <CityPortfolio portfolio={data.portfolio} />
                 <CityFaq faq={data.faq} />

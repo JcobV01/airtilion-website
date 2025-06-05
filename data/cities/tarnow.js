@@ -8,7 +8,7 @@ export const tarnow = {
 
     header: {
         h1: "Strony internetowe Tarnów",
-        paragraph1: "Tworzymy nowoczesne i eleganckie strony internetowe dopasowane do potrzeb klientów z regionu, łącząc funkcjonalność z estetyką. Oferujemy projektowanie i tworzenie stron internetowych od zera, korzystając z intuicyjnego systemu CMS.",
+        paragraph1: "Tworzymy nowoczesne i eleganckie strony internetowe dopasowane do potrzeb klientów z regionu, łącząc funkcjonalność z estetyką. Oferujemy projektowanie i tworzenie stron internetowych od zera, korzystając z intuicyjnego systemu CMS lub dedykowanych rozwiązań.",
         paragraph2: "Każda strona www Tarnów jest w pełni responsywna, szybka i bezpieczna. Obsługujemy klientów z regionu oraz z całej Polski - nie mamy ograniczeń geograficznych. Skontaktuj się z nami, a omówimy szczegóły współpracy, opowiemy o procesie tworzenia strony i przedstawimy darmową wycenę!"
     },
 

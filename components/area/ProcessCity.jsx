@@ -5,7 +5,7 @@ import { Icon } from '@node_modules/@iconify/react/dist/iconify'
 import useIntersectionObserver from '@hooks/useObserver';
 import CustomContact from './CustomContact';
 
-const ProcessCity = ({ processCity }) => {
+const ProcessCity = ({ processCity, city }) => {
     const [ref, isVisible] = useIntersectionObserver();
 
     return (
@@ -17,7 +17,7 @@ const ProcessCity = ({ processCity }) => {
                     <p className='mt-[16px] font-extralight text-[18px] sm:text-[16px]'>{processCity.paragraph1}</p>
                     <p className='mt-[48px] text-[16px] font-extralight sm:text-[14px]'>{processCity.cta}</p>
                 </div>
-                <div className='absolute left-0 bottom-[150px] w-[240px] xl:bottom-[90px] lg:relative lg:mt-[16px] lg:bottom-0 lg:self-start'>
+                <div className={`absolute left-0 ${city === 'Lublin' ? 'bottom-[245px] xl:bottom-[220px]' : 'bottom-[150px] xl:bottom-[90px]'}  w-[240px]  lg:relative lg:mt-[16px] lg:bottom-0 lg:self-start`}>
                     <CustomContact text="Skontaktuj się z nami" width={240} />
                 </div>
                 <div className='mt-[32px] w-[600px] flex gap-x-[100px] gap-y-[40px] flex-wrap xl:gap-x-[40px] lg:mt-[64px] lg:justify-center lg:gap-x-[100px] sm:w-full sm:flex-col sm:items-center'>
